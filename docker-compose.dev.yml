@@ -29,5 +29,5 @@ services:
     restart: unless-stopped
     volumes:
       - ./face:/app
-    command: yarn run dev
+    command: npm run dev
     container_name: explain-face

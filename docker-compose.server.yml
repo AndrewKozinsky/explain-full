@@ -26,7 +26,7 @@ services:
       context: face/
       dockerfile: Dockerfile.server
     restart: unless-stopped
-    command: yarn run start
+    command: npm run start
     container_name: explain-face
 
 networks:
