@@ -16,9 +16,9 @@ services:
   api:
     build:
       context: api/
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.server
     restart: unless-stopped
-    command: yarn run start:prod
+    command: npm run start:prod
     container_name: explain-api
 
   face:

@@ -15,11 +15,11 @@ services:
   api:
     build:
       context: api/
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     restart: unless-stopped
     volumes:
       - ./api/src:/app/src
-    command: yarn run start:dev
+    command: npm run start:dev
     container_name: explain-api
 
   face:
