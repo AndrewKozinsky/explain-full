@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <main>
-      123
+      Понимая английский
     </main>
   );
 }
