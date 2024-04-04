@@ -1,9 +1,15 @@
 import type { Metadata } from 'next'
 import './_in/style/global.scss'
+import PageWrapper from '../shared/components/pageWrapper/PageWrapper/PageWrapper'
+import Metrika from './_in/Metrika/Metrika'
 
 export const metadata: Metadata = {
 	title: 'Курс английского языка',
-	description: 'Курс английского языка',
+	description: 'Курс английского языка с нуля до уровня А2',
+	verification: {
+		yandex: '1611c5fab3b46857',
+	},
+	keywords: ['Английский', 'курс'],
 }
 
 type RootLayoutProps = {
@@ -15,9 +21,12 @@ export default function RootLayout(props: RootLayoutProps) {
 	return (
 		<html lang="ru">
 			<head>
-				<link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml" />
+				<link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml" />
 			</head>
-			<body>{children}</body>
+			<body>
+				<Metrika />
+				<PageWrapper>{children}</PageWrapper>
+			</body>
 		</html>
 	)
 }

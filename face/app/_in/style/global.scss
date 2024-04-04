@@ -1,5 +1,5 @@
-@import '../../../styles/variables.scss';
-@import '../../../styles/mixins.scss';
+@import '../../../shared/styles/variables.scss';
+@import '../../../shared/styles/mixins.scss';
 
 :root {
 	// Стандартный размер шрифта в браузере 16 пикселей.
@@ -30,7 +30,7 @@
     font-weight: 900;
 }*/
 
-/**:not(svg, g, path) {
+*:not(svg, g, path) {
 	all: unset;
 	display: revert;
     list-style: none;
@@ -38,9 +38,11 @@
 	&:focus {
 		outline: 2px solid $blueColor-2;
 	}
-}*/
+}
 
 body {
+	display: flex;
+	flex-direction: column;
 	font-family: 'Suisse', sans-serif;
 	font-display: swap;
 	font-size: 1.6rem;
@@ -48,6 +50,9 @@ body {
 	font-weight: 300;
 	color: $textColor;
 	background: $grayColor-1;
+	min-height: 100vh;
+	max-width: $max-page-width;
+	margin: 0 auto;
 
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;

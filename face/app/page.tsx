@@ -1,3 +1,7 @@
 export default function RootPage() {
-	return <main>Понимая английский</main>
+	return (
+		<main>
+			<h1>Понимая английский</h1>
+		</main>
+	)
 }
