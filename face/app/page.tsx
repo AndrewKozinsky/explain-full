@@ -1,7 +1,3 @@
-export default function Home() {
-  return (
-    <main>
-      Понимая английский
-    </main>
-  );
+export default function RootPage() {
+	return <main>Понимая английский</main>
 }
