@@ -25,7 +25,7 @@ services:
   face:
     build:
       context: face/
-      dockerfile: Dockerfile
+      dockerfile: face/Dockerfile.dev
     restart: unless-stopped
     volumes:
       - ./face:/app
