@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
-import './_in/style/global.scss'
 import PageWrapper from '../shared/components/pageWrapper/PageWrapper/PageWrapper'
 import Metrika from './_in/Metrika/Metrika'
+import './_in/style/global.scss'
 
 export const metadata: Metadata = {
 	title: 'Курс английского языка',
@@ -30,3 +30,7 @@ export default function RootLayout(props: RootLayoutProps) {
 		</html>
 	)
 }
+
+// TODO Класс PageUrlsNavigator.
+// TODO Напиши тесты на PageUrlsNavigator.
+// TODO Реализуй главную навигацию.

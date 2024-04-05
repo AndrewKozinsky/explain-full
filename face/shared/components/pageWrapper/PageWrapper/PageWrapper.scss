@@ -19,7 +19,8 @@
 
 .page-wrapper__top {
 	@include side-offset;
-	padding-top: 1.5rem;
+	padding-top: 1.7rem;
+	padding-bottom: 3rem;
 }
 
 .page-wrapper__middle {
@@ -29,5 +30,6 @@
 
 .page-wrapper__bottom {
 	@include side-offset;
-	padding-bottom: 2rem;
+	padding-top: 4rem;
+	padding-bottom: 3rem;
 }

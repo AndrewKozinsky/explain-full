@@ -1,12 +1,13 @@
 import React from 'react'
 import Logo from '../../Logo/Logo'
 import './Bar.scss'
+import MainMenu from '../MainMenu/MainMenu'
 
 function Bar() {
 	return (
 		<div className="page-bar">
 			<Logo />
-			<nav>33333 ewf we we</nav>
+			<MainMenu />
 		</div>
 	)
 }

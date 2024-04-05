@@ -73,3 +73,13 @@ a {
 		border-bottom-color: rgba($blueColor-2, .35);
 	}
 }
+.link--current {
+	cursor: default;
+	color: $orangeColor-2;
+	border-bottom: none;
+
+	&:hover {
+		color: saturate($orangeColor-2, 100%);
+		border-bottom-color: rgba($orangeColor-2, .35);
+	}
+}

@@ -1,6 +1,6 @@
 import React from 'react'
-import './PageWrapper.scss'
 import Bar from '../Bar/Bar'
+import './PageWrapper.scss'
 
 type PageWrapperProps = {
 	children: React.ReactNode
