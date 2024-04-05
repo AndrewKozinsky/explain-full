@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { useIsCurrentPage } from '../shared/components/pageWrapper/MainMenu/fn/isCurrentPage'
 import PageWrapper from '../shared/components/pageWrapper/PageWrapper/PageWrapper'
 import Metrika from './_in/Metrika/Metrika'
 import './_in/style/global.scss'
@@ -31,6 +32,5 @@ export default function RootLayout(props: RootLayoutProps) {
 	)
 }
 
-// TODO Класс PageUrlsNavigator.
-// TODO Напиши тесты на PageUrlsNavigator.
-// TODO Реализуй главную навигацию.
+// TODO Напиши тесты на useIsCurrentPage.
+// TODO Сделай из логотипа ссылку.
