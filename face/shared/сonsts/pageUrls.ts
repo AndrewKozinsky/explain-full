@@ -3,4 +3,8 @@ export const PageUrls = {
 		url: '/course',
 		name: 'Курс',
 	},
+	contacts: {
+		url: '/contacts',
+		name: 'Контакты',
+	},
 }

@@ -3,6 +3,28 @@
 // ОБЩИЕ СТИЛИ ДЛЯ РАЗЛИЧНЫХ КОМПОНЕНТОВ.
 // ОНИ БУДУТ ВКЛЮЧАТЬСЯ В КОНКРЕТНЫЕ КЛАССЫ
 
+@mixin link() {
+	color: $blueColor-2;
+	border-bottom: 1px solid rgba($blueColor-2, .2);
+	transition: color .2s, border-bottom-color .2s;
+
+	&:hover {
+		color: saturate($blueColor-2, 100%);
+		border-bottom-color: rgba($blueColor-2, .35);
+	}
+}
+
+@mixin link--current() {
+	cursor: default;
+	color: $orangeColor-2;
+	border-bottom: none;
+
+	&:hover {
+		color: saturate($orangeColor-2, 100%);
+		border-bottom-color: rgba($orangeColor-2, .35);
+	}
+}
+
 /*@mixin header-1() {
 	font-size: 3rem;
 	line-height: 3.6rem;

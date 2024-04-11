@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
-import { useIsCurrentPage } from '../shared/components/pageWrapper/MainMenu/fn/isCurrentPage'
-import PageWrapper from '../shared/components/pageWrapper/PageWrapper/PageWrapper'
+import PageWrapper from '../widgets/pageWrapper/PageWrapper/PageWrapper'
 import Metrika from './_in/Metrika/Metrika'
 import './_in/style/global.scss'
 
@@ -34,3 +33,4 @@ export default function RootLayout(props: RootLayoutProps) {
 
 // TODO Напиши тесты на useIsCurrentPage.
 // TODO Сделай из логотипа ссылку.
+// TODO Считаю нужно сделать кнопку входа в учётную запись.

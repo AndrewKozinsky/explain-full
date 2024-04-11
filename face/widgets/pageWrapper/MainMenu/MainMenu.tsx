@@ -3,7 +3,7 @@
 import React from 'react'
 import Link from 'next/link'
 import cn from 'classnames'
-import { PageUrls } from '../../../сonsts/pageUrls'
+import { PageUrls } from '../../../shared/сonsts/pageUrls'
 import { useIsCurrentPage } from './fn/isCurrentPage'
 import './MainMenu.scss'
 
@@ -12,7 +12,10 @@ function MainMenu() {
 		<nav>
 			<ul className="main-menu__ul">
 				<li>
-					<MenuLink name={PageUrls.course.name} url={PageUrls.course.url} />
+					<MenuLink linkData={PageUrls.course} />
+				</li>
+				<li>
+					<MenuLink linkData={PageUrls.contacts} />
 				</li>
 			</ul>
 		</nav>
@@ -22,12 +25,15 @@ function MainMenu() {
 export default MainMenu
 
 type MenuLinkProps = {
-	url: string
-	name: string
+	linkData: {
+		url: string
+		name: string
+	}
 }
 
 function MenuLink(props: MenuLinkProps) {
-	const { url, name } = props
+	const { linkData } = props
+	const { url, name } = linkData
 
 	const currentPage = useIsCurrentPage(url)
 

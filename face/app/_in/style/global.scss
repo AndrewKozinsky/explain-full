@@ -1,5 +1,6 @@
 @import '../../../shared/styles/variables.scss';
 @import '../../../shared/styles/mixins.scss';
+@import '../../../shared/styles/inherit.scss';
 
 :root {
 	// Стандартный размер шрифта в браузере 16 пикселей.
@@ -14,16 +15,28 @@
     src: url("./fonts/SuisseIntl-Regular.woff2") format("woff2");
     font-weight: 300;
 }
-/*@font-face {
+@font-face {
+	font-family: "Suisse";
+	src: url("./fonts/SuisseIntl-Medium.woff2") format("woff2");
+	font-weight: 400;
+}
+@font-face {
     font-family: "Suisse";
-    src: url("./fonts/SuisseIntl-SemiBold.woff2") format("woff2");
-    font-weight: 500;
-}*/
-/*@font-face {
+    src: url("./fonts/SuisseIntl-MediumItalic.woff2") format("woff2");
+    font-weight: 400;
+	font-style: italic;
+}
+@font-face {
+    font-family: "Suisse";
+    src: url("./fonts/SuisseIntl-SemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+	font-style: italic;
+}
+@font-face {
     font-family: "Suisse";
     src: url("./fonts/SuisseIntl-Bold.woff2") format("woff2");
     font-weight: 700;
-}*/
+}
 /*@font-face {
     font-family: "Suisse";
     src: url("./fonts/SuisseIntl-Black.woff2") format("woff2");
@@ -64,22 +77,8 @@ a {
 }
 
 .link {
-	color: $blueColor-2;
-	border-bottom: 1px solid rgba($blueColor-2, .2);
-	transition: color .2s, border-bottom-color .2s;
-
-	&:hover {
-		color: saturate($blueColor-2, 100%);
-		border-bottom-color: rgba($blueColor-2, .35);
-	}
+	@include link;
 }
 .link--current {
-	cursor: default;
-	color: $orangeColor-2;
-	border-bottom: none;
-
-	&:hover {
-		color: saturate($orangeColor-2, 100%);
-		border-bottom-color: rgba($orangeColor-2, .35);
-	}
+	@include link--current;
 }

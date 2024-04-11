@@ -8,8 +8,8 @@ services:
       - api
       - face
     environment:
-      VIRTUAL_HOST: explainit.ru
-      LETSENCRYPT_HOST: explainit.ru
+      VIRTUAL_HOST: explainit.ru,www.explainit.ru
+      LETSENCRYPT_HOST: explainit.ru,www.explainit.ru
     volumes:
       - ./nginx/nginx.conf.server:/etc/nginx/nginx.conf
 

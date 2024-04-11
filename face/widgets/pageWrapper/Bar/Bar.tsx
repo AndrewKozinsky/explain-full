@@ -1,12 +1,12 @@
 import React from 'react'
-import Logo from '../../Logo/Logo'
-import './Bar.scss'
+import LinkLogoWithText from '../../../shared/components/logo/LinkLogoWithText/LinkLogoWithText'
 import MainMenu from '../MainMenu/MainMenu'
+import './Bar.scss'
 
 function Bar() {
 	return (
 		<div className="page-bar">
-			<Logo />
+			<LinkLogoWithText />
 			<MainMenu />
 		</div>
 	)
