@@ -1,5 +1,4 @@
-version: '3'
-
+version: "3"
 services:
   nginx:
     image: nginx:1.19.7-alpine
@@ -7,28 +6,31 @@ services:
     depends_on:
       - api
       - face
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx/nginx.conf.dev:/etc/nginx/nginx.conf
     environment:
       VIRTUAL_HOST: explainit.ru,www.explainit.ru
       LETSENCRYPT_HOST: explainit.ru,www.explainit.ru
-    volumes:
-      - ./nginx/nginx.conf.server:/etc/nginx/nginx.conf
-
   api:
     build:
       context: api/
       dockerfile: Dockerfile.server
     restart: unless-stopped
+    volumes:
+      - ./api/src:/app/src
     command: npm run start:prod
     container_name: explain-api
-
   face:
     build:
       context: face/
       dockerfile: Dockerfile.server
     restart: unless-stopped
+    volumes:
+      - ./face:/app
     command: npm run start
     container_name: explain-face
-
 networks:
   default:
     external:

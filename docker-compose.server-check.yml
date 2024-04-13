@@ -13,18 +13,18 @@ services:
   api:
     build:
       context: api/
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile.server
     restart: unless-stopped
     volumes:
       - ./api/src:/app/src
-    command: npm run start:dev
+    command: npm run start:prod
     container_name: explain-api
   face:
     build:
       context: face/
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile.server
     restart: unless-stopped
     volumes:
       - ./face:/app
-    command: npm run dev
+    command: npm run start
     container_name: explain-face
