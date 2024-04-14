@@ -16,6 +16,8 @@ const customJestConfig = {
 	collectCoverageFrom: [
 		'./**/*.{ts,tsx}',
 		'!./**/*.next/**/*',
+		'!./**/layout.tsx',
+		'!./**/page.tsx',
 		'!**/Metrika/**/*',
 	],
 	setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
