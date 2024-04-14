@@ -1,17 +1,30 @@
 import { render, screen } from '@testing-library/react'
-import {renderWithRouter} from '../../../../../__tests__/utils/utils'
 import LinkLogoWithText from '../LinkLogoWithText'
-import nextNavigation from 'next/navigation'
 
-const usePathnameMock = jest.spyOn(nextNavigation, 'usePathname')
+let usePathnameMock = jest.fn()
+
+jest.mock("next/navigation", () => {
+	return {
+		usePathname: () => usePathnameMock(),
+	}
+})
 
 describe('LogoWithText', () => {
-	it('should render LogoWithText', () => {
-		usePathnameMock.mockImplementationOnce(() => '/')
-		render(<LinkLogoWithText />)
+	it('should render component without a link', () => {
+		usePathnameMock.mockImplementationOnce(() => "/")
+
+		const { container } = render(<LinkLogoWithText />)
 
 		expect(screen.getByTestId('defaultLogoWithText')).toBeInTheDocument()
-		// expect(screen.getByText('Explain it')).toBeInTheDocument()
-		// expect(screen.getByText(/Курс/i)).toBeInTheDocument()
+		expect(container.querySelector('a')).not.toBeInTheDocument()
+	})
+
+	it('should render component with a link', () => {
+		usePathnameMock.mockImplementationOnce(() => "/some")
+
+		const { container } = render(<LinkLogoWithText />)
+
+		expect(screen.getByTestId('linkLogoWithText')).toBeInTheDocument()
+		expect(container.querySelector('a')).toBeInTheDocument()
 	})
 })
