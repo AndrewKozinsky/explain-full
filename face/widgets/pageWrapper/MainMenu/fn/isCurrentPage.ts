@@ -1,5 +1,5 @@
-import { usePathname } from 'next/navigation'
 import { useMemo } from 'react'
+import { usePathname } from 'next/navigation'
 
 /**
  * Принимает ссылку на элемент меню и возвращает булево значение
@@ -7,7 +7,7 @@ import { useMemo } from 'react'
  * @param menuLinkUrl — url ссылки верхнего меню
  */
 export function useIsCurrentPage(menuLinkUrl: string) {
-	const pathname = usePathname()
+	const pathname = usePathname() || ''
 
 	return useMemo(
 		function () {
