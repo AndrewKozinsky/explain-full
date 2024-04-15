@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import LinkLogoWithText from '../LinkLogoWithText'
+import { LinkLogoWithText } from '../LinkLogoWithText'
 
 let usePathnameMock = jest.fn()
 

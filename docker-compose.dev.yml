@@ -21,7 +21,7 @@ services:
     container_name: explain-api
   face:
     build:
-      context: faceOld/
+      context: face/
       dockerfile: Dockerfile.dev
     restart: unless-stopped
     volumes:

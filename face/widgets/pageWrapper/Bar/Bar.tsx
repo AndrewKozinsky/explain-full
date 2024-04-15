@@ -1,6 +1,6 @@
 import React from 'react'
-import LinkLogoWithText from '../../../shared/components/logo/LinkLogoWithText/LinkLogoWithText'
-import MainMenu from '../MainMenu/MainMenu'
+import { LinkLogoWithText } from '../../../shared/components/logo/LinkLogoWithText/LinkLogoWithText'
+import { MainMenu } from '../MainMenu/MainMenu'
 import './Bar.scss'
 
 function Bar() {

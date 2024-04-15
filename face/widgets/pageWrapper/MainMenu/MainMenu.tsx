@@ -4,25 +4,23 @@ import React from 'react'
 import Link from 'next/link'
 import cn from 'classnames'
 import { PageUrls } from '../../../shared/сonsts/pageUrls'
-import { useIsCurrentPage } from './fn/isCurrentPage'
+import { useIsCurrentPage } from './fn/mainMenuFn'
 import './MainMenu.scss'
 
-function MainMenu() {
+export function MainMenu() {
 	return (
-		<nav>
+		<nav data-testid="main-menu">
 			<ul className="main-menu__ul">
 				<li>
-					<MenuLink linkData={PageUrls.course} />
+					<MainMenuLink linkData={PageUrls.course} />
 				</li>
 				<li>
-					<MenuLink linkData={PageUrls.contacts} />
+					<MainMenuLink linkData={PageUrls.contacts} />
 				</li>
 			</ul>
 		</nav>
 	)
 }
-
-export default MainMenu
 
 type MenuLinkProps = {
 	linkData: {
@@ -31,14 +29,15 @@ type MenuLinkProps = {
 	}
 }
 
-function MenuLink(props: MenuLinkProps) {
+export function MainMenuLink(props: MenuLinkProps) {
 	const { linkData } = props
 	const { url, name } = linkData
 
-	const currentPage = useIsCurrentPage(url)
+	const isCurrentPage = useIsCurrentPage(url)
+	// console.log(isCurrentPage)
 
 	return (
-		<Link href={url} className={cn('link', currentPage && 'link--current')}>
+		<Link href={url} className={cn('link', isCurrentPage && 'link--current')} data-testid="main-menu-link">
 			{name}
 		</Link>
 	)

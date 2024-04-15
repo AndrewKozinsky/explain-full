@@ -5,7 +5,6 @@ describe('LogoSign', () => {
 	it('should render LogoSign', () => {
 		render(<LogoSign />)
 
-		// @ts-ignore
 		expect(screen.getByRole('img')).toBeInTheDocument()
 	})
 })

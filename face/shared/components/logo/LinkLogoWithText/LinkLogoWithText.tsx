@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 import LogoWithText from '../LogoWithText/LogoWithText'
 import './LinkLogoWithText.scss'
 
-export default function LinkLogoWithText() {
+export function LinkLogoWithText() {
 	const pathname = usePathname()
 
 	if (pathname === '/') {
