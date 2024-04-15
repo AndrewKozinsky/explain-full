@@ -11,7 +11,7 @@ jest.mock("next/navigation", () => {
 
 describe('LogoWithText', () => {
 	it('should render component without a link', () => {
-		usePathnameMock.mockImplementationOnce(() => "/")
+		usePathnameMock.mockReturnValueOnce("/")
 
 		const { container } = render(<LinkLogoWithText />)
 
@@ -20,7 +20,7 @@ describe('LogoWithText', () => {
 	})
 
 	it('should render component with a link', () => {
-		usePathnameMock.mockImplementationOnce(() => "/some")
+		usePathnameMock.mockReturnValueOnce("/some")
 
 		const { container } = render(<LinkLogoWithText />)
 
