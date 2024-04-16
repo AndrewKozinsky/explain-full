@@ -1,17 +1,17 @@
-import {render, screen} from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import { MainMenuLink } from '../MainMenu'
 
 const useIsCurrentPageMock = jest.fn()
 jest.mock('../fn/mainMenuFn', () => {
 	return {
-		useIsCurrentPage: () => useIsCurrentPageMock()
+		useIsCurrentPage: () => useIsCurrentPageMock(),
 	}
 })
 
 describe('MainMenuLink', () => {
 	const url = '/my-url'
 	const name = 'my-name'
-	const linkData = {url, name}
+	const linkData = { url, name }
 
 	beforeEach(() => {
 		useIsCurrentPageMock.mockClear()
@@ -26,7 +26,7 @@ describe('MainMenuLink', () => {
 	})
 
 	it('should set correct class names if page uri is match to the link', () => {
-		useIsCurrentPageMock.mockReturnValueOnce( true)
+		useIsCurrentPageMock.mockReturnValueOnce(true)
 
 		render(<MainMenuLink linkData={linkData} />)
 
@@ -35,7 +35,7 @@ describe('MainMenuLink', () => {
 	})
 
 	it('should set correct class names if page uri is not match to the link', () => {
-		useIsCurrentPageMock.mockReturnValueOnce( false)
+		useIsCurrentPageMock.mockReturnValueOnce(false)
 
 		render(<MainMenuLink linkData={linkData} />)
 

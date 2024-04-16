@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { PageWrapper } from '../widgets/pageWrapper/PageWrapper/PageWrapper'
+import { PageWrapper } from '../shared/components/pageDetails/PageWrapper/PageWrapper'
 import Metrika from './_in/Metrika/Metrika'
 import './_in/style/global.scss'
 
@@ -20,7 +20,7 @@ export default function RootLayout(props: RootLayoutProps) {
 
 	return (
 		<html lang="ru">
-			<head>
+			<head title="">
 				<link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml" />
 			</head>
 			<body>

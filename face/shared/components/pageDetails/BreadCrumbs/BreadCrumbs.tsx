@@ -2,7 +2,7 @@
 
 import React, { ReactNode } from 'react'
 import Link from 'next/link'
-import LogoSign from '../logo/LogoSign/LogoSign'
+import LogoSign from '../../logo/LogoSign/LogoSign'
 import cn from 'classnames'
 import './Pagination.scss'
 
@@ -12,12 +12,12 @@ type PagItemType = {
 }
 
 type PaginationProps = {
-	items: PagItemType[]
+	items?: PagItemType[]
 }
 
 /** Хлебные крошки */
 export function BreadCrumbs(props: PaginationProps) {
-	const { items } = props
+	const { items = [] } = props
 
 	const itemsComps = [<PaginationRootItem withText={!items.length} key="/" />]
 

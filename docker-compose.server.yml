@@ -27,8 +27,6 @@ services:
       context: face/
       dockerfile: Dockerfile.server
     restart: unless-stopped
-    volumes:
-      - ./face:/app
     command: npm run start
     container_name: explain-face
 networks:

@@ -1,12 +1,9 @@
-import { BreadCrumbs } from '../shared/components/BreadCrumbs/BreadCrumbs'
-import { PageHeader } from '../shared/components/PageHeader/PageHeader'
-import { PageUrls } from '../shared/сonsts/pageUrls'
+import { PageHeader } from '../shared/components/pageDetails/PageHeader/PageHeader'
 
 export default function RootPage() {
 	return (
 		<main>
-			<BreadCrumbs items={[PageUrls.contacts, PageUrls.course]} />
-			<PageHeader>Курс «Понимая английский»</PageHeader>
+			<PageHeader>Понимая английский</PageHeader>
 		</main>
 	)
 }

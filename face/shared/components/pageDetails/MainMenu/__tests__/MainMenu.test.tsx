@@ -1,6 +1,5 @@
-import {render, screen} from '@testing-library/react'
-import * as isCurrentPage from '../fn/mainMenuFn'
-import {MainMenu, MainMenuLink} from '../MainMenu'
+import { render, screen } from '@testing-library/react'
+import { MainMenu } from '../MainMenu'
 
 describe('MainMenu', () => {
 	it('should render Bar', () => {

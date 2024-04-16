@@ -1,9 +1,9 @@
 import { renderHook } from '@testing-library/react'
 import { useIsCurrentPage } from '../mainMenuFn'
 
-let usePathnameMock = jest.fn()
+const usePathnameMock = jest.fn()
 
-jest.mock("next/navigation", () => {
+jest.mock('next/navigation', () => {
 	return {
 		usePathname: () => usePathnameMock(),
 	}

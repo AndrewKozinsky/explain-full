@@ -1,0 +1,11 @@
+.page-content-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+}
+
+.page-content-wrapper__top {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}

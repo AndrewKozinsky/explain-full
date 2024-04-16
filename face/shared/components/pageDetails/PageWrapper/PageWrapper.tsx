@@ -1,5 +1,5 @@
 import React from 'react'
-import Bar from '../Bar/Bar'
+import Bar from '../PageTopBar/Bar'
 import './PageWrapper.scss'
 
 type PageWrapperProps = {

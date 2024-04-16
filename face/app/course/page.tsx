@@ -1,11 +1,16 @@
 'use client'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { BreadCrumbs } from '../../shared/components/pageDetails/BreadCrumbs/BreadCrumbs'
+import { PageContentWrapper } from '../../shared/components/pageDetails/PageContentWrapper/PageContentWrapper'
+import { PageHeader } from '../../shared/components/pageDetails/PageHeader/PageHeader'
 
 export default function Home() {
 	return (
 		<main>
-			<Link href="/course/article">article</Link>
+			<PageContentWrapper>
+				<BreadCrumbs />
+				<PageHeader>Курс «Понимая английский»</PageHeader>
+				<p>Content</p>
+			</PageContentWrapper>
 		</main>
 	)
 }

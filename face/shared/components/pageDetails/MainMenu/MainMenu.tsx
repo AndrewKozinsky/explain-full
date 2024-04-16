@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { PageUrls } from '../../../shared/сonsts/pageUrls'
+import { PageUrls } from '../../../сonsts/pageUrls'
 import { useIsCurrentPage } from './fn/mainMenuFn'
 import './MainMenu.scss'
 
@@ -34,16 +34,16 @@ export function MainMenuLink(props: MenuLinkProps) {
 
 	const isCurrentPage = useIsCurrentPage(url)
 
-	if(isCurrentPage) {
+	if (isCurrentPage) {
 		return (
-			<p className='link--current' data-testid="main-menu-item">
+			<p className="link--current" data-testid="main-menu-item">
 				{name}
 			</p>
 		)
 	}
 
 	return (
-		<Link href={url} className='link' data-testid="main-menu-item">
+		<Link href={url} className="link" data-testid="main-menu-item">
 			{name}
 		</Link>
 	)

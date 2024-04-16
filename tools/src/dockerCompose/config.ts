@@ -49,7 +49,7 @@ export function createDockerConfig(env: 'dev' | 'serverCheck' | 'server'): Confi
 					dockerfile: env === 'dev' ? 'Dockerfile.dev' : 'Dockerfile.server',
 				},
 				restart: 'unless-stopped',
-				volumes: ['./face:/app'],
+				volumes: env === 'dev' ? ['./face:/app'] : undefined,
 				command: env === 'dev' ? 'npm run dev' : 'npm run start',
 				container_name: 'explain-face',
 			},
