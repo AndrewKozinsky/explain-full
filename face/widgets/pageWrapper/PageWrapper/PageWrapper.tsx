@@ -3,14 +3,15 @@ import Bar from '../Bar/Bar'
 import './PageWrapper.scss'
 
 type PageWrapperProps = {
+	// Содержимое страницы
 	children: React.ReactNode
 }
 
-function PageWrapper(props: PageWrapperProps) {
+export function PageWrapper(props: PageWrapperProps) {
 	const { children } = props
 
 	return (
-		<div className="page-wrapper">
+		<div className="page-wrapper" data-testid="page-wrapper">
 			<header className="page-wrapper__top">
 				<Bar />
 			</header>
@@ -21,5 +22,3 @@ function PageWrapper(props: PageWrapperProps) {
 		</div>
 	)
 }
-
-export default PageWrapper

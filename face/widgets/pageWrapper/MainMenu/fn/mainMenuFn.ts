@@ -4,14 +4,14 @@ import { usePathname } from 'next/navigation'
 /**
  * Принимает ссылку на элемент меню и возвращает булево значение
  * является ли это текущей страницей или содержит дочернюю текущую страницу.
- * @param menuLinkUrl — url ссылки верхнего меню
+ * @param linkUrl — url ссылки верхнего меню
  */
-export function useIsCurrentPage(menuLinkUrl: string) {
+export function useIsCurrentPage(linkUrl: string) {
 	const pathname = usePathname() || ''
 
 	return useMemo(
 		function () {
-			return menuLinkUrl === pathname || pathname.startsWith(menuLinkUrl + '/')
+			return linkUrl === pathname || pathname.startsWith(linkUrl + '/')
 		},
 		[pathname],
 	)

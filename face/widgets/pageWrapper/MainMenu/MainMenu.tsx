@@ -34,11 +34,17 @@ export function MainMenuLink(props: MenuLinkProps) {
 	const { url, name } = linkData
 
 	const isCurrentPage = useIsCurrentPage(url)
-	// console.log('-----')
-	console.log(isCurrentPage)
+
+	if(isCurrentPage) {
+		return (
+			<p className='link--current' data-testid="main-menu-item">
+				{name}
+			</p>
+		)
+	}
 
 	return (
-		<Link href={url} className={cn('link', isCurrentPage && 'link--current')} data-testid="main-menu-link">
+		<Link href={url} className='link' data-testid="main-menu-item">
 			{name}
 		</Link>
 	)

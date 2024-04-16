@@ -20,26 +20,26 @@ describe('MainMenuLink', () => {
 	it('should render MenuLink with correct href and text', () => {
 		const { container } = render(<MainMenuLink linkData={linkData} />)
 
-		expect(screen.getByRole('link')).toBeInTheDocument()
+		expect(screen.getByTestId('main-menu-item')).toBeInTheDocument()
 		expect(container.querySelector('a')?.href).toBe('http://localhost' + url)
 		expect(container.querySelector('a')?.textContent).toBe(name)
 	})
 
 	it('should set correct class names if page uri is match to the link', () => {
-		useIsCurrentPageMock.mockReturnValue( true)
+		useIsCurrentPageMock.mockReturnValueOnce( true)
 
 		render(<MainMenuLink linkData={linkData} />)
 
-		const classes = screen.getByRole('link').getAttribute('class')
-		expect(classes).toBe('link link--current')
+		const classes = screen.getByTestId('main-menu-item').getAttribute('class')
+		expect(classes).toBe('link--current')
 	})
 
 	it('should set correct class names if page uri is not match to the link', () => {
-		useIsCurrentPageMock.mockReturnValue( false)
+		useIsCurrentPageMock.mockReturnValueOnce( false)
 
 		render(<MainMenuLink linkData={linkData} />)
 
-		const classes = screen.getByRole('link').getAttribute('class')
+		const classes = screen.getByTestId('main-menu-item').getAttribute('class')
 		expect(classes).toBe('link')
 	})
 })

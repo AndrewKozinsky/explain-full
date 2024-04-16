@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import PageWrapper from '../widgets/pageWrapper/PageWrapper/PageWrapper'
+import { PageWrapper } from '../widgets/pageWrapper/PageWrapper/PageWrapper'
 import Metrika from './_in/Metrika/Metrika'
 import './_in/style/global.scss'
 

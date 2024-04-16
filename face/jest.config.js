@@ -7,19 +7,19 @@ const createJestConfig = nextJest({
 
 // Add any custom config to be passed to Jest
 const customJestConfig = {
-	verbose: true,
+	// verbose: true,
 	testMatch: [
 		"**/*.test.{ts,tsx}", // Match all files ending with .test.js
 		"**/*.spec.{ts,tsx}"  // Match all files ending with .spec.js
 	],
-	collectCoverage: true,
+	/*collectCoverage: true,
 	collectCoverageFrom: [
-		'./**/*.{ts,tsx}',
-		'!./**/*.next/**/*',
-		'!./**/layout.tsx',
-		'!./**/page.tsx',
-		'!**/Metrika/**/*',
-	],
+		'./!**!/!*.{ts,tsx}',
+		'!./!**!/!*.next/!**!/!*',
+		'!./!**!/layout.tsx',
+		'!./!**!/page.tsx',
+		'!**!/Metrika/!**!/!*',
+	],*/
 	setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 	testEnvironment: 'jsdom',
 }
