@@ -1,9 +1,9 @@
 @import 'mixins';
 
 $grayColor-1: #f6f6f9;
-//$grayColor-2: #E3E3E3;
-//$grayColor-3: #8E8E8E;
-//$grayColor-4: #646464;
+$grayColor-2: #E3E3E3;
+$grayColor-3: #8E8E8E;
+$grayColor-4: #646464;
 $textColor: rgb(30, 30, 30);
 //$orangeColor-1: #FDF2E8;
 $orangeColor-2: #e0671d;
@@ -18,8 +18,8 @@ $blueColor-2: #0076DE;
 //$redColor-2: #FF3900;
 //$dirtyBlueColor: #D2D8E1;
 
-//$tablet-width: 600px;
-//$monitor-width: 1000px;
+$tablet-width: 600px;
+$monitor-width: 1000px;
 $max-page-width: 1400px;
 
 $radius-1: 4px;

@@ -2,7 +2,6 @@
 
 import React from 'react'
 import Link from 'next/link'
-import cn from 'classnames'
 import { PageUrls } from '../../../shared/сonsts/pageUrls'
 import { useIsCurrentPage } from './fn/mainMenuFn'
 import './MainMenu.scss'

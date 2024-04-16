@@ -25,28 +25,8 @@
 	}
 }
 
-/*@mixin header-1() {
-	font-size: 3rem;
-	line-height: 3.6rem;
-	font-weight: 700;
-
-	@include container-width($tablet-width) {
-		font-size: 5rem;
-		line-height: 5.8rem;
-	}
-
-	@include container-width(calc($tablet-width + 20rem)) {
-		font-size: 6.4rem;
-		line-height: 7.2rem;
-	}
-
-	@include container-width($monitor-width) {
-		font-size: 7.6rem;
-		line-height: 8.4rem;
-	}
-}*/
-
 /*@mixin header-2() {
+	// clamp!!!
 	font-size: 2.4rem;
 	line-height: 3rem;
 	font-weight: 700;
@@ -63,6 +43,7 @@
 }*/
 
 /*@mixin header-3() {
+	// clamp!!!
 	font-size: 2rem;
 	line-height: 2.4rem;
 	font-weight: 700;
@@ -79,6 +60,7 @@
 }*/
 
 /*@mixin header-4() {
+	// clamp!!!
 	font-size: 1.6rem;
 	line-height: 2.4rem;
 	font-weight: 700;
