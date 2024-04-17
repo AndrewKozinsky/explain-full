@@ -1,36 +1,115 @@
 import React from 'react'
-// import cn from 'classnames'
 import Link from 'next/link'
-// import ArticleType from '../../../articles/articlesData/articleType'
-// import AppUrls from '../../../parts/pageUrl'
+import { ArticleTileType } from './fn/types'
 import './ArticleTile.scss'
 
 type ArticleListItemProps = {
-	url: string
-	// article: ArticleType.ShortArticle
+	tile: ArticleTileType.Tiles
 }
 
 // Карточка-ссылка на статью
 function ArticleTile(props: ArticleListItemProps) {
-	const { url } = props
+	const { tile } = props
 
-	/*const cardClasses = cn(
-		'article-list__card',
-		article.isPaid ? 'article-list__card--paid' : 'article-list__card--free'
-	)*/
+	if (tile.type === 'welcome') {
+		return <ArticleTileWelcome tile={tile} />
+	} else if (tile.type === 'level') {
+		return <ArticleTileLevel tile={tile} />
+	} else if (tile.type === 'article') {
+		return <ArticleTileArticle tile={tile} />
+	} else if (tile.type === 'media') {
+		return <ArticleTileMedia tile={tile} />
+	}
+
+	return null
+}
+
+export default ArticleTile
+
+type ArticleTileWelcomeProps = { tile: ArticleTileType.WelcomeTile }
+
+// Карточка приветствия на курсе
+function ArticleTileWelcome(props: ArticleTileWelcomeProps) {
+	const { tile } = props
 
 	return (
-		<Link href={url} className="article-tile">
-			<p>HELLO</p>
-			{/*<p className="article-list__card-num">Глава {article.number}</p>
-			<div className="article-list__card-content">
-				<h3 className="article-list__card-name">{article.name}</h3>
-				{!article.isPaid && (
-					<p className="article-list__card-description">{article.description}</p>
-				)}
-			</div>*/}
+		<Link href={tile.url} className="article-tile article-tile--welcome">
+			Добро
+			<br />
+			пожаловать
+			<br />
+			на курс!
 		</Link>
 	)
 }
 
-export default ArticleTile
+type ArticleTileLevelProps = { tile: ArticleTileType.LevelTile }
+
+// Карточка начала нового уровня языка
+function ArticleTileLevel(props: ArticleTileLevelProps) {
+	const { tile } = props
+
+	return (
+		<Link href={tile.url} className="article-tile article-tile--black article-tile--level">
+			<p className="article-tile--level-header" data-testid="article-tile-level-header">
+				{tile.level}
+			</p>
+			<Pill>{tile.name}</Pill>
+		</Link>
+	)
+}
+
+type ArticleTileArticleProps = { tile: ArticleTileType.ArticleTile }
+
+// Карточка статьи
+function ArticleTileArticle(props: ArticleTileArticleProps) {
+	const { tile } = props
+
+	return (
+		<Link href={tile.url} className="article-tile article-tile--article">
+			{tile.top && (
+				<p className="article-tile--article-top" data-testid="article-tile-article-top">
+					{tile.top}
+				</p>
+			)}
+			<h3 className="article-tile--article-header" data-testid="article-tile-article-header">
+				{tile.header}
+			</h3>
+			<p
+				className="article-tile--article-description"
+				data-testid="article-tile-article-description"
+			>
+				{tile.description}
+			</p>
+		</Link>
+	)
+}
+
+type ArticleTileMediaProps = { tile: ArticleTileType.MediaTile }
+
+// Карточка с фильмами и книгами
+function ArticleTileMedia(props: ArticleTileMediaProps) {
+	const { tile } = props
+
+	return (
+		<Link href={tile.url} className="article-tile article-tile--black article-tile--media">
+			<img src="/images/common/Camera.svg" className="article-tile--media-img" alt="Camera" />
+			<Pill>Фильмы</Pill>
+		</Link>
+	)
+}
+
+type PillProps = {
+	children: string
+}
+
+// Пилюля с текстом
+function Pill(props: PillProps) {
+	const { children } = props
+
+	return (
+		<p className="article-tile-pill" data-testid="article-tile-pill">
+			{children}
+		</p>
+	)
+}

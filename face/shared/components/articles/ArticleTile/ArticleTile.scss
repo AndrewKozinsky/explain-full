@@ -4,82 +4,88 @@
 $CN: article-tile;
 
 .#{$CN} {
-	background-color: #e0671d;
-	display: flex;
-	flex-direction: column;
 	aspect-ratio: 1 / 1;
-	/*justify-content: space-between;
-	gap: 1.6rem;
 	background-color: white;
-	padding: 2rem;
-	border-radius: $radius-1;
-	text-wrap: balance;
+	overflow: hidden;
+	padding: 7%;
+	border-radius: $radius-2;
 
 	@include hover-shadow();
 
-	&--free {
-		@include page-width($monitor-width) {
+	&--black {
+		color: white;
+		background-color: $textColor;
+	}
+
+	&--welcome {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 2rem;
+		line-height: 2.6rem;
+		text-align: center;
+		font-weight: 500;
+	}
+
+	&--level {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+		text-align: center;
+
+		&-header {
+			font-size: 3rem;
+			line-height: 3rem;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+	}
+
+	&--article {
+		&-top {
+			font-size: 1.2rem;
+			line-height: 1.6rem;
+			color: $grayColor-4;
+			margin-bottom: 1rem;
+		}
+
+		&-header {
+			font-size: 2rem;
+			line-height: 2.6rem;
+			font-weight: 500;
+			text-wrap: balance;
+		}
+
+		&-description {
+			font-size: 1.3rem;
+			line-height: 1.9rem;
+			color: $grayColor-4;
+			text-wrap: balance;
+			margin-top: 0.8rem;
+		}
+	}
+
+	&--media {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+
+		&-img {
 
 		}
-	}*/
+	}
 }
 
-/*.#{$CN}__card-num {
-	font-size: 1.3rem;
-	line-height: 1.7rem;
-	color: $grayColor-3;
-}*/
-
-/*.#{$CN}__card-content {
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
-}*/
-
-/*.#{$CN}__card-name {
-	font-size: 1.9rem;
-	line-height: 2.5rem;
-	font-weight: 500;
-
-	-webkit-line-clamp: 3;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
-}*/
-
-/*.#{$CN}__card-description {
-	display: -webkit-box;
-	font-size: 1.4rem;
-	line-height: 2rem;
-
-	-webkit-line-clamp: 4;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
-}*/
-
-/*.#{$CN}__index-card {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 10rem;
-	background-color: white;
-	cursor: pointer;
-	padding: 2rem;
-	border-radius: $radius-1;
-
-	@include hover-shadow();
-
-	@include container-width($tablet-width) {
-		grid-column: span 2;
-	}
-}*/
-
-/*.#{$CN}__index-card__text {
-	font-size: 2rem;
-	line-height: 2.4rem;
-	font-weight: 400;
-}*/
-
-/*.#{$CN}__index-card__arrow {
-	display: inline-block;
-	margin-left: 1rem;
-}*/
+.#{$CN}-pill {
+	font-size: 1.2rem;
+	line-height: 1.2rem;
+	color: $grayColor-1;
+	text-transform: capitalize;
+	padding: .6rem 1.1rem;
+	border: 1px solid $grayColor-4;
+	border-radius: 2rem;
+}
