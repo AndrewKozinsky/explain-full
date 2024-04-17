@@ -6,8 +6,6 @@ services:
     depends_on:
       - api
       - face
-    ports:
-      - 80:80
     volumes:
       - ./nginx/nginx.conf.dev:/etc/nginx/nginx.conf
     environment:

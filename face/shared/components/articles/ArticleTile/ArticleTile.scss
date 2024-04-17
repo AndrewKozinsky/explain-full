@@ -1,0 +1,85 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+$CN: article-tile;
+
+.#{$CN} {
+	background-color: #e0671d;
+	display: flex;
+	flex-direction: column;
+	aspect-ratio: 1 / 1;
+	/*justify-content: space-between;
+	gap: 1.6rem;
+	background-color: white;
+	padding: 2rem;
+	border-radius: $radius-1;
+	text-wrap: balance;
+
+	@include hover-shadow();
+
+	&--free {
+		@include page-width($monitor-width) {
+
+		}
+	}*/
+}
+
+/*.#{$CN}__card-num {
+	font-size: 1.3rem;
+	line-height: 1.7rem;
+	color: $grayColor-3;
+}*/
+
+/*.#{$CN}__card-content {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}*/
+
+/*.#{$CN}__card-name {
+	font-size: 1.9rem;
+	line-height: 2.5rem;
+	font-weight: 500;
+
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}*/
+
+/*.#{$CN}__card-description {
+	display: -webkit-box;
+	font-size: 1.4rem;
+	line-height: 2rem;
+
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}*/
+
+/*.#{$CN}__index-card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 10rem;
+	background-color: white;
+	cursor: pointer;
+	padding: 2rem;
+	border-radius: $radius-1;
+
+	@include hover-shadow();
+
+	@include container-width($tablet-width) {
+		grid-column: span 2;
+	}
+}*/
+
+/*.#{$CN}__index-card__text {
+	font-size: 2rem;
+	line-height: 2.4rem;
+	font-weight: 400;
+}*/
+
+/*.#{$CN}__index-card__arrow {
+	display: inline-block;
+	margin-left: 1rem;
+}*/

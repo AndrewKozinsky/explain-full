@@ -7,14 +7,6 @@ import { ConfigSchemaV37Json } from './types/ConfigSchemaV37Json'
 export function createDockerConfig(env: 'dev' | 'serverCheck' | 'server'): ConfigSchemaV37Json {
 	const domain = 'explainit.ru'
 
-	const serverNetworks = {
-		default: {
-			external: {
-				name: 'nginx-proxy',
-			},
-		},
-	}
-
 	return {
 		version: '3',
 
@@ -23,7 +15,7 @@ export function createDockerConfig(env: 'dev' | 'serverCheck' | 'server'): Confi
 				image: 'nginx:1.19.7-alpine',
 				container_name: 'explain-nginx',
 				depends_on: ['api', 'face'],
-				ports: ['80:80'],
+				ports: env === 'server' ? undefined : ['80:80'],
 				volumes: ['./nginx/nginx.conf.dev:/etc/nginx/nginx.conf'],
 				environment:
 					env === 'server'
@@ -54,6 +46,16 @@ export function createDockerConfig(env: 'dev' | 'serverCheck' | 'server'): Confi
 				container_name: 'explain-face',
 			},
 		},
-		networks: env === 'server' ? serverNetworks : undefined,
+		networks: env === 'server' ? getServerNetworks() : undefined,
+	}
+}
+
+function getServerNetworks() {
+	return {
+		default: {
+			external: {
+				name: 'nginx-proxy',
+			},
+		},
 	}
 }
