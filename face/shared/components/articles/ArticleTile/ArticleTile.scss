@@ -59,11 +59,15 @@ $CN: article-tile;
 		}
 
 		&-description {
+			display: -webkit-box;
+			-webkit-line-clamp: 8;
+			-webkit-box-orient: vertical;
 			font-size: 1.3rem;
 			line-height: 1.9rem;
 			color: $grayColor-4;
 			text-wrap: balance;
 			margin-top: 0.8rem;
+			overflow: hidden;
 		}
 	}
 

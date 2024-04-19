@@ -1,5 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
+import ArticleType from '../../../../articlesData/articleType'
 import ArticleTile from '../ArticleTile'
 
 describe('ArticleTile', () => {
@@ -12,7 +13,16 @@ describe('ArticleTile', () => {
 	})
 
 	it('should render a tile of type Level', () => {
-		render(<ArticleTile tile={{ type: 'level', level: 'a1', name: 'beginner', url: '/' }} />)
+		render(
+			<ArticleTile
+				tile={{
+					type: 'level',
+					level: ArticleType.LangLevel.a1,
+					name: ArticleType.LangLevelName.a1,
+					url: '/',
+				}}
+			/>,
+		)
 
 		const $tile = screen.getByRole('link')
 		expect($tile).toBeInTheDocument()

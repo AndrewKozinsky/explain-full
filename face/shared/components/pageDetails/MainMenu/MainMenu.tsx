@@ -1,5 +1,6 @@
 'use client'
 
+import cn from 'classnames'
 import React from 'react'
 import Link from 'next/link'
 import { PageUrls } from '../../../сonsts/pageUrls'
@@ -34,16 +35,12 @@ export function MainMenuLink(props: MenuLinkProps) {
 
 	const isCurrentPage = useIsCurrentPage(url)
 
-	if (isCurrentPage) {
-		return (
-			<p className="link--current" data-testid="main-menu-item">
-				{name}
-			</p>
-		)
-	}
-
 	return (
-		<Link href={url} className="link" data-testid="main-menu-item">
+		<Link
+			href={url}
+			className={cn('link', isCurrentPage && 'link--current')}
+			data-testid="main-menu-item"
+		>
 			{name}
 		</Link>
 	)

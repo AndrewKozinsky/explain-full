@@ -1,5 +1,7 @@
+import ArticleType from '../../../../articlesData/articleType'
+
 export namespace ArticleTileType {
-	export type Tiles = WelcomeTile | LevelTile | ArticleTile | MediaTile
+	export type Tile = WelcomeTile | LevelTile | ArticleTile | MediaTile
 
 	// Карточка приветственной статьи
 	export type WelcomeTile = {
@@ -10,8 +12,8 @@ export namespace ArticleTileType {
 	// Карточка начала нового уровня изучения языка
 	export type LevelTile = {
 		type: 'level'
-		level: 'a1' | 'a2'
-		name: 'beginner' | 'elementary'
+		level: ArticleType.LangLevel
+		name: ArticleType.LangLevelName
 		url: string
 	}
 

@@ -30,7 +30,3 @@ export default function RootLayout(props: RootLayoutProps) {
 		</html>
 	)
 }
-
-// TODO Напиши тесты на useIsCurrentPage.
-// TODO Сделай из логотипа ссылку.
-// TODO Считаю нужно сделать кнопку входа в учётную запись.

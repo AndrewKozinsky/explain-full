@@ -31,7 +31,7 @@ describe('MainMenuLink', () => {
 		render(<MainMenuLink linkData={linkData} />)
 
 		const classes = screen.getByTestId('main-menu-item').getAttribute('class')
-		expect(classes).toBe('link--current')
+		expect(classes).toBe('link link--current')
 	})
 
 	it('should set correct class names if page uri is not match to the link', () => {

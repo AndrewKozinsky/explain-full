@@ -4,7 +4,7 @@ import { ArticleTileType } from './fn/types'
 import './ArticleTile.scss'
 
 type ArticleListItemProps = {
-	tile: ArticleTileType.Tiles
+	tile: ArticleTileType.Tile
 }
 
 // Карточка-ссылка на статью
