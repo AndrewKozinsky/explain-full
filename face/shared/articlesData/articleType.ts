@@ -54,6 +54,7 @@ namespace ArticleType {
 	export type ArtArticle = {
 		type: ArtType.article
 		meta: ArtMeta
+		chapterNum: string
 		// Содержимое статьи
 		content: Content
 	}

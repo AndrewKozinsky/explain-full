@@ -10,6 +10,7 @@ const personalPronouns: ArticleType.ArtArticle = {
 		articleDescription:
 			'Личные местоимения в английском языке указывают на лицо, предмет или понятие, но не называют его.',
 	},
+	chapterNum: 'my chapterNum',
 	content: [],
 }
 

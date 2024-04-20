@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 	verification: {
 		yandex: '1611c5fab3b46857',
 	},
-	keywords: ['Английский', 'курс'],
+	keywords: ['Английский', 'курс', 'Курс английского языка', 'Понимая английский'],
 }
 
 type RootLayoutProps = {

@@ -6,7 +6,7 @@ const level: ArticleType.ArtLevel = {
 	meta: {
 		number: 2,
 		slug: 'level',
-		articleName: 'A1 Beginner',
+		articleName: 'Уровень A1',
 		articleDescription: 'Добро пожаловать на курс',
 	},
 }

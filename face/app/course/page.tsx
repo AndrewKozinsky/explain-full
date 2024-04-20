@@ -4,14 +4,12 @@ import { PageContentWrapper } from '../../shared/components/pageDetails/PageCont
 import { PageHeader } from '../../shared/components/pageDetails/PageHeader/PageHeader'
 import { CourseArticlesTiles } from '../../widgets/CourseArticlesTiles/CourseArticlesTiles'
 
-export default function Home() {
+export default function CoursePage() {
 	return (
-		<main>
-			<PageContentWrapper>
-				<BreadCrumbs />
-				<PageHeader>Курс «Понимая английский»</PageHeader>
-				<CourseArticlesTiles />
-			</PageContentWrapper>
-		</main>
+		<PageContentWrapper>
+			<BreadCrumbs />
+			<PageHeader>Курс «Понимая английский»</PageHeader>
+			<CourseArticlesTiles />
+		</PageContentWrapper>
 	)
 }

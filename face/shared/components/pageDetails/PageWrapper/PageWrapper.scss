@@ -26,6 +26,7 @@
 .page-wrapper__middle {
 	@include side-offset;
 	flex-grow: 1;
+	display: flex;
 }
 
 .page-wrapper__bottom {

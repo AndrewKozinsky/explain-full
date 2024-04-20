@@ -5,7 +5,7 @@ const welcome: ArticleType.ArtWelcome = {
 	meta: {
 		number: 1,
 		slug: 'welcome',
-		articleName: 'Welcome',
+		articleName: 'Добро пожаловать на курс!',
 		articleDescription: 'Добро пожаловать на курс',
 	},
 }

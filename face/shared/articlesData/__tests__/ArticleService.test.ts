@@ -17,7 +17,7 @@ const pureArticles: ArticleType.Art[] = [
 		meta: {
 			number: 2,
 			slug: 'level',
-			articleName: 'A1 Beginner',
+			articleName: 'Уровень A1',
 			articleDescription: 'Добро пожаловать на курс',
 		},
 	},
@@ -39,6 +39,7 @@ const pureArticles: ArticleType.Art[] = [
 			articleDescription:
 				'Личные местоимения в английском языке указывают на лицо, предмет или понятие, но не называют его.',
 		},
+		chapterNum: 'my chapterNum',
 		content: [],
 	},
 ]
