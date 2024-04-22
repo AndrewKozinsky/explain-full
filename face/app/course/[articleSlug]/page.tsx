@@ -5,6 +5,7 @@ import { BreadCrumbs } from '../../../shared/components/pageDetails/BreadCrumbs/
 import { PageContentWrapper } from '../../../shared/components/pageDetails/PageContentWrapper/PageContentWrapper'
 import { PageHeader } from '../../../shared/components/pageDetails/PageHeader/PageHeader'
 import { PageUrls } from '../../../shared/сonsts/pageUrls'
+import LevelArticleContent from '../../../widgets/courseArticle/LevelArticleContent/LevelArticleContent'
 import WelcomeArticleContent from '../../../widgets/courseArticle/WelcomeArticleContent/WelcomeArticleContent'
 
 type TextBookArticleProps = {
@@ -59,7 +60,13 @@ function ContentSwitcher(props: ContentSwitcherProps) {
 			/>
 		)
 	} else if (article.type === ArticleType.ArtType.level) {
-		return <p>Level</p>
+		return (
+			<LevelArticleContent
+				prevArticle={prevArticle}
+				article={article}
+				nextArticle={nextArticle}
+			/>
+		)
 	} else if (article.type === ArticleType.ArtType.media) {
 		return <p>Media</p>
 	}

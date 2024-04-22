@@ -29,18 +29,9 @@ $CN: article-tile;
 
 	&--level {
 		display: flex;
-		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		gap: 1rem;
 		text-align: center;
-
-		&-header {
-			font-size: 3rem;
-			line-height: 3rem;
-			font-weight: 700;
-			text-transform: uppercase;
-		}
 	}
 
 	&--article {

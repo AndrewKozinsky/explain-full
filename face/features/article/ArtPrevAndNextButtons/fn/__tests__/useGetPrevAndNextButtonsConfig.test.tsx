@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react'
-import { PrevAndNextButtonConfig } from '../../../../../shared/articlesData/articlesBackAndNextButtons/ArtBackAndNextButtons/PrevAndNextButtons'
+import { PrevAndNextButtonConfig } from '../../../../../shared/components/articles/PrevAndNextButtons/PrevAndNextButtons'
 import ArticleType from '../../../../../shared/articlesData/articleType'
 import { useGetPrevAndNextButtonsConfig } from '../getPrevAndNextButtonsConfig'
 

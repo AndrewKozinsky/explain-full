@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { LanguageLevelBadge } from '../LanguageLevelBadge/LanguageLevelBadge'
 import { ArticleTileType } from './fn/types'
 import './ArticleTile.scss'
 
@@ -51,10 +52,7 @@ function ArticleTileLevel(props: ArticleTileLevelProps) {
 
 	return (
 		<Link href={tile.url} className="article-tile article-tile--black article-tile--level">
-			<p className="article-tile--level-header" data-testid="article-tile-level-header">
-				{tile.level}
-			</p>
-			<Pill>{tile.name}</Pill>
+			<LanguageLevelBadge level={tile.level} />
 		</Link>
 	)
 }

@@ -1,10 +1,10 @@
 import React from 'react'
 import cn from 'classnames'
 import Link from 'next/link'
-import { LeftArrow, RightArrow } from '../../../components/icons/Arrow/Arrow'
+import { LeftArrow, RightArrow } from '../../icons/Arrow/Arrow'
 import './ArtPrevAndNextButtons.scss'
 
-type TextColor = 'blue' | 'white'
+export type PrevAndNextButtonsTextColor = 'blue' | 'white'
 
 export type PrevAndNextButtonConfig = {
 	topText?: string
@@ -15,7 +15,7 @@ export type PrevAndNextButtonConfig = {
 
 type ArtPrevAndNextButtonsProps = {
 	// Цвет текста и обводок
-	textColor?: TextColor
+	textColor?: PrevAndNextButtonsTextColor
 	backConfig?: PrevAndNextButtonConfig
 	nextConfig?: PrevAndNextButtonConfig
 }
