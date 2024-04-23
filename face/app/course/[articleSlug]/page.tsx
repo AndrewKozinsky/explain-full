@@ -1,12 +1,7 @@
-// import ArticlePage from '../../_pages/article/articlePage/ArticlePage/ArticlePage'
-import articleService from '../../../shared/articlesData/articleService'
-import ArticleType from '../../../shared/articlesData/articleType'
-import { BreadCrumbs } from '../../../shared/components/pageDetails/BreadCrumbs/BreadCrumbs'
-import { PageContentWrapper } from '../../../shared/components/pageDetails/PageContentWrapper/PageContentWrapper'
-import { PageHeader } from '../../../shared/components/pageDetails/PageHeader/PageHeader'
-import { PageUrls } from '../../../shared/сonsts/pageUrls'
-import LevelArticleContent from '../../../widgets/courseArticle/LevelArticleContent/LevelArticleContent'
-import WelcomeArticleContent from '../../../widgets/courseArticle/WelcomeArticleContent/WelcomeArticleContent'
+import CourseLevelPage from '../../../_pages/courseArtPage/courseLevelPage/CourseLevelPage/CourseLevelPage'
+import CourseWelcomePage from '../../../_pages/courseArtPage/courseWelcomePage/CourseWelcomePage/CourseWelcomePage'
+import articleService from '../../../articlesData/articleService'
+import ArticleType from '../../../articlesData/articleType'
 
 type TextBookArticleProps = {
 	params: {
@@ -29,48 +24,23 @@ export default async function CourseArticlePage(props: TextBookArticleProps) {
 		return <p>Глава не найдена.</p>
 	}
 
-	return (
-		<PageContentWrapper>
-			<BreadCrumbs items={[PageUrls.course]} />
-			<PageHeader>{article.meta.articleName}</PageHeader>
-			<ContentSwitcher
-				prevArticle={prevArticle}
-				article={article}
-				nextArticle={nextArticle}
-			/>
-		</PageContentWrapper>
-	)
-}
-
-type ContentSwitcherProps = {
-	prevArticle: ArticleType.Art | null
-	article: ArticleType.Art
-	nextArticle: ArticleType.Art | null
-}
-
-function ContentSwitcher(props: ContentSwitcherProps) {
-	const { prevArticle, article, nextArticle } = props
-
-	if (article.type === ArticleType.ArtType.welcome) {
+	if (article.type == ArticleType.ArtType.welcome) {
 		return (
-			<WelcomeArticleContent
+			<CourseWelcomePage
 				prevArticle={prevArticle}
 				article={article}
 				nextArticle={nextArticle}
 			/>
 		)
-	} else if (article.type === ArticleType.ArtType.level) {
+	} else if (article.type == ArticleType.ArtType.level) {
 		return (
-			<LevelArticleContent
+			<CourseLevelPage
 				prevArticle={prevArticle}
 				article={article}
 				nextArticle={nextArticle}
 			/>
 		)
-	} else if (article.type === ArticleType.ArtType.media) {
-		return <p>Media</p>
 	}
 
-	return <p>Article</p>
-	/*return <ArticlePage prevArticle={prevArticle} article={article} nextArticle={nextArticle} />*/
+	return <p>Some page</p>
 }

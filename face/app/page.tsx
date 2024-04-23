@@ -1,9 +1,5 @@
-import { PageHeader } from '../shared/components/pageDetails/PageHeader/PageHeader'
+import MainPage from '../_pages/mainPage/MainPage/MainPage'
 
 export default function RootPage() {
-	return (
-		<main>
-			<PageHeader>Понимая английский</PageHeader>
-		</main>
-	)
+	return <MainPage />
 }

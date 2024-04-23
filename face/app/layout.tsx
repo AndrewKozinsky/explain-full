@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { PageWrapper } from '../shared/components/pageDetails/PageWrapper/PageWrapper'
+import { PageWrapper } from '../ui/pageRelated/PageWrapper/PageWrapper'
 import Metrika from './_in/Metrika/Metrika'
 import './_in/style/global.scss'
 
