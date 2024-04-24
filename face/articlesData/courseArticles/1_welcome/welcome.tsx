@@ -4,8 +4,8 @@ const welcome: ArticleType.ArtWelcome = {
 	type: ArticleType.ArtType.welcome,
 	meta: {
 		number: 1,
-		caption: 'Вводная глава',
 		slug: 'welcome',
+		caption: 'Вводная глава',
 		articleName: 'Добро пожаловать на курс!',
 		articleDescription: 'Добро пожаловать на курс',
 	},

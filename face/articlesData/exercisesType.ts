@@ -1,15 +1,15 @@
-// import ArticleType from './articleType'
+import ArticleType from './articleType'
 
-/*namespace ExercisesType {
+namespace ExercisesType {
 	export type Exercises = {
 		type: 'exercises'
-		id: number
-		exercises: Exercise[]
+		// id: number
+		// exercises: Exercise[]
 		// Должен ли быть отступ от верхнего элемента
-		offset?: boolean
+		// offset?: boolean
 	}
 
-	export type Exercise = {
+	/*export type Exercise = {
 		// Какое-то примечание выше предложения
 		note?: string
 		// Предложение на русском языке
@@ -18,25 +18,25 @@
 		engSentences: EngSentence[]
 		// Слова этого предложения
 		words?: Word[]
-	}
+	}*/
 
 	// Перевод предложения на английская
-	export type EngSentence = {
+	/*export type EngSentence = {
 		// Текст предложения на английском
 		engSentence: string
 		// Правильное?
 		isCorrect: boolean
 		// Разбор предложения
 		analysis?: ArticleType.Content
-	}
+	}*/
 
 	// Слово из предложения
-	export type Word = {
+	/*export type Word = {
 		note?: string
 		rusWord: string
 		engWord: string
 		transcription?: string
-	}
-}*/
+	}*/
+}
 
-// export default ExercisesType
+export default ExercisesType

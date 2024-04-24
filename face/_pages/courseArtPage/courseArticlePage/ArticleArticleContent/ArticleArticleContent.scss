@@ -1,0 +1,28 @@
+@import '../../../../styles/variables';
+
+.article-article {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+	background-color: white;
+	container-type: inline-size;
+	padding: 1.2rem 1.4rem;
+	border-radius: $radius-2;
+
+	@include page-width(500px) {
+		padding: 2.2rem 2.6rem;
+	}
+
+	@include page-width(700px) {
+		padding: 3rem 3.6rem;
+	}
+
+	@include page-width(900px) {
+		padding: 3.5rem 4.8rem;
+	}
+}
+
+.article-article__content {
+	flex-grow: 1;
+}

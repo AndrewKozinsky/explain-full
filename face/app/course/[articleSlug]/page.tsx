@@ -1,3 +1,4 @@
+import CourseArticlePage from '../../../_pages/courseArtPage/courseArticlePage/CourseArticlePage/CourseArticlePage'
 import CourseLevelPage from '../../../_pages/courseArtPage/courseLevelPage/CourseLevelPage/CourseLevelPage'
 import CourseWelcomePage from '../../../_pages/courseArtPage/courseWelcomePage/CourseWelcomePage/CourseWelcomePage'
 import articleService from '../../../articlesData/articleService'
@@ -11,7 +12,7 @@ type TextBookArticleProps = {
 }
 
 // Универсальная страница учебника
-export default async function CourseArticlePage(props: TextBookArticleProps) {
+export default async function Page(props: TextBookArticleProps) {
 	const {
 		params: { articleSlug },
 	} = props
@@ -40,7 +41,15 @@ export default async function CourseArticlePage(props: TextBookArticleProps) {
 				nextArticle={nextArticle}
 			/>
 		)
+	} else if (article.type == ArticleType.ArtType.article) {
+		return (
+			<CourseArticlePage
+				prevArticle={prevArticle}
+				article={article}
+				nextArticle={nextArticle}
+			/>
+		)
 	}
 
-	return <p>Some page</p>
+	return <p>Unknown page</p>
 }

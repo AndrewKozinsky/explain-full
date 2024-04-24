@@ -1,5 +1,5 @@
-// import { ReactNode } from 'react'
-// import ExercisesType from './exercisesType'
+import { ReactNode } from 'react'
+import ExercisesType from './exercisesType'
 
 namespace ArticleType {
 	// Объединённый тип статьи
@@ -77,13 +77,16 @@ namespace ArticleType {
 	}
 
 	// Содержимое статьи
-	export type Content = (Header | Paragraph)[]
-	// | List
-	// | Note
-	// | ExercisesType.Exercises
-	// | CustomComponent
-	// | Faq
-	// | Grid
+	export type Content = (
+		| Header
+		| Paragraph
+		| Note
+		| Faq
+		| CustomComponent
+		| Grid
+		| List
+		| ExercisesType.Exercises
+	)[]
 
 	// Заголовок
 	export type Header = {
@@ -105,76 +108,76 @@ namespace ArticleType {
 		offset?: boolean
 		// Размер текста
 		textSize?: ParagraphSize
-		// children: TextElem[]
+		children: TextElem[]
 	}
 	export type ParagraphSize = 'small' | 'normal' | 'big' | 'giant'
 
 	// Список. Включает в себя блочные элементы.
-	/*export type List = {
+	export type List = {
 		type: 'list'
 		// Нумерованный или ненумерованный список?
 		listType: 'numbers' | 'dots'
 		children: Paragraph[]
-	}*/
+	}
 
-	// export type TextElem = Text | ArrowText
+	export type TextElem = Text | ArrowText
 
 	// Текст. Строковый элемент помещаемый в абзац.
-	/*export type Text = {
+	export type Text = {
 		type: 'text'
 		// Стиль текста
 		color?: TextColor
 		// Жирность текста
 		weight?: 'normal' | 'bold'
 		text: string
-	}*/
-	// export type TextColor = 'black' | 'blue' | 'gold' | 'error' | 'gray'
+	}
+	export type TextColor = 'black' | 'blue' | 'gold' | 'error' | 'gray'
 
 	// Текст. Строковый элемент помещаемый в абзац.
-	/*export type ArrowText = {
+	export type ArrowText = {
 		type: 'arrow'
-	}*/
+	}
 
 	// Заметка. Может включать весь доступный контент: заголовки, абзацы, грамматические таблицы.
-	/*export type Note = {
+	export type Note = {
 		type: 'note'
 		// Стиль заметки
 		noteStyle?: 'gray' | 'yellow'
 		children: Content
-	}*/
+	}
 
 	// Нестандартный компонент статьи
-	/*export type CustomComponent = {
+	export type CustomComponent = {
 		type: 'customComponent'
 		component: ReactNode
-	}*/
+	}
 
 	// Вопросы и ответы.
-	/*export type Faq = {
+	export type Faq = {
 		type: 'faq'
 		items: FaqItem[]
-	}*/
-	/*export type FaqItem = {
+	}
+	export type FaqItem = {
 		question: FaqQuestion
 		answer: FaqAnswer
-	}*/
-	/*export type FaqQuestion =
+	}
+	export type FaqQuestion =
 		| { type: 'plain'; value: string }
-		| { type: 'ReactNode'; value: Content }*/
+		| { type: 'ReactNode'; value: Content }
 
-	/*export type FaqAnswer =
+	export type FaqAnswer =
 		| { type: 'plain'; value: string[] }
-		| { type: 'ReactNode'; value: Content }*/
+		| { type: 'ReactNode'; value: Content }
 
 	// Сетка с горизонтальными колонками.
-	/*export type Grid = {
+	export type Grid = {
 		type: 'grid'
 		// Должен ли быть отступ от верхнего элемента
 		offset?: boolean
 		cells: GridCell[]
-	}*/
+	}
 	// Ячейка сетки
-	/*export type GridCell = {
+	export type GridCell = {
 		// Минимальная ширина. Если будет меньше, то ячейка переместится вниз.
 		// Строка вида '100px' или '50%'.
 		minWidth?: string
@@ -182,7 +185,7 @@ namespace ArticleType {
 		// Строка вида '100px' или '50%'.
 		width?: string
 		children: Content
-	}*/
+	}
 }
 
 export default ArticleType

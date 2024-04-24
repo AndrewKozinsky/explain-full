@@ -1,0 +1,40 @@
+//@import 'styles/global/variables';
+//@import 'styles/global/mixins';
+//@import 'styles/global/inherit';
+
+//$CN: exercises-layout;
+
+/*.#{$CN} {
+	display: grid;
+	gap: 2rem;
+	margin: 1rem 0 0 0;
+
+	@include container-width($tablet-width) {
+		gap: 3rem;
+		grid-template-columns: minmax(180px, 24%) 1fr;
+		grid-template-areas:
+			"exercises tabs"
+			"exercises content";
+	}
+}*/
+
+/*.#{$CN}__back {
+	@include container-width($tablet-width) {
+		grid-area: back;
+	}
+}*/
+/*.#{$CN}__exercises {
+	@include container-width($tablet-width) {
+		grid-area: exercises;
+	}
+}*/
+/*.#{$CN}__tabs {
+	@include container-width($tablet-width) {
+		grid-area: tabs;
+	}
+}*/
+/*.#{$CN}__content {
+	@include container-width($tablet-width) {
+		grid-area: content;
+	}
+}*/
