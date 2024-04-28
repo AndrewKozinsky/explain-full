@@ -1,4 +1,4 @@
-@import '../../../../styles/variables';
+@import 'styles/variables';
 
 .article-article {
 	flex-grow: 1;
@@ -6,7 +6,7 @@
 	flex-direction: column;
 	gap: 4rem;
 	background-color: white;
-	container-type: inline-size;
+
 	padding: 1.2rem 1.4rem;
 	border-radius: $radius-2;
 
@@ -25,6 +25,7 @@
 
 .article-article__content {
 	flex-grow: 1;
+	container-type: inline-size;
 }
 
 .article-article__footer {

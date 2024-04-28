@@ -1,7 +1,8 @@
 import React from 'react'
-import './ArrowText.scss'
+import './ArrowCircle.scss'
 
-function ArrowText() {
+// Серый круг со стрелкой
+function ArrowCircle() {
 	return (
 		<span className="art-arrow">
 			<span className="art-arrow__text">→</span>
@@ -9,4 +10,4 @@ function ArrowText() {
 	)
 }
 
-export default ArrowText
+export default ArrowCircle

@@ -1,7 +1,7 @@
 // import React from 'react'
 import cn from 'classnames'
 import ArticleType from '../../../articlesData/articleType'
-import ArrowText from '../ArrowText/ArrowText'
+import ArrowCircle from '../ArrowCircle/ArrowCircle'
 import Text from '../Text/Text'
 import './Paragraph.scss'
 
@@ -42,7 +42,7 @@ function ParagraphChildren(props: ParagraphChildrenProps) {
 				if (config.type === 'text') {
 					return <Text config={config} key={i} />
 				} else if (config.type === 'arrow') {
-					return <ArrowText key={i} />
+					return <ArrowCircle key={i} />
 				} else {
 					return null
 				}

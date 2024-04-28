@@ -17,7 +17,6 @@ type ExercisesProps = {
 function ExercisesButton(props: ExercisesProps) {
 	/*const { exercises } = props
 
-	console.log(exercises.exercises)
 	if (exercises.exercises.length <= 2) {
 		return null
 	}

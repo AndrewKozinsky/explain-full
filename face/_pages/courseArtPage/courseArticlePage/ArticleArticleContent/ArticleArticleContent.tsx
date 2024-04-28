@@ -1,6 +1,6 @@
 import React from 'react'
 import ArticleBuilder from '../../../../articleBuilder/ArticleBuilder/ArticleBuilder'
-import LearnByHeartButton from '../../../../articleBuilder/components/LearnByHeartButton/LearnByHeartButton'
+import LearnByHeartButton from '../../../../articleBuilder/components/learnByHeart/LearnByHeartButton/LearnByHeartButton'
 import { PrevAndNextArticlesNav } from '../../common/ArtPrevAndNextButtons/PrevAndNextArticlesNav'
 import ArticleType from '../../../../articlesData/articleType'
 import './ArticleArticleContent.scss'

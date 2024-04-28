@@ -33,31 +33,38 @@ export function PrevAndNextButtons(props: ArtPrevAndNextButtonsProps) {
 	if (!back && !next) return null
 
 	return (
-		<nav className={cn('art-prev-and-next-buttons', 'art-prev-and-next-buttons--' + textColor)}>
-			{back ? (
-				<PrevOrNextButton
-					direction="prev"
-					topText={back.topText}
-					name={back.name}
-					description={back.description}
-					href={back.href}
-				/>
-			) : (
-				<div data-testid="prev-and-next-button-ghost" />
-			)}
+		<div className="art-prev-and-next-buttons-outer">
+			<nav
+				className={cn(
+					'art-prev-and-next-buttons',
+					'art-prev-and-next-buttons--' + textColor,
+				)}
+			>
+				{back ? (
+					<PrevOrNextButton
+						direction="prev"
+						topText={back.topText}
+						name={back.name}
+						description={back.description}
+						href={back.href}
+					/>
+				) : (
+					<div data-testid="prev-and-next-button-ghost" />
+				)}
 
-			{next ? (
-				<PrevOrNextButton
-					direction="next"
-					topText={next.topText}
-					name={next.name}
-					description={next.description}
-					href={next.href}
-				/>
-			) : (
-				<div />
-			)}
-		</nav>
+				{next ? (
+					<PrevOrNextButton
+						direction="next"
+						topText={next.topText}
+						name={next.name}
+						description={next.description}
+						href={next.href}
+					/>
+				) : (
+					<div />
+				)}
+			</nav>
+		</div>
 	)
 }
 

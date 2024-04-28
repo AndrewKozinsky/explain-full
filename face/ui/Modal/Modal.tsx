@@ -19,8 +19,13 @@ function Modal(props: ModalProps) {
 	if (!isOpen) return null
 
 	return (
-		<div className="modal">
-			<div className="modal__body">
+		<div className="modal" onClick={close}>
+			<div
+				className="modal__body"
+				onClick={(e) => {
+					e.stopPropagation()
+				}}
+			>
 				<div className="modal__close-button-wrapper">
 					<CloseButton onClick={close} extraClass="modal__close-button" />
 				</div>

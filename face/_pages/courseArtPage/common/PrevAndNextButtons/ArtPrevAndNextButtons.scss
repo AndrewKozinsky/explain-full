@@ -1,5 +1,8 @@
-@import '../../../../styles/variables';
+@import 'styles/variables';
 
+.art-prev-and-next-buttons-outer {
+	container-type: inline-size;
+}
 .art-prev-and-next-buttons {
 	display: flex;
 	flex-direction: column;
