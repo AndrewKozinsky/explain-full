@@ -3,6 +3,7 @@
 import React from 'react'
 import ArticleType from '../../../articlesData/articleType'
 import { ModalIcon } from '../../../ui/icons/ModalIcon/ModalIcon'
+import Modal from '../../../ui/Modal/Modal'
 import { useGetClickOnBlock } from './fn/clickOnBlock'
 import { getWords } from './fn/getWords'
 import './LearnByHeartButton.scss'
@@ -23,20 +24,25 @@ function LearnByHeartButton(props: ExercisesProps) {
 	if (!words.length) return null
 
 	return (
-		<ButtonWrapper article={article}>
-			<div className="learn-by-heart-button__bg" />
-			<div className="learn-by-heart-button__content">
-				<h2 className="learn-by-heart-button__header">Слова следующей главы</h2>
-				<p className="learn-by-heart-button__header-info">
-					Выучите, чтобы без подсказок переводить предложения в следующей главе.
-				</p>
-				<WordsParagraph words={words} />
-			</div>
-			<div className="learn-by-heart-button__divider" />
-			<div className="learn-by-heart-button__modal-sign-wrapper">
-				<ModalIcon />
-			</div>
-		</ButtonWrapper>
+		<>
+			<ButtonWrapper article={article}>
+				<div className="learn-by-heart-button__bg" />
+				<div className="learn-by-heart-button__content">
+					<h2 className="learn-by-heart-button__header">Слова следующей главы</h2>
+					<p className="learn-by-heart-button__header-info">
+						Выучите, чтобы без подсказок переводить предложения в следующей главе.
+					</p>
+					<WordsParagraph words={words} />
+				</div>
+				<div className="learn-by-heart-button__divider" />
+				<div className="learn-by-heart-button__modal-sign-wrapper">
+					<ModalIcon />
+				</div>
+			</ButtonWrapper>
+			<Modal header="Тренировка" isOpen close={() => {}}>
+				<p>hello</p>
+			</Modal>
+		</>
 	)
 }
 
@@ -70,12 +76,12 @@ function WordsParagraph(props: WordsTextProps) {
 
 	return (
 		<p className="learn-by-heart-button__words">
-			{words.map((wordObj, i) => {
+			{words.map((word, i) => {
 				return (
-					<>
-						<span>{wordObj}</span>
+					<React.Fragment key={word}>
+						<span>{word}</span>
 						<span className="learn-by-heart-button__word-divider" />
-					</>
+					</React.Fragment>
 				)
 			})}
 		</p>

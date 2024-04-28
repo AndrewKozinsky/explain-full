@@ -10,6 +10,7 @@ $CN: learn-by-heart-button;
 	flex-direction: row;
 	cursor: pointer;
 	padding: 1.2rem 2rem;
+	border-radius: $radius-2;
 
 	&:hover {
 		.#{$CN}__bg {
