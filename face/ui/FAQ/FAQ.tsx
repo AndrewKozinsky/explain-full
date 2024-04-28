@@ -21,11 +21,13 @@ function Faq(props: FaqProps) {
 
 	return (
 		<section className={cn('faq', extraClass)}>
-			{store.items.map((faqItemData) => {
+			{store.items.map((faqItemData, i) => {
+				const isLastItem = store.items.length - 1 === i
+
 				return (
 					<React.Fragment key={faqItemData.itemId}>
 						<FaqItem store={store} setStore={setStore} faqItemData={faqItemData} />
-						<div className="faq__divider" />
+						{!isLastItem && <div className="faq__divider" />}
 					</React.Fragment>
 				)
 			})}
@@ -62,10 +64,6 @@ function FaqItem(props: FaqItemProps) {
 				onClick={openAnswer}
 				extraClass={cn('faq__button', faqItemData.isAnswerOpen && 'faq__button--pushed')}
 			/>
-			{/*<button
-				className={cn('faq__button', faqItemData.isAnswerOpen && 'faq__button--pushed')}
-				onClick={openAnswer}
-			/>*/}
 		</div>
 	)
 }

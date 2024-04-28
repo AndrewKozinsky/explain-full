@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import articleService from '../../../../../articlesData/articleService'
+import articleService from '../../../../../articleService/articleService'
 import ArticleType from '../../../../../articlesData/articleType'
 
 /**

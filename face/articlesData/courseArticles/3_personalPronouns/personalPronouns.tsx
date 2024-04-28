@@ -9,7 +9,7 @@ const personalPronouns: ArticleType.ArtArticle = {
 		caption: 'Глава 1',
 		articleName: 'Личные местоимения',
 		articleDescription:
-			'Личные местоимения в английском языке указывают на лицо, предмет или понятие, но не называют его.',
+			'Изучим член предложения без которой не обходится не одно предложение: подлежащее и его частный случай личные местоимения.',
 	},
 	content: [
 		{
@@ -223,25 +223,6 @@ const personalPronouns: ArticleType.ArtArticle = {
 			],
 		},
 		{
-			type: 'note',
-			noteStyle: 'yellow',
-			children: [
-				{
-					type: 'paragraph',
-					offset: false,
-					textSize: 'normal',
-					children: [
-						{
-							type: 'text',
-							color: 'black',
-							weight: 'normal',
-							text: 'На следующем уроке вы научитесь соединять эти местоимения с прилагательными для составления небольших предложений. Только советую перед этим выучить слова ниже. Они встретятся на тренировке.',
-						},
-					],
-				},
-			],
-		},
-		{
 			type: 'paragraph',
 			offset: true,
 			textSize: 'normal',
@@ -308,7 +289,14 @@ const personalPronouns: ArticleType.ArtArticle = {
 										type: 'text',
 										color: 'black',
 										weight: 'normal',
-										text: 'Можно через we обозначить несколько неодушевлённых предметов?',
+										text: 'Можно через ',
+									},
+									{ type: 'text', color: 'black', weight: 'bold', text: 'we' },
+									{
+										type: 'text',
+										color: 'black',
+										weight: 'normal',
+										text: ' обозначить несколько неодушевлённых предметов?',
 									},
 								],
 							},
@@ -332,6 +320,67 @@ const personalPronouns: ArticleType.ArtArticle = {
 							},
 						],
 					},
+				},
+				{
+					question: {
+						type: 'ReactNode',
+						value: [
+							{
+								type: 'paragraph',
+								offset: false,
+								textSize: 'normal',
+								children: [
+									{
+										type: 'text',
+										color: 'black',
+										weight: 'normal',
+										text: 'В чём главное различие между местоимениями ',
+									},
+									{ type: 'text', color: 'black', weight: 'bold', text: 'we' },
+									{ type: 'text', color: 'black', weight: 'normal', text: ' и ' },
+									{ type: 'text', color: 'black', weight: 'bold', text: 'they' },
+									{ type: 'text', color: 'black', weight: 'normal', text: '?' },
+								],
+							},
+						],
+					},
+					answer: {
+						type: 'ReactNode',
+						value: [
+							{
+								type: 'paragraph',
+								offset: false,
+								textSize: 'normal',
+								children: [
+									{
+										type: 'text',
+										color: 'black',
+										weight: 'normal',
+										text: 'We используется когда говорящий находится внутри группы, а they если вне её.',
+									},
+								],
+							},
+						],
+					},
+				},
+			],
+		},
+		{
+			type: 'note',
+			noteStyle: 'yellow',
+			children: [
+				{
+					type: 'paragraph',
+					offset: false,
+					textSize: 'normal',
+					children: [
+						{
+							type: 'text',
+							color: 'black',
+							weight: 'normal',
+							text: 'На следующем уроке вы научитесь соединять эти местоимения с прилагательными для составления небольших предложений. Только советую перед этим выучить слова ниже. Они встретятся на тренировке.',
+						},
+					],
 				},
 			],
 		},

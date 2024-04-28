@@ -21,7 +21,7 @@ $CN: art-text;
         border-radius: $radius-1;
 	}
 
-	/*&--color-error {
+	&--color-error {
 		position: relative;
 		display: inline-block;
 		color: $redColor-2;
@@ -36,13 +36,13 @@ $CN: art-text;
 			background-color: $redColor-2;
 			opacity: .3;
 		}
-	}*/
+	}
 
-	/*&--color-gray {
-		color: $grayColor-3;
-	}*/
+	&--color-gray {
+		color: $grayColor-4;
+	}
 
-	/*&--weight-bold {
-		font-weight: 500;
-	}*/
+	&--weight-bold {
+		font-weight: 600;
+	}
 }

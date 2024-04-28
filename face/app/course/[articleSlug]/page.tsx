@@ -1,7 +1,7 @@
 import CourseArticlePage from '../../../_pages/courseArtPage/courseArticlePage/CourseArticlePage/CourseArticlePage'
 import CourseLevelPage from '../../../_pages/courseArtPage/courseLevelPage/CourseLevelPage/CourseLevelPage'
 import CourseWelcomePage from '../../../_pages/courseArtPage/courseWelcomePage/CourseWelcomePage/CourseWelcomePage'
-import articleService from '../../../articlesData/articleService'
+import articleService from '../../../articleService/articleService'
 import ArticleType from '../../../articlesData/articleType'
 
 type TextBookArticleProps = {

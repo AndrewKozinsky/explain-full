@@ -38,39 +38,39 @@
     margin-top: 2.8rem;
 }
 
-/*.art-image + .art-paragraph {
+.art-image + .art-paragraph {
 	margin-top: 1.2rem;
-}*/
+}
 
 /*.art-image + .art-note {
 	margin-top: 2.2rem;
 }*/
-/*@include container-width($tablet-width) {
-	.art-image + .art-header--h4 {
+@include container-width($tablet-width) {
+	/*.art-image + .art-header--h4 {
 		margin-top: 2.4rem;
-	}
-	.art-image + .art-header--h3 {
+	}*/
+	/*.art-image + .art-header--h3 {
 		margin-top: 2.8rem;
-	}
-	.art-image + .art-header--h2 {
+	}*/
+	/*.art-image + .art-header--h2 {
 		margin-top: 3rem;
-	}
+	}*/
 	.art-image + .art-paragraph {
 		margin-top: 1.4rem;
 	}
-	.art-image + .art-note {
+	/*.art-image + .art-note {
 		margin-top: 2.4rem;
-	}
-}*/
+	}*/
+}
 
-/*@include container-width($monitor-width) {
+@include container-width($monitor-width) {
 	.art-image + .art-paragraph {
 		margin-top: 1.6rem;
 	}
-	.art-image + .art-note {
+	/*.art-image + .art-note {
 		margin-top: 2.6rem;
-	}
-}*/
+	}*/
+}
 
 // ЗАМЕТКА (ОТСТУП НЕ УКАЗЫВАЕТСЯ) =====
 /*.art-note + .art-note {
@@ -95,9 +95,9 @@
     margin-top: 0.2rem;
 }
 
-/*.art-paragraph + .art-paragraph--offset {
+.art-paragraph + .art-paragraph--offset {
     margin-top: 1rem;
-}*/
+}
 
 /*.art-paragraph + .art-header--h4 {
 	margin-top: 1rem;
@@ -167,9 +167,9 @@
 }*/
 
 // СПИСОК (ОТСТУП НЕ УКАЗЫВАЕТСЯ) =====
-/*.art-list + .art-paragraph {
+.art-list + .art-paragraph {
 	margin-top: 1.2rem;
-}*/
+}
 
 // КНОПКА ОТКРЫТИЯ УПРАЖНЕНИЙ (С ОТСТУПОМ)
 /*.exercises + .exercises {
@@ -180,9 +180,9 @@
 /*.art-faq + .art-faq {
 
 }*/
-/*.art-faq + .art-note {
+.art-faq + .art-note {
 	margin-top: 3rem;
-}*/
+}
 
 // СЕТКА (С ОТСТУПОМ)
 /*.art-grid + .art-paragraph {

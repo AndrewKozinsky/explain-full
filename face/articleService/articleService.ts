@@ -1,6 +1,7 @@
+import ExercisesType from '../articlesData/exercisesType'
 import { PageUrls } from '../сonsts/pageUrls'
-import articles from './courseArticles/articlesData'
-import ArticleType from './articleType'
+import articles from '../articlesData/courseArticles/articlesData'
+import ArticleType from '../articlesData/articleType'
 
 type ArticleOfLevel = { name: string; url: string }
 
@@ -77,6 +78,77 @@ export class ArticleService {
 		}
 
 		return foundedArticles
+	}
+
+	/**
+	 * Получает объект статьи и вычленяет блоки со словами для заучивания
+	 * @param articleSlug — слаг статьи
+	 */
+	getArticleWords(articleSlug: string): ExercisesType.Word[] {
+		const article = this.getArticle(articleSlug)
+		if (!article || article.type !== ArticleType.ArtType.article) return []
+
+		const wordBlocks: ExercisesType.Word[] = []
+
+		// Get article's words
+		article.content.forEach((currentComp) => {
+			if (currentComp.type !== 'exercises') return
+
+			currentComp.exercises.forEach((exercise) => {
+				if (!exercise.words) return
+
+				wordBlocks.push(...exercise.words)
+			})
+		})
+
+		// Set transcriptions to English words
+		wordBlocks.forEach((wordBlock) => {
+			// console.log(this.getEnglishWordTranscription(wordBlock.engWord))
+			wordBlock.transcription = this.getEnglishWordTranscription(wordBlock.engWord)
+		})
+
+		// Clear words from repeated ones
+		const clearedWords: ExercisesType.Word[] = []
+
+		wordBlocks.forEach((currentWord) => {
+			// Найти текущий блок слов в уже очищенном массиве
+			const searchWordInClearedWords = clearedWords.find((clearedWord) => {
+				return (
+					currentWord.rusWord == clearedWord.rusWord &&
+					currentWord.engWord == clearedWord.engWord
+				)
+			})
+
+			// Если не найден, то поставить
+			if (!searchWordInClearedWords) {
+				clearedWords.push(currentWord)
+			}
+		})
+
+		return clearedWords
+	}
+
+	/**
+	 * Получает английское слово и возвращает его транскрипцию (если есть)
+	 * @param engWord
+	 */
+	getEnglishWordTranscription(engWord: string) {
+		const wordTranscriptions = {
+			'a book': 'ə bʊk',
+			'a magazine': 'mæɡəˈziːn',
+			'a teacher': 'ə ˈtiːtʃə',
+			'a doctor': 'ə ˈdɒktə',
+			'a student': 'ə ˈstjuːd(ə)nt',
+			sick: 'sɪk',
+			'a child': 'ə tʃaɪld',
+			glad: 'ɡlæd',
+			ready: 'ˈredɪ',
+			soon: 'suːn',
+			happy: 'ˈhæpɪ',
+		}
+
+		// @ts-ignore
+		return wordTranscriptions[engWord]
 	}
 }
 

@@ -1,26 +1,27 @@
-//@import 'styles/global/variables';
-//@import 'styles/global/mixins';
-//@import 'styles/global/inherit';
+@import 'styles/variables';
+@import 'styles/mixins';
+@import 'styles/inherit';
 
 $CN: art-list;
 
-/*.#{$CN} {
+.#{$CN} {
 	position: relative;
 	list-style: none;
 
-	padding: 0 0 0 3.6rem;
+	padding: 0 0 0 4rem;
 	margin-top: 0.4rem;
 
 	li {
 		position: relative;
+		margin-top: 0.8rem;
 	}
 	li::before {
 		position: absolute;
 	}
-}*/
+}
 
 // Ненумерованный список
-/*ul.#{$CN} {
+ul.#{$CN} {
 	li {
 		&::before {
 			content: '';
@@ -32,21 +33,20 @@ $CN: art-list;
 			border-radius: 50%;
 		}
 	}
-}*/
+}
 
 // Нумерованный список
-/*ol.#{$CN} {
+ol.#{$CN} {
 	counter-reset: li;
 
 	li {
 		&::before {
-			content: counter(li) '.';
+			content: counter(li);
 			counter-increment: li;
 			top: 0.2em;
 			left: -2.2rem;
 			text-align: left;
-			color: $orangeColor-2;
 			font-weight: 600;
 		}
 	}
-}*/
+}

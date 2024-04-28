@@ -8,14 +8,18 @@ export const imageMapper = {
 			src: '/schemasAndTables/PersonalPronounceSubjectAndObjectTable.svg',
 			alt: 'Личные местоимения в роли подлежащего и дополнения',
 		},*/
-		/*ToBePresent: {
+		ToBePresent: {
 			src: '/schemasAndTables/ToBePresentTable.svg',
 			alt: 'To be в настоящем времени',
-		},*/
-		/*ToBePast: {
+		},
+		ToBePast: {
 			src: '/schemasAndTables/ToBePastTable.svg',
 			alt: 'To be в прошедшем времени',
-		},*/
+		},
+		ToBeFuture: {
+			src: '/schemasAndTables/ToBeFutureTable.svg',
+			alt: 'To be в будущем времени',
+		},
 		/*PossessivePronouns: {
 			src: '/schemasAndTables/PossessivePronounsTable.svg',
 			alt: 'Притяжательные местоимения',

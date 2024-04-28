@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react'
-import articleService from '../../../../../../articlesData/articleService'
+import articleService from '../../../../../../articleService/articleService'
 import ArticleType from '../../../../../../articlesData/articleType'
 import { ArticleTileType } from '../../../ArticleTile/fn/types'
 import { useGetTilesData } from '../getTilesData'

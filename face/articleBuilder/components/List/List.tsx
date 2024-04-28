@@ -1,16 +1,14 @@
-// import React from 'react'
-// import cn from 'classnames'
-// import ArticleType from '../../../articlesData/articleType'
-// import Paragraph from '../Paragraph/Paragraph'
+import cn from 'classnames'
+import Paragraph from '../Paragraph/Paragraph'
 import ArticleType from '../../../articlesData/articleType'
-// import './List.scss'
+import './List.scss'
 
 type ListProps = {
 	config: ArticleType.List
 }
 
 function List(props: ListProps) {
-	/*const { config } = props
+	const { config } = props
 
 	const classes = ['art-list']
 
@@ -26,11 +24,7 @@ function List(props: ListProps) {
 				)
 			})}
 		</Component>
-	)*/
-
-	// -------
-
-	return null
+	)
 }
 
 export default List

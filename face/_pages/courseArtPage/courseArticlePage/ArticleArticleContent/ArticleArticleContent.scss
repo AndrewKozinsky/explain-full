@@ -26,3 +26,9 @@
 .article-article__content {
 	flex-grow: 1;
 }
+
+.article-article__footer {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
