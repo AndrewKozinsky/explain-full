@@ -1,3 +1,7 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+@import 'styles/inherit';
+
 .main-menu__ul {
 	display: flex;
 	gap: 2.2rem;
@@ -5,6 +9,12 @@
 	line-height: 2.4rem;
 }
 
-.main-menu__link {
+.main-menu__link--current {
+	color: $orangeColor-2;
+	border-bottom-color: darken($orangeColor-1, 12%);
 
+	&:hover {
+		color: $orangeColor-2;
+		border-bottom-color: darken($orangeColor-1, 20%);
+	}
 }
