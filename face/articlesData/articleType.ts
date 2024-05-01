@@ -85,7 +85,7 @@ namespace ArticleType {
 		| CustomComponent
 		| Grid
 		| List
-		| ExercisesType.Exercises
+		| ExercisesType.ExercisesObj
 	)[]
 
 	// Заголовок

@@ -1,6 +1,7 @@
 import React from 'react'
 import ArticleBuilder from '../../../../articleBuilder/ArticleBuilder/ArticleBuilder'
 import LearnByHeartButton from '../../../../articleBuilder/components/learnByHeart/LearnByHeartButton/LearnByHeartButton'
+import { ExercisesModal } from '../../../../articleBuilder/exercisesModal'
 import { PrevAndNextArticlesNav } from '../../common/ArtPrevAndNextButtons/PrevAndNextArticlesNav'
 import ArticleType from '../../../../articlesData/articleType'
 import './ArticleArticleContent.scss'
@@ -23,6 +24,7 @@ function ArticleArticleContent(props: WelcomeArticleContentProps) {
 			<div className="article-article__footer">
 				<LearnByHeartButton article={nextArticle} />
 				<PrevAndNextArticlesNav prevArticle={prevArticle} nextArticle={nextArticle} />
+				<ExercisesModal articleSlug={article.meta.slug} />
 			</div>
 		</div>
 	)

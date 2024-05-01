@@ -1,7 +1,7 @@
 import ArticleType from './articleType'
 
 namespace ExercisesType {
-	export type Exercises = {
+	export type ExercisesObj = {
 		type: 'exercises'
 		id: number
 		exercises: Exercise[]

@@ -1,15 +1,15 @@
 'use client'
 
 import React from 'react'
-import { ModalIcon } from '../../../ui/icons/ModalIcon/ModalIcon'
 import cn from 'classnames'
-import { useGetClickOnBlock } from './fn/clickOnBlock'
+import { ModalIcon } from '../../../ui/icons/ModalIcon/ModalIcon'
+import { useGetOpenCloseExercisesModal } from '../../exercisesModal'
 import { getSentences } from './fn/getSentences'
 import ExercisesType from '../../../articlesData/exercisesType'
 import './Exercises.scss'
 
 type ExercisesProps = {
-	exercises: ExercisesType.Exercises
+	exercises: ExercisesType.ExercisesObj
 }
 
 // Кнопка перехода к модальному окну выполнения упражнений
@@ -40,14 +40,14 @@ function ExercisesButton(props: ExercisesProps) {
 export default ExercisesButton
 
 type ButtonWrapperProps = {
-	exercises: ExercisesType.Exercises
+	exercises: ExercisesType.ExercisesObj
 	children: React.ReactNode[]
 }
 
 function ButtonWrapper(props: ButtonWrapperProps) {
 	const { exercises, children } = props
 
-	const blockClickHandler = useGetClickOnBlock(exercises.exercises)
+	const blockClickHandler = useGetOpenCloseExercisesModal(true, exercises.id)
 
 	return (
 		<button
@@ -60,7 +60,7 @@ function ButtonWrapper(props: ButtonWrapperProps) {
 }
 
 type SentencesTextProps = {
-	exercises: ExercisesType.Exercises
+	exercises: ExercisesType.ExercisesObj
 }
 
 function SentencesText(props: SentencesTextProps) {

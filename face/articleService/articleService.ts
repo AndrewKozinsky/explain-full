@@ -1,7 +1,8 @@
+import ArticleType from '../articlesData/articleType'
+import articles from '../articlesData/courseArticles/articlesData'
 import ExercisesType from '../articlesData/exercisesType'
 import { PageUrls } from '../сonsts/pageUrls'
-import articles from '../articlesData/courseArticles/articlesData'
-import ArticleType from '../articlesData/articleType'
+import ArtType = ArticleType.ArtType
 
 type ArticleOfLevel = { name: string; url: string }
 
@@ -65,7 +66,7 @@ export class ArticleService {
 		for (let i = levelArtStartIdx; i < this.articles.length; i++) {
 			const article = this.articles[i]
 
-			// Завершить если наткрулись на другой уровень языка
+			// Завершить если наткнулись на другой уровень языка
 			if (article.type === ArticleType.ArtType.level) break
 			// Игнорировать материалы отличные от стандатных статей
 			if (article.type !== ArticleType.ArtType.article) continue
@@ -78,6 +79,22 @@ export class ArticleService {
 		}
 
 		return foundedArticles
+	}
+
+	getArticleExercises(
+		articleSlug: string,
+		exercisesId: number,
+	): undefined | ExercisesType.ExercisesObj {
+		const article = this.getArticle(articleSlug)
+		if (!article || article.type !== ArtType.article) return
+
+		const exercisesObj = article.content.find((contentItem) => {
+			return contentItem.type === 'exercises' && contentItem.id === exercisesId
+		})
+		if (!exercisesObj) return
+
+		// @ts-ignore
+		return exercisesObj
 	}
 
 	/**

@@ -1,4 +1,5 @@
 'use client'
+import cn from 'classnames'
 import React, { ReactNode } from 'react'
 import CloseButton from '../buttons/CloseButton/CloseButton'
 import { useFixBodyScrolling } from './fn/fixBodyScrolling'
@@ -9,10 +10,11 @@ type ModalProps = {
 	children: ReactNode
 	isOpen: boolean
 	close: () => void
+	extraClass?: string
 }
 
 function Modal(props: ModalProps) {
-	const { header, children, isOpen, close } = props
+	const { header, children, isOpen, close, extraClass } = props
 
 	useFixBodyScrolling(isOpen)
 
@@ -21,7 +23,7 @@ function Modal(props: ModalProps) {
 	return (
 		<div className="modal" onClick={close}>
 			<div
-				className="modal__body"
+				className={cn('modal__body', extraClass)}
 				onClick={(e) => {
 					e.stopPropagation()
 				}}
