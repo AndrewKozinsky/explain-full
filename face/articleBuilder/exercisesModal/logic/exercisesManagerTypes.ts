@@ -4,16 +4,19 @@ import ExercisesType from '../../../articlesData/exercisesType'
 export namespace ExercisesManagerTypes {
 	export type Store = {
 		// Все упражнения
-		exercises: Exercise[]
+		exercisesWriting: Exercise[]
+		exercisesOral: Exercise[]
 		// Текущее упражнение
 		currentExercise: Exercise
-		// Текущий тип упражнений
-		currentExerciseType: ExerciseType
 		// Что показывать в результате проверки перевода данного учеником
 		analysis: Analysis
 	}
 
-	export type Exercise = ExercisesType.Exercise & { isCurrent: boolean }
+	export type Exercise = ExercisesType.Exercise & {
+		id: number
+		isCurrent: boolean
+		type: ExerciseType
+	}
 
 	// Типы упражнений
 	export enum ExerciseType {

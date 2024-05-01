@@ -2,9 +2,8 @@
 
 import Modal from '../../../../ui/Modal/Modal'
 import { useExercisesModalStore } from '../../store/store'
-import ContentWrappers from '../ContentWrappers/ContentWrappers'
 import ExerciseContent from '../ExerciseContent/ExerciseContent'
-import ExercisesList from '../ExercisesList/ExercisesList'
+import ExercisesLists from '../ExercisesList/ExercisesLists'
 import { useGetOpenCloseExercisesModal } from './fn/clickOnBlock'
 import { useSetUpExercises } from './fn/useSetUpExercises'
 import './ExercisesModal.scss'
@@ -16,9 +15,9 @@ type ExercisesModalProps = {
 export function ExercisesModal(props: ExercisesModalProps) {
 	const { articleSlug } = props
 
-	const { isModalOpen } = useExercisesModalStore()
+	const { isModalOpen, exercisesLogic } = useExercisesModalStore()
 
-	const exercisesLogic = useSetUpExercises(articleSlug)
+	useSetUpExercises(articleSlug)
 	const closeModal = useGetOpenCloseExercisesModal(false, null)
 
 	if (!exercisesLogic || !exercisesLogic.store) return null
@@ -30,10 +29,10 @@ export function ExercisesModal(props: ExercisesModalProps) {
 			close={closeModal}
 			extraClass="exercises-modal"
 		>
-			<ContentWrappers>
-				<ExercisesList />
+			<div className="exercises-modal__content">
+				<ExercisesLists />
 				<ExerciseContent />
-			</ContentWrappers>
+			</div>
 		</Modal>
 	)
 }

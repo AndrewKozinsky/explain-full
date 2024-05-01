@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useEffect } from 'react'
 import articleService from '../../../../../articleService/articleService'
 import ExercisesLogic from '../../../logic/exercisesLogic'
 import { useExercisesModalStore } from '../../../store/store'
@@ -6,16 +6,16 @@ import { useExercisesModalStore } from '../../../store/store'
 export function useSetUpExercises(articleSlug: string) {
 	const { exercisesId } = useExercisesModalStore()
 
-	return useMemo(
+	useEffect(
 		function () {
-			if (!exercisesId) return
+			if (exercisesId === null) return
 
 			const currentExercises = articleService.getArticleExercises(articleSlug, exercisesId)
 			if (!currentExercises) return
 
 			const exercisesLogic = new ExercisesLogic(currentExercises.exercises)
 
-			return exercisesLogic
+			useExercisesModalStore.setState({ exercisesLogic })
 		},
 		[exercisesId],
 	)
