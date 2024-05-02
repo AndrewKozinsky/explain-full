@@ -1,13 +1,13 @@
 import React from 'react'
 import cn from 'classnames'
 import { ExercisesManagerTypes } from '../../logic/exercisesManagerTypes'
-import { useExercisesModalStore } from '../../store/store'
+import { exercisesLogic, useExercisesModalStore } from '../../store/store'
 import s from './ExercisesLists.module.scss'
 
 function ExercisesLists() {
-	const { exercisesLogic } = useExercisesModalStore()
+	const { store } = useExercisesModalStore()
 
-	const { exercisesWriting, exercisesOral } = exercisesLogic.store
+	const { exercisesWriting, exercisesOral } = store
 
 	return (
 		<div className={s.generalWrapper}>
@@ -26,8 +26,6 @@ type ExercisesListProps = {
 
 function ExercisesList(props: ExercisesListProps) {
 	const { header, exercises } = props
-
-	const { exercisesLogic } = useExercisesModalStore()
 
 	return (
 		<div className={s.partWrapper}>

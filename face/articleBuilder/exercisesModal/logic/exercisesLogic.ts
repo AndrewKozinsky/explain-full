@@ -1,14 +1,11 @@
 import ExercisesType from '../../../articlesData/exercisesType'
-import { makeFullImmutableCopy } from '../../../utils/objects'
+import { EventEmitter } from '../../../utils/eventEmitter'
 import { ExercisesManagerTypes } from './exercisesManagerTypes'
 
 class ExercisesLogic {
-	private exercises!: ExercisesManagerTypes.Exercise[]
 	store!: ExercisesManagerTypes.Store
 
-	constructor(rowExercises: ExercisesType.Exercise[]) {
-		this.initStore(rowExercises)
-	}
+	constructor(private eventEmitter: EventEmitter) {}
 
 	initStore(rowExercises: ExercisesType.Exercise[]) {
 		const exercisesWriting = this.convertRowExercisesToStoreExercises(
@@ -30,6 +27,8 @@ class ExercisesLogic {
 			currentExercise: exercisesWriting[0],
 			analysis: { status: ExercisesManagerTypes.AnalysisStatus.hidden },
 		}
+
+		this.eventEmitter.emit(ExercisesManagerTypes.Event.storeChanged)
 	}
 
 	convertRowExercisesToStoreExercises(
@@ -61,6 +60,8 @@ class ExercisesLogic {
 
 		if (!currentExercise) return
 		this.store.currentExercise = currentExercise
+
+		this.eventEmitter.emit(ExercisesManagerTypes.Event.storeChanged)
 	}
 }
 

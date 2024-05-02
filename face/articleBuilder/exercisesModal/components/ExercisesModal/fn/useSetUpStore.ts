@@ -1,9 +1,9 @@
 import { useEffect } from 'react'
 import articleService from '../../../../../articleService/articleService'
-import ExercisesLogic from '../../../logic/exercisesLogic'
-import { useExercisesModalStore } from '../../../store/store'
+import { ExercisesManagerTypes } from '../../../logic/exercisesManagerTypes'
+import { eventEmitter, exercisesLogic, useExercisesModalStore } from '../../../store/store'
 
-export function useSetUpExercises(articleSlug: string) {
+export function useSetUpStore(articleSlug: string) {
 	const { exercisesId } = useExercisesModalStore()
 
 	useEffect(
@@ -13,9 +13,7 @@ export function useSetUpExercises(articleSlug: string) {
 			const currentExercises = articleService.getArticleExercises(articleSlug, exercisesId)
 			if (!currentExercises) return
 
-			const exercisesLogic = new ExercisesLogic(currentExercises.exercises)
-
-			useExercisesModalStore.setState({ exercisesLogic })
+			exercisesLogic.initStore(currentExercises.exercises)
 		},
 		[exercisesId],
 	)

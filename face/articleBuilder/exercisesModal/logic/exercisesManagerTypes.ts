@@ -58,4 +58,8 @@ export namespace ExercisesManagerTypes {
 		error = 'error',
 		visible = 'visible',
 	}
+
+	export enum Event {
+		storeChanged = 'storeChanged',
+	}
 }
