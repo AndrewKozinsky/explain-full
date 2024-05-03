@@ -34,7 +34,13 @@
 
 	&--current {
 		color: $textColor;
+		cursor: default;
 		border-color: $grayColor-3;
+
+		&:hover {
+			color: $textColor;
+			border-color: $grayColor-3;
+		}
 	}
 }
 

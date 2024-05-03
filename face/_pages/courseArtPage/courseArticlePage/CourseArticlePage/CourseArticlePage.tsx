@@ -5,7 +5,7 @@ import ArticleType from '../../../../articlesData/articleType'
 import { BreadCrumbs } from '../../../../ui/pageRelated/BreadCrumbs/BreadCrumbs'
 import { PageContentWrapper } from '../../../../ui/pageRelated/PageContentWrapper/PageContentWrapper'
 import { PageHeader } from '../../../../ui/pageRelated/PageHeader/PageHeader'
-import { AI } from '../../../../utils/ai'
+import { ai, AI } from '../../../../utils/ai'
 import { extractNumFromStr } from '../../../../utils/number'
 import ArticleArticleContent from '../ArticleArticleContent/ArticleArticleContent'
 import { PageUrls } from '../../../../сonsts/pageUrls'
@@ -25,10 +25,9 @@ function CourseArticlePage(props: CourseLevelPageProps) {
 	const { prevArticle, article, nextArticle } = props
 
 	useEffect(function () {
-		const ai = new AI()
-		/*ai.getAccessToken().then((data) => {
+		ai.getAccessToken().then((data) => {
 			console.log(data)
-		})*/
+		})
 	}, [])
 
 	return (

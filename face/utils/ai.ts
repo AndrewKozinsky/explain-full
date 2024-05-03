@@ -1,7 +1,14 @@
+import path from 'path'
+
+process.env.NODE_EXTRA_CA_CERTS = path.resolve(__dirname, '../public/certificates')
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
+
 type GetAccessTokenRes = {
 	access_token: string
 	expires_at: number
 }
+
+// УДАЛИ ФАЙЛ !!!!
 
 /** Класс работы с искусственным интеллектом */
 export class AI {
@@ -45,3 +52,5 @@ export class AI {
 		console.log(question)
 	}
 }
+
+export const ai = new AI()

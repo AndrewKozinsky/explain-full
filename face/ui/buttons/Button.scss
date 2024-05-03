@@ -6,10 +6,11 @@
 	background-color: white;
 	cursor: pointer;
 	border: 1px solid darken($grayColor-2, 12%);
-	transition: border-color .25s, color .25s;
+	transition: background-color .25s, border-color .25s, color .25s;
 
 	&:hover {
 		color: $textColor;
+		background-color: $grayColor-1;
 		border-color: $grayColor-3;
 	}
 }
