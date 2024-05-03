@@ -16,6 +16,9 @@ export namespace ExercisesManagerTypes {
 		id: number
 		isCurrent: boolean
 		type: ExerciseType
+		userTranslate: string
+		// DELETE !!!
+		// isTranslateCorrect: 'unchecked' | boolean
 	}
 
 	// Типы упражнений
@@ -45,7 +48,7 @@ export namespace ExercisesManagerTypes {
 	}
 
 	// Показать разбор перевода данного учеником
-	type VisibleAnalysis = {
+	export type VisibleAnalysis = {
 		status: AnalysisStatus.visible
 		isTranslateCorrect: boolean
 		correctTranslations: ExercisesType.EngSentence[]

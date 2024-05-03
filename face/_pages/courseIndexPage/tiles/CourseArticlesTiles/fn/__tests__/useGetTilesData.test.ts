@@ -13,6 +13,7 @@ const pureArticles: ArticleType.Art[] = [
 			slug: 'welcome',
 			articleName: 'Welcome',
 			articleDescription: 'Добро пожаловать на курс',
+			isPaid: false,
 		},
 	},
 	{
@@ -24,6 +25,7 @@ const pureArticles: ArticleType.Art[] = [
 			slug: 'level',
 			articleName: 'Уровень A1',
 			articleDescription: 'Добро пожаловать на курс',
+			isPaid: false,
 		},
 	},
 	{
@@ -34,6 +36,7 @@ const pureArticles: ArticleType.Art[] = [
 			slug: 'article',
 			articleName: 'Имя статьи 1',
 			articleDescription: 'Описание статьи 1',
+			isPaid: false,
 		},
 		content: [],
 	},
@@ -45,6 +48,7 @@ const pureArticles: ArticleType.Art[] = [
 			slug: 'media',
 			articleName: 'Media',
 			articleDescription: 'Фильмы',
+			isPaid: false,
 		},
 	},
 ]

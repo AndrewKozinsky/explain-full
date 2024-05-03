@@ -20,6 +20,7 @@ describe('useGetPrevAndNextArticlesNavConfig function', () => {
 				slug: 'personal-pronouns',
 				articleName: 'Art article name',
 				articleDescription: 'Art description',
+				isPaid: false,
 			},
 			content: [],
 		}
@@ -33,6 +34,7 @@ describe('useGetPrevAndNextArticlesNavConfig function', () => {
 				slug: 'level',
 				articleName: 'Level article name',
 				articleDescription: 'Добро пожаловать на курс',
+				isPaid: false,
 			},
 		}
 

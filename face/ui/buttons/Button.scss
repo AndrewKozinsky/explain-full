@@ -1,0 +1,15 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.button {
+	color: darken($grayColor-4, 20%);
+	background-color: white;
+	cursor: pointer;
+	border: 1px solid darken($grayColor-2, 12%);
+	transition: border-color .25s, color .25s;
+
+	&:hover {
+		color: $textColor;
+		border-color: $grayColor-3;
+	}
+}

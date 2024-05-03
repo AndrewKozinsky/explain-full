@@ -1,5 +1,6 @@
 import { create } from 'zustand'
 import { EventEmitter } from '../../../utils/eventEmitter'
+import { ExerciseChecker } from '../logic/ExerciseChecker'
 import ExercisesLogic from '../logic/exercisesLogic'
 import { ExercisesManagerTypes } from '../logic/exercisesManagerTypes'
 import { ExercisesModalStoreType } from './storeTypes'
@@ -13,7 +14,8 @@ export const useExercisesModalStore = create<ExercisesModalStoreType.State>((set
 })
 
 export const eventEmitter = new EventEmitter()
-export const exercisesLogic = new ExercisesLogic(eventEmitter)
+export const exerciseChecker = new ExerciseChecker()
+export const exercisesLogic = new ExercisesLogic(eventEmitter, exerciseChecker)
 
 eventEmitter.on(ExercisesManagerTypes.Event.storeChanged, () => {
 	useExercisesModalStore.setState({ store: exercisesLogic.store })

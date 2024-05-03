@@ -9,6 +9,7 @@ export const pureArticles: ArticleType.Art[] = [
 			slug: 'welcome',
 			articleName: 'Welcome',
 			articleDescription: 'Добро пожаловать на курс',
+			isPaid: false,
 		},
 	},
 	{
@@ -20,6 +21,7 @@ export const pureArticles: ArticleType.Art[] = [
 			slug: 'level',
 			articleName: 'Уровень A1',
 			articleDescription: 'Добро пожаловать на курс',
+			isPaid: false,
 		},
 	},
 	{
@@ -30,6 +32,7 @@ export const pureArticles: ArticleType.Art[] = [
 			slug: 'my-art-1',
 			articleName: 'Имя статьи 1',
 			articleDescription: 'Описание статьи 1',
+			isPaid: false,
 		},
 		content: [
 			{
@@ -128,6 +131,7 @@ export const pureArticles: ArticleType.Art[] = [
 			slug: 'media',
 			articleName: 'Media',
 			articleDescription: 'Фильмы',
+			isPaid: false,
 		},
 	},
 	{
@@ -138,6 +142,7 @@ export const pureArticles: ArticleType.Art[] = [
 			slug: 'my-art-2',
 			articleName: 'Имя статьи 2',
 			articleDescription: 'Описание статьи 2',
+			isPaid: false,
 		},
 		content: [],
 	},
@@ -150,6 +155,7 @@ export const pureArticles: ArticleType.Art[] = [
 			slug: 'level',
 			articleName: 'Уровень A1',
 			articleDescription: 'Добро пожаловать на курс',
+			isPaid: false,
 		},
 	},
 	{
@@ -160,6 +166,7 @@ export const pureArticles: ArticleType.Art[] = [
 			slug: 'my-art-3',
 			articleName: 'Имя статьи 3',
 			articleDescription: 'Описание статьи 3',
+			isPaid: false,
 		},
 		content: [],
 	},

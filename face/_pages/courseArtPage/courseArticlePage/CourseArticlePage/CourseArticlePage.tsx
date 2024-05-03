@@ -1,8 +1,11 @@
-import React from 'react'
+'use client'
+
+import React, { useEffect } from 'react'
 import ArticleType from '../../../../articlesData/articleType'
 import { BreadCrumbs } from '../../../../ui/pageRelated/BreadCrumbs/BreadCrumbs'
 import { PageContentWrapper } from '../../../../ui/pageRelated/PageContentWrapper/PageContentWrapper'
 import { PageHeader } from '../../../../ui/pageRelated/PageHeader/PageHeader'
+import { AI } from '../../../../utils/ai'
 import { extractNumFromStr } from '../../../../utils/number'
 import ArticleArticleContent from '../ArticleArticleContent/ArticleArticleContent'
 import { PageUrls } from '../../../../сonsts/pageUrls'
@@ -17,9 +20,16 @@ type CourseLevelPageProps = {
 	nextArticle: ArticleType.Art | null
 }
 
-/** Страница начала уровня языка в курсе */
+/** Страница главы в курса */
 function CourseArticlePage(props: CourseLevelPageProps) {
 	const { prevArticle, article, nextArticle } = props
+
+	useEffect(function () {
+		const ai = new AI()
+		/*ai.getAccessToken().then((data) => {
+			console.log(data)
+		})*/
+	}, [])
 
 	return (
 		<PageContentWrapper>
@@ -45,7 +55,7 @@ function Header(props: ChapterNumberProps) {
 	const chapterNum = extractNumFromStr(caption)
 
 	return (
-		<PageHeader extraClass={s.wrapper}>
+		<PageHeader extraClass={s.generalWrapper}>
 			{articleName}
 			<span className={s.circle}>
 				<span className={s.circleNum}>{chapterNum}</span>

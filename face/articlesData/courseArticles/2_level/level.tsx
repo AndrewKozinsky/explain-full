@@ -9,6 +9,7 @@ const level: ArticleType.ArtLevel = {
 		caption: 'Уровень A1',
 		articleName: 'Уровень A1',
 		articleDescription: 'Начало уровня А1.',
+		isPaid: false,
 	},
 }
 

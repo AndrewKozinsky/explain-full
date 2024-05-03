@@ -1,5 +1,6 @@
 import React from 'react'
 import cn from 'classnames'
+import Switcher, { SwitcherItem } from '../../../../ui/Switcher/Switcher'
 import { ExercisesManagerTypes } from '../../logic/exercisesManagerTypes'
 import { exercisesLogic, useExercisesModalStore } from '../../store/store'
 import s from './ExercisesLists.module.scss'
@@ -27,20 +28,18 @@ type ExercisesListProps = {
 function ExercisesList(props: ExercisesListProps) {
 	const { header, exercises } = props
 
+	const items: SwitcherItem[] = exercises.map((exercise) => {
+		return {
+			text: exercise.rusSentence,
+			isCurrent: exercise.isCurrent,
+			onClick: () => exercisesLogic.changeCurrentExercise(exercise.id),
+		}
+	})
+
 	return (
 		<div className={s.partWrapper}>
 			<h2 className={s.partHeader}>{header}</h2>
-			<div className={s.buttons}>
-				{exercises.map((exercise, i) => (
-					<button
-						className={cn(s.button, exercise.isCurrent && s['button--current'])}
-						onClick={() => exercisesLogic.pickExercise(exercise.id)}
-						key={i}
-					>
-						{exercise.rusSentence}
-					</button>
-				))}
-			</div>
+			<Switcher items={items} orientation="vertical" />
 		</div>
 	)
 }

@@ -1,11 +1,16 @@
+import ArticleType from '../../../articlesData/articleType'
 import ExercisesType from '../../../articlesData/exercisesType'
 import { EventEmitter } from '../../../utils/eventEmitter'
+import { ExerciseChecker } from './ExerciseChecker'
 import { ExercisesManagerTypes } from './exercisesManagerTypes'
 
 class ExercisesLogic {
 	store!: ExercisesManagerTypes.Store
 
-	constructor(private eventEmitter: EventEmitter) {}
+	constructor(
+		private eventEmitter: EventEmitter,
+		private exerciseChecker: ExerciseChecker,
+	) {}
 
 	initStore(rowExercises: ExercisesType.Exercise[]) {
 		const exercisesWriting = this.convertRowExercisesToStoreExercises(
@@ -42,11 +47,17 @@ class ExercisesLogic {
 				id: minId + i,
 				isCurrent: false,
 				type,
+				userTranslate: '',
+				isTranslateCorrect: 'unchecked',
 			}
 		})
 	}
 
-	pickExercise(exerciseId: number) {
+	/**
+	 * Метод делает текущим упражнением упражнение с переданным идентификатором
+	 * @param exerciseId — id упражнения, которое нужно сделать текущем
+	 */
+	changeCurrentExercise(exerciseId: number) {
 		let currentExercise: null | ExercisesManagerTypes.Exercise = null
 
 		;[...this.store.exercisesWriting, ...this.store.exercisesOral].forEach((exercise) => {
@@ -56,10 +67,34 @@ class ExercisesLogic {
 			} else {
 				exercise.isCurrent = false
 			}
+
+			// Стереть перевод введённый пользователем
+			exercise.userTranslate = ''
 		})
 
 		if (!currentExercise) return
 		this.store.currentExercise = currentExercise
+
+		this.eventEmitter.emit(ExercisesManagerTypes.Event.storeChanged)
+	}
+
+	/** Проверяет перевод текущего упражнения на правильность */
+	async checkCurrentExercise() {
+		const exercise = this.store.currentExercise
+
+		this.store.analysis = await this.exerciseChecker.check(exercise)
+
+		this.eventEmitter.emit(ExercisesManagerTypes.Event.storeChanged)
+	}
+
+	/*getCorrectTranslations(exercise: ExercisesManagerTypes.Exercise) {
+		return exercise.engSentences.filter((engSentence) => {
+			return engSentence.isCorrect
+		})
+	}*/
+
+	setExerciseUserTranslate(translateText: string) {
+		this.store.currentExercise.userTranslate = translateText
 
 		this.eventEmitter.emit(ExercisesManagerTypes.Event.storeChanged)
 	}

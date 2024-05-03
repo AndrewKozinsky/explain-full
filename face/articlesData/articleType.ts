@@ -71,7 +71,7 @@ namespace ArticleType {
 		// Описание статьи
 		articleDescription: string
 		// Платная статья?
-		// isPaid: boolean
+		isPaid: boolean
 		// Статья опубликована?
 		// isPublished: boolean
 	}

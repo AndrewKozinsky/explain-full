@@ -10,6 +10,7 @@ const personalPronouns: ArticleType.ArtArticle = {
 		articleName: 'Личные местоимения',
 		articleDescription:
 			'Изучим член предложения без которой не обходится не одно предложение: подлежащее и его частный случай личные местоимения.',
+		isPaid: false,
 	},
 	content: [
 		{

@@ -6,7 +6,7 @@ type DictionaryWordProps = {
 	wordObj: ExercisesType.Word
 }
 
-// Абзац с англиским словом, переводом и транскрипцией для заучивания
+// Абзац с английским словом, переводом и транскрипцией для заучивания
 function DictionaryWord(props: DictionaryWordProps) {
 	const { note, rusWord, engWord, transcription } = props.wordObj
 

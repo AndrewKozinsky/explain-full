@@ -8,6 +8,7 @@ const welcome: ArticleType.ArtWelcome = {
 		caption: 'Вводная глава',
 		articleName: 'Добро пожаловать на курс!',
 		articleDescription: 'Добро пожаловать на курс',
+		isPaid: false,
 	},
 }
 
