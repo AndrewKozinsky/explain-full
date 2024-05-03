@@ -6,7 +6,7 @@ export function useGetButtonText() {
 	const { currentExercise: exercise, analysis } = useExercisesModalStore().store
 
 	return useMemo(function () {
-		if (exercise.type === ExercisesManagerTypes.ExerciseType.write) {
+		/*if (exercise.type === ExercisesManagerTypes.ExerciseType.write) {
 			if (!exercise.userTranslate) {
 				if (analysis.status === ExercisesManagerTypes.AnalysisStatus.hidden) {
 					return 'Правильный вариант'
@@ -16,6 +16,7 @@ export function useGetButtonText() {
 			return 'fg'
 		} else {
 			return '123'
-		}
+		}*/
+		return 'Правильный вариант'
 	}, [])
 }

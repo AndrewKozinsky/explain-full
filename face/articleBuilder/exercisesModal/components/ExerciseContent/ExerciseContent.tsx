@@ -1,5 +1,4 @@
 import React from 'react'
-import Button from '../../../../ui/buttons/Button/Button'
 import { ExercisesManagerTypes } from '../../logic/exercisesManagerTypes'
 import { useExercisesModalStore } from '../../store/store'
 import BottomButton from '../common/BottomButton/BottomButton'
@@ -23,13 +22,18 @@ function ExerciseContent() {
 export default ExerciseContent
 
 function WritingExerciseContent() {
+	const { analysis } = useExercisesModalStore().store
+
 	return (
 		<div className="exercise-content">
 			<div className="exercise-content__top">
 				<RusExercise />
 				<EngTranslateInput />
 			</div>
-			<Dictionary />
+			{analysis.status === ExercisesManagerTypes.AnalysisStatus.hidden && <Dictionary />}
+			{analysis.status === ExercisesManagerTypes.AnalysisStatus.loading && <p>loading</p>}
+			{analysis.status === ExercisesManagerTypes.AnalysisStatus.error && <p>error</p>}
+			{analysis.status === ExercisesManagerTypes.AnalysisStatus.visible && <p>visible</p>}
 			<BottomButton />
 		</div>
 	)

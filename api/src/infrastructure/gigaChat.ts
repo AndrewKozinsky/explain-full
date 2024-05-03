@@ -4,7 +4,7 @@ process.env.NODE_EXTRA_CA_CERTS = path.resolve(__dirname, './certificates')
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
 
 /** Класс работы с искусственным интеллектом */
-class AI {
+class GigaChat {
 	// Client ID
 	clientId = 'f16628a2-48db-4116-b49f-621e0b84a658'
 
@@ -65,7 +65,7 @@ class AI {
 	 * Отправляет ИИ вопрос на который нужно получить ответ.
 	 * @param question — текст вопроса
 	 */
-	async makeAskRequest(question: string) {
+	private async makeAskRequest(question: string) {
 		const requestBody = {
 			model: 'GigaChat',
 			messages: [
@@ -98,5 +98,5 @@ class AI {
 	}
 }
 
-const ai = new AI()
-export default ai
+const gigaChat = new GigaChat()
+export default gigaChat

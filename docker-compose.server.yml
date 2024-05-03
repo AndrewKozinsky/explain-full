@@ -20,6 +20,9 @@ services:
       - ./api/src:/app/src
     command: npm run start:prod
     container_name: explain-api
+    environment: &a1
+      AUTH_LOGIN: thnadz45$%
+      AUTH_PASSWORD: kwcGT09%$#
   face:
     build:
       context: face/
@@ -27,6 +30,7 @@ services:
     restart: unless-stopped
     command: npm run start
     container_name: explain-face
+    environment: *a1
 networks:
   default:
     external:

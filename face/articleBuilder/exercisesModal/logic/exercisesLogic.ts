@@ -1,4 +1,3 @@
-import ArticleType from '../../../articlesData/articleType'
 import ExercisesType from '../../../articlesData/exercisesType'
 import { EventEmitter } from '../../../utils/eventEmitter'
 import { ExerciseChecker } from './ExerciseChecker'
@@ -48,7 +47,6 @@ class ExercisesLogic {
 				isCurrent: false,
 				type,
 				userTranslate: '',
-				isTranslateCorrect: 'unchecked',
 			}
 		})
 	}
@@ -82,16 +80,18 @@ class ExercisesLogic {
 	async checkCurrentExercise() {
 		const exercise = this.store.currentExercise
 
-		this.store.analysis = await this.exerciseChecker.check(exercise)
+		const analysisInLocalDataRes = await this.exerciseChecker.checkInLocalData(exercise)
 
+		if (analysisInLocalDataRes) {
+			this.store.analysis = analysisInLocalDataRes
+
+			this.eventEmitter.emit(ExercisesManagerTypes.Event.storeChanged)
+			return
+		}
+
+		this.store.analysis = await this.exerciseChecker.checkByAI(exercise)
 		this.eventEmitter.emit(ExercisesManagerTypes.Event.storeChanged)
 	}
-
-	/*getCorrectTranslations(exercise: ExercisesManagerTypes.Exercise) {
-		return exercise.engSentences.filter((engSentence) => {
-			return engSentence.isCorrect
-		})
-	}*/
 
 	setExerciseUserTranslate(translateText: string) {
 		this.store.currentExercise.userTranslate = translateText

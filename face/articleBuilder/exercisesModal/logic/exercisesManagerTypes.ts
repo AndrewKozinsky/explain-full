@@ -17,8 +17,6 @@ export namespace ExercisesManagerTypes {
 		isCurrent: boolean
 		type: ExerciseType
 		userTranslate: string
-		// DELETE !!!
-		// isTranslateCorrect: 'unchecked' | boolean
 	}
 
 	// Типы упражнений
@@ -30,7 +28,7 @@ export namespace ExercisesManagerTypes {
 	}
 
 	// Тип показываемого анализа перевода данного учеником
-	type Analysis = HiddenAnalysis | LoadingAnalysis | ErrorAnalysis | VisibleAnalysis
+	export type Analysis = HiddenAnalysis | LoadingAnalysis | ErrorAnalysis | VisibleAnalysis
 
 	// Не показывать разбор перевода данного учеником
 	type HiddenAnalysis = {

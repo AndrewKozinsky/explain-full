@@ -11,3 +11,7 @@ export function typographyText(text: string) {
 
 	return newText
 }
+
+export function createAdminTokenString() {
+	return Buffer.from(process.env.AUTH_LOGIN + ':' + process.env.AUTH_PASSWORD).toString('base64')
+}

@@ -445,6 +445,75 @@ const toBePositive: ArticleType.ArtArticle = {
 			id: 0,
 			exercises: [
 				{
+					rusSentence: 'Проверка',
+					engSentences: [
+						{
+							engSentences: ['First'],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'В предложении сообщается чем является подлежащее «Это». Поэтому после него ставиться to be в одной из своих форм зависящей от лица подлежащего.',
+										},
+									],
+								},
+							],
+						},
+						{ engSentences: ['Second 1', 'Second 2'], isCorrect: true },
+						{
+							engSentences: ['third'],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Книга упоминается в первый раз. Поэтому существительное «книга» будет в значении «одна из книг». Чтобы это показать поставьте неопределённый артикль ',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: 'a',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ' вместо ',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: 'the',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: '.',
+										},
+									],
+								},
+							],
+						},
+					],
+					words: [{ rusWord: 'книга', engWord: 'a book' }],
+				},
+				{
 					rusSentence: 'Это книга.',
 					engSentences: [
 						{ engSentences: ['It is a book.'], isCorrect: true },

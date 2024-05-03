@@ -7,6 +7,12 @@ import { ConfigSchemaV37Json } from './types/ConfigSchemaV37Json'
 export function createDockerConfig(env: 'dev' | 'serverCheck' | 'server'): ConfigSchemaV37Json {
 	const domain = 'explainit.ru'
 
+	// Общие переменные окружения для всех сервисов
+	const commonEnvVars = {
+		AUTH_LOGIN: 'thnadz45$%',
+		AUTH_PASSWORD: 'kwcGT09%$#',
+	}
+
 	return {
 		version: '3',
 
@@ -34,6 +40,7 @@ export function createDockerConfig(env: 'dev' | 'serverCheck' | 'server'): Confi
 				volumes: ['./api/src:/app/src'],
 				command: env === 'dev' ? 'npm run start:dev' : 'npm run start:prod',
 				container_name: 'explain-api',
+				environment: commonEnvVars,
 			},
 			face: {
 				build: {
@@ -44,6 +51,7 @@ export function createDockerConfig(env: 'dev' | 'serverCheck' | 'server'): Confi
 				volumes: env === 'dev' ? ['./face:/app'] : undefined,
 				command: env === 'dev' ? 'npm run dev' : 'npm run start',
 				container_name: 'explain-face',
+				environment: commonEnvVars,
 			},
 		},
 		networks: env === 'server' ? getServerNetworks() : undefined,

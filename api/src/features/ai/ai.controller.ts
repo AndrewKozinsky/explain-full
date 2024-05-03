@@ -1,16 +1,15 @@
-import { Body, Controller, Post } from '@nestjs/common'
+import { Body, Controller, Post, UseGuards } from '@nestjs/common'
+import { CheckAdminAuthGuard } from '../../infrastructure/guards/checkAdminAuth.guard'
 import RouteNames from '../../settings/routeNames'
-// import ai from '../../infrastructure/ai'
+import gigaChat from '../../infrastructure/gigaChat'
 import { AskAIInputModel } from './models/askAi.input.model'
 
 @Controller(RouteNames.AI.value)
 export class AiController {
 	// Отправка вопроса ИИ и получение ответа.
+	@UseGuards(CheckAdminAuthGuard)
 	@Post()
 	async askAI(@Body() body: AskAIInputModel) {
-		console.log(body.question)
-		// const answer = await ai.ask(body.question)
-		// return answer
-		return body.question
+		return gigaChat.ask(body.question)
 	}
 }
