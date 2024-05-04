@@ -2,6 +2,7 @@ import ExercisesType from '../../../articlesData/exercisesType'
 import { EventEmitter } from '../../../utils/eventEmitter'
 import { ExerciseChecker } from './ExerciseChecker'
 import { ExercisesManagerTypes } from './exercisesManagerTypes'
+import AnalysisStatus = ExercisesManagerTypes.AnalysisStatus
 
 class ExercisesLogic {
 	store!: ExercisesManagerTypes.Store
@@ -80,7 +81,7 @@ class ExercisesLogic {
 	async checkCurrentExercise() {
 		const exercise = this.store.currentExercise
 
-		const analysisInLocalDataRes = await this.exerciseChecker.checkInLocalData(exercise)
+		const analysisInLocalDataRes = this.exerciseChecker.checkInLocalData(exercise)
 
 		if (analysisInLocalDataRes) {
 			this.store.analysis = analysisInLocalDataRes
@@ -89,8 +90,11 @@ class ExercisesLogic {
 			return
 		}
 
-		this.store.analysis = await this.exerciseChecker.checkByAI(exercise)
+		this.store.analysis = { status: AnalysisStatus.loading }
 		this.eventEmitter.emit(ExercisesManagerTypes.Event.storeChanged)
+
+		// this.store.analysis = await this.exerciseChecker.checkByAI(exercise)
+		// this.eventEmitter.emit(ExercisesManagerTypes.Event.storeChanged)
 	}
 
 	setExerciseUserTranslate(translateText: string) {

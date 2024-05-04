@@ -4,9 +4,9 @@ import { createAdminTokenString } from '../../../utils/strings'
 import { ExercisesManagerTypes } from './exercisesManagerTypes'
 
 export class ExerciseChecker {
-	async checkInLocalData(
+	checkInLocalData(
 		exercise: ExercisesManagerTypes.Exercise,
-	): Promise<undefined | ExercisesManagerTypes.Analysis> {
+	): undefined | ExercisesManagerTypes.Analysis {
 		// Массив правильных ответов на это упражнение
 		const correctTranslations = this.getCorrectTranslations(exercise)
 
@@ -98,7 +98,7 @@ export class ExerciseChecker {
 
 	/**
 	 * Получает предложение и приводит его к «высушенному» виду чтобы можно было сравнивать с похожими предложениями.
-	 * Например буквы приводятся к нижнему регистру, убираются знаки препинания, сокращения заменяются на полные варианты.
+	 * Например, буквы приводятся к нижнему регистру, убираются знаки препинания, сокращения заменяются на полные варианты.
 	 * @param sentence — предложение, которое нужно высушить
 	 */
 	drySentence(sentence: string) {
@@ -152,19 +152,14 @@ export class ExerciseChecker {
 	private async makeRequestToAI(
 		exercise: ExercisesManagerTypes.Exercise,
 	): Promise<{ correct: boolean; text: string }> {
-		const question = `Предложение "${exercise.rusSentence}" переведено "${exercise.userTranslate}". Проверь грамматическую правильность. Ответ дай в формате JSON вида:
-{
-	"correct": true,
-	"analysis": 'Your analysis'
-}
-В свойстве isCorrect должно быть значение true если английское предложение переведено правильно на русский или false если не правильно. В свойстве analysis напиши что сделано неправильно и как исправить если были сделаны ошибки. Или похвали если замечаний нет.
-`
+		const question = `Предложение "${exercise.rusSentence}" переведено "${exercise.userTranslate}". Проверь грамматическую правильность перевода на английский. Ответ дай в формате: {"correct": true,"analysis":"Your analysis"}. В isCorrect должно быть true если предложение переведено правильно на английский или false если не правильно. В analysis что сделано неправильно и как исправить если были сделаны ошибки.`
 
 		return new Promise((resolve, reject) => {
 			fetch('/api/ai', {
 				method: 'POST',
 				headers: {
 					authorization: createAdminTokenString(),
+					'Content-Type': 'application/json',
 				},
 				body: JSON.stringify({
 					question,

@@ -4,9 +4,11 @@ import { useExercisesModalStore } from '../../store/store'
 import BottomButton from '../common/BottomButton/BottomButton'
 import { useIsShownResultInOralExercise } from '../common/commonFn'
 import Dictionary from '../common/Dictionary/Dictionary'
+import Analysis from '../writing/Analysis/Analysis'
 import EngTranslateInput from '../writing/EngTranslateInput/EngTranslateInput'
 import RightEngTranslate from '../oral/RightEngTranslate/RightEngTranslate'
 import RusExercise from '../common/RusExercise/RusExercise'
+import LoadingOrErrorAnalysis from '../writing/LoadingOrErrorAnalysis/LoadingOrErrorAnalysis'
 import './ExerciseContent.scss'
 
 function ExerciseContent() {
@@ -31,9 +33,13 @@ function WritingExerciseContent() {
 				<EngTranslateInput />
 			</div>
 			{analysis.status === ExercisesManagerTypes.AnalysisStatus.hidden && <Dictionary />}
-			{analysis.status === ExercisesManagerTypes.AnalysisStatus.loading && <p>loading</p>}
-			{analysis.status === ExercisesManagerTypes.AnalysisStatus.error && <p>error</p>}
-			{analysis.status === ExercisesManagerTypes.AnalysisStatus.visible && <p>visible</p>}
+			{analysis.status === ExercisesManagerTypes.AnalysisStatus.loading && (
+				<LoadingOrErrorAnalysis type="loading" />
+			)}
+			{analysis.status === ExercisesManagerTypes.AnalysisStatus.error && (
+				<LoadingOrErrorAnalysis type="error" />
+			)}
+			{analysis.status === ExercisesManagerTypes.AnalysisStatus.visible && <Analysis />}
 			<BottomButton />
 		</div>
 	)

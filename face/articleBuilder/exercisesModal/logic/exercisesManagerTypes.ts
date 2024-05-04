@@ -50,7 +50,7 @@ export namespace ExercisesManagerTypes {
 		status: AnalysisStatus.visible
 		isTranslateCorrect: boolean
 		correctTranslations: ExercisesType.EngSentence[]
-		translateAnalysis: ArticleType.Content
+		translateAnalysis: undefined | ArticleType.Content
 	}
 
 	export enum AnalysisStatus {
