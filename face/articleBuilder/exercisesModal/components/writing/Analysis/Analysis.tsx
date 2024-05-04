@@ -7,6 +7,7 @@ import { useExercisesModalStore } from '../../../store/store'
 import AnalysisStatus = ExercisesManagerTypes.AnalysisStatus
 import s from './Analysis.module.scss'
 
+/** Анализ перевода введённого пользователем либо показ правильных вариантов */
 function Analysis() {
 	const { currentExercise: exercise } = useExercisesModalStore().store
 
@@ -23,15 +24,7 @@ function CorrectTranslations() {
 		return null
 	}
 
-	return (
-		<div className={s.wrapper}>
-			<Switcher
-				orientation="horizontal"
-				items={[{ text: 'Правильные варианты', isCurrent: true, onClick: () => {} }]}
-			/>
-			<CorrectTranslationsList correctTranslations={analysis.correctTranslations} />
-		</div>
-	)
+	return <CorrectTranslationsList correctTranslations={analysis.correctTranslations} />
 }
 
 /** Разбор перевода данного пользователем */
@@ -57,7 +50,7 @@ function AnalysisForTranslation() {
 						},
 					},
 					{
-						text: 'Правильные варианты',
+						text: 'Варианты перевода',
 						isCurrent: viewType === 'correctVariants',
 						onClick: () => {
 							setViewType('correctVariants')
@@ -78,6 +71,8 @@ function AnalysisForTranslation() {
 type CorrectTranslationsListProps = {
 	correctTranslations: ExercisesType.EngSentence[]
 }
+
+/** Список правильных вариантов перевода */
 function CorrectTranslationsList(props: CorrectTranslationsListProps) {
 	const { correctTranslations } = props
 

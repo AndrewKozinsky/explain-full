@@ -7,6 +7,7 @@ type NoteProps = {
 	config: ArticleType.Note
 }
 
+/** Серая или оранжевая обёртка для вложенных элементов статьи */
 function Note(props: NoteProps) {
 	const { config } = props
 

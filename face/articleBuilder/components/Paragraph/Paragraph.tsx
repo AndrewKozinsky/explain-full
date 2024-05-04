@@ -1,4 +1,3 @@
-// import React from 'react'
 import cn from 'classnames'
 import ArticleType from '../../../articlesData/articleType'
 import ArrowCircle from '../ArrowCircle/ArrowCircle'
@@ -9,6 +8,7 @@ type HeaderProps = {
 	config: ArticleType.Paragraph
 }
 
+/** Компонент абзаца в статье */
 function Paragraph(props: HeaderProps) {
 	const { config } = props
 
@@ -33,6 +33,7 @@ type ParagraphChildrenProps = {
 	textConfigs: ArticleType.TextElem[]
 }
 
+/** Дети компонента абзаца в статье */
 function ParagraphChildren(props: ParagraphChildrenProps) {
 	const { textConfigs } = props
 

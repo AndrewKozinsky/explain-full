@@ -3,7 +3,14 @@ import ExercisesType from '../../../articlesData/exercisesType'
 import { createAdminTokenString } from '../../../utils/strings'
 import { ExercisesManagerTypes } from './exercisesManagerTypes'
 
+/** Класс с методами проверки перевода данного пользователем */
 export class ExerciseChecker {
+	/**
+	 * Ищет в данных упражнения перевод похожий на тот, который дал пользователь.
+	 * И если находит, то возвращает объект с данными чтобы показать разбор перевода.
+	 * Если не находит, то возвращает undefined.
+	 * @param exercise — данные упражнения
+	 */
 	checkInLocalData(
 		exercise: ExercisesManagerTypes.Exercise,
 	): undefined | ExercisesManagerTypes.Analysis {
@@ -71,6 +78,11 @@ export class ExerciseChecker {
 		}
 	}
 
+	/**
+	 * Делает запрос на сервер для получения разбора перевода данного пользователем.
+	 * Фомирует и возвращает объект с данными чтобы показать разбор перевода.
+	 * @param exercise — данные упражнения
+	 */
 	async checkByAI(
 		exercise: ExercisesManagerTypes.Exercise,
 	): Promise<ExercisesManagerTypes.Analysis> {
@@ -100,6 +112,11 @@ export class ExerciseChecker {
 		})
 	}
 
+	/**
+	 * Находит в переданных переводах перевод похожий на тот, что дал пользователь.
+	 * @param translations — список существующих вариантов перевода в данных упражнения
+	 * @param userTranslation — перевод, данный пользователем
+	 */
 	private findSimilarTranslation(
 		translations: ExercisesType.EngSentence[],
 		userTranslation: string,
@@ -137,22 +154,15 @@ export class ExerciseChecker {
 		dryText = dryText.replace(/don't/g, 'do not')
 		dryText = dryText.replace(/doesn't/g, 'does not')
 		dryText = dryText.replace(/didn't/g, 'did not')
-		// dryText = dryText.replace(/aren't/g, 'are not')
 		dryText = dryText.replace(/can't/g, 'cannot')
 		dryText = dryText.replace(/couldn't/g, 'could not')
 		dryText = dryText.replace(/hadn't/g, 'had not')
 		dryText = dryText.replace(/hasn't/g, 'has not')
 		dryText = dryText.replace(/haven't/g, 'have not')
-		// dryText = dryText.replace(/i'm/g, 'i am')
 		dryText = dryText.replace(/i've/g, 'i have')
-		// dryText = dryText.replace(/isn't/g, 'is not')
-		// dryText = dryText.replace(/let's/g, 'let us')
 		dryText = dryText.replace(/mustn't/g, 'must not')
-		// dryText = dryText.replace(/shan't/g, 'shall not')
 		dryText = dryText.replace(/shouldn't/g, 'should not')
-		// dryText = dryText.replace(/they're/g, 'they are')
 		dryText = dryText.replace(/weren't/g, 'were not')
-		// dryText = dryText.replace(/what've/g, 'what have')
 		dryText = dryText.replace(/won't/g, 'will not')
 		dryText = dryText.replace(/you're/g, 'you are')
 		dryText = dryText.replace(/you've/g, 'you have')
@@ -160,6 +170,10 @@ export class ExerciseChecker {
 		return dryText
 	}
 
+	/**
+	 * Делает запрос на сервер для проверки перевода пользователя через искуственный интеллект
+	 * @param exercise — объект упражнения
+	 */
 	private async makeRequestToAI(
 		exercise: ExercisesManagerTypes.Exercise,
 	): Promise<{ correct: boolean; analysis: string }> {

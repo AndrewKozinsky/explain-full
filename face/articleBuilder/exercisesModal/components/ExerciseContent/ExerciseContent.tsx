@@ -11,6 +11,7 @@ import RusExercise from '../common/RusExercise/RusExercise'
 import LoadingOrErrorAnalysis from '../writing/LoadingOrErrorAnalysis/LoadingOrErrorAnalysis'
 import './ExerciseContent.scss'
 
+/** Часть модального окна прохождения упражнений с самим упражнением. */
 function ExerciseContent() {
 	const exercise = useExercisesModalStore().store.currentExercise
 
@@ -23,6 +24,7 @@ function ExerciseContent() {
 
 export default ExerciseContent
 
+/** Письменное упражнение. */
 function WritingExerciseContent() {
 	const { analysis } = useExercisesModalStore().store
 
@@ -45,6 +47,7 @@ function WritingExerciseContent() {
 	)
 }
 
+/** Голосовое упражнение. */
 function OralExerciseContent() {
 	const isShownResultInOralExercise = useIsShownResultInOralExercise()
 

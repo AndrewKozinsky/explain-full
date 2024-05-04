@@ -7,11 +7,6 @@ $CN: art-header;
 .#{$CN} {
 	text-wrap: balance;
 
-	// DELETE
-	/*&--h1 {
-		@include header-1();
-	}*/
-
 	&--h2 {
 		@include header-2();
 	}

@@ -3,6 +3,7 @@ import ArticleType from '../../../../../articlesData/articleType'
 import articleService from '../../../../../articleService/articleService'
 import { exercisesLogic, useExercisesModalStore } from '../../../store/store'
 
+/** Хук настраивает Хранилище модального окна прохождения упражнений. */
 export function useSetUpStore(article: ArticleType.ArtArticle) {
 	const { exercisesId } = useExercisesModalStore()
 

@@ -7,6 +7,7 @@ type LoadingOrErrorAnalysisProps = {
 	type: 'loading' | 'error'
 }
 
+/** Блок с сообщением о загрузке данных проверки перевода или об ошибке. */
 function LoadingOrErrorAnalysis(props: LoadingOrErrorAnalysisProps) {
 	const { type } = props
 

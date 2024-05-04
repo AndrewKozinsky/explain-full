@@ -8,7 +8,7 @@ import { usePrepareInput } from './fn/setFocusToInput'
 import AnalysisStatus = ExercisesManagerTypes.AnalysisStatus
 import s from './EngTranslateInput.module.scss'
 
-// Поле для ввода перевода русского предложения
+/** Поле для ввода перевода русского предложения */
 function EngTranslateInput() {
 	const { analysis } = useExercisesModalStore().store
 	const textareaRef = useRef<null | HTMLTextAreaElement>(null)

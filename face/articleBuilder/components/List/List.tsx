@@ -7,6 +7,7 @@ type ListProps = {
 	config: ArticleType.List
 }
 
+/** Нумерованный и ненумерованный список */
 function List(props: ListProps) {
 	const { config } = props
 

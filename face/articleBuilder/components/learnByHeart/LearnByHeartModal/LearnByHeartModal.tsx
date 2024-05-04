@@ -7,6 +7,7 @@ import { useLearnByHeartStore } from '../store/store'
 import { useGetOpenCloseModal } from './fn/clickOnBlock'
 import './LearnByHeartModal.scss'
 
+/** Модальное окно со списком слов для заучивания */
 function LearnByHeartModal() {
 	const { wordObjs, isModalOpen } = useLearnByHeartStore()
 

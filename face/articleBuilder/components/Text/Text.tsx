@@ -3,11 +3,12 @@ import ArticleType from '../../../articlesData/articleType'
 import { typographyText } from '../../../utils/strings'
 import './Text.scss'
 
-type HeaderProps = {
+type TextProps = {
 	config: ArticleType.Text
 }
 
-function Text(props: HeaderProps) {
+/** Текст статьи */
+function Text(props: TextProps) {
 	const { config } = props
 
 	if (!config.color && !config.color && !config.weight) {

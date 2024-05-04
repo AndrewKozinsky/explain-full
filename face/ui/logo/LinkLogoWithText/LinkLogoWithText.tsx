@@ -17,7 +17,7 @@ export function LinkLogoWithText() {
 	}
 
 	return (
-		<Link href="/face/public" className="link-logo" data-testid="linkLogoWithText">
+		<Link href="/" className="link-logo" data-testid="linkLogoWithText">
 			<LogoWithText />
 		</Link>
 	)

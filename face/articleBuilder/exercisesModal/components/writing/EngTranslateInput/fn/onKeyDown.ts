@@ -6,5 +6,5 @@ import { exercisesLogic } from '../../../../store/store'
 export function useGetOnInput(e: React.KeyboardEvent<HTMLTextAreaElement>) {
 	const $textInput = e.target as HTMLTextAreaElement
 
-	exercisesLogic.setExerciseUserTranslate($textInput.value)
+	exercisesLogic.setUserTranslateToExercise($textInput.value)
 }

@@ -1,4 +1,3 @@
-// import React from 'react'
 import cn from 'classnames'
 import ArticleType from '../../../articlesData/articleType'
 import { typographyText } from '../../../utils/strings'

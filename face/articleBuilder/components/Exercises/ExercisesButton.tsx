@@ -12,7 +12,7 @@ type ExercisesProps = {
 	exercises: ExercisesType.ExercisesObj
 }
 
-// Кнопка перехода к модальному окну выполнения упражнений
+/** Кнопка перехода к модальному окну выполнения упражнений */
 function ExercisesButton(props: ExercisesProps) {
 	const { exercises } = props
 
@@ -44,6 +44,7 @@ type ButtonWrapperProps = {
 	children: React.ReactNode[]
 }
 
+/** Обёртка кнопки открытия модального окна со списком слов для заучивания. */
 function ButtonWrapper(props: ButtonWrapperProps) {
 	const { exercises, children } = props
 
@@ -63,6 +64,7 @@ type SentencesTextProps = {
 	exercises: ExercisesType.ExercisesObj
 }
 
+/** Абзац со словами для заучивания в качестве иллюстрации что будет показано в модальном окне. */
 function SentencesText(props: SentencesTextProps) {
 	const { exercises } = props
 

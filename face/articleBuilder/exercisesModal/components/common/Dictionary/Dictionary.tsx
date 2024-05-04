@@ -3,6 +3,7 @@ import DictionaryWord from '../../../../../_pages/courseArtPage/courseArticlePag
 import { useExercisesModalStore } from '../../../store/store'
 import s from './Dictionary.module.scss'
 
+/** Список русских слов с переводом на английский для правильного перевода предложения. */
 function Dictionary() {
 	const { words } = useExercisesModalStore().store.currentExercise
 	if (!words) return null

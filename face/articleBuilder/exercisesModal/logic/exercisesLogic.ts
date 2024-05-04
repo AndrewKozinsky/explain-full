@@ -4,6 +4,7 @@ import { TelegramGroup } from '../../../utils/telegramGroup'
 import { ExerciseChecker } from './ExerciseChecker'
 import { ExercisesManagerTypes } from './exercisesManagerTypes'
 
+/** Класс предоставляющий методы для формирования данных и прохождения упражнений */
 class ExercisesLogic {
 	chapterName = 'Неизвестно'
 	store!: ExercisesManagerTypes.Store
@@ -14,10 +15,18 @@ class ExercisesLogic {
 		private telegramGroup: TelegramGroup,
 	) {}
 
+	/**
+	 * Ставит в данные название главы. Она требуется при отправке сообщения в Телеграм о новом неизвестном переводе.
+	 * @param chapterName — имя главы
+	 */
 	setChapterName(chapterName: string) {
 		this.chapterName = chapterName
 	}
 
+	/**
+	 * Ставит в свойсво store данные необходимые для отрисовки содержимого модального окна прохождения упражнений.
+	 * @param rowExercises — данные упражнений из статьи
+	 */
 	initStore(rowExercises: ExercisesType.Exercise[]) {
 		const exercisesWriting = this.convertRowExercisesToStoreExercises(
 			rowExercises,
@@ -42,15 +51,21 @@ class ExercisesLogic {
 		this.eventEmitter.emit(ExercisesManagerTypes.Event.storeChanged)
 	}
 
+	/**
+	 * Переводит данные об упражнениях в формат данных используемых в модальном окне прохождения упражнений
+	 * @param rowExercises — данные упражнений из статьи
+	 * @param type — тип упражнений: письменные или голосовые
+	 * @param startId — начальный идентификатор упражнений
+	 */
 	convertRowExercisesToStoreExercises(
 		rowExercises: ExercisesType.Exercise[],
 		type: ExercisesManagerTypes.ExerciseType,
-		minId: number,
+		startId: number,
 	): ExercisesManagerTypes.Exercise[] {
 		return rowExercises.map((rowExercise, i) => {
 			return {
 				...rowExercise,
-				id: minId + i,
+				id: startId + i,
 				isCurrent: false,
 				type,
 				userTranslate: '',
@@ -84,11 +99,13 @@ class ExercisesLogic {
 		this.eventEmitter.emit(ExercisesManagerTypes.Event.storeChanged)
 	}
 
+	/** Делает первое письменное упражнение текущим */
 	switchToFirstWritingExercise() {
 		const firstWritingExerciseId = this.store.exercisesWriting[0].id
 		this.switchToExerciseById(firstWritingExerciseId)
 	}
 
+	/** Делает первое голосовое упражнение текущим */
 	switchToFirstOralExercise() {
 		const firstWritingExerciseId = this.store.exercisesOral[0].id
 		this.switchToExerciseById(firstWritingExerciseId)
@@ -139,13 +156,21 @@ class ExercisesLogic {
 
 		const gigaChatAnalysis = await this.exerciseChecker.checkByAI(exercise)
 
-		this.reportAboutUnknownTranslation(exercise, gigaChatAnalysis)
+		this.sendMessageToTelegramAboutUnknownTranslation(exercise, gigaChatAnalysis)
 
 		this.store.analysis = gigaChatAnalysis
 		this.eventEmitter.emit(ExercisesManagerTypes.Event.storeChanged)
 	}
 
-	reportAboutUnknownTranslation(exercise: ExercisesManagerTypes.Exercise, analysis: any) {
+	/**
+	 * Отправляет в группу Телеграма сообщение о новом варианте перевода русского предложения
+	 * @param exercise — данные упражнения
+	 * @param analysis — данные анализа упражнения
+	 */
+	sendMessageToTelegramAboutUnknownTranslation(
+		exercise: ExercisesManagerTypes.Exercise,
+		analysis: any,
+	) {
 		let analysisText = 'При разборе произошла ошибка'
 
 		try {
@@ -160,7 +185,11 @@ class ExercisesLogic {
 		)
 	}
 
-	setExerciseUserTranslate(translateText: string) {
+	/**
+	 * Ставит в данные упражнения перевод данный пользователем.
+	 * @param translateText — перевод данный пользователем
+	 */
+	setUserTranslateToExercise(translateText: string) {
 		this.store.currentExercise.userTranslate = translateText
 		this.store.analysis.status = ExercisesManagerTypes.AnalysisStatus.hidden
 

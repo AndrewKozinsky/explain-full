@@ -1,10 +1,10 @@
 import React from 'react'
-import cn from 'classnames'
 import Switcher, { SwitcherItem } from '../../../../ui/Switcher/Switcher'
 import { ExercisesManagerTypes } from '../../logic/exercisesManagerTypes'
 import { exercisesLogic, useExercisesModalStore } from '../../store/store'
 import s from './ExercisesLists.module.scss'
 
+/** Списки упражнений для прохождения. */
 function ExercisesLists() {
 	const { store } = useExercisesModalStore()
 
@@ -25,6 +25,7 @@ type ExercisesListProps = {
 	exercises: ExercisesManagerTypes.Exercise[]
 }
 
+/** Список упражнений для прохождения с заголовком. */
 function ExercisesList(props: ExercisesListProps) {
 	const { header, exercises } = props
 

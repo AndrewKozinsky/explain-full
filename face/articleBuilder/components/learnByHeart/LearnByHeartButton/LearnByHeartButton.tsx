@@ -13,7 +13,9 @@ type ExercisesProps = {
 	article: null | ArticleType.Art
 }
 
-// Кнопка перехода к модальному окну со списком слов для заучивания главы
+/**
+ * Кнопка перехода к модальному окну со списком слов для заучивания
+ */
 function LearnByHeartButton(props: ExercisesProps) {
 	const { article } = props
 
@@ -52,7 +54,7 @@ type ButtonWrapperProps = {
 	children: React.ReactNode[]
 }
 
-// Кнопка открывающая модальное окно списка слов для заучивания
+/** Кнопка открывающая модальное окно списка слов для заучивания */
 function ButtonWrapper(props: ButtonWrapperProps) {
 	const { children } = props
 
@@ -65,7 +67,7 @@ function ButtonWrapper(props: ButtonWrapperProps) {
 	)
 }
 
-// Абзац текста с примерами слов для заучивания
+/** Абзац текста с примерами слов для заучивания */
 function WordsParagraph() {
 	const { wordObjs } = useLearnByHeartStore()
 

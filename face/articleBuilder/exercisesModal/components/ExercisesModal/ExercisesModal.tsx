@@ -13,6 +13,7 @@ type ExercisesModalProps = {
 	article: ArticleType.ArtArticle
 }
 
+/** Модальное окно прохождения упражнений */
 export function ExercisesModal(props: ExercisesModalProps) {
 	const { article } = props
 

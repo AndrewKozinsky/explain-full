@@ -5,8 +5,8 @@ export namespace ExercisesModalStoreType {
 		// Открыто ли модальное окно со списком слов для заучивания
 		isModalOpen: boolean
 		// id упражнений, которые модальное окно должно показывать
-		// ВОЗМОЖНО СТОИТ УДАЛИТЬ !!!
 		exercisesId: null | number
+		// Данные для отрисовки содержимого модального окна прохождения упражнений
 		store: ExercisesManagerTypes.Store
 	}
 }
