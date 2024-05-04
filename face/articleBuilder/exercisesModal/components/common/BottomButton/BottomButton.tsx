@@ -1,12 +1,13 @@
 import React from 'react'
 import Button from '../../../../../ui/buttons/Button/Button'
-import { exercisesLogic } from '../../../store/store'
-import { useGetButtonText } from './fn/button'
+import { useGetButtonText, useGetOnButtonClick, useSetEnterKeyHandler } from './fn/button'
 
 function BottomButton() {
 	const buttonText = useGetButtonText()
+	const onButtonClick = useGetOnButtonClick()
+	useSetEnterKeyHandler()
 
-	return <Button text={buttonText} onClick={() => exercisesLogic.checkCurrentExercise()} />
+	return <Button text={buttonText} onClick={onButtonClick} />
 }
 
 export default BottomButton

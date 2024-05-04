@@ -2,11 +2,10 @@ import React, { useEffect } from 'react'
 import { useExercisesModalStore } from '../../../../store/store'
 
 /**
- * Хук при изменении упражнения ставит фокус на поле ввода.
- * Это требуется для удобства ученика на случай если фокус установлен на других элементах.
+ * Хук при изменении упражнения ставит фокус на поле ввода и стирает существующее значение.
  * @param inputRef — ссылка на поле ввода перевода.
  */
-export function useSetFocusToInput(inputRef: React.MutableRefObject<HTMLTextAreaElement | null>) {
+export function usePrepareInput(inputRef: React.MutableRefObject<HTMLTextAreaElement | null>) {
 	const exerciseId = useExercisesModalStore().store.currentExercise.id
 
 	useEffect(
@@ -14,7 +13,8 @@ export function useSetFocusToInput(inputRef: React.MutableRefObject<HTMLTextArea
 			setTimeout(() => {
 				if (!inputRef.current) return
 
-				inputRef.current?.focus()
+				inputRef.current.focus()
+				inputRef.current.value = ''
 			}, 0)
 		},
 		[inputRef.current, exerciseId],

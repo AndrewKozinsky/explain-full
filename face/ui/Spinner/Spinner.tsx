@@ -3,20 +3,20 @@ import './Spinner.scss'
 
 function Spinner() {
 	return (
-		<div className="lds-spinner">
-			<div />
-			<div />
-			<div />
-			<div />
-			<div />
-			<div />
-			<div />
-			<div />
-			<div />
-			<div />
-			<div />
-			<div />
-		</div>
+		<span className="lds-spinner">
+			<span />
+			<span />
+			<span />
+			<span />
+			<span />
+			<span />
+			<span />
+			<span />
+			<span />
+			<span />
+			<span />
+			<span />
+		</span>
 	)
 }
 

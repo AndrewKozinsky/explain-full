@@ -1,19 +1,23 @@
 import { useEffect } from 'react'
+import ArticleType from '../../../../../articlesData/articleType'
 import articleService from '../../../../../articleService/articleService'
-import { ExercisesManagerTypes } from '../../../logic/exercisesManagerTypes'
-import { eventEmitter, exercisesLogic, useExercisesModalStore } from '../../../store/store'
+import { exercisesLogic, useExercisesModalStore } from '../../../store/store'
 
-export function useSetUpStore(articleSlug: string) {
+export function useSetUpStore(article: ArticleType.ArtArticle) {
 	const { exercisesId } = useExercisesModalStore()
 
 	useEffect(
 		function () {
 			if (exercisesId === null) return
 
-			const currentExercises = articleService.getArticleExercises(articleSlug, exercisesId)
+			const currentExercises = articleService.getArticleExercises(
+				article.meta.slug,
+				exercisesId,
+			)
 			if (!currentExercises) return
 
 			exercisesLogic.initStore(currentExercises.exercises)
+			exercisesLogic.setChapterName(article.meta.articleName)
 		},
 		[exercisesId],
 	)

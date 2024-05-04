@@ -32,7 +32,7 @@ function ExercisesList(props: ExercisesListProps) {
 		return {
 			text: exercise.rusSentence,
 			isCurrent: exercise.isCurrent,
-			onClick: () => exercisesLogic.changeCurrentExercise(exercise.id),
+			onClick: () => exercisesLogic.switchToExerciseById(exercise.id),
 		}
 	})
 

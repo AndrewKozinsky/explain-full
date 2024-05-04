@@ -2,9 +2,9 @@
 @import 'styles/mixins';
 @import 'styles/inherit';
 
-.loading-message {
+.error-message {
 	display: flex;
 	align-items: center;
 	gap: .5rem;
-	color: $grayColor-4;
+	color: $redColor-2;
 }

@@ -1,5 +1,6 @@
 'use client'
 
+import ArticleType from '../../../../articlesData/articleType'
 import Modal from '../../../../ui/Modal/Modal'
 import { useExercisesModalStore } from '../../store/store'
 import ExerciseContent from '../ExerciseContent/ExerciseContent'
@@ -9,15 +10,15 @@ import { useSetUpStore } from './fn/useSetUpStore'
 import './ExercisesModal.scss'
 
 type ExercisesModalProps = {
-	articleSlug: string
+	article: ArticleType.ArtArticle
 }
 
 export function ExercisesModal(props: ExercisesModalProps) {
-	const { articleSlug } = props
+	const { article } = props
 
 	const { isModalOpen, store } = useExercisesModalStore()
 
-	useSetUpStore(articleSlug)
+	useSetUpStore(article)
 	const closeModal = useGetOpenCloseExercisesModal(false, null)
 
 	if (!store) return null

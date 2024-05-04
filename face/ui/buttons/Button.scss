@@ -10,7 +10,7 @@
 
 	&:hover {
 		color: $textColor;
-		background-color: $grayColor-1;
+		background-color: desaturate($grayColor-1, 100%);
 		border-color: $grayColor-3;
 	}
 }

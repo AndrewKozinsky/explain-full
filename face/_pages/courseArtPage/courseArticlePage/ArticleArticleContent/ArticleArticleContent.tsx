@@ -24,7 +24,7 @@ function ArticleArticleContent(props: WelcomeArticleContentProps) {
 			<div className="article-article__footer">
 				<LearnByHeartButton article={nextArticle} />
 				<PrevAndNextArticlesNav prevArticle={prevArticle} nextArticle={nextArticle} />
-				<ExercisesModal articleSlug={article.meta.slug} />
+				<ExercisesModal article={article} />
 			</div>
 		</div>
 	)

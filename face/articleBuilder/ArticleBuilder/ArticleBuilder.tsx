@@ -1,6 +1,4 @@
-'use client'
-
-import React, { ReactNode, useEffect } from 'react'
+import React, { ReactNode } from 'react'
 import ArticleType from '../../articlesData/articleType'
 import ExercisesButton from '../components/Exercises/ExercisesButton'
 import FaqInArticle from '../components/FaqInArticle/FaqInArticle'
@@ -18,13 +16,6 @@ type ArticleBuilderProps = {
 // Компонент получающий данные статьи и по ним формирующий разметку
 function ArticleBuilder(props: ArticleBuilderProps): ReactNode {
 	const content = props.articleContent
-
-	useEffect(function () {
-		const $exercisesButton = document.querySelector('.exercises') as HTMLButtonElement
-		if (!$exercisesButton) return
-
-		$exercisesButton.click()
-	}, [])
 
 	return (
 		<>

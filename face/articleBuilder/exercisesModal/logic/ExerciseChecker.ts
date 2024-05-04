@@ -43,11 +43,30 @@ export class ExerciseChecker {
 		)
 
 		if (similarTranslation) {
+			let translateAnalysis = similarTranslation.analysis
+			if (!translateAnalysis) {
+				if (similarTranslation.isCorrect) {
+					translateAnalysis = [
+						{
+							type: 'paragraph',
+							children: [{ type: 'text', text: 'Перевод написан правильно.' }],
+						},
+					]
+				} else {
+					translateAnalysis = [
+						{
+							type: 'paragraph',
+							children: [{ type: 'text', text: 'Перевод написан неверно.' }],
+						},
+					]
+				}
+			}
+
 			return {
 				status: ExercisesManagerTypes.AnalysisStatus.visible,
 				isTranslateCorrect: similarTranslation.isCorrect,
 				correctTranslations,
-				translateAnalysis: similarTranslation.analysis!,
+				translateAnalysis,
 			}
 		}
 	}
@@ -66,7 +85,7 @@ export class ExerciseChecker {
 			isTranslateCorrect: aiAnalysis.correct,
 			correctTranslations,
 			translateAnalysis: [
-				{ type: 'paragraph', children: [{ type: 'text', text: aiAnalysis.text }] },
+				{ type: 'paragraph', children: [{ type: 'text', text: aiAnalysis.analysis }] },
 			],
 		}
 	}
@@ -128,21 +147,13 @@ export class ExerciseChecker {
 		dryText = dryText.replace(/i've/g, 'i have')
 		// dryText = dryText.replace(/isn't/g, 'is not')
 		// dryText = dryText.replace(/let's/g, 'let us')
-		// dryText = dryText.replace(/mightn't/g, 'might not')
 		dryText = dryText.replace(/mustn't/g, 'must not')
 		// dryText = dryText.replace(/shan't/g, 'shall not')
 		dryText = dryText.replace(/shouldn't/g, 'should not')
 		// dryText = dryText.replace(/they're/g, 'they are')
-		// dryText = dryText.replace(/they've/g, 'they have')
-		// dryText = dryText.replace(/we're/g, 'we are')
-		// dryText = dryText.replace(/we've/g, 'we have')
 		dryText = dryText.replace(/weren't/g, 'were not')
-		// dryText = dryText.replace(/what're/g, 'what are')
 		// dryText = dryText.replace(/what've/g, 'what have')
-		// dryText = dryText.replace(/who're/g, 'who are')
-		// dryText = dryText.replace(/who've/g, 'who have')
 		dryText = dryText.replace(/won't/g, 'will not')
-		// dryText = dryText.replace(/wouldn't/g, 'would not')
 		dryText = dryText.replace(/you're/g, 'you are')
 		dryText = dryText.replace(/you've/g, 'you have')
 
@@ -151,8 +162,8 @@ export class ExerciseChecker {
 
 	private async makeRequestToAI(
 		exercise: ExercisesManagerTypes.Exercise,
-	): Promise<{ correct: boolean; text: string }> {
-		const question = `Предложение "${exercise.rusSentence}" переведено "${exercise.userTranslate}". Проверь грамматическую правильность перевода на английский. Ответ дай в формате: {"correct": true,"analysis":"Your analysis"}. В isCorrect должно быть true если предложение переведено правильно на английский или false если не правильно. В analysis что сделано неправильно и как исправить если были сделаны ошибки.`
+	): Promise<{ correct: boolean; analysis: string }> {
+		const question = `Предложение "${exercise.rusSentence}" переведено "${exercise.userTranslate}". Проверь правильность перевода на английский. Ответ дай в объекте JSON: в свойстве isCorrect поставь булево значение правильно ли переведено предложение на английский. В analysis напиши что сделано неправильно и как исправить если были сделаны ошибки.`
 
 		return new Promise((resolve, reject) => {
 			fetch('/api/ai', {

@@ -2,18 +2,18 @@ import cn from 'classnames'
 import React, { useRef } from 'react'
 import { ExercisesManagerTypes } from '../../../logic/exercisesManagerTypes'
 import { useExercisesModalStore } from '../../../store/store'
-import s from './EngTranslateInput.module.scss'
 import { onEnterKeyDown } from './fn/getOnEnterKeyDown'
 import { useGetOnInput } from './fn/onKeyDown'
-import { useSetFocusToInput } from './fn/setFocusToInput'
+import { usePrepareInput } from './fn/setFocusToInput'
 import AnalysisStatus = ExercisesManagerTypes.AnalysisStatus
+import s from './EngTranslateInput.module.scss'
 
 // Поле для ввода перевода русского предложения
 function EngTranslateInput() {
 	const { analysis } = useExercisesModalStore().store
 	const textareaRef = useRef<null | HTMLTextAreaElement>(null)
 
-	useSetFocusToInput(textareaRef)
+	usePrepareInput(textareaRef)
 
 	let additionalTextClass = ''
 	if (analysis.status === AnalysisStatus.visible) {
