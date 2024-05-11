@@ -3,8 +3,9 @@ import ExercisesType from '../../../articlesData/exercisesType'
 
 export namespace ExercisesManagerTypes {
 	export type Store = {
-		// Все упражнения
+		// Письменные упражнения
 		exercisesWriting: Exercise[]
+		// Голосовые упражнения
 		exercisesOral: Exercise[]
 		// Текущее упражнение
 		currentExercise: Exercise

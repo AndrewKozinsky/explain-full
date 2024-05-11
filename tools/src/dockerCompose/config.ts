@@ -14,7 +14,7 @@ export function createDockerConfig(env: 'dev' | 'serverCheck' | 'server'): Confi
 	}
 
 	return {
-		version: '3',
+		version: '3.8',
 
 		services: {
 			nginx: {

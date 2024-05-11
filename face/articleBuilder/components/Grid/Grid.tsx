@@ -1,9 +1,7 @@
-// import React from 'react'
-// import ArticleType from '../../../articlesData/articleType'
-// import ArticleBuilder from '../../ArticleBuilder/ArticleBuilder'
-// import { getStyleTagCss, useGetGridId } from './fn/getGridStyle'
-// import './Grid.scss'
+import ArticleBuilder from '../../ArticleBuilder/ArticleBuilder'
+import { getStyleTagCss, useGetGridId } from './fn/getGridStyle'
 import ArticleType from '../../../articlesData/articleType'
+import './Grid.scss'
 
 type GridProps = {
 	config: ArticleType.Grid
@@ -12,7 +10,7 @@ type GridProps = {
 function Grid(props: GridProps) {
 	const { config } = props
 
-	/*const gridId = useGetGridId()
+	const gridId = useGetGridId()
 
 	return (
 		<section className="art-grid" id={gridId}>
@@ -25,11 +23,7 @@ function Grid(props: GridProps) {
 				)
 			})}
 		</section>
-	)*/
-
-	// ---
-
-	return null
+	)
 }
 
 export default Grid

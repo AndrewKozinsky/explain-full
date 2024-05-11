@@ -17,9 +17,9 @@
     margin-bottom: 0.3rem;
 }*/
 
-/*.art-header--h3 {
+.art-header--h3 {
     margin-bottom: 0.3rem;
-}*/
+}
 
 .art-header--h2 {
     margin-bottom: 0.6rem;
@@ -103,9 +103,9 @@
 	margin-top: 1rem;
 }*/
 
-/*.art-paragraph + .art-header--h3 {
+.art-paragraph + .art-header--h3 {
 	margin-top: 1.4rem;
-}*/
+}
 
 .art-paragraph + .art-header--h2 {
 	margin-top: 1.8rem;
@@ -139,35 +139,35 @@
 	margin-top: 0.4rem;
 }
 
-/*@include container-width($tablet-width) {
-	.art-paragraph + .art-header--h4 {
+@include container-width($tablet-width) {
+	/*.art-paragraph + .art-header--h4 {
 		margin-top: 1.2rem;
-	}
+	}*/
 	.art-paragraph + .art-header--h3 {
 		margin-top: 1.6rem;
 	}
-	.art-paragraph + .art-header--h2 {
+	/*.art-paragraph + .art-header--h2 {
 		margin-top: 1.8rem;
-	}
-}*/
+	}*/
+}
 
-/*@include container-width($monitor-width) {
-	.art-paragraph + .art-header--h4 {
+@include container-width($monitor-width) {
+	/*.art-paragraph + .art-header--h4 {
 		margin-top: 1.4rem;
-	}
+	}*/
 	.art-paragraph + .art-header--h3 {
 		margin-top: 2rem;
 	}
-	.art-paragraph + .art-header--h2 {
+	/*.art-paragraph + .art-header--h2 {
 		margin-top: 2.2rem;
-	}
-	.art-paragraph + .art-note {
+	}*/
+	/*.art-paragraph + .art-note {
 		margin-top: 1.8rem;
-	}
-	.art-paragraph + .art-grid {
+	}*/
+	/*.art-paragraph + .art-grid {
 		margin-top: 1.4rem;
-	}
-}*/
+	}*/
+}
 
 // СПИСОК (ОТСТУП НЕ УКАЗЫВАЕТСЯ) =====
 .art-list + .art-paragraph {

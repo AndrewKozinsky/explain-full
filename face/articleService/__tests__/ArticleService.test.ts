@@ -63,7 +63,7 @@ describe('ArticleService', () => {
 
 	describe('getArticleWords method', () => {
 		it('should return article words`', () => {
-			const receivedWords = articleService.getArticleWords('my-art-1')
+			const receivedWords = articleService.getArticleWordsByArticleSlug('my-art-1')
 
 			const expectedWords: ExercisesType.Word[] = [
 				{ rusWord: 'книга', engWord: 'a book', transcription: 'ə bʊk' },

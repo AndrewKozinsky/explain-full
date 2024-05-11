@@ -1,26 +1,27 @@
-// import { useMemo } from 'react'
+import { useMemo } from 'react'
+import ArticleType from '../../../../articlesData/articleType'
 // import ArticleType from '../../../../articlesData/articleType'
 
 /**
  * Возвращает уникальный идентификатор сетки чтобы к нему крепить сгенерированные стили ячеек.
  */
-/*export function useGetGridId() {
+export function useGetGridId() {
 	return useMemo(function () {
 		return 'grid-' + Math.round(Math.random() * 100000)
 	}, [])
-}*/
+}
 
 /**
  * Генерирует стили ячеек сетки чтобы они складывались в один столбик если места не достаточно.
  * @param gridConfig — конфигурация сетки
  * @param gridId — идентификатор сетки
  */
-/*export function getStyleTagCss(gridConfig: ArticleType.Grid, gridId: string) {
+export function getStyleTagCss(gridConfig: ArticleType.Grid, gridId: string) {
 	// Есть ли ячейки с указанной шириной
 	const isThereCellsWithWidth = Boolean(
 		gridConfig.cells.find((cell) => {
 			return cell.minWidth
-		})
+		}),
 	)
 
 	// Если ячеек с указанной шириной нет, то задать display: flex
@@ -56,7 +57,7 @@
 	}
 }
 `
-}*/
+}
 
 /*.#{$CN}__cell {
 

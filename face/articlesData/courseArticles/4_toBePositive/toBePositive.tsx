@@ -46,7 +46,7 @@ const toBePositive: ArticleType.ArtArticle = {
 			children: [
 				{ type: 'text', color: 'black', weight: 'normal', text: 'Они клоуны.' },
 				{ type: 'arrow' },
-				{ type: 'text', color: 'black', weight: 'normal', text: 'They clown.' },
+				{ type: 'text', color: 'black', weight: 'normal', text: 'They clowns.' },
 			],
 		},
 		{
@@ -95,8 +95,17 @@ const toBePositive: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: 'В предложениях подлежащие в виде местоимения. Тут сделано как надо. Но в моих предложениях нет сказуемого, то есть самого действия. Когда-то давно в русском языке оно ставилось. На современный манер звучало бы как «есть». В болгарском оно существует до сих пор. И в английском тоже. Оно называется be. Поставлю в перевод.',
+					text: 'В предложениях выше подлежащие в виде местоимения. Но в моих переводах нет сказуемого, то есть самого действия. Когда-то давно в русском языке оно ставилось. На современный манер звучало бы как «',
 				},
+				{ type: 'text', color: 'blue', weight: 'normal', text: 'есть' },
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: '». В болгарском оно существует до сих пор. И в английском тоже. Это глагол ',
+				},
+				{ type: 'text', color: 'blue', weight: 'normal', text: 'be' },
+				{ type: 'text', color: 'black', weight: 'normal', text: '. Поставлю в перевод:' },
 			],
 		},
 		{
@@ -124,7 +133,7 @@ const toBePositive: ArticleType.ArtArticle = {
 				{ type: 'arrow' },
 				{ type: 'text', color: 'black', weight: 'normal', text: 'They ' },
 				{ type: 'text', color: 'blue', weight: 'normal', text: 'be' },
-				{ type: 'text', color: 'black', weight: 'normal', text: ' clown.' },
+				{ type: 'text', color: 'black', weight: 'normal', text: ' clowns.' },
 			],
 		},
 		{
@@ -232,7 +241,7 @@ const toBePositive: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: 'Английские глаголы могут находиться в одном из трёх форм:',
+					text: 'Английские глаголы могут находиться в одной из трёх форм:',
 				},
 			],
 		},
@@ -245,11 +254,13 @@ const toBePositive: ArticleType.ArtArticle = {
 					offset: false,
 					textSize: 'normal',
 					children: [
+						{ type: 'text', color: 'black', weight: 'normal', text: 'В ' },
+						{ type: 'text', color: 'black', weight: 'bold', text: 'неопределённой' },
 						{
 							type: 'text',
 							color: 'black',
 							weight: 'normal',
-							text: 'В неопределённой форме (инфинитив). Это глагол отвечающий на вопрос «что делать?». Он не содержит в себе сведений о времени совершения действия. Глагол «есть» в неопределённой форме будет ',
+							text: ' форме (инфинитиве). Это глагол отвечающий на вопрос «что делать?». Это действие в чистом виде по которому нельзя сказать о времени. Глагол «есть» в неопределённой форме будет ',
 						},
 						{ type: 'text', color: 'blue', weight: 'normal', text: 'be' },
 						{
@@ -265,12 +276,9 @@ const toBePositive: ArticleType.ArtArticle = {
 					offset: false,
 					textSize: 'normal',
 					children: [
-						{
-							type: 'text',
-							color: 'black',
-							weight: 'normal',
-							text: 'В форме настоящего времени.',
-						},
+						{ type: 'text', color: 'black', weight: 'normal', text: 'В форме ' },
+						{ type: 'text', color: 'black', weight: 'bold', text: 'настоящего' },
+						{ type: 'text', color: 'black', weight: 'normal', text: ' времени.' },
 					],
 				},
 				{
@@ -278,12 +286,9 @@ const toBePositive: ArticleType.ArtArticle = {
 					offset: false,
 					textSize: 'normal',
 					children: [
-						{
-							type: 'text',
-							color: 'black',
-							weight: 'normal',
-							text: 'В форме прошедшего времени.',
-						},
+						{ type: 'text', color: 'black', weight: 'normal', text: 'В форме ' },
+						{ type: 'text', color: 'black', weight: 'bold', text: 'прошедшего' },
+						{ type: 'text', color: 'black', weight: 'normal', text: ' времени.' },
 					],
 				},
 			],
@@ -293,11 +298,13 @@ const toBePositive: ArticleType.ArtArticle = {
 			offset: true,
 			textSize: 'normal',
 			children: [
+				{ type: 'text', color: 'black', weight: 'normal', text: 'Форма глагола ' },
+				{ type: 'text', color: 'blue', weight: 'normal', text: 'be' },
 				{
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: 'Форма глагола be в настоящем времени зависит от лица подлежащего.',
+					text: ' в настоящем времени зависит от лица подлежащего.',
 				},
 			],
 		},
@@ -347,7 +354,7 @@ const toBePositive: ArticleType.ArtArticle = {
 				{ type: 'arrow' },
 				{ type: 'text', color: 'black', weight: 'normal', text: 'They ' },
 				{ type: 'text', color: 'blue', weight: 'normal', text: 'are' },
-				{ type: 'text', color: 'black', weight: 'normal', text: ' clown.' },
+				{ type: 'text', color: 'black', weight: 'normal', text: ' clowns.' },
 			],
 		},
 		{
@@ -380,14 +387,7 @@ const toBePositive: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: '. Его назначение будет объяснено в следующей главе. А существительное clown стоит в единственном числе. Чтобы сделать во множественном добавлю окончание ',
-				},
-				{ type: 'text', color: 'blue', weight: 'normal', text: '-s' },
-				{
-					type: 'text',
-					color: 'black',
-					weight: 'normal',
-					text: '. Эта тема тоже будет разобрана в одной из следующих глав.',
+					text: '. Его назначение будет объяснено в следующей главе. ',
 				},
 			],
 		},
@@ -410,9 +410,7 @@ const toBePositive: ArticleType.ArtArticle = {
 			children: [
 				{ type: 'text', color: 'black', weight: 'normal', text: 'Они клоуны.' },
 				{ type: 'arrow' },
-				{ type: 'text', color: 'black', weight: 'normal', text: 'They are clown' },
-				{ type: 'text', color: 'blue', weight: 'normal', text: 's' },
-				{ type: 'text', color: 'black', weight: 'normal', text: '.' },
+				{ type: 'text', color: 'black', weight: 'normal', text: 'They are clowns.' },
 			],
 		},
 		{
@@ -444,75 +442,6 @@ const toBePositive: ArticleType.ArtArticle = {
 			type: 'exercises',
 			id: 0,
 			exercises: [
-				{
-					rusSentence: 'Проверка',
-					engSentences: [
-						{
-							engSentences: ['First'],
-							isCorrect: false,
-							analysis: [
-								{
-									type: 'paragraph',
-									offset: false,
-									textSize: 'normal',
-									children: [
-										{
-											type: 'text',
-											color: 'black',
-											weight: 'normal',
-											text: 'В предложении сообщается чем является подлежащее «Это». Поэтому после него ставиться to be в одной из своих форм зависящей от лица подлежащего.',
-										},
-									],
-								},
-							],
-						},
-						{ engSentences: ['Second 1', 'Second 2'], isCorrect: true },
-						{
-							engSentences: ['third'],
-							isCorrect: false,
-							analysis: [
-								{
-									type: 'paragraph',
-									offset: false,
-									textSize: 'normal',
-									children: [
-										{
-											type: 'text',
-											color: 'black',
-											weight: 'normal',
-											text: 'Книга упоминается в первый раз. Поэтому существительное «книга» будет в значении «одна из книг». Чтобы это показать поставьте неопределённый артикль ',
-										},
-										{
-											type: 'text',
-											color: 'blue',
-											weight: 'normal',
-											text: 'a',
-										},
-										{
-											type: 'text',
-											color: 'black',
-											weight: 'normal',
-											text: ' вместо ',
-										},
-										{
-											type: 'text',
-											color: 'blue',
-											weight: 'normal',
-											text: 'the',
-										},
-										{
-											type: 'text',
-											color: 'black',
-											weight: 'normal',
-											text: '.',
-										},
-									],
-								},
-							],
-						},
-					],
-					words: [{ rusWord: 'книга', engWord: 'a book' }],
-				},
 				{
 					rusSentence: 'Это книга.',
 					engSentences: [
@@ -580,12 +509,45 @@ const toBePositive: ArticleType.ArtArticle = {
 							],
 						},
 					],
-					words: [{ rusWord: 'книга', engWord: 'a book' }],
+					words: [{ rusWord: 'книга', engWord: 'book' }],
 				},
 				{
 					rusSentence: 'Я строитель',
-					engSentences: [{ engSentences: ['I am a builder.'], isCorrect: true }],
-					words: [{ rusWord: 'книга', engWord: 'a book' }],
+					engSentences: [
+						{ engSentences: ['I am a builder.'], isCorrect: true },
+						{
+							engSentences: ['I am builder.'],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Перед существительными в единственном числе нужно ставить артикль ',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: 'a',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: '. Подробнее о его назначении будет рассказано в следующей главе.',
+										},
+									],
+								},
+							],
+						},
+					],
+					words: [{ rusWord: 'строитель', engWord: 'builder' }],
 				},
 				{
 					rusSentence: 'Это журнал.',
@@ -678,9 +640,7 @@ const toBePositive: ArticleType.ArtArticle = {
 							],
 						},
 					],
-					words: [
-						{ rusWord: 'журнал', engWord: 'a magazine', transcription: 'mæɡəˈziːn' },
-					],
+					words: [{ rusWord: 'журнал', engWord: 'magazine' }],
 				},
 				{
 					rusSentence: 'Он учитель.',
@@ -738,52 +698,7 @@ const toBePositive: ArticleType.ArtArticle = {
 							],
 						},
 					],
-					words: [{ rusWord: 'учитель', engWord: 'a teacher' }],
-				},
-				{
-					rusSentence: 'Мария врач.',
-					engSentences: [
-						{ engSentences: ['Maria is a doctor.'], isCorrect: true },
-						{
-							engSentences: ['Maria is a vet.'],
-							isCorrect: false,
-							analysis: [
-								{
-									type: 'paragraph',
-									offset: false,
-									textSize: 'normal',
-									children: [
-										{
-											type: 'text',
-											color: 'black',
-											weight: 'normal',
-											text: 'Мария не ветеринар, а врач.',
-										},
-									],
-								},
-							],
-						},
-						{
-							engSentences: ['Maria am doctor.'],
-							isCorrect: false,
-							analysis: [
-								{
-									type: 'paragraph',
-									offset: false,
-									textSize: 'normal',
-									children: [
-										{
-											type: 'text',
-											color: 'black',
-											weight: 'normal',
-											text: 'Все имена в третьем лице. Поэтому после них to be стоит в форме is, а не am.',
-										},
-									],
-								},
-							],
-						},
-					],
-					words: [{ rusWord: 'врач', engWord: 'a doctor' }],
+					words: [{ rusWord: 'учитель', engWord: 'teacher' }],
 				},
 				{
 					rusSentence: 'Это телефон.',
@@ -858,7 +773,7 @@ const toBePositive: ArticleType.ArtArticle = {
 							],
 						},
 					],
-					words: [{ rusWord: 'телефон', engWord: 'a phone' }],
+					words: [{ rusWord: 'телефон', engWord: 'phone' }],
 				},
 				{
 					rusSentence: 'Павел студент.',
@@ -988,7 +903,7 @@ const toBePositive: ArticleType.ArtArticle = {
 							],
 						},
 					],
-					words: [{ rusWord: 'студент', engWord: 'a student' }],
+					words: [{ rusWord: 'студент', engWord: 'student' }],
 				},
 				{
 					rusSentence: 'Это дверь.',
@@ -1087,22 +1002,38 @@ const toBePositive: ArticleType.ArtArticle = {
 							],
 						},
 					],
-					words: [{ rusWord: 'студент', engWord: 'a student' }],
+					words: [{ rusWord: 'дверь', engWord: 'door' }],
 				},
 				{
 					rusSentence: 'Они всё ещё дети.',
 					engSentences: [{ engSentences: ['They are still children.'], isCorrect: true }],
-					words: [{ rusWord: 'студент', engWord: 'a student' }],
+					words: [
+						{ rusWord: 'они', engWord: 'they' },
+						{ rusWord: 'всё ещё', engWord: 'still' },
+						{ rusWord: 'дети', engWord: 'children' },
+					],
+				},
+				{
+					rusSentence: 'Эйприл Фокс танцовщица.',
+					engSentences: [{ engSentences: ['April Fox is a dancer.'], isCorrect: true }],
+					words: [{ rusWord: 'танцор/танцовщица', engWord: 'dancer' }],
 				},
 				{
 					rusSentence: 'Просто представь себе они уже капитаны!',
 					engSentences: [
 						{
-							engSentences: ['Just imagine they are captans already!'],
+							engSentences: [
+								'Just imagine they are captains already!',
+								'Just imagine! They are captains already!',
+							],
 							isCorrect: true,
 						},
 					],
-					words: [{ rusWord: 'студент', engWord: 'a student' }],
+					words: [
+						{ rusWord: 'просто представь', engWord: 'just imagine' },
+						{ rusWord: 'капитаны', engWord: 'captains' },
+						{ rusWord: 'уже', engWord: 'already' },
+					],
 				},
 			],
 			offset: true,
@@ -1113,11 +1044,13 @@ const toBePositive: ArticleType.ArtArticle = {
 			offset: false,
 			textSize: 'normal',
 			children: [
+				{ type: 'text', color: 'black', weight: 'normal', text: 'Глагол ' },
+				{ type: 'text', color: 'blue', weight: 'normal', text: 'be' },
 				{
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: 'Глагол be в прошедшем времени тоже зависит от лица подлежащего. Только тут две формы, а не три как в настоящем времени.',
+					text: ' в прошедшем времени тоже зависит от лица подлежащего. Только тут две формы, а не три как в настоящем времени.',
 				},
 			],
 		},
@@ -1199,11 +1132,19 @@ const toBePositive: ArticleType.ArtArticle = {
 					offset: false,
 					textSize: 'normal',
 					children: [
+						{ type: 'text', color: 'blue', weight: 'normal', text: 'Was' },
 						{
 							type: 'text',
 							color: 'black',
 							weight: 'normal',
-							text: 'Was ставится перед подлежащим единственного числа, а were множественного. Как и в русском для единственного говорим «был», а для множественного «были». Даже по количеству букв слова совпадают.',
+							text: ' ставится перед подлежащим единственного числа, а ',
+						},
+						{ type: 'text', color: 'blue', weight: 'normal', text: 'were' },
+						{
+							type: 'text',
+							color: 'black',
+							weight: 'normal',
+							text: ' множественного. Как и в русском для единственного говорим «был», а для множественного «были». Даже по количеству букв слова совпадают.',
 						},
 					],
 				},
@@ -1227,37 +1168,40 @@ const toBePositive: ArticleType.ArtArticle = {
 			id: 1,
 			exercises: [
 				{
-					rusSentence: 'К тому времени я был ученым.',
-					engSentences: [
-						{ engSentences: ['At that time, I was a scientist.'], isCorrect: true },
-					],
-					words: [{ rusWord: 'рад', engWord: 'glad' }],
+					rusSentence: 'Она была врачом.',
+					engSentences: [{ engSentences: ['She was a doctor.'], isCorrect: true }],
+					words: [{ rusWord: 'врач', engWord: 'doctor' }],
 				},
 				{
 					rusSentence: 'Он был слесарем.',
 					engSentences: [{ engSentences: ['He was a mechanic.'], isCorrect: true }],
-					words: [{ rusWord: 'рад', engWord: 'glad' }],
+					words: [{ rusWord: 'слесарь', engWord: 'mechanic' }],
 				},
 				{
-					rusSentence: 'Она была врачом.',
-					engSentences: [{ engSentences: ['She was a doctor.'], isCorrect: true }],
-					words: [{ rusWord: 'рад', engWord: 'glad' }],
+					rusSentence: 'В то время я был ученым.',
+					engSentences: [
+						{ engSentences: ['At that time, I was a scientist.'], isCorrect: true },
+					],
+					words: [
+						{ rusWord: 'в то время', engWord: 'at that time' },
+						{ rusWord: 'ученый', engWord: 'scientist' },
+					],
 				},
 				{
 					rusSentence: 'Они были детьми.',
 					engSentences: [{ engSentences: ['They were children.'], isCorrect: true }],
-					words: [{ rusWord: 'рад', engWord: 'glad' }],
+					words: [{ rusWord: 'дети', engWord: 'children' }],
 				},
 				{
 					rusSentence: 'Это было испытанием.',
 					engSentences: [{ engSentences: ['It was a challenge.'], isCorrect: true }],
-					words: [{ rusWord: 'рад', engWord: 'glad' }],
+					words: [{ rusWord: 'испытание', engWord: 'challenge' }],
 				},
 				{
 					rusSentence: 'Я был ребёнком в глубине души.',
 					engSentences: [{ engSentences: ['I was a child at heart.'], isCorrect: true }],
 					words: [
-						{ rusWord: 'ребёнок', engWord: 'a child' },
+						{ rusWord: 'ребёнок', engWord: 'child' },
 						{
 							note: 'Буквально переводится «в сердце»',
 							rusWord: 'в глубине души',
@@ -1268,12 +1212,52 @@ const toBePositive: ArticleType.ArtArticle = {
 				{
 					rusSentence: 'Он был совершенно один.',
 					engSentences: [{ engSentences: ['He was completely alone.'], isCorrect: true }],
-					words: [{ rusWord: 'болен', engWord: 'sick' }],
+					words: [
+						{ rusWord: 'совершенно', engWord: 'completely' },
+						{
+							note: 'В значении «быть в одиночестве», а не число 1.',
+							rusWord: 'один',
+							engWord: 'alone',
+						},
+					],
 				},
 				{
 					rusSentence: 'Она была профессионалом.',
-					engSentences: [{ engSentences: ['She was a professional.'], isCorrect: true }],
-					words: [{ rusWord: 'болен', engWord: 'sick' }],
+					engSentences: [
+						{ engSentences: ['She was a professional.'], isCorrect: true },
+						{
+							engSentences: ['She was professional.'],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Перед существительными в единственном числе нужно ставить артикль ',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: 'a',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: '. Подробнее о его назначении будет рассказано в следующей главе.',
+										},
+									],
+								},
+							],
+						},
+					],
+					words: [{ rusWord: 'профессионал', engWord: 'professional' }],
 				},
 				{
 					rusSentence: 'Я был трудоголиком в лучшие времена.',
@@ -1283,17 +1267,125 @@ const toBePositive: ArticleType.ArtArticle = {
 							isCorrect: true,
 						},
 					],
-					words: [{ rusWord: 'болен', engWord: 'sick' }],
+					words: [
+						{ rusWord: 'трудоголик', engWord: 'workaholic' },
+						{ rusWord: 'в лучшие времена', engWord: 'in the best of times' },
+					],
 				},
 				{
 					rusSentence: 'Они были строителями днём, и грабителями ночью.',
 					engSentences: [
 						{
-							engSentences: ['I was a workaholic in the best of times.'],
+							engSentences: ['They were builders at day and robbers at night.'],
 							isCorrect: true,
 						},
+						{
+							engSentences: ['They were builders by day and robbers by night.'],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Предложение составлено правильно за исключением предлогов ',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: 'by',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: '. Предлог ',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: 'by',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ' употребляется когда указывают время ',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'bold',
+											text: 'до которого ',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'событие произошло или произойдёт.',
+										},
+									],
+								},
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'big',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Он уйдёт к утру',
+										},
+										{
+											type: 'text',
+											color: 'gray',
+											weight: 'normal',
+											text: ' (утром его уже не будет)',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: '.',
+										},
+										{ type: 'arrow' },
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'He will go by morning.',
+										},
+									],
+								},
+								{
+									type: 'paragraph',
+									offset: true,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'А у нас указывается время когда событие произойдёт. Тут лучше подходить предлог at.',
+										},
+									],
+								},
+							],
+						},
 					],
-					words: [{ rusWord: 'болен', engWord: 'sick' }],
+					words: [
+						{ rusWord: 'строители', engWord: 'builders' },
+						{ rusWord: 'грабители', engWord: 'robbers' },
+						{ rusWord: 'днём', engWord: 'at day' },
+						{ rusWord: 'ночью', engWord: 'at night' },
+					],
 				},
 			],
 			offset: true,
@@ -1308,9 +1400,9 @@ const toBePositive: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: 'Английские глаголы не имеет формы будущего времени. Поэтому предложения строят в форме настоящего времени, но применяют некоторые средства чтобы указать на будущие действия. Одно из них — модальный глагол ',
+					text: 'Английские глаголы не имеет формы будущего времени. Поэтому предложения строят в форме настоящего времени, но применяют некоторые средства чтобы указать на будущие действия. Одно из них — ',
 				},
-				{ type: 'text', color: 'blue', weight: 'normal', text: 'will' },
+				{ type: 'text', color: 'blue', weight: 'normal', text: 'модальный глагол will' },
 				{ type: 'text', color: 'black', weight: 'normal', text: '.' },
 			],
 		},
@@ -1527,16 +1619,7 @@ const toBePositive: ArticleType.ArtArticle = {
 					rusSentence: 'Однажды он станет врачом.',
 					engSentences: [
 						{ engSentences: ['He will be a doctor one day.'], isCorrect: true },
-					],
-					words: [
-						{ rusWord: 'однажды', engWord: 'one day' },
-						{ rusWord: 'врач', engWord: 'doctor' },
-					],
-				},
-				{
-					rusSentence: 'Скоро ты будешь взрослой.',
-					engSentences: [
-						{ engSentences: ['Soon you will be an adult'], isCorrect: true },
+						{ engSentences: ['One day he will be a doctor.'], isCorrect: true },
 					],
 					words: [
 						{ rusWord: 'однажды', engWord: 'one day' },
@@ -1547,21 +1630,20 @@ const toBePositive: ArticleType.ArtArticle = {
 					rusSentence: 'Завтра будет новый день.',
 					engSentences: [
 						{ engSentences: ['Tomorrow will be a new day.'], isCorrect: true },
+						{ engSentences: ['A new day will be tomorrow.'], isCorrect: true },
 					],
 					words: [
-						{ rusWord: 'однажды', engWord: 'one day' },
-						{ rusWord: 'врач', engWord: 'doctor' },
+						{ rusWord: 'завтра', engWord: 'tomorrow' },
+						{ rusWord: 'новый', engWord: 'new' },
+						{ rusWord: 'день', engWord: 'day' },
 					],
 				},
 				{
 					rusSentence: 'Он будет лидером команды.',
 					engSentences: [
-						{ engSentences: ['She will be a team leader.'], isCorrect: true },
+						{ engSentences: ['He will be a team leader.'], isCorrect: true },
 					],
-					words: [
-						{ rusWord: 'команда', engWord: 'team' },
-						{ rusWord: 'лидер', engWord: 'leader' },
-					],
+					words: [{ rusWord: 'лидер команды', engWord: 'team leader' }],
 				},
 				{
 					rusSentence: 'Я буду одновременно продавцом и кассиром.',
@@ -1570,29 +1652,38 @@ const toBePositive: ArticleType.ArtArticle = {
 							engSentences: ['I will be a salesman and a cashier at the same time.'],
 							isCorrect: true,
 						},
+						{
+							engSentences: ['At the same time I will be a salesman and a cashier.'],
+							isCorrect: true,
+						},
 					],
 					words: [
-						{ rusWord: 'команда', engWord: 'team' },
-						{ rusWord: 'лидер', engWord: 'leader' },
+						{ rusWord: 'одновременно', engWord: 'at the same time' },
+						{ rusWord: 'продавец', engWord: 'salesman' },
+						{ rusWord: 'кассир', engWord: 'cashier' },
 					],
 				},
 				{
 					rusSentence: 'Я лягушка, но ночью буду принцессой.',
 					engSentences: [
 						{
-							engSentences: ['I am a from, but I will be a princess tonight.'],
+							engSentences: ['I am a frog, but I will be a princess tonight.'],
 							isCorrect: true,
 						},
 						{
-							engSentences: ['I am a from, but I will be a princess at night.'],
+							engSentences: ['I am a frog, but I will be a princess at night.'],
 							isCorrect: true,
 						},
 						{
-							engSentences: ['I am a from, but at night I will be a princess.'],
+							engSentences: ['I am a frog, but at night I will be a princess.'],
 							isCorrect: true,
 						},
 					],
-					words: [{ rusWord: 'команда', engWord: 'team' }],
+					words: [
+						{ rusWord: 'лягушка', engWord: 'frog' },
+						{ rusWord: 'принцесса', engWord: 'princess' },
+						{ rusWord: 'ночью', engWord: 'at night' },
+					],
 				},
 			],
 			offset: true,
@@ -1638,7 +1729,16 @@ const toBePositive: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: 'Английские местоимения имеют более чёткую специализацию. Для людей используется he или she в зависимости от половой принадлежности.',
+					text: 'Английские местоимения имеют более чёткую специализацию. Для людей используется ',
+				},
+				{ type: 'text', color: 'blue', weight: 'normal', text: 'he' },
+				{ type: 'text', color: 'black', weight: 'normal', text: ' или ' },
+				{ type: 'text', color: 'blue', weight: 'normal', text: 'she' },
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: ' в зависимости от половой принадлежности.',
 				},
 			],
 		},
@@ -1657,11 +1757,12 @@ const toBePositive: ArticleType.ArtArticle = {
 			offset: true,
 			textSize: 'normal',
 			children: [
+				{ type: 'text', color: 'blue', weight: 'normal', text: 'It' },
 				{
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: 'It для животных и неодишевлённых предметов в единственном числе.',
+					text: ' для животных и неодушевлённых предметов в единственном числе.',
 				},
 			],
 		},
@@ -1680,11 +1781,12 @@ const toBePositive: ArticleType.ArtArticle = {
 			offset: true,
 			textSize: 'normal',
 			children: [
+				{ type: 'text', color: 'blue', weight: 'normal', text: 'They' },
 				{
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: 'They для животных и неодушевлённых предметов во множественном числе.',
+					text: ' для животных и неодушевлённых предметов во множественном числе.',
 				},
 			],
 		},
@@ -1718,42 +1820,87 @@ const toBePositive: ArticleType.ArtArticle = {
 				{
 					rusSentence: 'Это карандаши.',
 					engSentences: [{ engSentences: ['They are pencils.'], isCorrect: true }],
-					words: [{ rusWord: 'команда', engWord: 'team' }],
+					words: [{ rusWord: 'карандаши', engWord: 'pencils' }],
 				},
 				{
 					rusSentence: 'Это Маша.',
-					engSentences: [{ engSentences: ['She is Masha,'], isCorrect: true }],
+					engSentences: [{ engSentences: ['She is Masha.'], isCorrect: true }],
 					words: [{ rusWord: 'команда', engWord: 'team' }],
 				},
 				{
-					rusSentence: 'Это спички.',
-					engSentences: [{ engSentences: ['She'], isCorrect: true }],
-					words: [{ rusWord: 'команда', engWord: 'team' }],
+					rusSentence: 'Это стулья.',
+					engSentences: [{ engSentences: ['They are chairs.'], isCorrect: true }],
+					words: [{ rusWord: 'стулья', engWord: 'chairs' }],
 				},
 				{
 					rusSentence: 'Это верблюды.',
-					engSentences: [{ engSentences: ['She'], isCorrect: true }],
-					words: [{ rusWord: 'команда', engWord: 'team' }],
+					engSentences: [{ engSentences: ['They are camels.'], isCorrect: true }],
+					words: [{ rusWord: 'верблюды', engWord: 'camels' }],
 				},
 				{
 					rusSentence: 'Это енот.',
-					engSentences: [{ engSentences: ['She'], isCorrect: true }],
-					words: [{ rusWord: 'команда', engWord: 'team' }],
+					engSentences: [{ engSentences: ['It is a raccoon.'], isCorrect: true }],
+					words: [{ rusWord: 'енот', engWord: 'raccoon' }],
 				},
 				{
 					rusSentence: 'Это пишущая ручка.',
-					engSentences: [{ engSentences: ['She'], isCorrect: true }],
-					words: [{ rusWord: 'команда', engWord: 'team' }],
+					engSentences: [{ engSentences: ['It is a pen.'], isCorrect: true }],
+					words: [{ rusWord: 'пишущая ручка', engWord: 'pen' }],
 				},
 				{
 					rusSentence: 'Это косатка.',
-					engSentences: [{ engSentences: ['She'], isCorrect: true }],
-					words: [{ rusWord: 'команда', engWord: 'team' }],
+					engSentences: [{ engSentences: ['It is a whale.'], isCorrect: true }],
+					words: [{ rusWord: 'косатка', engWord: 'whale' }],
 				},
 				{
 					rusSentence: 'Это рабочий.',
-					engSentences: [{ engSentences: ['She'], isCorrect: true }],
-					words: [{ rusWord: 'команда', engWord: 'team' }],
+					engSentences: [{ engSentences: ['He is a worker'], isCorrect: true }],
+					words: [{ rusWord: 'рабочий', engWord: 'worker' }],
+				},
+				{
+					rusSentence: 'Мария врач.',
+					engSentences: [
+						{ engSentences: ['Maria is a doctor.'], isCorrect: true },
+						{
+							engSentences: ['Maria is a vet.'],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Мария не ветеринар, а врач.',
+										},
+									],
+								},
+							],
+						},
+						{
+							engSentences: ['Maria am doctor.'],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Все имена в третьем лице. Поэтому после них to be стоит в форме is, а не am.',
+										},
+									],
+								},
+							],
+						},
+					],
+					words: [{ rusWord: 'врач', engWord: 'doctor' }],
 				},
 			],
 			offset: true,
@@ -1811,7 +1958,7 @@ const toBePositive: ArticleType.ArtArticle = {
 										type: 'text',
 										color: 'black',
 										weight: 'normal',
-										text: ' — это член предложения обозначающий объект совершаемый действие. Мы пока изучили личные местоимения, но подлежащим может быть существительное, имя.',
+										text: ' — это член предложения обозначающий объект совершающий действие. Мы пока изучили личные местоимения, но подлежащим может быть существительное, имя.',
 									},
 								],
 							},
@@ -1837,7 +1984,7 @@ const toBePositive: ArticleType.ArtArticle = {
 										type: 'text',
 										color: 'black',
 										weight: 'normal',
-										text: ' в одной из временных форм: am, are, is, was, were.',
+										text: ' в одной из временных форм: am, are, is, was, were или be после will для выражения будущего времени.',
 									},
 								],
 							},
@@ -1857,7 +2004,14 @@ const toBePositive: ArticleType.ArtArticle = {
 										type: 'text',
 										color: 'black',
 										weight: 'normal',
-										text: 'Почему в заголовке главы говорится про be, но в предложениях почему-то используется am, are, is, was и were?',
+										text: 'Почему в заголовке главы говорится про ',
+									},
+									{ type: 'text', color: 'black', weight: 'bold', text: 'be' },
+									{
+										type: 'text',
+										color: 'black',
+										weight: 'normal',
+										text: ', но в предложениях почему-то используется am, are, is, was и were?',
 									},
 								],
 							},
@@ -2007,7 +2161,7 @@ const toBePositive: ArticleType.ArtArticle = {
 										type: 'text',
 										color: 'black',
 										weight: 'normal',
-										text: ' должен быть в формы am, are или is.',
+										text: ' должен быть в форме am, are или is.',
 									},
 								],
 							},
@@ -2045,7 +2199,7 @@ const toBePositive: ArticleType.ArtArticle = {
 										type: 'text',
 										color: 'black',
 										weight: 'normal',
-										text: 'Потому что время совершения действия находится на сказуемом. Will стоит в форме настоящего времени. А be тут является дополнением, оно время не передаёт, поэтому стоит в инфинитивной форме.',
+										text: 'Потому что время совершения действия находится на сказуемом. Сказуемым является модальный глагол will. Он и стоит в форме настоящего времени. А be тут дополнение, через него время не передаётся, поэтому стоит в инфинитивной форме.',
 									},
 								],
 							},

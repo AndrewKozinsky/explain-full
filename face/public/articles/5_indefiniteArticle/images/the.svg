@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="68px" height="37px" viewBox="0 0 68 37" version="1.1" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard</title>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-Copy" stroke="#000000" x="0.5" y="0.5" width="67" height="36" rx="18"></rect>
+        <text id="the-copy" font-family="SuisseIntl-Regular, Suisse Intl" font-size="25" font-weight="normal"
+              line-spacing="25" fill="#1B1B1B">
+            <tspan x="15" y="28">the</tspan>
+        </text>
+    </g>
+</svg>

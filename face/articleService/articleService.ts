@@ -101,7 +101,7 @@ export class ArticleService {
 	 * Получает объект статьи и вычленяет блоки со словами для заучивания
 	 * @param articleSlug — слаг статьи
 	 */
-	getArticleWords(articleSlug: string): ExercisesType.Word[] {
+	getArticleWordsByArticleSlug(articleSlug: string): ExercisesType.Word[] {
 		const article = this.getArticle(articleSlug)
 		if (!article || article.type !== ArticleType.ArtType.article) return []
 
@@ -118,16 +118,26 @@ export class ArticleService {
 			})
 		})
 
+		return this.prepareArticleWords(wordBlocks)
+	}
+
+	prepareArticleWords(wordBlocks?: ExercisesType.Word[]) {
+		if (!wordBlocks) return []
+
+		const newWordBlocks: ExercisesType.Word[] = []
+
 		// Set transcriptions to English words
 		wordBlocks.forEach((wordBlock) => {
-			// console.log(this.getEnglishWordTranscription(wordBlock.engWord))
-			wordBlock.transcription = this.getEnglishWordTranscription(wordBlock.engWord)
+			const wordBlockCopy = { ...wordBlock }
+			wordBlockCopy.transcription = this.getEnglishWordTranscription(wordBlock.engWord)
+
+			newWordBlocks.push(wordBlockCopy)
 		})
 
 		// Clear words from repeated ones
 		const clearedWords: ExercisesType.Word[] = []
 
-		wordBlocks.forEach((currentWord) => {
+		newWordBlocks.forEach((currentWord) => {
 			// Найти текущий блок слов в уже очищенном массиве
 			const searchWordInClearedWords = clearedWords.find((clearedWord) => {
 				return (
@@ -151,17 +161,46 @@ export class ArticleService {
 	 */
 	getEnglishWordTranscription(engWord: string) {
 		const wordTranscriptions = {
-			'a book': 'ə bʊk',
-			'a magazine': 'mæɡəˈziːn',
-			'a teacher': 'ə ˈtiːtʃə',
-			'a doctor': 'ə ˈdɒktə',
-			'a student': 'ə ˈstjuːd(ə)nt',
+			book: 'bʊk',
+			magazine: 'mæɡəˈziːn',
+			teacher: 'ˈtiːtʃə',
+			doctor: 'ˈdɒktə',
+			student: 'ˈstjuːd(ə)nt',
 			sick: 'sɪk',
-			'a child': 'ə tʃaɪld',
+			child: 'tʃaɪld',
 			glad: 'ɡlæd',
 			ready: 'ˈredɪ',
 			soon: 'suːn',
 			happy: 'ˈhæpɪ',
+			builder: 'ˈbɪldə',
+			phone: 'fəʊn',
+			door: 'dɔː',
+			they: 'ðeɪ',
+			still: 'stɪl',
+			children: 'ˈtʃɪldrən',
+			captains: 'ˈkæptɪnz',
+			already: 'ɔːlˈredɪ',
+			mechanic: 'mɪˈkænɪk',
+			scientist: 'ˈsaɪəntɪst',
+			challenge: 'ˈtʃælɪn(d)ʒ',
+			completely: 'kəmˈpliːtlɪ',
+			alone: 'əˈləʊn',
+			professional: 'prəˈfeʃ(ə)n(ə)l',
+			workaholic: 'wɜːkəˈhɒlɪk',
+			builders: 'ˈbɪldəz',
+			robbers: 'ˈrɒbəz',
+			home: 'həʊm',
+			adult: 'ˈædʌlt',
+			tomorrow: 'təˈmɒrəʊ',
+			new: 'njuː',
+			day: 'deɪ',
+			leader: 'ˈliːdə',
+			team: 'tiːm',
+			salesman: 'ˈseɪlzmən',
+			cashier: 'kæˈʃɪə',
+			frog: 'frɒɡ',
+			princess: 'ˌprɪnˈses',
+			savage: 'ˈsævɪdʒ',
 		}
 
 		// @ts-ignore

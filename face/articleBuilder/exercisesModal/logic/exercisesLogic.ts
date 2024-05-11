@@ -1,4 +1,5 @@
 import ExercisesType from '../../../articlesData/exercisesType'
+import articleService from '../../../articleService/articleService'
 import { EventEmitter } from '../../../utils/eventEmitter'
 import { TelegramGroup } from '../../../utils/telegramGroup'
 import { ExerciseChecker } from './ExerciseChecker'
@@ -69,6 +70,7 @@ class ExercisesLogic {
 				isCurrent: false,
 				type,
 				userTranslate: '',
+				words: articleService.prepareArticleWords(rowExercise.words),
 			}
 		})
 	}

@@ -13,7 +13,7 @@ export function useSetWordsToStore(article: null | ArticleType.Art) {
 			return
 		}
 
-		const words = articleService.getArticleWords(article.meta.slug)
+		const words = articleService.getArticleWordsByArticleSlug(article.meta.slug)
 
 		useLearnByHeartStore.setState({ wordObjs: words })
 	}, [])
