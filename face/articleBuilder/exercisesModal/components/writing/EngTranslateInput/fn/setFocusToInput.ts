@@ -15,6 +15,6 @@ export function usePrepareInput(inputRef: React.MutableRefObject<HTMLTextAreaEle
 			inputRef.current.focus()
 			inputRef.current.value = ''
 		},
-		[inputRef.current, exerciseId],
+		[exerciseId],
 	)
 }

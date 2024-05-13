@@ -86,7 +86,13 @@ const adjectives: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: ' ставится перед прилагательным потому что связка прилагательное + существительное по сути является одной сущностью. Например: серая мышь, красивая шляпка. Про неопределённый артикль будет рассказано в следующей главе.',
+					text: ' ставится перед прилагательным потому что связка прилагательное + существительное по сути является одной сущностью. Например: серая мышь, красивая шляпка. ',
+				},
+				{
+					type: 'text',
+					color: 'gray',
+					weight: 'normal',
+					text: 'Про неопределённый артикль будет рассказано в следующей главе.',
 				},
 			],
 		},
@@ -179,8 +185,12 @@ const adjectives: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'gray',
 					weight: 'normal',
-					text: 'Я и Дженни — это подлежащее во множественном числе. Поэтому be будет в форме are, а не is.',
+					text: 'Я и Дженни — это подлежащее во множественном числе. Поэтому be будет в форме ',
 				},
+				{ type: 'text', color: 'gray', weight: 'bold', text: 'are' },
+				{ type: 'text', color: 'gray', weight: 'normal', text: ', а не ' },
+				{ type: 'text', color: 'gray', weight: 'bold', text: 'is' },
+				{ type: 'text', color: 'gray', weight: 'normal', text: '.' },
 			],
 		},
 		{
@@ -292,6 +302,25 @@ const adjectives: ArticleType.ArtArticle = {
 											color: 'black',
 											weight: 'normal',
 											text: ' тоже верен.',
+										},
+									],
+								},
+							],
+						},
+						{
+							engSentences: ['Katya is 20.'],
+							isCorrect: true,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Правильно! Это сокращённый вариант перевода Katya is 20 years old.',
 										},
 									],
 								},
@@ -608,7 +637,10 @@ const adjectives: ArticleType.ArtArticle = {
 				},
 				{
 					rusSentence: 'Это тяжелое решение.',
-					engSentences: [{ engSentences: ['It is a tough decision.'], isCorrect: true }],
+					engSentences: [
+						{ engSentences: ['It is a tough decision.'], isCorrect: true },
+						{ engSentences: ['It is a hard decision.'], isCorrect: true },
+					],
 					words: [
 						{ rusWord: 'тяжёлое (решение)', engWord: 'tough' },
 						{ rusWord: 'решение', engWord: 'decision' },
@@ -733,9 +765,11 @@ const adjectives: ArticleType.ArtArticle = {
 		{
 			type: 'grid',
 			offset: false,
-			gridId: 'grid-17497',
+			gridId: 'grid-57839',
 			cells: [
 				{
+					minWidth: '300px',
+					width: '1fr',
 					children: [
 						{ type: 'header', tag: 'h4', style: 'h4', text: '-ing' },
 						{
@@ -754,7 +788,7 @@ const adjectives: ArticleType.ArtArticle = {
 									type: 'text',
 									color: 'black',
 									weight: 'normal',
-									text: ' описывают впечатление, которое производит на человека.',
+									text: ' описывают впечатление, которое производят на человека.',
 								},
 							],
 						},
@@ -856,6 +890,8 @@ const adjectives: ArticleType.ArtArticle = {
 					],
 				},
 				{
+					minWidth: '300px',
+					width: '1fr',
 					children: [
 						{ type: 'header', tag: 'h4', style: 'h4', text: '-ed' },
 						{
@@ -1315,8 +1351,77 @@ const adjectives: ArticleType.ArtArticle = {
 								},
 							],
 						},
+						{
+							engSentences: ['This instructions is really confusing.'],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Инструкции во множественном числе. Поэтому ',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'bold',
+											text: 'be',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ' будет не в форме ',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'bold',
+											text: 'is',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ', а в ',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'bold',
+											text: 'are',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: '.',
+										},
+									],
+								},
+								{
+									type: 'paragraph',
+									offset: true,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Посмотрите таблицу в уроке про be. Instructions можно заменить на местоимение they. После they пишется are в настоящем времени.',
+										},
+									],
+								},
+							],
+						},
 					],
 					words: [
+						{ rusWord: 'эти', engWord: 'this' },
 						{ rusWord: 'инструкции', engWord: 'instructions' },
 						{ rusWord: 'дейстительно', engWord: 'really' },
 						{ rusWord: 'запутанный', engWord: 'confusing' },
@@ -1360,84 +1465,6 @@ const adjectives: ArticleType.ArtArticle = {
 					words: [{ rusWord: 'разочарованный', engWord: 'disappointed' }],
 				},
 				{
-					rusSentence: 'Это заметно и является проблемой.',
-					engSentences: [
-						{
-							engSentences: ['It is noticed and is an issue.'],
-							isCorrect: true,
-							analysis: [
-								{
-									type: 'paragraph',
-									offset: false,
-									textSize: 'normal',
-									children: [
-										{
-											type: 'text',
-											color: 'black',
-											weight: 'normal',
-											text: 'Верно! Прилагательные с окончанием ',
-										},
-										{
-											type: 'text',
-											color: 'blue',
-											weight: 'normal',
-											text: '-ed',
-										},
-										{
-											type: 'text',
-											color: 'black',
-											weight: 'normal',
-											text: ' описывают эмоции человека.',
-										},
-									],
-								},
-							],
-						},
-						{
-							engSentences: [],
-							isCorrect: false,
-							analysis: [
-								{
-									type: 'paragraph',
-									offset: false,
-									textSize: 'normal',
-									children: [
-										{
-											type: 'text',
-											color: 'black',
-											weight: 'normal',
-											text: 'После подлежащего должен быть to be в форме is потому что следом идёт прилагательное и существительное.',
-										},
-									],
-								},
-							],
-						},
-						{
-							engSentences: [],
-							isCorrect: false,
-							analysis: [
-								{
-									type: 'paragraph',
-									offset: false,
-									textSize: 'normal',
-									children: [
-										{
-											type: 'text',
-											color: 'black',
-											weight: 'normal',
-											text: 'issue — это существительное. Поэтому должно быть определяющее слово. А ещё второе существительное относится к подлежащему it, поэтому перед ним должен быть to be.',
-										},
-									],
-								},
-							],
-						},
-					],
-					words: [
-						{ rusWord: 'заметный', engWord: 'noticed' },
-						{ rusWord: 'проблема', engWord: 'issue' },
-					],
-				},
-				{
 					rusSentence: 'Они были отвратительны и, вероятно, ядовиты.',
 					engSentences: [
 						{
@@ -1452,63 +1479,11 @@ const adjectives: ArticleType.ArtArticle = {
 					],
 				},
 				{
-					rusSentence: 'Я единственный ребенок и очень балованная.',
-					engSentences: [
-						{ engSentences: ['I am an only child and very spoiled.'], isCorrect: true },
-					],
-					words: [
-						{ rusWord: 'единственный', engWord: 'only' },
-						{ rusWord: 'ребенок', engWord: 'child' },
-						{ rusWord: 'очень', engWord: 'very' },
-						{ rusWord: 'балованный', engWord: 'spoiled' },
-					],
-				},
-				{
 					rusSentence: 'Я был очень смущён.',
 					engSentences: [{ engSentences: ['I was very confused.'], isCorrect: true }],
 					words: [
 						{ rusWord: 'очень', engWord: 'very' },
 						{ rusWord: 'смущён', engWord: 'confused' },
-					],
-				},
-				{
-					rusSentence: 'Это было захватывающее шоу.',
-					engSentences: [
-						{
-							engSentences: ['It was an exciting show.'],
-							isCorrect: true,
-							analysis: [
-								{
-									type: 'paragraph',
-									offset: false,
-									textSize: 'normal',
-									children: [
-										{
-											type: 'text',
-											color: 'black',
-											weight: 'normal',
-											text: 'Верно! Прилагательные с окончанием ',
-										},
-										{
-											type: 'text',
-											color: 'blue',
-											weight: 'normal',
-											text: '-ing',
-										},
-										{
-											type: 'text',
-											color: 'black',
-											weight: 'normal',
-											text: ' описывают впечатление оказываемое на человека.',
-										},
-									],
-								},
-							],
-						},
-					],
-					words: [
-						{ rusWord: 'захватывающее', engWord: 'exciting' },
-						{ rusWord: 'шоу', engWord: 'show' },
 					],
 				},
 			],
@@ -1532,10 +1507,7 @@ const adjectives: ArticleType.ArtArticle = {
 			type: 'paragraph',
 			offset: true,
 			textSize: 'normal',
-			children: [
-				{ type: 'text', color: 'blue', weight: 'normal', text: 'un' },
-				{ type: 'text', color: 'black', weight: 'normal', text: ':' },
-			],
+			children: [{ type: 'text', color: 'blue', weight: 'normal', text: 'un' }],
 		},
 		{
 			type: 'paragraph',
@@ -1565,10 +1537,7 @@ const adjectives: ArticleType.ArtArticle = {
 			type: 'paragraph',
 			offset: true,
 			textSize: 'normal',
-			children: [
-				{ type: 'text', color: 'blue', weight: 'normal', text: 'in' },
-				{ type: 'text', color: 'black', weight: 'normal', text: ':' },
-			],
+			children: [{ type: 'text', color: 'blue', weight: 'normal', text: 'in' }],
 		},
 		{
 			type: 'paragraph',
@@ -1720,7 +1689,7 @@ const adjectives: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: 'К сожалению невозможно вычислить через какой префикс задать прилагательному противоположное значение. Это нужно только знать. Дело усугубляется ещё и тем, что не каждое слово может иметь противоположение значение. А множеству слов вообще нельзя добавлять эти префиксы.  Для таких случаев есть отрицательная частица которую изучим в одной из следующих глав.',
+					text: 'К сожалению невозможно вычислить через какой префикс задать прилагательному противоположное значение. Это нужно только знать. Дело усугубляется ещё и тем, что не каждое слово может его иметь. А множеству слов вообще нельзя добавлять эти префиксы.  Для таких случаев есть отрицательная частица которую изучим в одной из следующих глав.',
 				},
 			],
 		},
@@ -1733,7 +1702,7 @@ const adjectives: ArticleType.ArtArticle = {
 					engSentences: [
 						{ engSentences: ['Chester is irreplaceable.'], isCorrect: true },
 						{
-							engSentences: ['Chester are irreplaceable.'],
+							engSentences: ['Chester is irreplaceble'],
 							isCorrect: false,
 							analysis: [
 								{
@@ -1745,31 +1714,93 @@ const adjectives: ArticleType.ArtArticle = {
 											type: 'text',
 											color: 'black',
 											weight: 'normal',
-											text: 'Так как имена имеют третье лицо, то после них глагол ',
+											text: 'Грамматически правильно, но не ',
 										},
 										{
 											type: 'text',
-											color: 'blue',
-											weight: 'normal',
-											text: 'to be',
+											color: 'black',
+											weight: 'bold',
+											text: 'irreplaceble',
 										},
 										{
 											type: 'text',
 											color: 'black',
 											weight: 'normal',
-											text: ' в настоящем времени будет стоять в форме ',
+											text: ', а ',
 										},
 										{
 											type: 'text',
 											color: 'blue',
 											weight: 'normal',
-											text: 'is',
+											text: 'irreplaceable',
 										},
 										{
 											type: 'text',
 											color: 'black',
 											weight: 'normal',
-											text: '.',
+											text: '. Забыли добавить a.',
+										},
+									],
+								},
+								{
+									type: 'paragraph',
+									offset: true,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Прилагательное irreplaceable интересно тем, что образовано от глагола ',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'bold',
+											text: 'replace',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ' (заменить). К нему добавлен суффикс ',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: '-able',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ' далающей из него прилагательное характеризующее  свойство либо доступность для какого-либо действия. В данном случае «заменимый».',
+										},
+									],
+								},
+								{
+									type: 'paragraph',
+									offset: true,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'А префикс ',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: 'ir-',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ' меняет значение прилагательного на противоположное.',
 										},
 									],
 								},
@@ -1794,7 +1825,7 @@ const adjectives: ArticleType.ArtArticle = {
 											type: 'text',
 											color: 'blue',
 											weight: 'normal',
-											text: 'to be',
+											text: 'be',
 										},
 										{
 											type: 'text',
@@ -1815,12 +1846,12 @@ const adjectives: ArticleType.ArtArticle = {
 					words: [
 						{
 							note: 'Дословный перевод «её поведение»',
-							rusWord: 'Она ведёт себя',
-							engWord: 'Her behavior',
+							rusWord: 'она ведёт себя',
+							engWord: 'her behavior',
 						},
 						{
 							note: 'Происходит от moral — нравственный',
-							rusWord: 'Аморально',
+							rusWord: 'аморально',
 							engWord: 'immoral',
 						},
 					],
@@ -1828,7 +1859,49 @@ const adjectives: ArticleType.ArtArticle = {
 				{
 					rusSentence: 'Это слишком неточный способ.',
 					engSentences: [
-						{ engSentences: ['It is too inaccurate way.'], isCorrect: true },
+						{
+							engSentences: ['It is too inaccurate way.'],
+							isCorrect: true,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Правильно! Прилагательное ',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'bold',
+											text: 'accurate',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ' переводится «точный». А приставка ',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: 'in-',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ' задаёт противоположное значение.',
+										},
+									],
+								},
+							],
+						},
 					],
 					words: [
 						{ rusWord: 'неточный', engWord: 'inaccurate' },
@@ -1836,36 +1909,36 @@ const adjectives: ArticleType.ArtArticle = {
 					],
 				},
 				{
-					rusSentence: 'Он был безграмотным человеком.',
-					engSentences: [
-						{ engSentences: ['He was an illiterate person.'], isCorrect: true },
-					],
-					words: [
-						{
-							note: 'Происходит от literate — грамотный',
-							rusWord: 'безграмотный',
-							engWord: 'illiterate',
-						},
-					],
-				},
-				{
-					rusSentence: 'Она была в неизвестном месте среди неизвестных людей.',
-					engSentences: [
-						{
-							engSentences: ['She was at an unknown place, among unknown people.'],
-							isCorrect: true,
-						},
-					],
-					words: [
-						{ rusWord: 'неизвестный', engWord: 'unknown' },
-						{ rusWord: 'место', engWord: 'place' },
-						{ rusWord: 'среди', engWord: 'among' },
-						{ rusWord: 'люди', engWord: 'people' },
-					],
-				},
-				{
 					rusSentence: 'Джек очень несчастен.',
-					engSentences: [{ engSentences: ['Jake is very unhappy.'], isCorrect: true }],
+					engSentences: [
+						{ engSentences: ['Jake is very unhappy.'], isCorrect: true },
+						{
+							engSentences: ['Jace is very unhappy.'],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Не Джейс, а Джек. Jace',
+										},
+										{ type: 'arrow' },
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Jake.',
+										},
+									],
+								},
+							],
+						},
+					],
 					words: [{ rusWord: 'несчастен', engWord: 'unhappy' }],
 				},
 			],
@@ -1881,7 +1954,7 @@ const adjectives: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: 'Прилагательное можно сделать из существительного  через добавления суффикса.',
+					text: 'Прилагательное можно сделать из существительного через добавления суффикса.',
 				},
 			],
 		},
@@ -2124,37 +2197,6 @@ const adjectives: ArticleType.ArtArticle = {
 					],
 				},
 				{
-					rusSentence: 'Открытая Россия — политическая партия.',
-					engSentences: [
-						{ engSentences: ['Open Russia is a political party.'], isCorrect: true },
-						{
-							engSentences: [],
-							isCorrect: false,
-							analysis: [
-								{
-									type: 'paragraph',
-									offset: false,
-									textSize: 'normal',
-									children: [
-										{
-											type: 'text',
-											color: 'black',
-											weight: 'normal',
-											text: 'Не стоит неопределённый артикль a перед political party. Его нужно поставить потому что подразумевается, что Открытая Россия не является одной из множества политических партий. Англичанам важно знать какое существительное перед ними: неопределённое или конкретное.',
-										},
-									],
-								},
-							],
-						},
-					],
-					words: [
-						{ rusWord: 'открытый', engWord: 'open' },
-						{ rusWord: 'Россия', engWord: 'Russia' },
-						{ rusWord: 'политический', engWord: 'political' },
-						{ rusWord: 'партия', engWord: 'party' },
-					],
-				},
-				{
 					rusSentence: 'Несмотря на это, они слишком эмоциональны.',
 					engSentences: [
 						{ engSentences: ['Despite it, they are too emotional.'], isCorrect: true },
@@ -2196,7 +2238,14 @@ const adjectives: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: 'Такие образования прилагательных из существительных не характерны в основной массе. В большинстве случаев не только прилагательные, но и другие слова выглядят одинаково для нескольких частей речи. Например слово professional может быть или существительным «профессионал» и прилагательным «профессиональный». Часть речи зависит от положения слова в предложении.',
+					text: 'Такие образования прилагательных из существительных не характерны в основной массе. В большинстве случаев не только прилагательные, но и другие слова выглядят одинаково для разных частей речи. Например слово ',
+				},
+				{ type: 'text', color: 'black', weight: 'bold', text: 'professional' },
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: ' может быть или существительным «профессионал» и прилагательным «профессиональный». Часть речи зависит от положения слова в предложении.',
 				},
 			],
 		},
@@ -2209,7 +2258,7 @@ const adjectives: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: 'Все эти префиксы и суффиксы сразу запомнить невозможно. Но я хочу чтобы эта информация просто осела и при переводе с английского вы это замечали. Также можно сократить количество запоминаемых слов если, например, учить существительные, а по ним прибавляя суффикс получать прилагательное.',
+					text: 'Все эти префиксы и суффиксы сразу запомнить невозможно. Но я хочу чтобы эта информация просто осела и при переводе с английского вы это замечали. Также можно сократить количество запоминаемых слов если, например, учить существительные, а на их основе формировать прилагательное.',
 				},
 			],
 		},
@@ -2222,7 +2271,7 @@ const adjectives: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: 'Ответьте на вопросы чтобы понять как вы усвоили материал.',
+					text: 'Ответьте на вопросы чтобы понять как усвоили материал.',
 				},
 			],
 		},
@@ -2306,6 +2355,57 @@ const adjectives: ArticleType.ArtArticle = {
 										color: 'black',
 										weight: 'normal',
 										text: ' Отдыхать.',
+									},
+								],
+							},
+							{
+								type: 'paragraph',
+								offset: true,
+								textSize: 'normal',
+								children: [
+									{
+										type: 'text',
+										color: 'black',
+										weight: 'normal',
+										text: 'Неинфинитивные формы глагола содержат время.',
+									},
+								],
+							},
+							{
+								type: 'paragraph',
+								offset: false,
+								textSize: 'big',
+								children: [
+									{
+										type: 'text',
+										color: 'gray',
+										weight: 'normal',
+										text: 'Что делал?',
+									},
+									{
+										type: 'text',
+										color: 'black',
+										weight: 'normal',
+										text: ' Смотрел.',
+									},
+								],
+							},
+							{
+								type: 'paragraph',
+								offset: false,
+								textSize: 'big',
+								children: [
+									{
+										type: 'text',
+										color: 'gray',
+										weight: 'normal',
+										text: 'Что делаешь?',
+									},
+									{
+										type: 'text',
+										color: 'black',
+										weight: 'normal',
+										text: ' Отдыхаешь.',
 									},
 								],
 							},

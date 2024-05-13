@@ -8,9 +8,9 @@ import ArticleThis from './ArticleThis'
 const indefiniteArticle: ArticleType.ArtArticle = {
 	type: ArticleType.ArtType.article,
 	meta: {
-		number: 5,
+		number: 6,
 		slug: 'indefinite-article',
-		caption: 'Глава 3',
+		caption: 'Глава 4',
 		articleName: 'Неопределённый артикль a',
 		articleDescription:
 			'Кратко рассмотрено для чего перед каждым существительным ставят определитель и разберём неопределённый артикль a/an.',
@@ -29,9 +29,9 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 					weight: 'normal',
 					text: 'Существительное может быть ',
 				},
-				{ type: 'text', color: 'blue', weight: 'normal', text: 'неопределённым' },
-				{ type: 'text', color: 'black', weight: 'normal', text: ' или ' },
 				{ type: 'text', color: 'blue', weight: 'normal', text: 'определённым' },
+				{ type: 'text', color: 'black', weight: 'normal', text: ' или ' },
+				{ type: 'text', color: 'blue', weight: 'normal', text: 'неопределённым' },
 				{
 					type: 'text',
 					color: 'black',
@@ -57,7 +57,7 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: 'Если про мяч сообщается впервые, то будет обозначать просьбу купить любой мяч. А если упоминался ранее, то конкретный упомянутый мяч. В русском языке мы это понимаем по контексту. Но нередко перед определёнными существительными ставим местоимения «тот», «этот» чтобы сделать отсылку на объект упомянутый ранее.',
+					text: 'Если про мяч сообщается впервые, то будет обозначать просьбу купить любой мяч. А если упоминался ранее, то конкретный  мяч. В русском языке это понимают по контексту. Но нередко перед определёнными существительными ставим местоимения «тот», «этот» чтобы сделать отсылку на объект упомянутый ранее.',
 				},
 			],
 		},
@@ -126,6 +126,20 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 					color: 'black',
 					weight: 'normal',
 					text: ' some, any, many и другие используются перед неопределёнными существительными во множественном числе. ',
+				},
+			],
+		},
+		{ type: 'header', tag: 'h3', style: 'h3', text: 'Нулевой артикль' },
+		{
+			type: 'paragraph',
+			offset: false,
+			textSize: 'normal',
+			children: [
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: 'Нулевым артиклем называют отсутствие артикля. В частности перед существительными во множественным числе.',
 				},
 			],
 		},
@@ -198,7 +212,7 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 							type: 'text',
 							color: 'black',
 							weight: 'normal',
-							text: 'Выше дано упрощённое представление работы артиклей a, the и других определителей. На самом деле есть большое количество правил и исключений когда они ставятся или не ставятся. Они будут рассмотрены по ходу курса.',
+							text: 'Выше дано упрощённое представление работы артиклей и других определителей. На самом деле есть большое количество правил когда какой используется. Они будут рассмотрены по ходу курса.',
 						},
 					],
 				},
@@ -209,11 +223,13 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 			offset: true,
 			textSize: 'normal',
 			children: [
+				{ type: 'text', color: 'black', weight: 'normal', text: 'Вы уже ставили ' },
+				{ type: 'text', color: 'black', weight: 'bold', text: 'неопределённый артикль a' },
 				{
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: 'Вы уже ставили неопределённый артикль a в предыдущей главе. Давайте разберём его в деталях. А с другими определителями познакомимся ближе по ходу курса.',
+					text: ' упражнениях предыдущих глав. Давайте разберём его в деталях. А с другими определителями познакомимся ближе по ходу курса.',
 				},
 			],
 		},
@@ -389,11 +405,11 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 		{
 			type: 'grid',
 			offset: true,
-			gridId: 'grid-67466',
+			gridId: 'grid-64798',
 			cells: [
 				{
 					minWidth: '300px',
-					width: '50%',
+					width: '1fr',
 					children: [
 						{
 							type: 'paragraph',
@@ -459,7 +475,7 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 				},
 				{
 					minWidth: '300px',
-					width: '50%',
+					width: '1fr',
 					children: [
 						{
 							type: 'paragraph',
@@ -553,7 +569,7 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 					engSentences: [
 						{ engSentences: ['I am Calvin.'], isCorrect: true },
 						{
-							engSentences: ['I Calvin.'],
+							engSentences: ['I am Kelvin'],
 							isCorrect: false,
 							analysis: [
 								{
@@ -565,14 +581,21 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 											type: 'text',
 											color: 'black',
 											weight: 'normal',
-											text: 'Если в предложении сообщаете о свойстве или качестве не забывайте про to be.',
+											text: 'Кельвин пишется через ',
+										},
+										{ type: 'text', color: 'black', weight: 'bold', text: 'C' },
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ': Calvin. А так предложение правильное.',
 										},
 									],
 								},
 							],
 						},
 						{
-							engSentences: ['I is Calvin.'],
+							engSentences: ['I am Celvin'],
 							isCorrect: false,
 							analysis: [
 								{
@@ -584,7 +607,33 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 											type: 'text',
 											color: 'black',
 											weight: 'normal',
-											text: 'Так как имена имеют третье лицо, то после них глагол to be в настоящем времени будет стоять в форме is.',
+											text: 'Кельвин пишется через ',
+										},
+										{ type: 'text', color: 'black', weight: 'bold', text: 'a' },
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ', а не ',
+										},
+										{ type: 'text', color: 'black', weight: 'bold', text: 'e' },
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ': C',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: 'a',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'lvin. А так предложение правильное.',
 										},
 									],
 								},
@@ -620,96 +669,16 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 					words: [{ rusWord: 'дикарь', engWord: 'savage' }],
 				},
 				{
-					note: 'На английском «идеальный вариант» будет «идеал».',
-					rusSentence: 'Одна минута каждый день — идеальный вариант.',
-					engSentences: [
-						{
-							engSentences: ['One minute every day is ideal.'],
-							isCorrect: true,
-							analysis: [
-								{
-									type: 'paragraph',
-									offset: false,
-									textSize: 'normal',
-									children: [
-										{
-											type: 'text',
-											color: 'black',
-											weight: 'normal',
-											text: 'Вариант A minute тоже подходит.',
-										},
-									],
-								},
-							],
-						},
-						{
-							engSentences: [],
-							isCorrect: false,
-							analysis: [
-								{
-									type: 'paragraph',
-									offset: false,
-									textSize: 'normal',
-									children: [
-										{
-											type: 'text',
-											color: 'black',
-											weight: 'normal',
-											text: 'Вариант One minute тоже подходит.',
-										},
-									],
-								},
-							],
-						},
-						{
-							engSentences: [],
-							isCorrect: false,
-							analysis: [
-								{
-									type: 'paragraph',
-									offset: false,
-									textSize: 'normal',
-									children: [
-										{
-											type: 'text',
-											color: 'black',
-											weight: 'normal',
-											text: 'Тут подлежащее One minute. Это местоимение третьего лица. Поэтому to be должен быть в форме is.',
-										},
-									],
-								},
-							],
-						},
-					],
-					words: [
-						{ rusWord: 'минута', engWord: 'minute' },
-						{ rusWord: 'каждый', engWord: 'every' },
-						{ rusWord: 'день', engWord: 'day' },
-						{
-							note: 'ideal применяется без неопределённого артикля a.',
-							rusWord: 'идеальный',
-							engWord: 'ideal',
-						},
-					],
-				},
-				{
-					rusSentence: 'Я не ребенок, мне 44 года.',
-					engSentences: [
-						{ engSentences: ['I am not a child I am 44.'], isCorrect: true },
-					],
-					words: [{ rusWord: '44 года', engWord: '44 years old' }],
-				},
-				{
 					rusSentence: 'Он полицейский.',
 					engSentences: [{ engSentences: ['He is a policeman.'], isCorrect: true }],
 					words: [{ rusWord: 'полицейский', engWord: 'policeman' }],
 				},
 				{
-					rusSentence: 'Она знаменитая художница.',
+					rusSentence: 'Майкл — настоящий мужчина.',
 					engSentences: [
-						{ engSentences: ['She is a famous artist.'], isCorrect: true },
+						{ engSentences: ['Michael is a real man.'], isCorrect: true },
 						{
-							engSentences: ['She a famous artist is.'],
+							engSentences: ['Michael is the real man.'],
 							isCorrect: false,
 							analysis: [
 								{
@@ -721,56 +690,25 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 											type: 'text',
 											color: 'black',
 											weight: 'normal',
-											text: 'В английских предложениях есть чёткий порядок слов: за подлежащим следует сказуемое в повествовательных предложениях. Тут сказуемое убежало в конец предложения.',
-										},
-									],
-								},
-							],
-						},
-						{
-							engSentences: ['She am a famous artist.'],
-							isCorrect: false,
-							analysis: [
-								{
-									type: 'paragraph',
-									offset: false,
-									textSize: 'normal',
-									children: [
-										{
-											type: 'text',
-											color: 'black',
-											weight: 'normal',
-											text: 'После местоимения ',
+											text: 'Если бы в контексте разговора упоминался какой-то настоящий мужчина и потом сообщили, что Майкл и он есть, то предложение было бы правильным. Но про это ничего не сказано. И смысл предложения в том, что Майкл один из настоящих мужчин. Поэтому перед связкой ',
 										},
 										{
 											type: 'text',
 											color: 'blue',
 											weight: 'normal',
-											text: 'she',
+											text: 'real man',
 										},
 										{
 											type: 'text',
 											color: 'black',
 											weight: 'normal',
-											text: ' следует ',
+											text: ' нужно поставить неопределённый артикль ',
 										},
 										{
 											type: 'text',
 											color: 'blue',
 											weight: 'normal',
-											text: 'to be',
-										},
-										{
-											type: 'text',
-											color: 'black',
-											weight: 'normal',
-											text: ' в форме ',
-										},
-										{
-											type: 'text',
-											color: 'blue',
-											weight: 'normal',
-											text: 'is',
+											text: 'a',
 										},
 										{
 											type: 'text',
@@ -782,18 +720,37 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 								},
 							],
 						},
+						{
+							engSentences: ['Michael is real a man.'],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Неопределённый артикль a должен стоять перед связкой прилагательного + существительного.',
+										},
+									],
+								},
+							],
+						},
 					],
 					words: [
-						{ rusWord: 'знаменитый', engWord: 'famous' },
-						{ rusWord: 'художник', engWord: 'an artist' },
+						{ rusWord: 'настоящий', engWord: 'real' },
+						{ rusWord: 'мужчина', engWord: 'man' },
 					],
 				},
 				{
-					rusSentence: 'Жёлтая папка.',
+					rusSentence: 'Даша симпатичная девушка.',
 					engSentences: [
-						{ engSentences: ['An yellow folder.'], isCorrect: true },
+						{ engSentences: ['Dasha is a pretty girl.'], isCorrect: true },
 						{
-							engSentences: ['Is yellow folder.'],
+							engSentences: ['Dasha is are pretty girl.'],
 							isCorrect: false,
 							analysis: [
 								{
@@ -805,33 +762,50 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 											type: 'text',
 											color: 'black',
 											weight: 'normal',
-											text: 'Бесмысленное предложение. В повествовательных предложениях глагол to be не может стоять раньше подлежащего.',
+											text: 'В предложении ',
 										},
-									],
-								},
-							],
-						},
-						{
-							engSentences: ['It is an yellow folder.'],
-							isCorrect: true,
-							analysis: [
-								{
-									type: 'paragraph',
-									offset: false,
-									textSize: 'normal',
-									children: [
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: 'to be',
+										},
 										{
 											type: 'text',
 											color: 'black',
 											weight: 'normal',
-											text: 'Грамматически-правильный, но не точный перевод.',
+											text: ' должен быть в один. А тут их два: в форме ',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: 'is',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ' и ',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: 'are',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: '. И артикля a не хватает. Даша ведь одна из симпатичных девушек, а не та самая.',
 										},
 									],
 								},
 							],
 						},
 						{
-							engSentences: ['Yellow folder.'],
+							engSentences: ['Dasha is pretty a girl.'],
 							isCorrect: false,
 							analysis: [
 								{
@@ -843,7 +817,7 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 											type: 'text',
 											color: 'black',
 											weight: 'normal',
-											text: 'Перед существительными или прилагательном и существительном должно стоять определяющее слово. Если контекст отсутствует, то при переводе используйте неопределённый артикль.',
+											text: 'В связке прилагательного и существительного первым идёт неопределённый артикль a. Поставьте его перед прилагательным.',
 										},
 									],
 								},
@@ -851,8 +825,154 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 						},
 					],
 					words: [
-						{ rusWord: 'жёлтый', engWord: 'yellow' },
-						{ rusWord: 'папка', engWord: 'a folder' },
+						{ rusWord: 'симпатичный', engWord: 'pretty' },
+						{ rusWord: 'девушка', engWord: 'girl' },
+					],
+				},
+				{
+					rusSentence: 'Это чёрный телефон.',
+					engSentences: [
+						{ engSentences: ['It is a black phone.'], isCorrect: true },
+						{
+							engSentences: ['It is black a phone.'],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Неопределённый артикль a должен стоять перед связкой прилагательного + существительного. Считайте black phone одной сущностью перед которой нужно показать определённость или неопределённость через определяющее слово.',
+										},
+									],
+								},
+							],
+						},
+						{
+							engSentences: ['It phone is black.'],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Тут одновременно есть два подлежащих: it и phone. Так быть не должно.',
+										},
+									],
+								},
+							],
+						},
+					],
+					words: [
+						{ rusWord: 'чёрный', engWord: 'black' },
+						{ rusWord: 'телефон', engWord: 'phone' },
+					],
+				},
+				{
+					rusSentence: 'Это просто любопытный факт.',
+					engSentences: [
+						{ engSentences: [], isCorrect: false },
+						{
+							engSentences: [],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Если перед существительным есть прилагательное, относящиеся к этому существительному, то артикль a должен стоять перед этим словом, а не после.',
+										},
+									],
+								},
+							],
+						},
+					],
+					words: [
+						{ rusWord: 'просто', engWord: 'just' },
+						{ rusWord: 'любопытный', engWord: 'fun' },
+						{ rusWord: 'факт', engWord: 'fact' },
+					],
+				},
+				{
+					rusSentence: 'Кстати, он очень хороший врач.',
+					engSentences: [
+						{ engSentences: ['He\'s a very good doctor, by the way.'], isCorrect: true },
+						{
+							engSentences: [],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Сообщается кем он является — очень хорошим врачом. Поэтому после подлежащего должен быть to be. B один один из «очень хороших докторов». Поэтому перед этим словосочетанием должен быть неопределённый артикль a.',
+										},
+									],
+								},
+							],
+						},
+						{
+							engSentences: [],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Грамматически правильно, но забыли слово «очень».',
+										},
+									],
+								},
+							],
+						},
+					],
+					words: [
+						{ rusWord: 'кстати', engWord: 'by the way' },
+						{ rusWord: 'очень', engWord: 'good' },
+						{ rusWord: 'очень', engWord: 'very' },
+						{ rusWord: 'врач', engWord: 'doctor' },
+					],
+				},
+				{
+					rusSentence: 'Маша просто истеричная дура, а Саша самовлюблённый болван.',
+					engSentences: [
+						{
+							engSentences: [
+								'Masha is just a hysterical fool and Sasha is a narcissistic idiot.',
+							],
+							isCorrect: true,
+						},
+					],
+					words: [
+						{ rusWord: 'просто', engWord: 'just' },
+						{ rusWord: 'истеричный', engWord: 'hysterical' },
+						{ rusWord: 'дурак', engWord: 'fool' },
+						{ rusWord: 'самовлюблённый', engWord: 'narcissistic' },
+						{ rusWord: 'болван', engWord: 'idiot' },
 					],
 				},
 			],
@@ -884,7 +1004,9 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 					text: 'Это чай. Это стакан чая.',
 				},
 				{ type: 'arrow' },
-				{ type: 'text', color: 'black', weight: 'normal', text: 'It is tea. It is a tea.' },
+				{ type: 'text', color: 'black', weight: 'normal', text: 'It is tea. It is ' },
+				{ type: 'text', color: 'blue', weight: 'normal', text: 'a' },
+				{ type: 'text', color: 'black', weight: 'normal', text: ' tea.' },
 			],
 		},
 		{
@@ -920,12 +1042,9 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 			children: [
 				{ type: 'text', color: 'black', weight: 'normal', text: 'Это бумага. Это газета.' },
 				{ type: 'arrow' },
-				{
-					type: 'text',
-					color: 'black',
-					weight: 'normal',
-					text: 'It is paper. It is a paper.',
-				},
+				{ type: 'text', color: 'black', weight: 'normal', text: 'It is paper. It is ' },
+				{ type: 'text', color: 'blue', weight: 'normal', text: 'a' },
+				{ type: 'text', color: 'black', weight: 'normal', text: ' paper.' },
 			],
 		},
 		{
@@ -950,7 +1069,7 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 		{
 			type: 'grid',
 			offset: false,
-			gridId: 'grid-33878',
+			gridId: 'grid-78677',
 			cells: [
 				{
 					children: [
@@ -1067,12 +1186,9 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 					text: 'Это красота. Она красотка.',
 				},
 				{ type: 'arrow' },
-				{
-					type: 'text',
-					color: 'black',
-					weight: 'normal',
-					text: 'It is beauty. She is a beauty.',
-				},
+				{ type: 'text', color: 'black', weight: 'normal', text: 'It is beauty. She is ' },
+				{ type: 'text', color: 'blue', weight: 'normal', text: 'a' },
+				{ type: 'text', color: 'black', weight: 'normal', text: ' beauty.' },
 			],
 		},
 		{
@@ -1097,7 +1213,7 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 		{
 			type: 'grid',
 			offset: false,
-			gridId: 'grid-56319',
+			gridId: 'grid-15882',
 			cells: [
 				{
 					children: [
@@ -1223,7 +1339,7 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: 'Вы узнали, что существительные в английском могут быть определёнными или неопределёнными. Определённые — это те, которые уже находятся в контексте разговора. Но до этого их нужно в контекст ввести. Поэтому сначала упоминают неопределённое существительное помечая его артиклем a, а затем оно становится вместе с одним из определённых.',
+					text: 'Вы узнали, что существительные в английском могут быть определёнными или неопределёнными. Определённые — это те, которые уже находятся в контексте разговора. Но до этого их нужно в контекст ввести. Поэтому сначала упоминают неопределённое существительное помечая его артиклем a, а затем оно становится одним из определённых.',
 				},
 			],
 		},
@@ -1234,7 +1350,7 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 			children: [
 				{ type: 'text', color: 'black', weight: 'normal', text: 'Огромный слон.' },
 				{ type: 'arrow' },
-				{ type: 'text', color: 'black', weight: 'normal', text: 'It is a dog.' },
+				{ type: 'text', color: 'black', weight: 'normal', text: 'It is a huge elephant.' },
 			],
 		},
 		{
@@ -1246,7 +1362,7 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'gray',
 					weight: 'normal',
-					text: 'В первый раз ввели в повествование собаку. Она пока неопределённая. При последующих упоминаниях будет определённым с подходящим определителем.',
+					text: 'В первый раз ввели в повествование слона. Он пока неопределённый. При последующих упоминаниях будет определённым с подходящим определителем.',
 				},
 			],
 		},
@@ -1279,11 +1395,12 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 			offset: false,
 			textSize: 'normal',
 			children: [
+				{ type: 'text', color: 'black', weight: 'bold', text: 'Неопределённый артикль a' },
 				{
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: 'Неопределённый артикль a могут применять не в значении «один из объектов что-то делает», а в обобщённом значении как типичное поведение любого объекта этого класса.',
+					text: ' могут применять не в значении «один из объектов», а в обобщённом значении как типичное поведение любого объекта этого класса.',
 				},
 			],
 		},
@@ -1339,7 +1456,7 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'gray',
 					weight: 'normal',
-					text: 'Заметьте, что артикль стоит и перед rabbit и перед domestic animal.',
+					text: 'Заметьте, что артикль стоит и перед rabbit и перед domestic animal потому что это два неопределённых существительных.',
 				},
 			],
 		},
@@ -1348,10 +1465,10 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 			id: 2,
 			exercises: [
 				{
-					rusSentence: 'Металлическая скамейка менее популярна, чем деревянная',
+					rusSentence: 'Металлическая скамейка менее популярна, чем деревянная.',
 					engSentences: [
 						{
-							engSentences: ['A metal bench is less popular than wooden bench'],
+							engSentences: ['A metal bench is less popular than a wooden bench.'],
 							isCorrect: true,
 						},
 						{
@@ -1367,33 +1484,61 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 											type: 'text',
 											color: 'black',
 											weight: 'normal',
-											text: 'В этом пр',
+											text: 'Не th',
+										},
+										{ type: 'text', color: 'black', weight: 'bold', text: 'e' },
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'n, а th',
+										},
+										{ type: 'text', color: 'black', weight: 'bold', text: 'a' },
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'n.',
 										},
 									],
 								},
-							],
-						},
-						{
-							engSentences: [],
-							isCorrect: false,
-							analysis: [
 								{
 									type: 'paragraph',
-									offset: false,
+									offset: true,
 									textSize: 'normal',
 									children: [
 										{
 											type: 'text',
 											color: 'black',
 											weight: 'normal',
-											text: 'В этом п',
+											text: 'Перед ',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'bold',
+											text: 'wooden bench',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ' тоже нужен артикль.',
 										},
 									],
 								},
 							],
 						},
 					],
-					words: [{ rusWord: 'два', engWord: 'two' }],
+					words: [
+						{ rusWord: 'металлический', engWord: 'metal' },
+						{ rusWord: 'скамейка', engWord: 'bench' },
+						{ rusWord: 'деревянный', engWord: 'bench' },
+						{ rusWord: 'менее', engWord: 'less' },
+						{ rusWord: 'популярный', engWord: 'popular' },
+						{ rusWord: 'чем', engWord: 'than' },
+						{ rusWord: 'деревянный', engWord: 'wooden' },
+					],
 				},
 				{
 					rusSentence: 'Мобильный криптокошелёк отличается высокой безопасностью.',
@@ -1402,16 +1547,80 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 							engSentences: ['A mobile crypto wallet is very secure.'],
 							isCorrect: true,
 						},
+						{
+							engSentences: ['Mobile crypto wallet is very secure'],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Перед ',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'bold',
+											text: 'Mobile crypto',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ' забыли неопределённый артикль ',
+										},
+										{ type: 'text', color: 'blue', weight: 'bold', text: 'a' },
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: '. Он нужен когда сообщают о типичном поведении объекта.',
+										},
+									],
+								},
+							],
+						},
 					],
 					words: [
-						{ rusWord: 'к сожалению', engWord: 'unfortunately' },
+						{ rusWord: 'мобильный', engWord: 'mobile' },
 						{ rusWord: 'криптокошелёк', engWord: 'crypto wallet' },
+						{
+							note: 'В контексте данного предложения слово «отличается» можно перевести через very.',
+							rusWord: 'очень',
+							engWord: 'very',
+						},
 						{ rusWord: 'безопасный', engWord: 'secure' },
 					],
 				},
 				{
 					rusSentence: 'Собака — верный питомец.',
-					engSentences: [{ engSentences: ['Dogs are loyal pets.'], isCorrect: true }],
+					engSentences: [
+						{ engSentences: ['A dog is a loyal pet.'], isCorrect: true },
+						{
+							engSentences: ['A dog is loyal pet.'],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Перед loyal pet должен быть неопределённый артикль a потому что подразумевают типичное поведение: любая собака по поведению — это верный питомец.',
+										},
+									],
+								},
+							],
+						},
+					],
 					words: [
 						{ rusWord: 'собака', engWord: 'dog' },
 						{ rusWord: 'верный', engWord: 'loyal' },
@@ -1421,7 +1630,7 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 				{
 					rusSentence: 'Человеческий младенец полностью беспомощен.',
 					engSentences: [
-						{ engSentences: ['A human babie is totally helpless.'], isCorrect: true },
+						{ engSentences: ['A human baby is totally helpless.'], isCorrect: true },
 						{
 							engSentences: [],
 							isCorrect: false,
@@ -1441,27 +1650,13 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 								},
 							],
 						},
-						{
-							engSentences: [],
-							isCorrect: false,
-							analysis: [
-								{
-									type: 'paragraph',
-									offset: false,
-									textSize: 'normal',
-									children: [
-										{
-											type: 'text',
-											color: 'black',
-											weight: 'normal',
-											text: 'В этом п',
-										},
-									],
-								},
-							],
-						},
 					],
-					words: [{ rusWord: 'два', engWord: 'two' }],
+					words: [
+						{ rusWord: 'человеческий', engWord: 'human' },
+						{ rusWord: 'младенец', engWord: 'baby' },
+						{ rusWord: 'полностью', engWord: 'totally' },
+						{ rusWord: 'беспомощен', engWord: 'helpless' },
+					],
 				},
 				{
 					note: 'Если место обозначается по роду деятельности (больница — место где лечат, тюрьма — место где отбывают наказание), то артикль не ставится.',
@@ -1487,32 +1682,22 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 								},
 							],
 						},
+					],
+					words: [
+						{ rusWord: 'преступник', engWord: 'criminal' },
+						{ rusWord: 'должен', engWord: 'must' },
+						{ rusWord: 'должен', engWord: 'must' },
 						{
-							engSentences: [],
-							isCorrect: false,
-							analysis: [
-								{
-									type: 'paragraph',
-									offset: false,
-									textSize: 'normal',
-									children: [
-										{
-											type: 'text',
-											color: 'black',
-											weight: 'normal',
-											text: 'В этом п',
-										},
-									],
-								},
-							],
+							note: 'Перед prison артикль не ставится. Подробнее про это будет в главе про нулевой артикль.',
+							rusWord: 'в тюрьме',
+							engWord: 'in prison',
 						},
 					],
-					words: [{ rusWord: 'два', engWord: 'two' }],
 				},
 			],
 			offset: true,
 		},
-		{ type: 'header', tag: 'h2', style: 'h2', text: 'Изменение артикля для благозвучности' },
+		{ type: 'header', tag: 'h2', style: 'h2', text: 'Изменение артикля на an' },
 		{
 			type: 'paragraph',
 			offset: false,
@@ -1543,7 +1728,7 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: '. Это сформировалось для благозвучности чтобы не произносить гласные друг за другом.',
+					text: '. Это нужно для гармонии чтобы не произносить гласные друг за другом.',
 				},
 			],
 		},
@@ -1554,7 +1739,7 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 			children: [
 				{ type: 'text', color: 'blue', weight: 'normal', text: 'an apple' },
 				{ type: 'text', color: 'black', weight: 'normal', text: ' — произносится ' },
-				{ type: 'text', color: 'blue', weight: 'normal', text: '[ˈæpl]' },
+				{ type: 'text', color: 'blue', weight: 'normal', text: '[эпл]' },
 				{
 					type: 'text',
 					color: 'black',
@@ -1577,7 +1762,7 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 					weight: 'normal',
 					text: ' — хотя в письме начинается с согласной, но произносится с гласной ',
 				},
-				{ type: 'text', color: 'blue', weight: 'normal', text: '[ˈɑːnɪst]' },
+				{ type: 'text', color: 'blue', weight: 'normal', text: '[онист]' },
 				{
 					type: 'text',
 					color: 'black',
@@ -1612,7 +1797,7 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 					weight: 'normal',
 					text: ' — произносится и пишется ',
 				},
-				{ type: 'text', color: 'blue', weight: 'normal', text: '[ˈteɪbl]' },
+				{ type: 'text', color: 'blue', weight: 'normal', text: '[теибл]' },
 				{
 					type: 'text',
 					color: 'black',
@@ -1635,7 +1820,7 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 					weight: 'normal',
 					text: ' — хотя в письме начинается с гласной, но произносится с согласной ',
 				},
-				{ type: 'text', color: 'blue', weight: 'normal', text: '[ˈjuːnəti]' },
+				{ type: 'text', color: 'blue', weight: 'normal', text: '[джунэти]' },
 				{ type: 'text', color: 'black', weight: 'normal', text: '. Поэтому ' },
 				{ type: 'text', color: 'blue', weight: 'normal', text: 'a' },
 				{ type: 'text', color: 'black', weight: 'normal', text: '.' },
@@ -1669,7 +1854,7 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: 'В русском языке мы также изменяем слова для благозвучности. Например предлог «в» мы изменим на «во» если после него стоит слово начинающееся на «в»: «в цирке», но «во время исполнения».',
+					text: 'В русском языке мы также изменяем слова для благозвучности. Например предлог «в» изменим на «во» если после него стоит слово начинающееся на «в»: «в цирке», но «во время исполнения».',
 				},
 			],
 		},
@@ -1683,21 +1868,11 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 					words: [{ rusWord: 'идиот', engWord: 'idiot' }],
 				},
 				{
-					rusSentence: 'Это Майк.',
-					engSentences: [{ engSentences: ['He is Mike.'], isCorrect: true }],
-					words: [],
-				},
-				{
-					rusSentence: 'Это аэропорт.',
-					engSentences: [{ engSentences: ['It is an airport.'], isCorrect: true }],
-					words: [{ rusWord: 'аэропорт', engWord: 'airport' }],
-				},
-				{
 					rusSentence: 'Это конверт.',
 					engSentences: [
 						{ engSentences: ['It is an envelop.'], isCorrect: true },
 						{
-							engSentences: ['It is a envelop.'],
+							engSentences: ['It is a envelope.'],
 							isCorrect: false,
 							analysis: [
 								{
@@ -1709,7 +1884,31 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 											type: 'text',
 											color: 'black',
 											weight: 'normal',
-											text: 'Неопределённый артикль a пишется перед словами начинающиеся с согласной для благозвучности. А envelop начинается с гласной. Поэтому тут используйте an.',
+											text: 'Неопределённый артикль ',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: 'a',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ' пишется перед словами начинающиеся с согласной для благозвучности. А envelop начинается с гласной. Поэтому тут используйте ',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: 'an',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: '.',
 										},
 									],
 								},
@@ -1738,19 +1937,471 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 					words: [{ rusWord: 'конверт', engWord: 'envelope' }],
 				},
 				{
-					rusSentence: 'Это совет.',
-					engSentences: [{ engSentences: ['It is an advice.'], isCorrect: true }],
-					words: [{ rusWord: 'совет', engWord: 'advice' }],
-				},
-				{
+					note: 'В русском языке «взрослый» — это прилагательное. В английском используется существительное.',
 					rusSentence: 'Скоро ты будешь взрослой.',
 					engSentences: [
 						{ engSentences: ['Soon you will be an adult'], isCorrect: true },
 						{ engSentences: ['You will be an adult soon.'], isCorrect: true },
+						{
+							engSentences: ['You will be adult soon.'],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Если бы слово adult было прилагательным, то такой вариант был бы правильный. Перед прилагательными артикли не ставятся. Но это должно быть неопределённым существительным. Поэтому ',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: 'an',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ' требуется.',
+										},
+									],
+								},
+							],
+						},
 					],
 					words: [
 						{ rusWord: 'скоро', engWord: 'soon' },
 						{ rusWord: 'взрослый', engWord: 'adult' },
+					],
+				},
+				{
+					rusSentence: 'Она художница.',
+					engSentences: [
+						{ engSentences: ['She is an artist.'], isCorrect: true },
+						{
+							engSentences: ['She a artist is.'],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'В английских предложениях есть чёткий порядок слов: за подлежащим следует сказуемое в повествовательных предложениях. Тут сказуемое убежало в конец предложения.',
+										},
+									],
+								},
+							],
+						},
+						{
+							engSentences: ['She am a famous artist.'],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'После местоимения ',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: 'she',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ' следует ',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: 'to be',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ' в форме ',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: 'is',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: '.',
+										},
+									],
+								},
+							],
+						},
+					],
+					words: [
+						{ rusWord: 'знаменитый', engWord: 'famous' },
+						{ rusWord: 'художник', engWord: 'artist' },
+					],
+				},
+				{
+					rusSentence: 'Это заметно и является проблемой.',
+					engSentences: [
+						{
+							engSentences: ['It is noticed and is an issue.'],
+							isCorrect: true,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Верно! Прилагательные с окончанием ',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: '-ed',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ' описывают эмоции человека.',
+										},
+									],
+								},
+							],
+						},
+						{
+							engSentences: ['It is noticed and is a problem.'],
+							isCorrect: true,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Верно! Прилагательные с окончанием ',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: '-ed',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ' описывают эмоции человека.',
+										},
+									],
+								},
+							],
+						},
+						{
+							engSentences: [],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Глагол ',
+										},
+										{ type: 'text', color: 'blue', weight: 'bold', text: 'be' },
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ' должен стоять перед каждым дополнением: и перед ',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'bold',
+											text: 'noticed',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ' и перед ',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'bold',
+											text: 'problem',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: '.',
+										},
+									],
+								},
+							],
+						},
+					],
+					words: [
+						{ rusWord: 'заметный', engWord: 'noticed' },
+						{ rusWord: 'проблема', engWord: 'issue' },
+					],
+				},
+				{
+					rusSentence: 'Я единственный ребенок и очень балованная.',
+					engSentences: [
+						{ engSentences: ['I am an only child and very spoiled.'], isCorrect: true },
+					],
+					words: [
+						{ rusWord: 'единственный', engWord: 'only' },
+						{ rusWord: 'ребенок', engWord: 'child' },
+						{ rusWord: 'очень', engWord: 'very' },
+						{ rusWord: 'балованный', engWord: 'spoiled' },
+					],
+				},
+				{
+					rusSentence: 'Это было захватывающее шоу.',
+					engSentences: [
+						{
+							engSentences: ['It was an exciting show.'],
+							isCorrect: true,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Верно! Прилагательные с окончанием ',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: '-ing',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ' описывают впечатление оказываемое на человека.',
+										},
+									],
+								},
+							],
+						},
+					],
+					words: [
+						{ rusWord: 'захватывающее', engWord: 'exciting' },
+						{ rusWord: 'шоу', engWord: 'show' },
+					],
+				},
+				{
+					rusSentence: 'Он был безграмотным человеком.',
+					engSentences: [
+						{ engSentences: ['He was an illiterate person.'], isCorrect: true },
+						{ engSentences: ['He was an illiterate man.'], isCorrect: true },
+					],
+					words: [
+						{
+							note: 'Происходит от literate — грамотный',
+							rusWord: 'безграмотный',
+							engWord: 'illiterate',
+						},
+						{ rusWord: 'человек', engWord: 'person' },
+					],
+				},
+				{
+					rusSentence: 'Валера — главный редактор.',
+					engSentences: [
+						{ engSentences: ['Valera is an editor-in-chief.'], isCorrect: true },
+						{
+							engSentences: ['Valera is editor-in-chief.'],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'editor-in-chief — это существительное. А перед ними мы договорились всегда ставить определяющее слово. Валера один из главных редакторов, поэтому стоит поставить неопределённый артикль a.',
+										},
+									],
+								},
+							],
+						},
+						{
+							engSentences: ['Valera is an editor-in-chief.'],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Неопределённый артикль a не может стоять в форме an потому что следом не стоит слово начинающееся на согласную.',
+										},
+									],
+								},
+							],
+						},
+					],
+					words: [{ rusWord: 'главный редактор', engWord: 'editor-in-chief' }],
+				},
+				{
+					rusSentence: 'Это старая деревня.',
+					engSentences: [
+						{ engSentences: ['It is an old village.'], isCorrect: true },
+						{
+							engSentences: ['It is old village.'],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Воспринимайте old village как одну сущность: старая деревня. Но англичанам важно знать это одна из множества старых деревень или та самая конкретная деревня. Это одна из множества. Поэтому перед ней ставьте неопределённый артикль a потому что «деревня» — это исчисляемое существительное в единственном числе. А перед ними ставится артикль ',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: 'a',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: '. Но так как перед артиклем стоит слово начинающееся на гласную, то используйте артикль ',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: 'an',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ' для благозвучности.',
+										},
+									],
+								},
+							],
+						},
+						{
+							engSentences: ['It is a old village.'],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Слово ',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: 'old',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ' пишется и произносится через гласную ',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: 'o',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: '. А a используется когда следом идёт слово начинающуюся на согласную. ',
+										},
+										{
+											type: 'text',
+											color: 'blue',
+											weight: 'normal',
+											text: 'an',
+										},
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: ' с согласной сделано для удобства речи потому что язык спотыкается когде есть подряд две гласные.',
+										},
+									],
+								},
+							],
+						},
+					],
+					words: [
+						{ rusWord: 'старый', engWord: 'old' },
+						{ rusWord: 'деревня', engWord: 'village' },
 					],
 				},
 			],
@@ -1847,7 +2498,7 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 										type: 'text',
 										color: 'black',
 										weight: 'normal',
-										text: 'Должно сойтись два условия: существительное должно быть в единственном числе и исчисляемое.',
+										text: 'Должно сойтись три условия: существительное должно быть неопределённым, в единственном числе и исчисляемое.',
 									},
 								],
 							},
@@ -1867,8 +2518,15 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 										type: 'text',
 										color: 'black',
 										weight: 'normal',
-										text: 'В каком члене предложения указывается время совершения действия?',
+										text: 'В каком члене предложения указывается ',
 									},
+									{
+										type: 'text',
+										color: 'black',
+										weight: 'bold',
+										text: 'время совершения действия',
+									},
+									{ type: 'text', color: 'black', weight: 'normal', text: '?' },
 								],
 							},
 						],
@@ -1953,12 +2611,24 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 										weight: 'normal',
 										text: '. На него ложится время. А так как ',
 									},
-									{ type: 'text', color: 'black', weight: 'bold', text: 'be' },
+									{ type: 'text', color: 'gold', weight: 'normal', text: 'be' },
 									{
 										type: 'text',
 										color: 'black',
 										weight: 'normal',
-										text: ' уже не сказуемое, а дополнение, то находится в инфинитивной форме.',
+										text: ' уже не сказуемое, а дополнение, то находится в ',
+									},
+									{
+										type: 'text',
+										color: 'gold',
+										weight: 'normal',
+										text: 'инфинитивной',
+									},
+									{
+										type: 'text',
+										color: 'black',
+										weight: 'normal',
+										text: ' форме.',
 									},
 								],
 							},
@@ -1981,11 +2651,13 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 										text: 'They ',
 									},
 									{ type: 'text', color: 'blue', weight: 'normal', text: 'will' },
+									{ type: 'text', color: 'black', weight: 'normal', text: ' ' },
+									{ type: 'text', color: 'gold', weight: 'normal', text: 'be' },
 									{
 										type: 'text',
 										color: 'black',
 										weight: 'normal',
-										text: ' be smart.',
+										text: ' smart.',
 									},
 								],
 							},

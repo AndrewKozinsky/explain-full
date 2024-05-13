@@ -33,11 +33,6 @@
 	font-style: italic;
 
 	@include container-width($tablet-width) {
-		font-size: 3rem;
-		line-height: 3.8rem;
-	}
-
-	@include container-width($monitor-width) {
 		font-size: 3.6rem;
 		line-height: 4.4rem;
 	}

@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import cn from 'classnames'
 import { ExercisesManagerTypes } from '../../../logic/exercisesManagerTypes'
 import { useExercisesModalStore } from '../../../store/store'
