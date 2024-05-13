@@ -1,6 +1,6 @@
 import ArticleType from '../../articleType'
 
-const level: ArticleType.ArtLevel = {
+const levelA1: ArticleType.ArtLevel = {
 	type: ArticleType.ArtType.level,
 	level: 'a1' as any,
 	meta: {
@@ -13,4 +13,4 @@ const level: ArticleType.ArtLevel = {
 	},
 }
 
-export default level
+export default levelA1

@@ -10,12 +10,10 @@ export function usePrepareInput(inputRef: React.MutableRefObject<HTMLTextAreaEle
 
 	useEffect(
 		function () {
-			setTimeout(() => {
-				if (!inputRef.current) return
+			if (!inputRef.current) return
 
-				inputRef.current.focus()
-				inputRef.current.value = ''
-			}, 0)
+			inputRef.current.focus()
+			inputRef.current.value = ''
 		},
 		[inputRef.current, exerciseId],
 	)

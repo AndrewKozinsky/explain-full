@@ -1,5 +1,5 @@
 import ArticleBuilder from '../../ArticleBuilder/ArticleBuilder'
-import { getStyleTagCss, useGetGridId } from './fn/getGridStyle'
+import { getStyleTagCss } from './fn/getGridStyle'
 import ArticleType from '../../../articlesData/articleType'
 import './Grid.scss'
 
@@ -10,11 +10,9 @@ type GridProps = {
 function Grid(props: GridProps) {
 	const { config } = props
 
-	const gridId = useGetGridId()
-
 	return (
-		<section className="art-grid" id={gridId}>
-			<style type="text/css">{getStyleTagCss(config, gridId)}</style>
+		<section className="art-grid" id={config.gridId}>
+			<style type="text/css">{getStyleTagCss(config)}</style>
 			{config.cells.map((cell, i) => {
 				return (
 					<div className="art-grid__cell" key={i}>

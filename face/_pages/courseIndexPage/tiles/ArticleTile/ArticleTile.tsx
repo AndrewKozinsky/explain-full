@@ -58,7 +58,7 @@ function ArticleTileLevel(props: ArticleTileLevelProps) {
 		<Link
 			href={tile.url}
 			className="article-tile article-tile--black article-tile--level"
-			data-testid="article-tile--level"
+			data-testid="article-tile--levelA1"
 		>
 			<LanguageLevelBadge level={tile.level} />
 		</Link>

@@ -14,7 +14,7 @@ function LevelArticlesNames(props: ArticlesNamesProps) {
 	const articlesNames = useGetArticlesNamesOfLevel(level)
 
 	return (
-		<p className="level-articles-names" data-testid="level-articles-names">
+		<p className="level-articles-names" data-testid="levelA1-articles-names">
 			{articlesNames.map((name, i) => {
 				if (name === '*') {
 					return (

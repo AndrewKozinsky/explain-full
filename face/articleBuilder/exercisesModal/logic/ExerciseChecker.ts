@@ -87,7 +87,7 @@ export class ExerciseChecker {
 		exercise: ExercisesManagerTypes.Exercise,
 	): Promise<ExercisesManagerTypes.Analysis> {
 		// Массив правильных ответов на это упражнение
-		const correctTranslations = this.getCorrectTranslations(exercise)
+		/*const correctTranslations = this.getCorrectTranslations(exercise)
 
 		// Разбора похожего варианта перевода нет, поэтому сделать запрос к ИИ на разбор
 		const aiAnalysis = await this.makeRequestToAI(exercise)
@@ -98,6 +98,17 @@ export class ExerciseChecker {
 			correctTranslations,
 			translateAnalysis: [
 				{ type: 'paragraph', children: [{ type: 'text', text: aiAnalysis.analysis }] },
+			],
+		}*/
+
+		// -----------
+
+		return {
+			status: ExercisesManagerTypes.AnalysisStatus.visible,
+			isTranslateCorrect: false,
+			correctTranslations: [],
+			translateAnalysis: [
+				{ type: 'paragraph', children: [{ type: 'text', text: 'Dummy text' }] },
 			],
 		}
 	}

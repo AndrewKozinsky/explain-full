@@ -16,7 +16,7 @@ type ExercisesProps = {
 function ExercisesButton(props: ExercisesProps) {
 	const { exercises } = props
 
-	if (exercises.exercises.length <= 2) {
+	if (exercises.exercises.length < 3) {
 		return null
 	}
 

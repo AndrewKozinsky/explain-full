@@ -1,5 +1,5 @@
+import { useRef } from 'react'
 import cn from 'classnames'
-import React, { useRef } from 'react'
 import { ExercisesManagerTypes } from '../../../logic/exercisesManagerTypes'
 import { useExercisesModalStore } from '../../../store/store'
 import { onEnterKeyDown } from './fn/getOnEnterKeyDown'

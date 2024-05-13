@@ -1,22 +1,12 @@
-import { useMemo } from 'react'
 import ArticleType from '../../../../articlesData/articleType'
-// import ArticleType from '../../../../articlesData/articleType'
-
-/**
- * Возвращает уникальный идентификатор сетки чтобы к нему крепить сгенерированные стили ячеек.
- */
-export function useGetGridId() {
-	return useMemo(function () {
-		return 'grid-' + Math.round(Math.random() * 100000)
-	}, [])
-}
 
 /**
  * Генерирует стили ячеек сетки чтобы они складывались в один столбик если места не достаточно.
  * @param gridConfig — конфигурация сетки
- * @param gridId — идентификатор сетки
  */
-export function getStyleTagCss(gridConfig: ArticleType.Grid, gridId: string) {
+export function getStyleTagCss(gridConfig: ArticleType.Grid) {
+	const { gridId } = gridConfig
+
 	// Есть ли ячейки с указанной шириной
 	const isThereCellsWithWidth = Boolean(
 		gridConfig.cells.find((cell) => {

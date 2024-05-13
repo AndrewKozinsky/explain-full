@@ -1,16 +1,18 @@
 import ArticleType from '../articleType'
-import welcome from './1_welcome/welcome'
-import level from './2_level/level'
-import personalPronouns from './3_personalPronouns/personalPronouns'
-import toBePositive from './4_toBePositive/toBePositive'
-import indefiniteArticle from './5_indefiniteArticle/indefiniteArticle'
+import welcome from './welcome/welcome'
+import levelA1 from './levelA1/levelA1'
+import personalPronouns from './1_personalPronouns/personalPronouns'
+import toBePositive from './2_toBePositive/toBePositive'
+import adjectives from './3_adjectives/adjectives'
+import indefiniteArticle from './4_indefiniteArticle/indefiniteArticle'
 
 // Список статей учебника
 const rowArticles: ArticleType.Art[] = [
 	welcome,
-	level,
+	levelA1,
 	personalPronouns,
 	toBePositive,
+	adjectives,
 	indefiniteArticle,
 ]
 
