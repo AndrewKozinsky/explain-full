@@ -20,18 +20,18 @@ export const imageMapper = {
 			src: '/schemasAndTables/ToBeFutureTable.svg',
 			alt: 'To be в будущем времени',
 		},
-		/*PossessivePronouns: {
+		PossessivePronouns: {
 			src: '/schemasAndTables/PossessivePronounsTable.svg',
 			alt: 'Притяжательные местоимения',
-		},*/
-		/*PastSimplePositive: {
+		},
+		PastSimplePositive: {
 			src: '/schemasAndTables/PastSimplePositiveTable.svg',
 			alt: 'Past Simple',
-		},*/
-		/*PresentSimplePositive: {
+		},
+		PresentSimplePositive: {
 			src: '/schemasAndTables/PresentSimplePositiveTable.svg',
 			alt: 'Present Simple',
-		},*/
+		},
 		/*PresentSimplePositiveAndQuestion: {
 			src: '/schemasAndTables/PresentSimplePositiveAndQuestionTable.svg',
 			alt: 'Present Simple утверждение и вопрос',
@@ -85,54 +85,70 @@ export const imageMapper = {
 			alt: 'Present Simple Question',
 		},*/
 	},
-	/*schemas: {
+	schemas: {
 		ToBePresentPositive: {
 			src: '/schemasAndTables/ToBePresentPositiveScheme.svg',
 			alt: '',
 		},
-		PresentSimplePositive: {
+		/*PresentSimplePositive: {
 			src: '/schemasAndTables/PresentSimplePositiveScheme.svg',
 			alt: '',
-		},
-		PresentSimpleNegative_1: {
+		},*/
+		/*PresentSimpleNegative_1: {
 			src: '/schemasAndTables/PresentSimpleNegativeScheme_1.svg',
 			alt: '',
-		},
+		},*/
 		ToBePresentNegative: {
 			src: '/schemasAndTables/ToBePresentNegativeScheme.svg',
 			alt: '',
 		},
-		PresentSimpleQuestion_1: {
+		/*PresentSimpleQuestion_1: {
 			src: '/schemasAndTables/PresentSimpleQuestionScheme_1.svg',
 			alt: '',
-		},
-		PresentSimpleNegative_2: {
+		},*/
+		/*PresentSimpleNegative_2: {
 			src: '/schemasAndTables/PresentSimpleNegativeScheme_2.svg',
 			alt: '',
-		},
+		},*/
 		ToBePresentQuestion: {
 			src: '/schemasAndTables/ToBePresentQuestionScheme.svg',
 			alt: '',
 		},
-		PresentSimpleQuestion_2: {
+		/*PresentSimpleQuestion_2: {
 			src: '/schemasAndTables/PresentSimpleQuestionScheme_2.svg',
 			alt: '',
-		},
-		FutureSimpleNegative: {
+		},*/
+		/*FutureSimpleNegative: {
 			src: '/schemasAndTables/FutureSimpleNegativeScheme.svg',
 			alt: 'Future Simple',
-		},
-		FutureSimplePositive: {
+		},*/
+		/*FutureSimplePositive: {
 			src: '/schemasAndTables/FutureSimplePositiveScheme.svg',
 			alt: 'Future Simple Positive',
-		},
-		FutureSimpleQuestion: {
+		},*/
+		/*FutureSimpleQuestion: {
 			src: '/schemasAndTables/FutureSimpleQuestionScheme.svg',
 			alt: 'Future Simple Question',
-		},
-		ToBeFuturePositive: {
+		},*/
+		/*ToBeFuturePositive: {
 			src: '/schemasAndTables/ToBeFuturePositiveScheme.svg',
 			alt: 'To Be Future',
+		},*/
+		PossessiveDeterminate_1_Scheme: {
+			src: '/schemasAndTables/PossessiveDeterminate_1_Scheme.svg',
+			alt: 'Определитель для pizza',
 		},
-	},*/
+		PossessiveDeterminate_2_Scheme: {
+			src: '/schemasAndTables/PossessiveDeterminate_2_Scheme.svg',
+			alt: 'Определители для pizza',
+		},
+		PossessiveDeterminate_3_Scheme: {
+			src: '/schemasAndTables/PossessiveDeterminate_3_Scheme.svg',
+			alt: 'Определитель для pizza',
+		},
+		PossessiveDeterminate_4_Scheme: {
+			src: '/schemasAndTables/PossessiveDeterminate_4_Scheme.svg',
+			alt: 'Определитель для little bird’s и Определитель для nest',
+		},
+	},
 }

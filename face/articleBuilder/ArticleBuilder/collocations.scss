@@ -42,9 +42,9 @@
 	margin-top: 1.2rem;
 }
 
-/*.art-image + .art-note {
+.art-image + .art-note {
 	margin-top: 2.2rem;
-}*/
+}
 @include container-width($tablet-width) {
 	/*.art-image + .art-header--h4 {
 		margin-top: 2.4rem;
@@ -58,18 +58,18 @@
 	.art-image + .art-paragraph {
 		margin-top: 1.4rem;
 	}
-	/*.art-image + .art-note {
+	.art-image + .art-note {
 		margin-top: 2.4rem;
-	}*/
+	}
 }
 
 @include container-width($monitor-width) {
 	.art-image + .art-paragraph {
 		margin-top: 1.6rem;
 	}
-	/*.art-image + .art-note {
+	.art-image + .art-note {
 		margin-top: 2.6rem;
-	}*/
+	}
 }
 
 // ЗАМЕТКА (ОТСТУП НЕ УКАЗЫВАЕТСЯ) =====
@@ -77,9 +77,13 @@
     margin-top: 2rem;
 }*/
 
-/*.art-note + .art-header--h2 {
+.art-note + .art-header--h2 {
 	margin-top: 2.6rem;
-}*/
+}
+
+.art-note + .art-header--h3 {
+	margin-top: 2.2rem;
+}
 
 .art-note + .art-paragraph {
 	margin-top: 1.6rem;
@@ -105,9 +109,9 @@
     margin-top: 1rem;
 }
 
-/*.art-paragraph + .art-header--h4 {
+.art-paragraph + .art-header--h4 {
 	margin-top: 1rem;
-}*/
+}
 
 .art-paragraph + .art-header--h3 {
 	margin-top: 1.4rem;
@@ -210,9 +214,9 @@
 	margin-top: 2.0rem;
 }*/
 
-/*.art-grid + .art-note {
+.art-grid + .art-note {
 	margin-top: 2.0rem;
-}*/
+}
 
 @include container-width($tablet-width) {
 	/*.art-grid + .art-header--h4 {
@@ -224,9 +228,9 @@
 	/*.art-grid + .art-header--h2 {
 		margin-top: 2.2rem;
 	}*/
-	/*.art-grid + .art-note {
+	.art-grid + .art-note {
 		margin-top: 2.2rem;
-	}*/
+	}
 }
 
 @include container-width($monitor-width) {

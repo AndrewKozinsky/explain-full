@@ -1,4 +1,13 @@
 import ArticleType from '../articleType'
+import the from './10_the/the'
+import adjectivesDegreesOfComparison from './11_adjectivesDegreesOfComparison/adjectivesDegreesOfComparison'
+import beShort from './12_beShort/beShort'
+import presentSimple from './13_presentSimple/presentSimple'
+import pluralOfNouns from './5_pluralOfNouns/pluralOfNouns'
+import beNegativeAndQuestion from './6_beNegativeAndQuestion/beNegativeAndQuestion'
+import demonstrativePronouns from './7_demonstrativePronouns/demonstrativePronouns'
+import possessivePronouns from './8_possessivePronouns/possessivePronouns'
+import possessive from './9_possessive/possessive'
 import welcome from './welcome/welcome'
 import levelA1 from './levelA1/levelA1'
 import personalPronouns from './1_personalPronouns/personalPronouns'
@@ -14,6 +23,15 @@ const rowArticles: ArticleType.Art[] = [
 	toBePositive,
 	adjectives,
 	indefiniteArticle,
+	pluralOfNouns,
+	beNegativeAndQuestion,
+	demonstrativePronouns,
+	possessivePronouns,
+	possessive,
+	the,
+	adjectivesDegreesOfComparison,
+	beShort,
+	presentSimple,
 ]
 
 const articles: ArticleType.Art[] = rowArticles.map((article, i) => {

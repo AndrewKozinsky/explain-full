@@ -14,7 +14,7 @@ function Peanuts(props: PeanutsProps) {
 			{imageNames.map((imageName) => {
 				return (
 					<img
-						src={'/articles/5_indefiniteArticle/images/' + imageName + '.svg'}
+						src={'/articles/4_indefiniteArticle/images/' + imageName + '.svg'}
 						alt="img"
 					/>
 				)

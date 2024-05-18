@@ -25,11 +25,11 @@ ul.#{$CN} {
 	li {
 		&::before {
 			content: '';
-			top: 0.7em;
-			left: -1.4rem;
-			width: 0.7rem;
-			height: 0.7rem;
-			background-color: $orangeColor-2;
+			top: 0.6em;
+			left: -1.6rem;
+			width: 0.9rem;
+			height: 0.9rem;
+			background-color: $textColor;
 			border-radius: 50%;
 		}
 	}
