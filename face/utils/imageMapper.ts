@@ -32,18 +32,18 @@ export const imageMapper = {
 			src: '/schemasAndTables/PresentSimplePositiveTable.svg',
 			alt: 'Present Simple',
 		},
-		/*PresentSimplePositiveAndQuestion: {
+		PresentSimplePositiveAndQuestion: {
 			src: '/schemasAndTables/PresentSimplePositiveAndQuestionTable.svg',
 			alt: 'Present Simple утверждение и вопрос',
-		},*/
-		/*PresentSimpleFull: {
+		},
+		PresentSimpleFull: {
 			src: '/schemasAndTables/PresentSimpleFullTable.svg',
 			alt: 'Present Simple',
-		},*/
-		/*FutureSimpleFull: {
+		},
+		FutureSimpleFull: {
 			src: '/schemasAndTables/FutureSimpleFullTable.svg',
 			alt: 'Future Simple',
-		},*/
+		},
 		/*FutureSimpleNegative: {
 			src: '/schemasAndTables/FutureSimpleNegativeTable.svg',
 			alt: 'Future Simple Negative',
@@ -52,26 +52,26 @@ export const imageMapper = {
 			src: '/schemasAndTables/FutureSimplePositiveAndQuestionTable.svg',
 			alt: 'Future Simple Positive And Question',
 		},*/
-		/*FutureSimplePositive: {
+		FutureSimplePositive: {
 			src: '/schemasAndTables/FutureSimplePositiveTable.svg',
 			alt: 'Future Simple Positive',
-		},*/
-		/*FutureSimpleQuestion: {
+		},
+		FutureSimpleQuestion: {
 			src: '/schemasAndTables/FutureSimpleQuestionTable.svg',
 			alt: 'Future Simple Question',
-		},*/
-		/*PastSimpleFull: {
+		},
+		PastSimpleFull: {
 			src: '/schemasAndTables/PastSimpleFullTable.svg',
 			alt: 'Past Simple',
-		},*/
+		},
 		/*PastSimpleNegative: {
 			src: '/schemasAndTables/PastSimpleNegativeTable.svg',
 			alt: 'Past Simple Negative',
 		},*/
-		/*PastSimplePositiveAndQuestion: {
+		PastSimplePositiveAndQuestion: {
 			src: '/schemasAndTables/PastSimplePositiveAndQuestionTable.svg',
 			alt: 'Past Simple Positive and Question',
-		},*/
+		},
 		/*PastSimpleQuestion: {
 			src: '/schemasAndTables/PastSimpleQuestionTable.svg',
 			alt: 'Past Simple Question',
@@ -90,42 +90,54 @@ export const imageMapper = {
 			src: '/schemasAndTables/ToBePresentPositiveScheme.svg',
 			alt: '',
 		},
-		/*PresentSimplePositive: {
+		PresentSimplePositive: {
 			src: '/schemasAndTables/PresentSimplePositiveScheme.svg',
 			alt: '',
-		},*/
-		/*PresentSimpleNegative_1: {
+		},
+		PastSimplePositive: {
+			src: '/schemasAndTables/PastSimplePositiveScheme.svg',
+			alt: '',
+		},
+		PresentSimpleNegative_1: {
 			src: '/schemasAndTables/PresentSimpleNegativeScheme_1.svg',
 			alt: '',
-		},*/
+		},
 		ToBePresentNegative: {
 			src: '/schemasAndTables/ToBePresentNegativeScheme.svg',
 			alt: '',
 		},
-		/*PresentSimpleQuestion_1: {
+		PresentSimpleQuestion_1: {
 			src: '/schemasAndTables/PresentSimpleQuestionScheme_1.svg',
 			alt: '',
-		},*/
-		/*PresentSimpleNegative_2: {
+		},
+		PresentSimpleNegative_2: {
 			src: '/schemasAndTables/PresentSimpleNegativeScheme_2.svg',
 			alt: '',
-		},*/
+		},
+		PastSimpleQuestion_1: {
+			src: '/schemasAndTables/PastSimpleQuestionScheme_1.svg',
+			alt: '',
+		},
+		PastSimpleQuestion_2: {
+			src: '/schemasAndTables/PastSimpleQuestionScheme_2.svg',
+			alt: '',
+		},
 		ToBePresentQuestion: {
 			src: '/schemasAndTables/ToBePresentQuestionScheme.svg',
 			alt: '',
 		},
-		/*PresentSimpleQuestion_2: {
+		PresentSimpleQuestion_2: {
 			src: '/schemasAndTables/PresentSimpleQuestionScheme_2.svg',
 			alt: '',
-		},*/
+		},
 		/*FutureSimpleNegative: {
 			src: '/schemasAndTables/FutureSimpleNegativeScheme.svg',
 			alt: 'Future Simple',
 		},*/
-		/*FutureSimplePositive: {
+		FutureSimplePositive: {
 			src: '/schemasAndTables/FutureSimplePositiveScheme.svg',
 			alt: 'Future Simple Positive',
-		},*/
+		},
 		/*FutureSimpleQuestion: {
 			src: '/schemasAndTables/FutureSimpleQuestionScheme.svg',
 			alt: 'Future Simple Question',

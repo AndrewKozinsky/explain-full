@@ -3,6 +3,8 @@ import the from './10_the/the'
 import adjectivesDegreesOfComparison from './11_adjectivesDegreesOfComparison/adjectivesDegreesOfComparison'
 import beShort from './12_beShort/beShort'
 import presentSimple from './13_presentSimple/presentSimple'
+import compareBeAndSimple from './14_compareBeAndSimple/compareBeAndSimple'
+import simpleQuestionAndNegative from './15_simpleQuestionAndNegative/simpleQuestionAndNegative'
 import pluralOfNouns from './5_pluralOfNouns/pluralOfNouns'
 import beNegativeAndQuestion from './6_beNegativeAndQuestion/beNegativeAndQuestion'
 import demonstrativePronouns from './7_demonstrativePronouns/demonstrativePronouns'
@@ -32,6 +34,8 @@ const rowArticles: ArticleType.Art[] = [
 	adjectivesDegreesOfComparison,
 	beShort,
 	presentSimple,
+	compareBeAndSimple,
+	simpleQuestionAndNegative,
 ]
 
 const articles: ArticleType.Art[] = rowArticles.map((article, i) => {
