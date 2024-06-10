@@ -1,10 +1,14 @@
 import React from 'react'
-import { PageHeader } from '../../../ui/pageRelated/PageHeader/PageHeader'
+import CourseFace from '../CourseFace/CourseFace'
+import FeaturesGridOne from '../FeaturesGridOne/FeaturesGridOne'
+import MainPageHeader from '../MainPageHeader/MainPageHeader'
 
 function MainPage() {
 	return (
 		<main>
-			<PageHeader>Понимая английский</PageHeader>
+			<MainPageHeader />
+			<CourseFace />
+			<FeaturesGridOne />
 		</main>
 	)
 }
