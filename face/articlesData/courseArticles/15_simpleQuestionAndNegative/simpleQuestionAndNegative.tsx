@@ -22,7 +22,7 @@ const simpleQuestionAndNegative: ArticleType.ArtArticle = {
 	type: ArticleType.ArtType.article,
 	meta: {
 		number: 17,
-		slug: 'simpleQuestionAndNegative',
+		slug: 'simple-question-and-negative',
 		caption: 'Глава 15',
 		articleName: 'Вопрос и отрицание в Simple',
 		articleDescription:
@@ -50,7 +50,7 @@ const simpleQuestionAndNegative: ArticleType.ArtArticle = {
 		{
 			type: 'grid',
 			offset: true,
-			gridId: 'grid-26971',
+			gridId: 'grid-6610',
 			cells: [
 				{
 					children: [
@@ -558,7 +558,7 @@ const simpleQuestionAndNegative: ArticleType.ArtArticle = {
 		{
 			type: 'grid',
 			offset: true,
-			gridId: 'grid-18741',
+			gridId: 'grid-2989',
 			cells: [
 				{
 					children: [

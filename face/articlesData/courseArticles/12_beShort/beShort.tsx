@@ -3,7 +3,7 @@ import ArticleType from '../../articleType'
 const beShort: ArticleType.ArtArticle = {
 	type: ArticleType.ArtType.article,
 	meta: {
-		number: 15,
+		number: 14,
 		slug: 'be-short',
 		caption: 'Глава 12',
 		articleName: 'Сокращённая запись be и will',
@@ -785,7 +785,7 @@ const beShort: ArticleType.ArtArticle = {
 			],
 			offset: true,
 		},
-		{ type: 'header', tag: 'h2', style: 'h2', text: 'Будущее время' },
+		{ type: 'header', tag: 'h2', style: 'h2', text: 'Will' },
 		{ type: 'header', tag: 'h3', style: 'h3', text: 'Утверждение' },
 		{
 			type: 'paragraph',
@@ -796,8 +796,10 @@ const beShort: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: 'В сокращённой записи от will остаётся только ',
+					text: 'В сокращённой записи от ',
 				},
+				{ type: 'text', color: 'black', weight: 'bold', text: 'will' },
+				{ type: 'text', color: 'black', weight: 'normal', text: ' остаётся только ' },
 				{ type: 'text', color: 'blue', weight: 'normal', text: '‘ll' },
 				{ type: 'text', color: 'black', weight: 'normal', text: '.' },
 			],
@@ -963,7 +965,7 @@ const beShort: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: 'Сокращённая форма и слово до него сливаются вместе и на письме и в проговаривании. И для некоторых слов она не уместна потому что сказать такое сочитание звуков затруднительно. Например сочитание guys и are. Сокращение guys’re правильное, но в реальном разговоре такого избегают.',
+					text: 'Сокращённая форма и слово до него сливаются вместе и на письме и в речи. И для некоторых слов она не уместна потому что сказать такое сочитание звуков затруднительно. Например сочитание guys и are. Сокращение guys’re правильное, но в реальном разговоре такого избегают.',
 				},
 			],
 		},

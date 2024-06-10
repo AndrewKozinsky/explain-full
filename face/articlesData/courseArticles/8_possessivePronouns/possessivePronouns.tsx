@@ -9,7 +9,7 @@ const possessivePronouns: ArticleType.ArtArticle = {
 		caption: 'Глава 8',
 		articleName: 'Притяжательные местоимения',
 		articleDescription:
-			'Притяжательные местсоимения поясняют кому принадлежит персонаж или предмет.',
+			'Притяжательные местоимения поясняют кому принадлежит персонаж или предмет.',
 		isPaid: false,
 	},
 	content: [
@@ -40,7 +40,8 @@ const possessivePronouns: ArticleType.ArtArticle = {
 			textSize: 'giant',
 			children: [
 				{ type: 'text', color: 'gray', weight: 'normal', text: '(Чей?)' },
-				{ type: 'text', color: 'blue', weight: 'normal', text: ' Твой' },
+				{ type: 'text', color: 'black', weight: 'normal', text: ' ' },
+				{ type: 'text', color: 'blue', weight: 'normal', text: 'Твой' },
 				{ type: 'text', color: 'black', weight: 'normal', text: ' телефон сломан.' },
 			],
 		},
@@ -650,11 +651,8 @@ const possessivePronouns: ArticleType.ArtArticle = {
 						{ engSentences: ['My psychology is not well.'], isCorrect: true },
 					],
 					words: [
-						{ rusWord: 'психологическое состояние — psychology', engWord: '344d' },
-						{
-							rusWord: 'здоровый, в удовлетворительном состоянии — well',
-							engWord: '123',
-						},
+						{ rusWord: 'психологическое состояние', engWord: 'psychology' },
+						{ rusWord: 'здоровый, в удовлетворительном состоянии', engWord: 'well' },
 					],
 				},
 				{
@@ -678,7 +676,7 @@ const possessivePronouns: ArticleType.ArtArticle = {
 					],
 					words: [
 						{ rusWord: 'в настоящее время', engWord: 'currently' },
-						{ rusWord: 'агент', engWord: 'an agent' },
+						{ rusWord: 'агент', engWord: 'agent' },
 					],
 				},
 				{
@@ -696,7 +694,7 @@ const possessivePronouns: ArticleType.ArtArticle = {
 						{ rusWord: 'второй', engWord: 'second' },
 						{ rusWord: 'третий', engWord: 'third' },
 						{ rusWord: 'иногда', engWord: 'sometimes' },
-						{ rusWord: 'язык', engWord: 'a language' },
+						{ rusWord: 'язык', engWord: 'language' },
 					],
 				},
 				{
@@ -704,6 +702,11 @@ const possessivePronouns: ArticleType.ArtArticle = {
 					engSentences: [
 						{ engSentences: ['Is he your brother? No, he is not.'], isCorrect: true },
 					],
+					words: [{ rusWord: 'брат', engWord: 'brother' }],
+				},
+				{
+					rusSentence: 'Мои руки чистые.',
+					engSentences: [{ engSentences: ['My hands are clear.'], isCorrect: true }],
 					words: [{ rusWord: 'брат', engWord: 'brother' }],
 				},
 			],
@@ -1041,7 +1044,7 @@ const possessivePronouns: ArticleType.ArtArticle = {
 						{ engSentences: ['His coat is long, but hers is short.'], isCorrect: true },
 					],
 					words: [
-						{ rusWord: 'пальто', engWord: 'a coat' },
+						{ rusWord: 'пальто', engWord: 'coat' },
 						{ rusWord: 'длинный', engWord: 'long' },
 						{ rusWord: 'короткий', engWord: 'short' },
 					],

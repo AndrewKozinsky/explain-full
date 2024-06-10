@@ -765,7 +765,7 @@ const adjectives: ArticleType.ArtArticle = {
 		{
 			type: 'grid',
 			offset: false,
-			gridId: 'grid-57839',
+			gridId: 'grid-2345',
 			cells: [
 				{
 					minWidth: '300px',
@@ -1486,8 +1486,41 @@ const adjectives: ArticleType.ArtArticle = {
 						{ rusWord: 'смущён', engWord: 'confused' },
 					],
 				},
+				{
+					rusSentence: 'Но сегодня Ника интересовали только сокровища.',
+					engSentences: [
+						{
+							engSentences: ['But tonight Nick was only interested in treasure.'],
+							isCorrect: true,
+						},
+					],
+					words: [
+						{ rusWord: 'очень', engWord: 'very' },
+						{ rusWord: 'смущён', engWord: 'confused' },
+					],
+				},
+				{
+					rusSentence: 'Они уставшие после их долгого дня.',
+					engSentences: [
+						{ engSentences: ['They are tired after their long day.'], isCorrect: true },
+					],
+					words: [
+						{ rusWord: 'очень', engWord: 'very' },
+						{ rusWord: 'смущён', engWord: 'confused' },
+					],
+				},
+				{
+					rusSentence: 'Переведи',
+					engSentences: [
+						{ engSentences: ['He was huge and frightening.'], isCorrect: true },
+					],
+					words: [
+						{ rusWord: 'очень', engWord: 'very' },
+						{ rusWord: 'смущён', engWord: 'confused' },
+					],
+				},
 			],
-			offset: true,
+			offset: false,
 		},
 		{ type: 'header', tag: 'h2', style: 'h2', text: 'Противоположное значение' },
 		{
@@ -1941,6 +1974,16 @@ const adjectives: ArticleType.ArtArticle = {
 					],
 					words: [{ rusWord: 'несчастен', engWord: 'unhappy' }],
 				},
+				{
+					rusSentence: 'Они были очень несчастливы и очень напуганы.',
+					engSentences: [
+						{
+							engSentences: ['They were very unhappy, and very afraid.'],
+							isCorrect: true,
+						},
+					],
+					words: [{ rusWord: 'несчастен', engWord: 'unhappy' }],
+				},
 			],
 			offset: true,
 		},
@@ -2225,6 +2268,55 @@ const adjectives: ArticleType.ArtArticle = {
 						{ rusWord: 'слишком', engWord: 'too' },
 						{ rusWord: 'эмоциональный', engWord: 'emotional' },
 					],
+				},
+				{
+					rusSentence: 'Я смелая, я красивая, я замечательная.',
+					engSentences: [
+						{
+							engSentences: ['I am brave, I am beautiful, and I am brilliant.'],
+							isCorrect: true,
+						},
+						{ engSentences: [], isCorrect: false },
+						{
+							engSentences: [],
+							isCorrect: false,
+							analysis: [
+								{
+									type: 'paragraph',
+									offset: false,
+									textSize: 'normal',
+									children: [
+										{
+											type: 'text',
+											color: 'black',
+											weight: 'normal',
+											text: 'Если в предложении говорится про свойство, то должен быть to be.',
+										},
+									],
+								},
+							],
+						},
+					],
+					words: [
+						{ rusWord: 'смелый', engWord: 'brave' },
+						{ rusWord: 'красивый', engWord: 'beautiful' },
+						{ rusWord: 'замечательный', engWord: 'brilliant' },
+					],
+				},
+				{
+					rusSentence: 'Мы очень благодарны.',
+					engSentences: [{ engSentences: ['We are very grateful.'], isCorrect: true }],
+					words: [{ rusWord: 'смелый', engWord: 'brave' }],
+				},
+				{
+					rusSentence: 'Эта книга продуманная и вдохновляющая.',
+					engSentences: [
+						{
+							engSentences: ['This book is thoughtful and inspiring.'],
+							isCorrect: true,
+						},
+					],
+					words: [{ rusWord: 'смелый', engWord: 'brave' }],
 				},
 			],
 			offset: true,

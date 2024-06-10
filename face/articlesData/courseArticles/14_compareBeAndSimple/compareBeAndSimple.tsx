@@ -715,6 +715,11 @@ const compareBeAndSimple: ArticleType.ArtArticle = {
 						{ rusWord: 'игрушка', engWord: 'a toy' },
 					],
 				},
+				{
+					rusSentence: 'Ему семь лет.',
+					engSentences: [{ engSentences: ['He is seven years old. '], isCorrect: true }],
+					words: [{ rusWord: 'странный', engWord: 'strange' }],
+				},
 			],
 			offset: true,
 		},
@@ -903,7 +908,7 @@ const compareBeAndSimple: ArticleType.ArtArticle = {
 		{
 			type: 'grid',
 			offset: true,
-			gridId: 'grid-59496',
+			gridId: 'grid-88455',
 			cells: [
 				{
 					minWidth: '300px',
@@ -1320,6 +1325,18 @@ const compareBeAndSimple: ArticleType.ArtArticle = {
 							isCorrect: true,
 						},
 					],
+					words: [{ rusWord: 'популярный', engWord: 'popular' }],
+				},
+				{
+					rusSentence: 'Ни люди, ни собаки не проснулись.',
+					engSentences: [
+						{ engSentences: ['Neither humans nor dogs are awake.'], isCorrect: true },
+					],
+					words: [{ rusWord: 'популярный', engWord: 'popular' }],
+				},
+				{
+					rusSentence: 'Мы настроены оптимистично.',
+					engSentences: [{ engSentences: ['We are optimistic.'], isCorrect: true }],
 					words: [{ rusWord: 'популярный', engWord: 'popular' }],
 				},
 				{

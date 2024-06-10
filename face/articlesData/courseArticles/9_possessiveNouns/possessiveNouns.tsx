@@ -4,13 +4,13 @@ import PossessiveDeterminate_2_Scheme from './PossessiveDeterminate_2_Scheme'
 import PossessiveDeterminate_3_Scheme from './PossessiveDeterminate_3_Scheme'
 import PossessiveDeterminate_4_Scheme from './PossessiveDeterminate_4_Scheme'
 
-const possessive: ArticleType.ArtArticle = {
+const possessiveNouns: ArticleType.ArtArticle = {
 	type: ArticleType.ArtType.article,
 	meta: {
 		number: 11,
-		slug: 'possessive',
+		slug: 'possessive-nouns',
 		caption: 'Глава 9',
-		articleName: 'Притяжательный падеж',
+		articleName: 'Притяжательные существительные',
 		articleDescription:
 			'Наравне с притяжательными местоимениями задаёт принадлежость предмета, но выбор слов гораздо больше, чем 7 местоимений.',
 		isPaid: false,
@@ -25,26 +25,53 @@ const possessive: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: 'Падеж — это изменение окончания существительного для выражения связи с другими словами в предложении. В русском языке их 6. В английском 2: общий и притяжательный.',
+					text: 'Вы уже встречались с притяжательными местоимениями.',
 				},
 			],
 		},
 		{
-			type: 'note',
-			noteStyle: 'gray',
+			type: 'paragraph',
+			offset: false,
+			textSize: 'giant',
+			children: [
+				{ type: 'text', color: 'black', weight: 'normal', text: 'Эта моя тарелка' },
+				{ type: 'arrow' },
+				{ type: 'text', color: 'black', weight: 'normal', text: 'This is my plate' },
+			],
+		},
+		{
+			type: 'paragraph',
+			offset: false,
+			textSize: 'giant',
+			children: [
+				{ type: 'text', color: 'black', weight: 'normal', text: 'Эта тарелка моя' },
+				{ type: 'arrow' },
+				{ type: 'text', color: 'black', weight: 'normal', text: 'This plate is mine' },
+			],
+		},
+		{
+			type: 'paragraph',
+			offset: true,
+			textSize: 'normal',
 			children: [
 				{
-					type: 'paragraph',
-					offset: false,
-					textSize: 'normal',
-					children: [
-						{
-							type: 'text',
-							color: 'black',
-							weight: 'normal',
-							text: 'Предложения «Эта моя тарелка» и «Эта тарелка моя» можно перевести и как This is my plate, так и This plate is mine. Форма с самостоятельным притяжательным местоимением больше подходит чтобы заострить внимание на факте обладания.',
-						},
-					],
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: 'Притяжательными можно сделать существительные задав им притяжательный падеж.',
+				},
+			],
+		},
+		{
+			type: 'paragraph',
+			offset: true,
+			textSize: 'normal',
+			children: [
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: 'Падеж — это изменение окончания существительного для выражения связи с другими словами в предложении. В русском языке их 6. В английском 2: общий и притяжательный.',
 				},
 			],
 		},
@@ -78,12 +105,12 @@ const possessive: ArticleType.ArtArticle = {
 			textSize: 'giant',
 			children: [
 				{ type: 'text', color: 'black', weight: 'normal', text: 'A ' },
-				{ type: 'text', color: 'gold', weight: 'normal', text: 'boy' },
+				{ type: 'text', color: 'gold', weight: 'normal', text: 'cat' },
 				{ type: 'text', color: 'black', weight: 'normal', text: '' },
 				{ type: 'arrow' },
 				{ type: 'text', color: 'black', weight: 'normal', text: 'A ' },
-				{ type: 'text', color: 'blue', weight: 'normal', text: 'boy’s' },
-				{ type: 'text', color: 'black', weight: 'normal', text: ' photo' },
+				{ type: 'text', color: 'blue', weight: 'normal', text: 'cat’s' },
+				{ type: 'text', color: 'black', weight: 'normal', text: ' bowl' },
 			],
 		},
 		{
@@ -91,12 +118,15 @@ const possessive: ArticleType.ArtArticle = {
 			offset: false,
 			textSize: 'small',
 			children: [
+				{ type: 'text', color: 'gray', weight: 'bold', text: 'cat' },
 				{
 					type: 'text',
 					color: 'gray',
 					weight: 'normal',
-					text: 'boy — это форма в общем падеже, а boy’s в притяжательном.',
+					text: ' — это форма в общем падеже, а ',
 				},
+				{ type: 'text', color: 'gray', weight: 'bold', text: 'cat’s' },
+				{ type: 'text', color: 'gray', weight: 'normal', text: ' в притяжательном.' },
 			],
 		},
 		{
@@ -117,11 +147,11 @@ const possessive: ArticleType.ArtArticle = {
 			offset: false,
 			textSize: 'giant',
 			children: [
-				{ type: 'text', color: 'black', weight: 'normal', text: 'A boy’s photo' },
+				{ type: 'text', color: 'black', weight: 'normal', text: 'A cat’s bowl' },
 				{ type: 'arrow' },
-				{ type: 'text', color: 'black', weight: 'normal', text: 'Мальчика фотография' },
+				{ type: 'text', color: 'black', weight: 'normal', text: 'Кота чашка' },
 				{ type: 'arrow' },
-				{ type: 'text', color: 'black', weight: 'normal', text: 'Фотография мальчика' },
+				{ type: 'text', color: 'black', weight: 'normal', text: 'Чашка кота' },
 			],
 		},
 		{
@@ -137,6 +167,19 @@ const possessive: ArticleType.ArtArticle = {
 				},
 			],
 		},
+		{
+			type: 'paragraph',
+			offset: true,
+			textSize: 'normal',
+			children: [
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: 'Его можно добавить к любому существительному. Но в основном предпочитают добавлять их к одушевлённым персонажам.',
+				},
+			],
+		},
 		{ type: 'header', tag: 'h2', style: 'h2', text: 'Образование притяжательного падежа' },
 		{ type: 'header', tag: 'h3', style: 'h3', text: 'Одно слово в притяжательном падеже' },
 		{
@@ -148,8 +191,10 @@ const possessive: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: 'Существительному добавляется знака апострофа и буквы s к форме общего падежа.',
+					text: 'Существительному добавляется знака апострофа и буквы ',
 				},
+				{ type: 'text', color: 'blue', weight: 'normal', text: 's' },
+				{ type: 'text', color: 'black', weight: 'normal', text: ' к форме общего падежа.' },
 			],
 		},
 		{
@@ -204,7 +249,7 @@ const possessive: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: ', то добавляется только апастроф.',
+					text: ', то добавляется только апостроф.',
 				},
 			],
 		},
@@ -255,7 +300,14 @@ const possessive: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: 'Если в притяжательном падеже стоит несколько слов, то ’s добавляется к последнему слову:',
+					text: 'Если в притяжательном падеже стоит несколько слов, то ',
+				},
+				{ type: 'text', color: 'blue', weight: 'normal', text: '’s' },
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: ' добавляется к последнему слову:',
 				},
 			],
 		},
@@ -332,7 +384,7 @@ const possessive: ArticleType.ArtArticle = {
 		{ type: 'customComponent', component: <PossessiveDeterminate_1_Scheme /> },
 		{
 			type: 'paragraph',
-			offset: false,
+			offset: true,
 			textSize: 'normal',
 			children: [
 				{
@@ -354,7 +406,7 @@ const possessive: ArticleType.ArtArticle = {
 		{ type: 'customComponent', component: <PossessiveDeterminate_2_Scheme /> },
 		{
 			type: 'paragraph',
-			offset: false,
+			offset: true,
 			textSize: 'normal',
 			children: [
 				{
@@ -389,11 +441,21 @@ const possessive: ArticleType.ArtArticle = {
 					textSize: 'big',
 					children: [
 						{ type: 'text', color: 'error', weight: 'normal', text: 'This my' },
-						{ type: 'text', color: 'black', weight: 'normal', text: ' pizza.' },
+						{ type: 'text', color: 'black', weight: 'normal', text: ' pizza is raw' },
 						{ type: 'arrow' },
-						{ type: 'text', color: 'black', weight: 'normal', text: 'This pizza ' },
+						{
+							type: 'text',
+							color: 'black',
+							weight: 'normal',
+							text: 'This pizza is raw ',
+						},
 						{ type: 'text', color: 'gray', weight: 'normal', text: 'или' },
-						{ type: 'text', color: 'black', weight: 'normal', text: ' My pizza.' },
+						{
+							type: 'text',
+							color: 'black',
+							weight: 'normal',
+							text: ' My pizza is raw',
+						},
 					],
 				},
 			],
@@ -412,161 +474,119 @@ const possessive: ArticleType.ArtArticle = {
 			],
 		},
 		{ type: 'customComponent', component: <PossessiveDeterminate_4_Scheme /> },
-		{ type: 'header', tag: 'h2', style: 'h2', text: 'Когда применимо' },
-		{
-			type: 'paragraph',
-			offset: false,
-			textSize: 'normal',
-			children: [
-				{
-					type: 'text',
-					color: 'black',
-					weight: 'normal',
-					text: 'К существительному можно добавить притяжательный падеж если оно обозначает одушевлённый объект.  Неодушевленные существительные, за исключением некоторых случаев, в притяжательном падеже не употребляются.',
-				},
-			],
-		},
-		{
-			type: 'header',
-			tag: 'h3',
-			style: 'h3',
-			text: 'Существительные обозначающие временные промежутки',
-		},
-		{
-			type: 'paragraph',
-			offset: false,
-			textSize: 'normal',
-			children: [
-				{
-					type: 'text',
-					color: 'blue',
-					weight: 'normal',
-					text: 'Такие наречия времени, как: today сегодня, yesterday вчера, tomorrow завтра. Например: today’s newspaper — сегодняшняя газета, yesterday’s excursion — вчерашняя экскурсия. Существительные, обозначающие время (year год, month месяц, day день, hour час, minute минута, …), части дня (night ночь, вечер, …), времена года. the night’s shadows — ночные тени, a month’s holiday — месячный отпуск,',
-				},
-			],
-		},
-		{
-			type: 'paragraph',
-			offset: false,
-			textSize: 'big',
-			children: [
-				{
-					type: 'text',
-					color: 'black',
-					weight: 'normal',
-					text: 'One hot summer\'s day Joe was by the river.',
-				},
-				{ type: 'arrow' },
-				{
-					type: 'text',
-					color: 'black',
-					weight: 'normal',
-					text: 'Однажды жарким летним днём Джо был около реки.',
-				},
-			],
-		},
-		{ type: 'header', tag: 'h3', style: 'h3', text: 'Звезды и планеты' },
-		{
-			type: 'paragraph',
-			offset: false,
-			textSize: 'normal',
-			children: [
-				{
-					type: 'text',
-					color: 'blue',
-					weight: 'normal',
-					text: 'the moon’s surface — поверхность луны, the sun’s rays — солнечные лучи; лучи солнца.',
-				},
-			],
-		},
-		{ type: 'header', tag: 'h3', style: 'h3', text: 'Расстояния' },
-		{
-			type: 'paragraph',
-			offset: false,
-			textSize: 'normal',
-			children: [
-				{
-					type: 'text',
-					color: 'blue',
-					weight: 'normal',
-					text: 'расстояние (mile миля, kilometer километр, …) at a mile’s distance — на расстоянии одной мили,',
-				},
-			],
-		},
-		{ type: 'header', tag: 'h3', style: 'h3', text: 'Стоимость' },
-		{
-			type: 'paragraph',
-			offset: false,
-			textSize: 'normal',
-			children: [
-				{
-					type: 'text',
-					color: 'blue',
-					weight: 'normal',
-					text: 'five dollar’s worth — стоимостью в пять долларов.',
-				},
-			],
-		},
-		{ type: 'header', tag: 'h3', style: 'h3', text: 'Группы людей' },
-		{
-			type: 'paragraph',
-			offset: false,
-			textSize: 'normal',
-			children: [
-				{
-					type: 'text',
-					color: 'blue',
-					weight: 'normal',
-					text: 'Собирательные существительные, обозначающие сообщества людей: party партия, army армия, family семья, crew команда, экипаж, society общество, nation нация, government правительство и др. Например:\nthe society’s members — члены общества, the nation’s wealth — богатство нации.',
-				},
-			],
-		},
-		{
-			type: 'header',
-			tag: 'h3',
-			style: 'h3',
-			text: 'Местоимения, заменяющие одушевленные существительные',
-		},
-		{
-			type: 'paragraph',
-			offset: false,
-			textSize: 'normal',
-			children: [
-				{
-					type: 'text',
-					color: 'blue',
-					weight: 'normal',
-					text: 'Притяжательный падеж могут иметь местоимения, заменяющие одушевленные существительные: somebody, someone кто-то, anybody, anyone кто-нибудь, everyone, everybody все, nobody, no one никто и др. Например:\nIt’s nobody’s business — Это никого не касается.',
-				},
-			],
-		},
-		{ type: 'header', tag: 'h3', style: 'h3', text: 'Прочие понятия' },
-		{
-			type: 'paragraph',
-			offset: false,
-			textSize: 'normal',
-			children: [
-				{
-					type: 'text',
-					color: 'blue',
-					weight: 'normal',
-					text: 'world мир, earth земля, nature природа; continent континент, и их названия; ocean океан, sea море, river река и их названия; country страна, названия стран, и территорий; town, city город и их названия; ship корабль, судно и другие средства передвижения, и их названия; названия газет и др.\nAfrica’s future — будущее Африки the ocean’s roar — рев океана Canada’s population — население Канады London’s museums — музеи Лондона the ship’s crew — команда корабля.',
-				},
-			],
-		},
 		{
 			type: 'exercises',
 			id: 0,
 			exercises: [
 				{
-					rusSentence: 'Моё по',
-					engSentences: [{ engSentences: ['My situ'], isCorrect: true }],
+					rusSentence: 'Отец Алисы доволен и счастлив.',
+					engSentences: [
+						{
+							engSentences: ['Alissa\'s father is pleased and happy.'],
+							isCorrect: true,
+						},
+					],
+					words: [{ rusWord: 'положение', engWord: 'situation' }],
+				},
+				{
+					rusSentence: 'Комната в отеле Айприл и Лауры на втором этаже.',
+					engSentences: [
+						{
+							engSentences: ['April and Laura\'s hotel room is on the second floor.'],
+							isCorrect: true,
+						},
+					],
 					words: [{ rusWord: 'положение', engWord: 'situation' }],
 				},
 			],
 			offset: true,
 		},
+		{
+			type: 'header',
+			tag: 'h2',
+			style: 'h2',
+			text: 'Притяжательный падеж или сокращённая форма be',
+		},
+		{
+			type: 'paragraph',
+			offset: false,
+			textSize: 'normal',
+			children: [
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: 'Апостров + s используется в том числе как сокращённая форма глагола be в форме is. Но сомнений обычно не возникает потому что определить это можно по косвенным признакам присущих притяжательным существительным и be.',
+				},
+			],
+		},
+		{
+			type: 'paragraph',
+			offset: true,
+			textSize: 'normal',
+			children: [
+				{ type: 'text', color: 'black', weight: 'normal', text: 'Посмотрим примеры.' },
+			],
+		},
+		{
+			type: 'paragraph',
+			offset: false,
+			textSize: 'giant',
+			children: [{ type: 'text', color: 'black', weight: 'normal', text: 'Andy’s toy.' }],
+		},
+		{
+			type: 'paragraph',
+			offset: false,
+			textSize: 'normal',
+			children: [
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: 'Если ‘s — это сокращённая форма is, тогда перед toy должен быть неопределённый артикль a. Поэтому переводится не «Энди — игрушка», а «Игрушка Энди».',
+				},
+			],
+		},
+		{
+			type: 'paragraph',
+			offset: false,
+			textSize: 'small',
+			children: [
+				{
+					type: 'text',
+					color: 'gray',
+					weight: 'normal',
+					text: 'Даже если бы слово toy было во множественном числе и неопределённый артикль нельзя было поставить, то всё равно бы было понятно потому что около Энди не может быть существительного множественного числа и be был бы в форме are.',
+				},
+			],
+		},
+		{
+			type: 'paragraph',
+			offset: true,
+			textSize: 'giant',
+			children: [
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: 'Nutcracker’s my favourite book.',
+				},
+			],
+		},
+		{
+			type: 'paragraph',
+			offset: false,
+			textSize: 'normal',
+			children: [
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: 'Если Nutcracker’s — это притяжательное существительное, то после него должно быть существительное. А тут стоит местоимение. Поэтому ‘s — это сокращение от is. Предложение переводится «Щелкунчик моя любимая книга».',
+				},
+			],
+		},
 	],
 }
 
-export default possessive
+export default possessiveNouns

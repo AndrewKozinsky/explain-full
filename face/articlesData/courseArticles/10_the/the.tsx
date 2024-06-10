@@ -49,7 +49,7 @@ const the: ArticleType.ArtArticle = {
 		{
 			type: 'grid',
 			offset: true,
-			gridId: 'grid-33336',
+			gridId: 'grid-92750',
 			cells: [
 				{
 					minWidth: '220px',

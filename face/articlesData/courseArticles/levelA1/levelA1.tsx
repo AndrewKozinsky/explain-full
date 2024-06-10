@@ -5,11 +5,11 @@ const levelA1: ArticleType.ArtLevel = {
 	level: 'a1' as any,
 	meta: {
 		number: 2,
-		slug: 'level',
+		slug: 'level-a1',
 		caption: 'Уровень A1',
 		articleName: 'Уровень A1',
 		articleDescription: 'Начало уровня А1.',
-		isPaid: false,
+		isPaid: true,
 	},
 }
 

@@ -298,7 +298,7 @@ const adjectivesDegreesOfComparison: ArticleType.ArtArticle = {
 		{
 			type: 'grid',
 			offset: true,
-			gridId: 'grid-95655',
+			gridId: 'grid-4748',
 			cells: [
 				{
 					children: [
@@ -578,6 +578,19 @@ const adjectivesDegreesOfComparison: ArticleType.ArtArticle = {
 					],
 					words: [{ rusWord: 'ребенок', engWord: 'a child' }],
 				},
+				{
+					rusSentence:
+						'Цена был на 30 долларов дешевле, чем мои наушники Audio Technica, но качество было плохим.',
+					engSentences: [
+						{
+							engSentences: [
+								'The price was $30 cheaper than my Audio Technica headphones, but the quality was bad.',
+							],
+							isCorrect: true,
+						},
+					],
+					words: [{ rusWord: 'ребенок', engWord: 'a child' }],
+				},
 			],
 			offset: true,
 		},
@@ -597,7 +610,7 @@ const adjectivesDegreesOfComparison: ArticleType.ArtArticle = {
 		{
 			type: 'grid',
 			offset: true,
-			gridId: 'grid-80692',
+			gridId: 'grid-38497',
 			cells: [
 				{
 					children: [
@@ -619,9 +632,8 @@ const adjectivesDegreesOfComparison: ArticleType.ArtArticle = {
 							offset: false,
 							textSize: 'giant',
 							children: [
-								{ type: 'text', color: 'black', weight: 'normal', text: 'h' },
-								{ type: 'text', color: 'gold', weight: 'normal', text: 'o' },
-								{ type: 'text', color: 'black', weight: 'normal', text: 't' },
+								{ type: 'text', color: 'black', weight: 'normal', text: 'ho' },
+								{ type: 'text', color: 'gold', weight: 'normal', text: 't' },
 							],
 						},
 						{
@@ -642,9 +654,8 @@ const adjectivesDegreesOfComparison: ArticleType.ArtArticle = {
 							offset: false,
 							textSize: 'giant',
 							children: [
-								{ type: 'text', color: 'black', weight: 'normal', text: 'th' },
-								{ type: 'text', color: 'gold', weight: 'normal', text: 'i' },
-								{ type: 'text', color: 'black', weight: 'normal', text: 'n' },
+								{ type: 'text', color: 'black', weight: 'normal', text: 'thi' },
+								{ type: 'text', color: 'gold', weight: 'normal', text: 'n' },
 							],
 						},
 					],
@@ -669,8 +680,8 @@ const adjectivesDegreesOfComparison: ArticleType.ArtArticle = {
 							offset: false,
 							textSize: 'giant',
 							children: [
-								{ type: 'text', color: 'black', weight: 'normal', text: 'hot' },
-								{ type: 'text', color: 'gold', weight: 'normal', text: 't' },
+								{ type: 'text', color: 'black', weight: 'normal', text: 'ho' },
+								{ type: 'text', color: 'gold', weight: 'normal', text: 'tt' },
 								{ type: 'text', color: 'blue', weight: 'normal', text: 'er' },
 							],
 						},
@@ -692,8 +703,8 @@ const adjectivesDegreesOfComparison: ArticleType.ArtArticle = {
 							offset: false,
 							textSize: 'giant',
 							children: [
-								{ type: 'text', color: 'black', weight: 'normal', text: 'thin' },
-								{ type: 'text', color: 'gold', weight: 'normal', text: 'n' },
+								{ type: 'text', color: 'black', weight: 'normal', text: 'thi' },
+								{ type: 'text', color: 'gold', weight: 'normal', text: 'nn' },
 								{ type: 'text', color: 'blue', weight: 'normal', text: 'er' },
 							],
 						},
@@ -720,8 +731,8 @@ const adjectivesDegreesOfComparison: ArticleType.ArtArticle = {
 							textSize: 'giant',
 							children: [
 								{ type: 'text', color: 'blue', weight: 'normal', text: 'the' },
-								{ type: 'text', color: 'black', weight: 'normal', text: ' hot' },
-								{ type: 'text', color: 'gold', weight: 'normal', text: 't' },
+								{ type: 'text', color: 'black', weight: 'normal', text: ' ho' },
+								{ type: 'text', color: 'gold', weight: 'normal', text: 'tt' },
 								{ type: 'text', color: 'blue', weight: 'normal', text: 'est' },
 							],
 						},
@@ -744,8 +755,8 @@ const adjectivesDegreesOfComparison: ArticleType.ArtArticle = {
 							textSize: 'giant',
 							children: [
 								{ type: 'text', color: 'blue', weight: 'normal', text: 'the' },
-								{ type: 'text', color: 'black', weight: 'normal', text: ' thin' },
-								{ type: 'text', color: 'gold', weight: 'normal', text: 'n' },
+								{ type: 'text', color: 'black', weight: 'normal', text: ' thi' },
+								{ type: 'text', color: 'gold', weight: 'normal', text: 'nn' },
 								{ type: 'text', color: 'blue', weight: 'normal', text: 'est' },
 							],
 						},
@@ -829,7 +840,7 @@ const adjectivesDegreesOfComparison: ArticleType.ArtArticle = {
 					words: [{ rusWord: 'ребенок', engWord: 'a child' }],
 				},
 				{
-					rusSentence: 'Его квартира была меньше, чем у нас.',
+					rusSentence: 'Его квартира была меньше, чем наша.',
 					engSentences: [
 						{ engSentences: ['Her apartment was smaller than ours.'], isCorrect: true },
 					],
@@ -896,16 +907,18 @@ const adjectivesDegreesOfComparison: ArticleType.ArtArticle = {
 					weight: 'normal',
 					text: ' не удваивается. То есть добавляется ',
 				},
-				{ type: 'text', color: 'blue', weight: 'bold', text: '-r' },
+				{ type: 'text', color: 'black', weight: 'bold', text: '-' },
+				{ type: 'text', color: 'blue', weight: 'bold', text: 'r' },
 				{ type: 'text', color: 'black', weight: 'normal', text: ' и ' },
-				{ type: 'text', color: 'blue', weight: 'bold', text: '-st' },
+				{ type: 'text', color: 'black', weight: 'bold', text: '-' },
+				{ type: 'text', color: 'blue', weight: 'bold', text: 'st' },
 				{ type: 'text', color: 'black', weight: 'normal', text: ' соответственно.' },
 			],
 		},
 		{
 			type: 'grid',
 			offset: true,
-			gridId: 'grid-67301',
+			gridId: 'grid-93045',
 			cells: [
 				{
 					children: [
@@ -1074,6 +1087,13 @@ const adjectivesDegreesOfComparison: ArticleType.ArtArticle = {
 					],
 					words: [{ rusWord: 'ребенок', engWord: 'a child' }],
 				},
+				{
+					rusSentence: 'Их офис крупнее нашего.',
+					engSentences: [
+						{ engSentences: ['Their office is larger than ours.'], isCorrect: true },
+					],
+					words: [{ rusWord: 'ребенок', engWord: 'a child' }],
+				},
 			],
 			offset: true,
 		},
@@ -1103,7 +1123,7 @@ const adjectivesDegreesOfComparison: ArticleType.ArtArticle = {
 							type: 'text',
 							color: 'black',
 							weight: 'normal',
-							text: 'Придумай другое предложение похожее на это.',
+							text: 'Виктор самый высокий.',
 						},
 						{ type: 'arrow' },
 						{
@@ -1160,7 +1180,7 @@ const adjectivesDegreesOfComparison: ArticleType.ArtArticle = {
 		{
 			type: 'grid',
 			offset: true,
-			gridId: 'grid-54510',
+			gridId: 'grid-67916',
 			cells: [
 				{
 					children: [
@@ -1388,7 +1408,7 @@ const adjectivesDegreesOfComparison: ArticleType.ArtArticle = {
 		{
 			type: 'grid',
 			offset: true,
-			gridId: 'grid-19971',
+			gridId: 'grid-43331',
 			cells: [
 				{
 					children: [
@@ -1591,7 +1611,7 @@ const adjectivesDegreesOfComparison: ArticleType.ArtArticle = {
 		{
 			type: 'grid',
 			offset: true,
-			gridId: 'grid-40961',
+			gridId: 'grid-32716',
 			cells: [
 				{
 					children: [
@@ -1814,7 +1834,7 @@ const adjectivesDegreesOfComparison: ArticleType.ArtArticle = {
 		{
 			type: 'grid',
 			offset: true,
-			gridId: 'grid-46939',
+			gridId: 'grid-57146',
 			cells: [
 				{
 					children: [
@@ -1861,7 +1881,7 @@ const adjectivesDegreesOfComparison: ArticleType.ArtArticle = {
 							offset: false,
 							textSize: 'giant',
 							children: [
-								{ type: 'text', color: 'black', weight: 'normal', text: 'better' },
+								{ type: 'text', color: 'black', weight: 'normal', text: 'more' },
 							],
 						},
 					],
@@ -1890,7 +1910,7 @@ const adjectivesDegreesOfComparison: ArticleType.ArtArticle = {
 									type: 'text',
 									color: 'black',
 									weight: 'normal',
-									text: 'the best',
+									text: 'the most',
 								},
 							],
 						},
@@ -1916,6 +1936,39 @@ const adjectivesDegreesOfComparison: ArticleType.ArtArticle = {
 		},
 		{
 			type: 'paragraph',
+			offset: false,
+			textSize: 'normal',
+			children: [
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: 'Much more усиливает высказывание:',
+				},
+			],
+		},
+		{
+			type: 'paragraph',
+			offset: false,
+			textSize: 'giant',
+			children: [
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: 'Мой подход гораздо более гуманный.',
+				},
+				{ type: 'arrow' },
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: 'My approach is much more human.',
+				},
+			],
+		},
+		{
+			type: 'paragraph',
 			offset: true,
 			textSize: 'normal',
 			children: [
@@ -1930,7 +1983,7 @@ const adjectivesDegreesOfComparison: ArticleType.ArtArticle = {
 		{
 			type: 'grid',
 			offset: true,
-			gridId: 'grid-67225',
+			gridId: 'grid-23219',
 			cells: [
 				{
 					children: [

@@ -10,7 +10,7 @@ const presentSimple: ArticleType.ArtArticle = {
 		caption: 'Глава 13',
 		articleName: 'Утвердительные предложения в Simple',
 		articleDescription:
-			'Научимся строить предложения сообщающие о действии совершаемые переодически или постоянно.',
+			'Узнаем про грамматическое время Simple и научимся строить утвердительные предложения во всех временах.',
 		isPaid: false,
 	},
 	content: [
@@ -252,7 +252,14 @@ const presentSimple: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'gray',
 					weight: 'normal',
-					text: 'Глагол «работать» в инфинитивной форме будет work . Так как он стоит после подлежащего второго лица, то в настоящем временем он останется неизменным.',
+					text: 'Глагол «работать» в инфинитивной форме будет ',
+				},
+				{ type: 'text', color: 'gray', weight: 'bold', text: 'work' },
+				{
+					type: 'text',
+					color: 'gray',
+					weight: 'normal',
+					text: ' . Так как он стоит после подлежащего второго лица, то в настоящем временем он останется неизменным.',
 				},
 			],
 		},
@@ -292,7 +299,14 @@ const presentSimple: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'gray',
 					weight: 'normal',
-					text: 'Глагол «спать» в инфинитивной форме будет sleep . Так как он стоит после подлежащего третьего лица, то в настоящем временем к нему добавляется окончание ',
+					text: 'Глагол «спать» в инфинитивной форме будет ',
+				},
+				{ type: 'text', color: 'gray', weight: 'bold', text: 'sleep' },
+				{
+					type: 'text',
+					color: 'gray',
+					weight: 'normal',
+					text: ' . Так как он стоит после подлежащего третьего лица, то в настоящем временем к нему добавляется окончание ',
 				},
 				{ type: 'text', color: 'gray', weight: 'bold', text: '-s' },
 				{ type: 'text', color: 'gray', weight: 'normal', text: '.' },
@@ -545,7 +559,7 @@ const presentSimple: ArticleType.ArtArticle = {
 		{
 			type: 'grid',
 			offset: true,
-			gridId: 'grid-81178',
+			gridId: 'grid-3784',
 			cells: [
 				{
 					minWidth: '300px',
@@ -561,9 +575,9 @@ const presentSimple: ArticleType.ArtArticle = {
 									type: 'text',
 									color: 'black',
 									weight: 'normal',
-									text: 'У таких глаголов прошедшее время образуется по правилу добавления окончание ',
+									text: 'У таких глаголов прошедшее время образуется по правилу добавления окончание -',
 								},
-								{ type: 'text', color: 'blue', weight: 'normal', text: '-ed' },
+								{ type: 'text', color: 'blue', weight: 'normal', text: 'ed' },
 								{
 									type: 'text',
 									color: 'black',
@@ -644,9 +658,9 @@ const presentSimple: ArticleType.ArtArticle = {
 									type: 'text',
 									color: 'black',
 									weight: 'normal',
-									text: 'И есть несколько исключений в словах, к которым добавление ',
+									text: 'И есть несколько исключений в словах, к которым добавление -',
 								},
-								{ type: 'text', color: 'blue', weight: 'normal', text: '-ed' },
+								{ type: 'text', color: 'blue', weight: 'normal', text: 'ed' },
 								{
 									type: 'text',
 									color: 'black',
@@ -671,9 +685,9 @@ const presentSimple: ArticleType.ArtArticle = {
 									type: 'text',
 									color: 'black',
 									weight: 'normal',
-									text: ', то во второй форме добавляется ',
+									text: ', то во второй форме добавляется -',
 								},
-								{ type: 'text', color: 'blue', weight: 'normal', text: '-d' },
+								{ type: 'text', color: 'blue', weight: 'normal', text: 'd' },
 								{ type: 'text', color: 'black', weight: 'normal', text: '.' },
 							],
 						},
@@ -1020,8 +1034,10 @@ const presentSimple: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'gray',
 					weight: 'normal',
-					text: ' — неправильный глагол. В прошедшем времени будет understood. Это нужно запомнить',
+					text: ' — неправильный глагол. В прошедшем времени будет ',
 				},
+				{ type: 'text', color: 'gray', weight: 'bold', text: 'understood' },
+				{ type: 'text', color: 'gray', weight: 'normal', text: '. Это нужно запомнить' },
 			],
 		},
 		{
@@ -1136,8 +1152,193 @@ const presentSimple: ArticleType.ArtArticle = {
 					],
 					words: [{ rusWord: 'ходить (куда-то)', engWord: 'go' }],
 				},
+				{
+					rusSentence:
+						'Kalamake looked strange. His skin was whiter than the other people\'s and he was blind.',
+					engSentences: [
+						{
+							engSentences: [
+								'Kalamake looked strange. His skin was whiter than the other people\'s and he was blind.',
+							],
+							isCorrect: true,
+						},
+					],
+					words: [{ rusWord: 'ходить (куда-то)', engWord: 'go' }],
+				},
 			],
 			offset: true,
+		},
+		{
+			type: 'header',
+			tag: 'h3',
+			style: 'h3',
+			text: 'Изменение части речи в зависимости от положения слова в предложении',
+		},
+		{
+			type: 'paragraph',
+			offset: false,
+			textSize: 'normal',
+			children: [
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: 'В главе про прилагательные я писал, что они могут иметь окончание -ed. И правильные глаголы в прошедшем времени имеют то же окончание. Даже более того одно и то же слово будет разными частями речи в зависимости от того слово какой части речи идёт до него.',
+				},
+			],
+		},
+		{
+			type: 'paragraph',
+			offset: true,
+			textSize: 'normal',
+			children: [
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: 'Слово confuse является глаголом «запутывать», «сбивать с толку». Глагол правильный, поэтому в прошедшем времени confused.',
+				},
+			],
+		},
+		{
+			type: 'paragraph',
+			offset: false,
+			textSize: 'giant',
+			children: [
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: 'This words confused Keola.',
+				},
+				{ type: 'arrow' },
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: 'Эти слова смутили Кеолу.',
+				},
+			],
+		},
+		{
+			type: 'paragraph',
+			offset: true,
+			textSize: 'normal',
+			children: [
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: 'Поставлю confused после be и он станет прилагательным смущённый.',
+				},
+			],
+		},
+		{
+			type: 'paragraph',
+			offset: false,
+			textSize: 'giant',
+			children: [
+				{ type: 'text', color: 'black', weight: 'normal', text: 'Keola is confused.' },
+				{ type: 'arrow' },
+				{ type: 'text', color: 'black', weight: 'normal', text: 'Кеола смущённый.' },
+			],
+		},
+		{
+			type: 'paragraph',
+			offset: true,
+			textSize: 'normal',
+			children: [
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: 'Чтобы понять какой части речи слово нужно посмотреть что стоит перед ним. В первом предложении перед confused существительное words. Если бы после words, стоять запятая, то значит идёт перечисление существительных, но запятой нет. Значит не существительное. Прилагательное тоже не может быть потому что в английском оно всегда стоить до существительного в отличии от русского языка. Единственным логичным вариантом будет глагол. Ещё в пользу глагола говорит то, что This words — это подлежащее. А после подлежащего может быть только глагол.',
+				},
+			],
+		},
+		{
+			type: 'paragraph',
+			offset: true,
+			textSize: 'normal',
+			children: [
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: 'confused во втором предложении стоит после глагола be. После него может быть или прилагательное или существительное. Существительных с окончанием -ed нет. К тому же перед ним стоял бы определитель или оно было бы во множественном числе. Поэтому confused — это прилагательное без вариантов.',
+				},
+			],
+		},
+		{
+			type: 'note',
+			noteStyle: 'gray',
+			children: [
+				{
+					type: 'paragraph',
+					offset: false,
+					textSize: 'small',
+					children: [
+						{
+							type: 'text',
+							color: 'black',
+							weight: 'normal',
+							text: 'Определители существительного не только поясняют определённость, но и указывают что далее идёт существительное. Это дополнительная помощь чтобы разобраться с частями речи.',
+						},
+					],
+				},
+			],
+		},
+		{
+			type: 'paragraph',
+			offset: true,
+			textSize: 'normal',
+			children: [
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: 'Понимание части речи — ключ к успешному переводу предложений. На таких простых примерах представленных выше это не кажестя чем-то сложным. Но в более сложных примерах можно легко потеряться и не понять смысла.',
+				},
+			],
+		},
+		{
+			type: 'paragraph',
+			offset: true,
+			textSize: 'normal',
+			children: [
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: 'Такое динамическое изменения части речи во многих словах обычное дело в английском языке. Поэтому переводчик для одного и того же слова представляет переводы для нескольких частей речи.',
+				},
+			],
+		},
+		{
+			type: 'paragraph',
+			offset: true,
+			textSize: 'normal',
+			children: [
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: 'Понимание что может стоять после определённых частей речи можно вывести логически. Никакие таблицы для этого не нужны.',
+				},
+			],
+		},
+		{
+			type: 'paragraph',
+			offset: true,
+			textSize: 'normal',
+			children: [
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: 'Так как часть речи может быть любой, то поэтому в английском языке важен порядок слов в предложении.',
+				},
+			],
 		},
 		{ type: 'header', tag: 'h2', style: 'h2', text: 'Будущее время (Future Simple)' },
 		{

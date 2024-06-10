@@ -199,6 +199,20 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 				},
 			],
 		},
+		{ type: 'header', tag: 'h3', style: 'h3', text: 'Существительные в притяжательном падеже' },
+		{
+			type: 'paragraph',
+			offset: false,
+			textSize: 'normal',
+			children: [
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: 'По смыслу как притяжательное местоимение, но можно указать принадлежность любым предметом или персонажем.',
+				},
+			],
+		},
 		{
 			type: 'note',
 			noteStyle: 'yellow',
@@ -309,7 +323,7 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 					type: 'text',
 					color: 'black',
 					weight: 'normal',
-					text: ' произошёл от древнеанглийского слова «один». Поэтому его можно использовать только для существительных в единственном числе.',
+					text: ' произошёл от древнеанглийского числительного an (один), поэтому его используют только для существительных в единственном числе.',
 				},
 			],
 		},
@@ -405,7 +419,7 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 		{
 			type: 'grid',
 			offset: true,
-			gridId: 'grid-64798',
+			gridId: 'grid-28036',
 			cells: [
 				{
 					minWidth: '300px',
@@ -552,7 +566,20 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 									type: 'text',
 									color: 'gray',
 									weight: 'normal',
-									text: 'Рис выглядит как множество рисинок, а деньги как купюры или монеты. То есть множество объектов. Но для обозначения используется местоимение it, а не they. They используется для исчисляемых объектов.',
+									text: 'Нет 3 деньги или 12 денег.',
+								},
+							],
+						},
+						{
+							type: 'paragraph',
+							offset: true,
+							textSize: 'normal',
+							children: [
+								{
+									type: 'text',
+									color: 'black',
+									weight: 'normal',
+									text: 'Вы можете возразить, что рис состоит из рисинок, а деньги из купюр. Это можно посчитать. Но мы же говорим про существительное рис, и не рисинки. И про деньги, а не купюры. Поэтому это посчитать нельзя.',
 								},
 							],
 						},
@@ -1069,7 +1096,7 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 		{
 			type: 'grid',
 			offset: false,
-			gridId: 'grid-78677',
+			gridId: 'grid-34910',
 			cells: [
 				{
 					children: [
@@ -1213,7 +1240,7 @@ const indefiniteArticle: ArticleType.ArtArticle = {
 		{
 			type: 'grid',
 			offset: false,
-			gridId: 'grid-15882',
+			gridId: 'grid-21718',
 			cells: [
 				{
 					children: [

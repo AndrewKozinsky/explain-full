@@ -1046,7 +1046,7 @@ const demonstrativePronouns: ArticleType.ArtArticle = {
 		{
 			type: 'grid',
 			offset: true,
-			gridId: 'grid-12897',
+			gridId: 'grid-54454',
 			cells: [
 				{
 					children: [

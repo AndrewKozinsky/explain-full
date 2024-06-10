@@ -7,8 +7,8 @@ const welcome: ArticleType.ArtWelcome = {
 		slug: 'welcome',
 		caption: 'Вводная глава',
 		articleName: 'Добро пожаловать на курс!',
-		articleDescription: 'Добро пожаловать на курс',
-		isPaid: false,
+		articleDescription: 'Вводная глава где объясняются организацинные моменты.',
+		isPaid: true,
 	},
 }
 

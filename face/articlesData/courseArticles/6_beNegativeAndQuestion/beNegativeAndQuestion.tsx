@@ -47,7 +47,7 @@ const beNegativeAndQuestion: ArticleType.ArtArticle = {
 		{
 			type: 'grid',
 			offset: true,
-			gridId: 'grid-56415',
+			gridId: 'grid-2915',
 			cells: [
 				{
 					children: [
@@ -597,7 +597,7 @@ const beNegativeAndQuestion: ArticleType.ArtArticle = {
 		{
 			type: 'grid',
 			offset: true,
-			gridId: 'grid-64842',
+			gridId: 'grid-35530',
 			cells: [
 				{
 					children: [
@@ -1140,6 +1140,19 @@ const beNegativeAndQuestion: ArticleType.ArtArticle = {
 				},
 			],
 			offset: true,
+		},
+		{
+			type: 'paragraph',
+			offset: true,
+			textSize: 'normal',
+			children: [
+				{
+					type: 'text',
+					color: 'black',
+					weight: 'normal',
+					text: 'Ответьте на вопросы чтобы проверить насколько хорошо поняли материал.',
+				},
+			],
 		},
 		{
 			type: 'faq',
