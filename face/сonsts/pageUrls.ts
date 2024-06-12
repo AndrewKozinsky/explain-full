@@ -13,4 +13,8 @@ export const PageUrls = {
 		url: '/contacts',
 		name: 'Контакты',
 	},
+	history: {
+		url: '/history',
+		name: 'История обновлений',
+	},
 }

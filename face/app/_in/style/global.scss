@@ -16,6 +16,12 @@
     font-weight: 300;
 }
 @font-face {
+    font-family: "Suisse";
+    src: url("./fonts/SuisseIntl-RegularItalic.woff2") format("woff2");
+    font-weight: 300;
+	font-style: italic;
+}
+@font-face {
 	font-family: "Suisse";
 	src: url("./fonts/SuisseIntl-Medium.woff2") format("woff2");
 	font-weight: 400;

@@ -1,6 +1,6 @@
 import React from 'react'
 import CourseFace from '../CourseFace/CourseFace'
-import FeaturesGridOne from '../FeaturesGridOne/FeaturesGridOne'
+import FeaturesGridOne from '../featuresGridOne/FeaturesGridOne/FeaturesGridOne'
 import MainPageHeader from '../MainPageHeader/MainPageHeader'
 
 function MainPage() {
