@@ -1,0 +1,67 @@
+У меня есть аудио на английском языке. Я хочу чтобы искусственный интеллект распознал слова и написал время когда они начинаются и заканчиваются. Как мне это сделать?
+
+Если вы хотите сделать это самостоятельно, вот пример, как можно использовать Google Cloud Speech-to-Text:
+
+Установите клиентскую библиотеку:
+npm install @google-cloud/speech
+
+Настройте аутентификацию: Вам нужно создать проект в Google Cloud Console, включить API и скачать файл ключа аутентификации (JSON). Установите переменную окружения GOOGLE_APPLICATION_CREDENTIALS для использования этого файла.
+export GOOGLE_APPLICATION_CREDENTIALS="path/to/your-service-account-file.json"
+
+Используйте следующий код для распознавания речи с временными метками:
+// Import the Google Cloud client library
+const speech = require('@google-cloud/speech');
+const fs = require('fs');
+
+// Creates a client
+const client = new speech.SpeechClient();
+
+// The path to the audio file to transcribe
+const fileName = 'path/to/your-audio-file.wav';
+
+// Reads a local audio file and converts it to base64
+const file = fs.readFileSync(fileName);
+const audioBytes = file.toString('base64');
+
+// The audio file's encoding, sample rate in hertz, and BCP-47 language code
+const audio = {
+  content: audioBytes,
+};
+const config = {
+  encoding: 'LINEAR16',
+  sampleRateHertz: 16000,
+  languageCode: 'en-US',
+  enableWordTimeOffsets: true,  // This enables word time offsets
+};
+
+const request = {
+  audio: audio,
+  config: config,
+};
+
+// Detects speech in the audio file
+client.recognize(request)
+  .then(response => {
+    const transcription = response[0].results
+      .map(result => result.alternatives[0])
+      .map(alternative => {
+        console.log(`Transcript: ${alternative.transcript}`);
+        alternative.words.forEach(wordInfo => {
+          const startTime = wordInfo.startTime.seconds + wordInfo.startTime.nanos * 1e-9;
+          const endTime = wordInfo.endTime.seconds + wordInfo.endTime.nanos * 1e-9;
+          console.log(`Word: ${wordInfo.word}, start_time: ${startTime}, end_time: ${endTime}`);
+        });
+      });
+  })
+  .catch(err => {
+    console.error('ERROR:', err);
+  });
+
+Пояснения:
+Импорт библиотеки: Импортируется библиотека Google Cloud Speech.
+Создание клиента: Создается клиент для работы с API.
+Чтение аудиофайла: Аудиофайл считывается и конвертируется в формат base64.
+Настройка параметров распознавания: Определяются параметры, включая кодировку, частоту дискретизации и язык.
+Запрос распознавания: Создается и отправляется запрос на распознавание.
+Обработка ответа: Обрабатываются результаты распознавания и выводятся временные метки для каждого слова.
+Этот пример предназначен для файлов формата WAV с частотой дискретизации 16 кГц. Вы можете адаптировать его для других форматов и частот.

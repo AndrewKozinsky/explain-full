@@ -19,9 +19,9 @@ services:
       - ./api/src:/app/src
     command: npm run start:dev
     container_name: explain-api
-    environment: &a1
-      AUTH_LOGIN: thnadz45$%
-      AUTH_PASSWORD: kwcGT09%$#
+    environment:
+      ADMIN_LOGIN: thnadz45$%
+      ADMIN_PASSWORD: kwcGT09%$#
   face:
     build:
       context: face/
@@ -31,4 +31,7 @@ services:
       - ./face:/app
     command: npm run dev
     container_name: explain-face
-    environment: *a1
+    environment:
+      ADMIN_LOGIN: thnadz45$%
+      ADMIN_PASSWORD: kwcGT09%$#
+      ENV_MODE: dev

@@ -17,4 +17,8 @@ export const PageUrls = {
 		url: '/history',
 		name: 'История обновлений',
 	},
+	texts: {
+		url: '/texts',
+		name: 'Тексты',
+	},
 }

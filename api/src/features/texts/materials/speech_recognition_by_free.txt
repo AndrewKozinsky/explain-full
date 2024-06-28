@@ -1,0 +1,83 @@
+Для выполнения задачи распознавания речи с временными метками слов на Node.js, можно использовать библиотеку vosk и пакет fluent-ffmpeg для обработки аудиофайлов. Ниже приведен пример кода:
+
+Установка необходимых библиотек
+Установите FFmpeg. Вы можете скачать его с официального сайта и установить в вашей системе.
+Установите необходимые npm-пакеты:
+npm install vosk fluent-ffmpeg ffmpeg-static
+
+Пример кода на Node.js
+const fs = require('fs');
+const ffmpeg = require('fluent-ffmpeg');
+const { Model, KaldiRecognizer } = require('vosk');
+const wav = require('wav');
+const ffmpegPath = require('ffmpeg-static');
+
+// Укажите путь к модели Vosk
+const MODEL_PATH = "vosk-model-small-en-us-0.15";
+
+// Убедитесь, что модель Vosk загружена
+if (!fs.existsSync(MODEL_PATH)) {
+    console.error("Please download the model from https://alphacephei.com/vosk/models and unpack as 'model' in the current folder.");
+    process.exit(1);
+}
+
+const model = new Model(MODEL_PATH);
+
+function transcribeAudio(audioFile) {
+    return new Promise((resolve, reject) => {
+        // Преобразование аудиофайла в WAV формат
+        const wavPath = "temp_audio.wav";
+        ffmpeg(audioFile)
+            .setFfmpegPath(ffmpegPath)
+            .audioChannels(1)
+            .toFormat('wav')
+            .save(wavPath)
+            .on('end', () => {
+                const results = [];
+                const wfReader = new wav.Reader();
+
+                wfReader.on('format', ({ audioFormat, sampleRate, channels }) => {
+                    const rec = new KaldiRecognizer(model, sampleRate);
+                    rec.setWords(true);
+
+                    wfReader.on('data', (data) => {
+                        if (rec.acceptWaveform(data)) {
+                            results.push(JSON.parse(rec.resultString()));
+                        } else {
+                            console.log(rec.partialResultString());
+                        }
+                    });
+
+                    wfReader.on('end', () => {
+                        results.push(JSON.parse(rec.finalResultString()));
+                        resolve(results);
+                        fs.unlinkSync(wavPath); // Удаляем временный WAV файл
+                    });
+                });
+
+                fs.createReadStream(wavPath).pipe(wfReader);
+            })
+            .on('error', reject);
+    });
+}
+
+function printTranscription(results) {
+    results.forEach(result => {
+        if (result.result) {
+            result.result.forEach(word => {
+                console.log(`Word: ${word.word}, Start: ${word.start}s, End: ${word.end}s`);
+            });
+        }
+    });
+}
+
+// Пример использования
+const audioFile = "your_audio_file.mp3";
+transcribeAudio(audioFile).then(printTranscription).catch(console.error);
+
+Объяснение кода
+Установка модели Vosk: Убедитесь, что вы скачали и разархивировали модель Vosk в указанный путь.
+Конвертация аудио в моно WAV: Используя fluent-ffmpeg, аудиофайл конвертируется в моно и сохраняется временный WAV файл.
+Распознавание речи: Открывается WAV файл и используется KaldiRecognizer для распознавания речи. Результаты сохраняются с указанием времени начала и окончания каждого слова.
+Вывод результатов: Распознанные слова и их временные метки выводятся в консоль.
+Этот скрипт можно адаптировать для работы с различными форматами аудио и улучшить в зависимости от конкретных требований.

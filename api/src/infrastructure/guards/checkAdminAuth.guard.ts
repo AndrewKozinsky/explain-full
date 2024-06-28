@@ -20,7 +20,7 @@ export class CheckAdminAuthGuard implements CanActivate {
 
 function getCorrectAuthorizationHeader() {
 	const base64LoginAndPassword = Buffer.from(
-		process.env.AUTH_LOGIN + ':' + process.env.AUTH_PASSWORD,
+		process.env.ADMIN_LOGIN + ':' + process.env.ADMIN_PASSWORD,
 	).toString('base64')
 
 	return 'Basic ' + base64LoginAndPassword

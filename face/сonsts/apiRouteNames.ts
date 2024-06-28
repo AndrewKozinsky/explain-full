@@ -1,10 +1,10 @@
-export const RouteNames = {
+export const ApiRouteNames = {
 	AI: {
 		value: 'ai',
 	},
 	TEXTS: {
 		value: 'texts',
-		TEXT_ID(textId: string) {
+		TEXT_ID(textId: number | string) {
 			return {
 				value: textId,
 				full: 'texts/' + textId,
@@ -13,4 +13,4 @@ export const RouteNames = {
 	},
 }
 
-export default RouteNames
+export default ApiRouteNames

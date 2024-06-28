@@ -1,13 +1,15 @@
 import ArticleType from '../../../articlesData/articleType'
 import ExercisesType from '../../../articlesData/exercisesType'
-import { createAdminTokenString } from '../../../utils/strings'
+import api from '../../../requests/http'
+import { createAdminTokenString } from '../../../requests/utils'
+import ApiRouteNames from '../../../сonsts/apiRouteNames'
 import { ExercisesManagerTypes } from './exercisesManagerTypes'
 
 /** Класс с методами проверки перевода данного пользователем */
 export class ExerciseChecker {
 	/**
 	 * Ищет в данных упражнения перевод похожий на тот, который дал пользователь.
-	 * И если находит, то возвращает объект с данными чтобы показать разбор перевода.
+	 * И если находит, то возвращает объект с данными, чтобы показать разбор перевода.
 	 * Если не находит, то возвращает undefined.
 	 * @param exercise — данные упражнения
 	 */
@@ -190,8 +192,18 @@ export class ExerciseChecker {
 	): Promise<{ correct: boolean; analysis: string }> {
 		const question = `Предложение "${exercise.rusSentence}" переведено "${exercise.userTranslate}". Проверь правильность перевода на английский. Ответ дай в объекте JSON: в свойстве isCorrect поставь булево значение правильно ли переведено предложение на английский. В analysis напиши что сделано неправильно и как исправить если были сделаны ошибки.`
 
-		return new Promise((resolve, reject) => {
-			fetch('/api/ai', {
+		return api.post(
+			ApiRouteNames.AI.value,
+			{ question },
+			{
+				headers: {
+					authorization: createAdminTokenString(),
+				},
+			},
+		)
+
+		// DELETE LATER
+		/*fetch('/api/ai', {
 				method: 'POST',
 				headers: {
 					authorization: createAdminTokenString(),
@@ -206,7 +218,6 @@ export class ExerciseChecker {
 					console.log(data)
 
 					resolve(data as any)
-				})
-		})
+				})*/
 	}
 }

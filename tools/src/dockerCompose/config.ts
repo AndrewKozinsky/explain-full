@@ -1,18 +1,13 @@
 import { ConfigSchemaV37Json } from './types/ConfigSchemaV37Json'
 
+const domain = 'explainit.ru'
+type EnvType = 'dev' | 'serverCheck' | 'server'
+
 /**
- * Возращает объект конфигурации docker-compose для разработки, проверки развёртывания на сервере и для сервера
+ * Возвращает объект конфигурации docker-compose для разработки, проверки развёртывания на сервере и для сервера
  * @param env — тип конфигурации
  */
-export function createDockerConfig(env: 'dev' | 'serverCheck' | 'server'): ConfigSchemaV37Json {
-	const domain = 'explainit.ru'
-
-	// Общие переменные окружения для всех сервисов
-	const commonEnvVars = {
-		AUTH_LOGIN: 'thnadz45$%',
-		AUTH_PASSWORD: 'kwcGT09%$#',
-	}
-
+export function createDockerConfig(env: EnvType): ConfigSchemaV37Json {
 	return {
 		version: '3.8',
 
@@ -23,13 +18,7 @@ export function createDockerConfig(env: 'dev' | 'serverCheck' | 'server'): Confi
 				depends_on: ['api', 'face'],
 				ports: env === 'server' ? undefined : ['80:80'],
 				volumes: ['./nginx/nginx.conf.dev:/etc/nginx/nginx.conf'],
-				environment:
-					env === 'server'
-						? {
-								VIRTUAL_HOST: `${domain},www.${domain}`,
-								LETSENCRYPT_HOST: `${domain},www.${domain}`,
-							}
-						: undefined,
+				environment: getNginxEnvs(env),
 			},
 			api: {
 				build: {
@@ -40,7 +29,7 @@ export function createDockerConfig(env: 'dev' | 'serverCheck' | 'server'): Confi
 				volumes: ['./api/src:/app/src'],
 				command: env === 'dev' ? 'npm run start:dev' : 'npm run start:prod',
 				container_name: 'explain-api',
-				environment: commonEnvVars,
+				environment: getApiEnvs(env),
 			},
 			face: {
 				build: {
@@ -51,7 +40,7 @@ export function createDockerConfig(env: 'dev' | 'serverCheck' | 'server'): Confi
 				volumes: env === 'dev' ? ['./face:/app'] : undefined,
 				command: env === 'dev' ? 'npm run dev' : 'npm run start',
 				container_name: 'explain-face',
-				environment: commonEnvVars,
+				environment: getFaceEnvs(env),
 			},
 		},
 		networks: env === 'server' ? getServerNetworks() : undefined,
@@ -66,4 +55,44 @@ function getServerNetworks() {
 			},
 		},
 	}
+}
+
+// Общие переменные окружения для всех сервисов
+const commonEnvVars = {
+	ADMIN_LOGIN: 'thnadz45$%',
+	ADMIN_PASSWORD: 'kwcGT09%$#',
+}
+
+/**
+ * Возвращает переменные окружения для Nginx
+ * @param env — тип конфигурации
+ */
+function getNginxEnvs(env: EnvType) {
+	if (env !== 'server') return undefined
+
+	return {
+		VIRTUAL_HOST: `${domain},www.${domain}`,
+		LETSENCRYPT_HOST: `${domain},www.${domain}`,
+	}
+}
+
+/**
+ * Возвращает переменные окружения для Api
+ * @param env — тип конфигурации
+ */
+function getApiEnvs(env: EnvType) {
+	return commonEnvVars
+}
+
+/**
+ * Возвращает переменные окружения для Face
+ * @param env — тип конфигурации
+ */
+function getFaceEnvs(env: EnvType) {
+	let envMode = 'dev'
+	if (env !== 'dev') {
+		envMode = 'server'
+	}
+
+	return { ...commonEnvVars, ENV_MODE: envMode }
 }
