@@ -1,10 +1,4 @@
-import axios from 'axios'
 import TextArtPage from '../../../_pages/textsArtPage/textArtPage/TextArtPage/TextArtPage'
-import api from '../../../requests/http'
-import TextsApiTypes from '../../../requests/texts/textsApiTypes'
-import textsRequests from '../../../requests/texts/textsRequest'
-import { createAdminTokenString } from '../../../requests/utils'
-import ApiRouteNames from '../../../сonsts/apiRouteNames'
 
 type TextPageProps = {
 	params: {
@@ -27,16 +21,9 @@ export default async function Page(props: TextPageProps) {
 		})*/
 
 	try {
-		const data = await fetch('/api/texts/h', {
+		const data = await fetch('http://localhost/api/texts/1', {
 			method: 'GET',
-		}).then((res) => {
-			console.log(res)
-			res.json()
 		})
-		/*.then((data) => {
-				console.log(data)
-				return data
-			})*/
 	} catch (err: any) {
 		console.log(err)
 	}
