@@ -18,7 +18,7 @@ function StoryArtPage(props: TextArtPageProps) {
 		<PageContentWrapper>
 			<BreadCrumbs items={[PageUrls.stories]} />
 			<PageHeader subheaderText={text.ruHeader}>{text.enHeader}</PageHeader>
-			<StorySection textConfig={text} />
+			<StorySection storyConfig={text} />
 		</PageContentWrapper>
 	)
 }

@@ -3,20 +3,17 @@
 import cn from 'classnames'
 import React from 'react'
 import { StoryConfigT } from '../../../../requests/texts/textsApiTypes'
+import { useStoryStore } from '../../store/store'
 import { useGetOnWordClick, useIsWordSelected } from './fn/selectWord'
 import './StoryBlock.scss'
 
-type TextArtPageProps = {
-	textConfig: StoryConfigT.Story
-}
-
 /** Страница вводной глав курса */
-function StoryBlock(props: TextArtPageProps) {
-	const { textConfig } = props
+function StoryBlock() {
+	const storyConfig = useStoryStore().storyConfig
 
 	return (
 		<div className="story-block">
-			{textConfig.paragraphs.map((paragraph) => {
+			{storyConfig.paragraphs.map((paragraph) => {
 				return <Paragraph paragraph={paragraph}></Paragraph>
 			})}
 		</div>

@@ -1,20 +1,31 @@
+'use client'
+
 import React from 'react'
 import { StoryConfigT } from '../../../../requests/texts/textsApiTypes'
 import WordBlock from '../../right/WordBlock/WordBlock'
+import { useStoryStore } from '../../store/store'
 import StoryBlock from '../../text/StoryBlock/StoryBlock'
+import { setStoryConfigToStore } from './fn/setStoryConfigToStore'
 import './StorySection.scss'
 
 type TextArtPageProps = {
-	textConfig: StoryConfigT.Story
+	storyConfig: StoryConfigT.Story
 }
 
 /** Страница вводной глав курса */
 function StorySection(props: TextArtPageProps) {
-	const { textConfig } = props
+	const { storyConfig } = props
+
+	setStoryConfigToStore(storyConfig)
+
+	const storyConfigInStore = useStoryStore().storyConfig
+	if (!storyConfigInStore) {
+		return null
+	}
 
 	return (
 		<section className="story-section">
-			<StoryBlock textConfig={textConfig} />
+			<StoryBlock />
 			<WordBlock />
 		</section>
 	)

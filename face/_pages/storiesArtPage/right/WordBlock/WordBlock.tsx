@@ -1,8 +1,8 @@
 'use client'
 
 import React from 'react'
+import SelectedWordGeneral from '../../selectedWord/wrappers/SelectedWordGeneral/SelectedWordGeneral'
 import NoWordSelected from '../NoWordSelected/NoWordSelected'
-import WordSelected from '../WordSelected/WordSelected'
 import { useGetShowBlockType } from './fn/showBlockType'
 import './WordBlock.scss'
 
@@ -13,7 +13,7 @@ function WordBlock() {
 	return (
 		<div className="word-block">
 			{showingBlockType === 'notSelected' && <NoWordSelected />}
-			{showingBlockType === 'selected' && <WordSelected />}
+			{showingBlockType === 'selected' && <SelectedWordGeneral />}
 		</div>
 	)
 }

@@ -3,6 +3,7 @@
 
 .word-block {
 	display: flex;
+	align-items: flex-start;
 	background-color: $grayColor-2;
 	width: 32rem;
 	min-height: 20rem;

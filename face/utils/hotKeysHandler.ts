@@ -24,6 +24,6 @@ export function useGetHotKeysHandler(keydownHandler: KeydownHandler) {
 				document.removeEventListener('keydown', keyDown)
 			}
 		},
-		[keydownHandler]
+		[keydownHandler],
 	)
 }
