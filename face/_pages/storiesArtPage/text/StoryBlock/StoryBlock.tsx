@@ -1,5 +1,9 @@
+'use client'
+
+import cn from 'classnames'
 import React from 'react'
 import { StoryConfigT } from '../../../../requests/texts/textsApiTypes'
+import { useGetOnWordClick, useIsWordSelected } from './fn/selectWord'
 import './StoryBlock.scss'
 
 type TextArtPageProps = {
@@ -31,7 +35,6 @@ function Paragraph(props: ParagraphProps) {
 	return (
 		<p>
 			{paragraph.sentences.map((sentence) => {
-				console.log(sentence)
 				return <Sentence sentence={sentence} />
 			})}
 		</p>
@@ -48,7 +51,7 @@ function Sentence(props: SentenceProps) {
 
 	return sentence.sentenceParts.map((sentencePart) => {
 		if (sentencePart.type === 'word') {
-			return <Word word={sentencePart} />
+			return <Word sentence={sentence} word={sentencePart} />
 		} else if (sentencePart.type === 'punctuation') {
 			return <Punctuation punctuation={sentencePart} />
 		}
@@ -56,12 +59,23 @@ function Sentence(props: SentenceProps) {
 }
 
 type WordProps = {
+	sentence: StoryConfigT.Sentence
 	word: StoryConfigT.Word
 }
 function Word(props: WordProps) {
-	const { word } = props
+	const { sentence, word } = props
 
-	return <span className="story-block__word">{word.word.engWord}</span>
+	const onWordClick = useGetOnWordClick(sentence.id, word.id)
+	const isWordSelected = useIsWordSelected(sentence.id, word.id)
+
+	return (
+		<span
+			className={cn('story-block__word', isWordSelected && 'story-block__word--selected')}
+			onClick={onWordClick}
+		>
+			{word.word.engWord}
+		</span>
+	)
 }
 
 type PunctuationProps = {

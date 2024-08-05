@@ -3,13 +3,14 @@ import { StoryConfigT } from '../types'
 const main: StoryConfigT.Story = {
 	enHeader: "The Rajah's Diamond",
 	ruHeader: 'Бриллиант раджи',
-	level: 'a1',
+	level: ['a1'],
 	paragraphs: [
 		{
 			type: 'paragraph',
 			sentences: [
 				{
 					type: 'sentence',
+					id: 1,
 					sentenceParts: [
 						{
 							id: 1,
@@ -347,6 +348,7 @@ const main: StoryConfigT.Story = {
 				},
 				{
 					type: 'sentence',
+					id: 2,
 					sentenceParts: [
 						{
 							id: 21,

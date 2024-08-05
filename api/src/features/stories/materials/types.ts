@@ -9,7 +9,7 @@ export namespace StoryConfigT {
 		// Перевод заголовка на английском на русский
 		ruHeader: string
 		// Уровень сложности текста
-		level: 'a1' | 'a2' | 'b1' | 'b2' | 'c1'
+		level: ('a1' | 'a2' | 'b1' | 'b2' | 'c1')[]
 		// Весь текст
 		paragraphs: Paragraph[]
 		// Ссылка на аудио (при наличии)
@@ -27,6 +27,7 @@ export namespace StoryConfigT {
 	// Предложение
 	export type Sentence = {
 		type: 'sentence'
+		id: number
 		sentenceParts: (Word | Punctuation)[]
 		sentence: {
 			eng: string

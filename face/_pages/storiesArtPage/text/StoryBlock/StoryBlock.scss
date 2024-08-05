@@ -10,6 +10,7 @@
 
 .story-block__word {
 	position: relative;
+	cursor: pointer;
 	z-index: 2;
 
 	&::after {
@@ -19,8 +20,19 @@
 		bottom: -2px;
 		left: -3px;
 		right: -3px;
-		background-color: $blueColor-2;
 		z-index: -1;
 		border-radius: $radius-1;
+	}
+
+	&:hover::after {
+		background-color: $grayColor-1;
+	}
+
+	&--selected {
+		color: white;
+
+		&::after {
+			background-color: $blueColor-2 !important;
+		}
 	}
 }

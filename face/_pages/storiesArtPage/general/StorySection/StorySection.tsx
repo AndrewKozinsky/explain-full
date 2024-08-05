@@ -1,7 +1,7 @@
 import React from 'react'
 import { StoryConfigT } from '../../../../requests/texts/textsApiTypes'
 import SelectedWordBlock from '../../right/SelectedWordBlock/SelectedWordBlock'
-import StoryBlock from '../../left/StoryBlock/StoryBlock'
+import StoryBlock from '../../text/StoryBlock/StoryBlock'
 import './StorySection.scss'
 
 type TextArtPageProps = {
