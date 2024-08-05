@@ -1,0 +1,38 @@
+These talents, and a bit of luck, helped Harry to find a job when his parents died just two years after he finished school.
+
+TEXT 1
+{
+	enHeader: "The Rajah's Diamond",
+	level: "a1",
+	text: [
+		"These talents, and a bit of luck, helped Harry to find a job when his parents died just two years after he finished school."
+	]
+}
+
+TEXT 2
+[
+  { conf: 1, end: 0.57, start: 0.27, word: 'these' },
+  { conf: 1, end: 1.17, start: 0.57, word: 'talents' },
+  { conf: 1, end: 1.5, start: 1.32, word: 'and' },
+  { conf: 1, end: 1.56, start: 1.5, word: 'a' },
+  { conf: 1, end: 1.74, start: 1.56, word: 'bit' },
+  { conf: 1, end: 1.83, start: 1.74, word: 'of' },
+  { conf: 1, end: 2.22, start: 1.83, word: 'luck' },
+  { conf: 1, end: 3, start: 2.61, word: 'helped' },
+  { conf: 1, end: 3.3, start: 3, word: 'harry' },
+  { conf: 1, end: 3.42, start: 3.3, word: 'to' },
+  { conf: 1, end: 3.78, start: 3.42, word: 'find' },
+  { conf: 1, end: 3.84, start: 3.78, word: 'a' },
+  { conf: 1, end: 4.14, start: 3.84, word: 'job' },
+  { conf: 1, end: 4.29, start: 4.14, word: 'when' },
+  { conf: 1, end: 4.53, start: 4.29, word: 'his' },
+  { conf: 1, end: 5.04, start: 4.53, word: 'parents' },
+  { conf: 1, end: 5.43, start: 5.04, word: 'died' },
+  { conf: 1, end: 5.88, start: 5.46, word: 'just' },
+  { conf: 1, end: 6.3, start: 6, word: 'two' },
+  { conf: 1, end: 6.69, start: 6.3, word: 'years' },
+  { conf: 1, end: 6.99, start: 6.69, word: 'after' },
+  { conf: 1, end: 7.11, start: 6.99, word: 'he' },
+  { conf: 1, end: 7.53, start: 7.11, word: 'finished' },
+  { conf: 1, end: 7.98, start: 7.53, word: 'school' }
+]

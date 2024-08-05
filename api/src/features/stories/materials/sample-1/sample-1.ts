@@ -1,10 +1,10 @@
-import { TextType } from '../types'
+import { StoryConfigT } from '../types'
 
-const main: TextType = {
+const main: StoryConfigT.Story = {
 	enHeader: "The Rajah's Diamond",
 	ruHeader: 'Бриллиант раджи',
 	level: 'a1',
-	text: [
+	paragraphs: [
 		{
 			type: 'paragraph',
 			sentences: [

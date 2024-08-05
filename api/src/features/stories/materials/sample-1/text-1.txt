@@ -1,0 +1,28 @@
+Harry did not like studying very much, so he was allowed to finish his education before most young men do. However, Harry loved music, and he could sing and play the piano well.
+
+[
+  { conf: 0.875011, end: 1.23, start: 0.84, word: 'harry' },
+  { conf: 1, end: 1.38, start: 1.23, word: 'did' },
+  { conf: 1, end: 1.59, start: 1.38, word: 'not' },
+  { conf: 1, end: 1.83, start: 1.59, word: 'like' },
+  { conf: 1, end: 2.31, start: 1.83, word: 'studying' },
+  { conf: 1, end: 2.58, start: 2.31, word: 'very' },
+  { conf: 1, end: 2.91, start: 2.58, word: 'much' },
+  { conf: 1, end: 3.54, start: 3.27, word: 'so' },
+  { conf: 1, end: 3.69, start: 3.54, word: 'he' },
+  { conf: 1, end: 3.84, start: 3.69, word: 'was' },
+  { conf: 1, end: 4.26, start: 3.84, word: 'allowed' },
+  { conf: 1, end: 4.44, start: 4.26, word: 'to' },
+  { conf: 1, end: 4.86, start: 4.44, word: 'finish' },
+  { conf: 1, end: 5.01, start: 4.86, word: 'his' },
+  { conf: 1, end: 5.76, start: 5.01, word: 'education' },
+  { conf: 1, end: 6.15, start: 5.76, word: 'before' },
+  { conf: 1, end: 6.6, start: 6.15, word: 'most' },
+  { conf: 1, end: 6.9, start: 6.6, word: 'young' },
+  { conf: 1, end: 7.23, start: 6.9, word: 'men' },
+  { conf: 1, end: 7.59, start: 7.23, word: 'do' },
+  { conf: 1, end: 8.88, start: 8.4, word: 'however' },
+  { conf: 0.809718, end: 9.54, start: 9.21, word: 'harry' },
+  { conf: 1, end: 9.87, start: 9.54, word: 'loved' },
+  { conf: 1, end: 10.44, start: 9.9, word: 'music' }
+]

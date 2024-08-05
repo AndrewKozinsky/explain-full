@@ -4,10 +4,10 @@ import { createAdminTokenString } from '../utils'
 import TextsApiTypes from './textsApiTypes'
 
 // Запросы к методам работы с искусственным интеллектом
-const textsRequests = {
+const storiesRequests = {
 	// Получение текста с переданным идентификатором
-	getText(textId: number | string) {
-		return api.get<TextsApiTypes.GetText>(ApiRouteNames.TEXTS.TEXT_ID(textId).full, {
+	getStory(textId: number | string) {
+		return api.get<TextsApiTypes.GetText>(ApiRouteNames.STORIES.TEXT_ID(textId).full, {
 			headers: {
 				authorization: createAdminTokenString(),
 			},
@@ -15,4 +15,4 @@ const textsRequests = {
 	},
 }
 
-export default textsRequests
+export default storiesRequests

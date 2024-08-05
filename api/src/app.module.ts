@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common'
 import { AiModule } from './features/ai/ai.module'
-import { TextsModule } from './features/texts/texts.module'
+import { StoriesModule } from './features/stories/stories.module'
 
 @Module({
-	imports: [AiModule, TextsModule],
+	imports: [AiModule, StoriesModule],
 	controllers: [],
 	providers: [],
 })

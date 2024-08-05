@@ -2,12 +2,12 @@ export const ApiRouteNames = {
 	AI: {
 		value: 'ai',
 	},
-	TEXTS: {
-		value: 'texts',
+	STORIES: {
+		value: 'stories',
 		TEXT_ID(textId: number | string) {
 			return {
 				value: textId,
-				full: 'texts/' + textId,
+				full: 'stories/' + textId,
 			}
 		},
 	},

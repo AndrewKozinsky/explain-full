@@ -2,12 +2,12 @@ export const RouteNames = {
 	AI: {
 		value: 'ai',
 	},
-	TEXTS: {
-		value: 'texts',
+	STORIES: {
+		value: 'stories',
 		TEXT_ID(textId: string) {
 			return {
 				value: textId,
-				full: 'texts/' + textId,
+				full: 'stories/' + textId,
 			}
 		},
 	},

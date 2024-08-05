@@ -1,10 +1,10 @@
-import { TextType } from '../types'
+import { StoryConfigT } from '../types'
 
-export const sampleText2: TextType = {
+export const sampleText2: StoryConfigT.Story = {
 	enHeader: "The Rajah's Diamond",
 	ruHeader: 'Бриллиант раджи',
 	level: 'a1',
-	text: [
+	paragraphs: [
 		{
 			type: 'paragraph',
 			sentences: [
@@ -28,6 +28,10 @@ export const sampleText2: TextType = {
 							},
 						},
 						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
 							id: 2,
 							type: 'word',
 							word: {
@@ -45,7 +49,7 @@ export const sampleText2: TextType = {
 						},
 						{
 							type: 'punctuation',
-							text: ',',
+							text: ', ',
 						},
 						{
 							id: 3,
@@ -64,6 +68,10 @@ export const sampleText2: TextType = {
 							},
 						},
 						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
 							id: 4,
 							type: 'word',
 							word: {
@@ -78,6 +86,10 @@ export const sampleText2: TextType = {
 								start: 1.5,
 								end: 1.56,
 							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
 						},
 						{
 							id: 5,
@@ -96,6 +108,10 @@ export const sampleText2: TextType = {
 							},
 						},
 						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
 							id: 6,
 							type: 'word',
 							word: {
@@ -110,6 +126,10 @@ export const sampleText2: TextType = {
 								start: 1.74,
 								end: 1.83,
 							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
 						},
 						{
 							id: 7,
@@ -129,7 +149,7 @@ export const sampleText2: TextType = {
 						},
 						{
 							type: 'punctuation',
-							text: ',',
+							text: ', ',
 						},
 						{
 							id: 8,
@@ -148,6 +168,10 @@ export const sampleText2: TextType = {
 							},
 						},
 						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
 							id: 9,
 							type: 'word',
 							word: {
@@ -162,6 +186,10 @@ export const sampleText2: TextType = {
 								start: 3,
 								end: 3.3,
 							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
 						},
 						{
 							id: 10,
@@ -180,6 +208,10 @@ export const sampleText2: TextType = {
 							},
 						},
 						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
 							id: 11,
 							type: 'word',
 							word: {
@@ -194,6 +226,10 @@ export const sampleText2: TextType = {
 								start: 3.42,
 								end: 3.78,
 							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
 						},
 						{
 							id: 12,
@@ -212,6 +248,10 @@ export const sampleText2: TextType = {
 							},
 						},
 						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
 							id: 13,
 							type: 'word',
 							word: {
@@ -226,6 +266,10 @@ export const sampleText2: TextType = {
 								start: 3.84,
 								end: 4.14,
 							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
 						},
 						{
 							id: 14,
@@ -244,6 +288,10 @@ export const sampleText2: TextType = {
 							},
 						},
 						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
 							id: 15,
 							type: 'word',
 							word: {
@@ -258,6 +306,10 @@ export const sampleText2: TextType = {
 								start: 4.29,
 								end: 4.53,
 							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
 						},
 						{
 							id: 16,
@@ -276,6 +328,10 @@ export const sampleText2: TextType = {
 							},
 						},
 						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
 							id: 17,
 							type: 'word',
 							word: {
@@ -290,6 +346,10 @@ export const sampleText2: TextType = {
 								start: 5.04,
 								end: 5.43,
 							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
 						},
 						{
 							id: 18,
@@ -308,6 +368,10 @@ export const sampleText2: TextType = {
 							},
 						},
 						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
 							id: 19,
 							type: 'word',
 							word: {
@@ -322,6 +386,10 @@ export const sampleText2: TextType = {
 								start: 6,
 								end: 6.3,
 							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
 						},
 						{
 							id: 20,
@@ -340,6 +408,10 @@ export const sampleText2: TextType = {
 							},
 						},
 						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
 							id: 21,
 							type: 'word',
 							word: {
@@ -354,6 +426,10 @@ export const sampleText2: TextType = {
 								start: 6.69,
 								end: 6.99,
 							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
 						},
 						{
 							id: 22,
@@ -372,6 +448,10 @@ export const sampleText2: TextType = {
 							},
 						},
 						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
 							id: 23,
 							type: 'word',
 							word: {
@@ -386,6 +466,10 @@ export const sampleText2: TextType = {
 								start: 7.11,
 								end: 7.53,
 							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
 						},
 						{
 							id: 24,

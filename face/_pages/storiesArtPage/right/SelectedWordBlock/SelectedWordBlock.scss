@@ -1,0 +1,10 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.selected-word-block {
+	flex-grow: 1;
+	display: flex;
+	min-width: 30rem;
+	background-color: $grayColor-2;
+	padding: 1.8rem 2rem;
+}

@@ -1,9 +1,4 @@
-// Типы для взаимодействия с API школы
-namespace TextsApiTypes {
-	export type GetText = StoryConfigT.Story
-}
-
-export default TextsApiTypes
+// ПРИ ИЗМЕНЕНИИ ОБНОВИ ТИПЫ НА КЛИЕНТЕ В requests/texts/textsApiTypes.ts
 
 // Объект текста
 export namespace StoryConfigT {

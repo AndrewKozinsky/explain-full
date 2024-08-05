@@ -1,15 +1,14 @@
 import { ReactNode } from 'react'
 import { Metadata } from 'next'
-import articleService from '../../../articleService/articleService'
 
 type GenerateMetadataParams = {
 	params: {
-		textSlug: string
+		storySlug: string
 	}
 }
 
 export async function generateMetadata(params: GenerateMetadataParams): Promise<Metadata> {
-	const { textSlug } = params.params
+	const { storySlug } = params.params
 
 	return {
 		description: 'Text description',
