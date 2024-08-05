@@ -1,6 +1,6 @@
 import React from 'react'
 import { StoryConfigT } from '../../../../requests/texts/textsApiTypes'
-import SelectedWordBlock from '../../right/SelectedWordBlock/SelectedWordBlock'
+import WordBlock from '../../right/WordBlock/WordBlock'
 import StoryBlock from '../../text/StoryBlock/StoryBlock'
 import './StorySection.scss'
 
@@ -15,7 +15,7 @@ function StorySection(props: TextArtPageProps) {
 	return (
 		<section className="story-section">
 			<StoryBlock textConfig={textConfig} />
-			<SelectedWordBlock />
+			<WordBlock />
 		</section>
 	)
 }

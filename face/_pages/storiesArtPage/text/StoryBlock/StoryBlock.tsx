@@ -47,8 +47,6 @@ type SentenceProps = {
 function Sentence(props: SentenceProps) {
 	const { sentence } = props
 
-	// return sentence.sentence.eng
-
 	return sentence.sentenceParts.map((sentencePart) => {
 		if (sentencePart.type === 'word') {
 			return <Word sentence={sentence} word={sentencePart} />
