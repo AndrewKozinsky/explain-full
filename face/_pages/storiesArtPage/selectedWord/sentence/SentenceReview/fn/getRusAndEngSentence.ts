@@ -5,11 +5,11 @@ import { StoryManager } from '../../../storyManager'
 export function useGetRusAndEngSentence() {
 	const selectedSentenceId = useStoryStore().selectedSentenceId
 
+	const storyManager = new StoryManager()
+	const sentence = storyManager.getSelectedSentence()
+
 	return useMemo(
 		function (): { rus: string; eng: string } {
-			const storyManager = new StoryManager()
-			const sentence = storyManager.getSelectedSentence()
-
 			if (!sentence) {
 				return {
 					rus: '',

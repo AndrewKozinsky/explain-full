@@ -11,7 +11,6 @@ export class AiController {
 	@HttpCode(HttpStatus.OK)
 	@Post()
 	async askAI(@Body() body: AskAIInputModel) {
-		console.log(body)
 		return gigaChat.ask(body.question)
 	}
 }
