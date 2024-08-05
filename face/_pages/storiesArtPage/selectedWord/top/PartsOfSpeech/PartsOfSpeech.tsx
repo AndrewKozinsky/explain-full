@@ -1,22 +1,26 @@
 import cn from 'classnames'
 import React from 'react'
-import { useGetPartsOfSpeech } from './fn/getPartsOfSpeech'
+import { useGetSelectedWord } from '../common'
 import './PartsOfSpeech.scss'
 
 function PartsOfSpeech() {
-	const partsOfSpeech = useGetPartsOfSpeech()
+	const selectedWord = useGetSelectedWord()
+
+	if (!selectedWord) {
+		return null
+	}
 
 	return (
 		<div className="parts-of-speech">
 			<PartOfSpeechItem
-				title="В предл."
-				textInBlock={partsOfSpeech.inSentence}
-				blockColor="black"
+				title="Часть речи"
+				textInBlock={selectedWord.word.partOfSpeech}
+				blockColor="white"
 			/>
 			<PartOfSpeechItem
-				title="В речи"
-				textInBlock={partsOfSpeech.inSpeech}
-				blockColor="white"
+				title="Часть предл."
+				textInBlock={selectedWord.word.partOfSentence}
+				blockColor="black"
 			/>
 		</div>
 	)

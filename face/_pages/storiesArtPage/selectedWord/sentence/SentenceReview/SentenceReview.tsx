@@ -9,8 +9,8 @@ function SentenceReview() {
 
 	return (
 		<div className="sentence-review">
-			<p className="sentence-review__eng">{sentenceTexts.eng}</p>
-			<p className="sentence-review__rus">{sentenceTexts.rus}</p>
+			<p className="sentence-review__normal">{sentenceTexts.eng}</p>
+			<p className="sentence-review__big">{sentenceTexts.rus}</p>
 		</div>
 	)
 }

@@ -1,0 +1,34 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.transcriptions {
+	display: flex;
+	gap: 1.5rem;
+	margin-top: .6rem;
+}
+
+.transcription {
+	display: flex;
+	align-items: center;
+	gap: .4rem;
+	background-color: white;
+	padding: .2rem .5rem;
+	border-radius: $radius-1;
+}
+
+.transcription__lang {
+	display: inline-block;
+	font-size: 1.3rem;
+	line-height: 1.5rem;
+	color: $grayColor-4;
+	background-color: $grayColor-2;
+	padding: .1rem .1rem;
+	border-radius: 2px;
+	margin-left: -.5rem;
+}
+
+.transcription__text {
+	font-family: Arial;
+	font-size: 2rem;
+	line-height: 2rem;
+}
