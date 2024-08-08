@@ -1,5 +1,5 @@
-import { StoryConfigT } from '../../../requests/texts/textsApiTypes'
 import { useStoryStore } from '../store/store'
+import { StoryConfigT } from '../storyTypes'
 
 export class StoryManager {
 	// Помечает слово выделенным

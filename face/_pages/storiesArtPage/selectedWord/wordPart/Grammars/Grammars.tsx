@@ -1,42 +1,42 @@
 import React from 'react'
 import LinkToArticle from '../LinkToArticle/LinkToArticle'
 import './Grammars.scss'
+import {
+	PhraseGrammarConfig,
+	useGetGrammarsConfig,
+	PhraseGrammarsConfig,
+} from './fn/getGrammarsConfig'
 
 function PhrasesGrammars() {
-	const doPhraseLinks: GrammarLinkConfig[] = [
-		{ text: 'Present Simple', href: '' },
-		{ text: 'Модальный глагол must', href: '' },
-	]
-	const goOnPhraseLinks: GrammarLinkConfig[] = [{ text: 'Фразовые глаголы', href: '' }]
+	const grammarsConfig = useGetGrammarsConfig()
+
+	if (!grammarsConfig.length) {
+		return null
+	}
 
 	return (
 		<div className="phrases-grammar">
-			<PhraseGrammar header="go" linkConfigs={doPhraseLinks} />
-			<PhraseGrammar header="go on" linkConfigs={goOnPhraseLinks} />
+			{grammarsConfig.map((wordGrammarConf) => {
+				return <PhraseGrammar wordGrammarsConfig={wordGrammarConf} />
+			})}
 		</div>
 	)
 }
 
 export default PhrasesGrammars
 
-type GrammarLinkConfig = {
-	text: string
-	href: string
-}
-
 type PhraseGrammarProps = {
-	header: string
-	linkConfigs: GrammarLinkConfig[]
+	wordGrammarsConfig: PhraseGrammarsConfig
 }
 
 function PhraseGrammar(props: PhraseGrammarProps) {
-	const { header, linkConfigs } = props
+	const { wordGrammarsConfig } = props
 
 	return (
 		<div className="phrase-grammar">
-			<h3 className="phrase-grammar__header">{header}</h3>
-			{linkConfigs.map((linkConfig) => {
-				return <LinkToArticle href={linkConfig.href}>{linkConfig.text}</LinkToArticle>
+			<h3 className="phrase-grammar__header">{wordGrammarsConfig.word}</h3>
+			{wordGrammarsConfig.grammars.map((linkConfig) => {
+				return <LinkToArticle href={linkConfig.href}>{linkConfig.name}</LinkToArticle>
 			})}
 		</div>
 	)

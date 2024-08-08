@@ -1,6 +1,6 @@
 import cn from 'classnames'
 import React from 'react'
-import { useGetSelectedWord } from '../common'
+import { useGetSelectedWord } from '../../common'
 import './PartsOfSpeech.scss'
 
 function PartsOfSpeech() {

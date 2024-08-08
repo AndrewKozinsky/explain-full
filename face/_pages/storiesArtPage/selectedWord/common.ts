@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
-import { StoryConfigT } from '../../../../requests/texts/textsApiTypes'
-import { useStoryStore } from '../../store/store'
-import { StoryManager } from '../storyManager'
+import { useStoryStore } from '../store/store'
+import { StoryConfigT } from '../storyTypes'
+import { StoryManager } from './storyManager'
 
 export function useGetSelectedWord(): null | StoryConfigT.Word {
 	const sentenceId = useStoryStore().selectedSentenceId

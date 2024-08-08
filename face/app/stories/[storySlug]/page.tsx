@@ -1,5 +1,5 @@
 import StoryArtPage from '../../../_pages/storiesArtPage/general/StoryArtPage/StoryArtPage'
-import storiesRequests from '../../../requests/texts/textsRequest'
+import storiesRequests from '../../../requests/stories/textsRequest'
 
 type TextPageProps = {
 	params: {

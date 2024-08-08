@@ -1,9 +1,9 @@
 'use client'
 
 import React from 'react'
-import { StoryConfigT } from '../../../../requests/texts/textsApiTypes'
 import WordBlock from '../../right/WordBlock/WordBlock'
 import { useStoryStore } from '../../store/store'
+import { StoryConfigT } from '../../storyTypes'
 import StoryBlock from '../../text/StoryBlock/StoryBlock'
 import { setStoryConfigToStore } from './fn/setStoryConfigToStore'
 import './StorySection.scss'

@@ -1,4 +1,4 @@
-import { StoryConfigT } from '../../../requests/texts/textsApiTypes'
+import { StoryConfigT } from '../storyTypes'
 
 export namespace StoryStoreType {
 	export type State = {

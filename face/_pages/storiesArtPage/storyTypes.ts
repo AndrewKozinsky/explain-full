@@ -1,11 +1,6 @@
-// Типы для взаимодействия с API школы
-namespace TextsApiTypes {
-	export type GetText = StoryConfigT.Story
-}
+import { GrammarConfigT } from './grammarTypes'
 
-export default TextsApiTypes
-
-// Объект текста
+// Объект истории
 export namespace StoryConfigT {
 	// Объект текста
 	export type Story = {
@@ -17,10 +12,6 @@ export namespace StoryConfigT {
 		level: ('a1' | 'a2' | 'b1' | 'b2' | 'c1')[]
 		// Весь текст
 		paragraphs: Paragraph[]
-		// Ссылка на аудио (при наличии)
-		// audioSrc?: string
-		// Ссылка на видео (при наличии)
-		// videoSrc?: string
 	}
 
 	// Абзац
@@ -45,7 +36,10 @@ export namespace StoryConfigT {
 	export type Word = {
 		id: number
 		type: 'word'
-		phraseId: number[]
+		// Фраза — это одно или несколько слов относящиеся к какой-то грамматической теме.
+		// Чтобы отметить такие слова, относящиеся к определённой теме, используют поле phraseIds в слове.
+		// Так как слово может относиться к нескольким фразам и нескольким темам, то phraseIds является массивом идентификаторов.
+		phraseIds: number[]
 		word: {
 			// Какой части предложения слово
 			partOfSentence: string
@@ -62,17 +56,14 @@ export namespace StoryConfigT {
 			// Транскрипция на американском английском
 			usTranscription: string
 		}
-		// Координаты в какое время слово начинается и заканчивается
-		/*coords: {
-			// На какой секунде начинается
-			start: number
-			// На какой секунде заканчивается
-			end: number
-		}*/
 	}
 
+	// Фраза — это одно или несколько слов относящиеся к какой-то грамматической теме.
+	// Такие слова отмечены идентификатором.
+	// Этот объект связывает слова и грамматическое правило
 	export type Phrase = {
 		phraseId: number
+		grammar: GrammarConfigT.Grammar[]
 	}
 
 	// Знак препинания в предложении

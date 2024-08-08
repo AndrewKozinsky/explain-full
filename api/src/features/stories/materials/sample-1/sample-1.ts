@@ -1,4 +1,4 @@
-import { StoryConfigT } from '../types'
+import { StoryConfigT } from '../storyTypes'
 
 const main: StoryConfigT.Story = {
 	enHeader: "The Rajah's Diamond",
@@ -15,7 +15,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 1,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Noun',
 								partOfSpeech: 'Subject',
@@ -29,7 +29,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 2,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Verb',
 								partOfSpeech: 'Predicate',
@@ -43,7 +43,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 3,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Adverb',
 								partOfSpeech: 'Modifier',
@@ -57,7 +57,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 4,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Verb',
 								partOfSpeech: 'Predicate',
@@ -71,7 +71,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 5,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Verb',
 								partOfSpeech: 'Object',
@@ -85,7 +85,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 6,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Adverb',
 								partOfSpeech: 'Modifier',
@@ -99,7 +99,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 7,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Adverb',
 								partOfSpeech: 'Modifier',
@@ -117,7 +117,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 8,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Conjunction',
 								partOfSpeech: 'Conjunction',
@@ -131,7 +131,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 9,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Pronoun',
 								partOfSpeech: 'Subject',
@@ -145,7 +145,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 10,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Verb',
 								partOfSpeech: 'Predicate',
@@ -159,7 +159,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 11,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Verb',
 								partOfSpeech: 'Predicate',
@@ -173,7 +173,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 12,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Preposition',
 								partOfSpeech: 'Predicate',
@@ -187,7 +187,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 13,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Verb',
 								partOfSpeech: 'Predicate',
@@ -201,7 +201,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 14,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Pronoun',
 								partOfSpeech: 'Modifier',
@@ -215,7 +215,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 15,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Noun',
 								partOfSpeech: 'Object',
@@ -229,7 +229,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 16,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Preposition',
 								partOfSpeech: 'Modifier',
@@ -243,7 +243,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 17,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Adjective',
 								partOfSpeech: 'Modifier',
@@ -257,7 +257,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 18,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Adjective',
 								partOfSpeech: 'Modifier',
@@ -271,7 +271,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 19,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Noun',
 								partOfSpeech: 'Object of Preposition',
@@ -285,7 +285,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 20,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Verb',
 								partOfSpeech: 'Predicate',
@@ -314,7 +314,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 21,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Conjunction',
 								partOfSpeech: 'Modifier',
@@ -328,7 +328,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 22,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Noun',
 								partOfSpeech: 'Subject',
@@ -342,7 +342,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 23,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Verb',
 								partOfSpeech: 'Predicate',
@@ -356,7 +356,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 24,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Noun',
 								partOfSpeech: 'Object',
@@ -370,7 +370,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 25,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Conjunction',
 								partOfSpeech: 'Conjunction',
@@ -384,7 +384,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 26,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Pronoun',
 								partOfSpeech: 'Subject',
@@ -398,7 +398,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 27,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Verb',
 								partOfSpeech: 'Predicate',
@@ -412,7 +412,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 28,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Verb',
 								partOfSpeech: 'Predicate',
@@ -426,7 +426,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 29,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Conjunction',
 								partOfSpeech: 'Predicate',
@@ -440,7 +440,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 30,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Verb',
 								partOfSpeech: 'Predicate',
@@ -454,7 +454,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 31,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Article',
 								partOfSpeech: 'Modifier',
@@ -468,7 +468,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 32,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Noun',
 								partOfSpeech: 'Object',
@@ -482,7 +482,7 @@ const main: StoryConfigT.Story = {
 						{
 							id: 33,
 							type: 'word',
-							phraseId: [],
+							phraseIds: [],
 							word: {
 								partOfSentence: 'Adverb',
 								partOfSpeech: 'Modifier',

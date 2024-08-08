@@ -2,8 +2,8 @@
 
 import cn from 'classnames'
 import React from 'react'
-import { StoryConfigT } from '../../../../requests/texts/textsApiTypes'
 import { useStoryStore } from '../../store/store'
+import { StoryConfigT } from '../../storyTypes'
 import { useGetOnWordClick, useIsWordSelected } from './fn/selectWord'
 import './StoryBlock.scss'
 

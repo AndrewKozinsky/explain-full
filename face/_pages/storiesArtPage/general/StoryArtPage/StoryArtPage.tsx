@@ -1,9 +1,9 @@
 import React from 'react'
-import { StoryConfigT } from '../../../../requests/texts/textsApiTypes'
 import { BreadCrumbs } from '../../../../ui/pageRelated/BreadCrumbs/BreadCrumbs'
 import { PageContentWrapper } from '../../../../ui/pageRelated/PageContentWrapper/PageContentWrapper'
 import { PageHeader } from '../../../../ui/pageRelated/PageHeader/PageHeader'
 import { PageUrls } from '../../../../сonsts/pageUrls'
+import { StoryConfigT } from '../../storyTypes'
 import StorySection from '../StorySection/StorySection'
 
 type TextArtPageProps = {

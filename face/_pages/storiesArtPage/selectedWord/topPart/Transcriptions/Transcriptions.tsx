@@ -1,5 +1,5 @@
 import React from 'react'
-import { useGetSelectedWord } from '../common'
+import { useGetSelectedWord } from '../../common'
 import './Transcriptions.scss'
 
 function Transcriptions() {
