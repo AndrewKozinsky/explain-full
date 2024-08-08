@@ -5,7 +5,7 @@ import './NoWordSelected.scss'
 function NoWordSelected() {
 	return (
 		<div className="no-word-selected-block">
-			<img src="/images/common/pointer.svg" alt="pointer" />
+			<img src="/images/story/pointer.svg" alt="pointer" />
 			<p className="no-word-selected-block__text">
 				Выделите слово чтобы посмотреть перевод и разбор грамматики.
 			</p>
