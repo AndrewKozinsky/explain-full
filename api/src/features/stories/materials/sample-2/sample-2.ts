@@ -25,10 +25,6 @@ export const sampleText2: StoryConfigT.Story = {
 								enTranscription: 'ðiːz',
 								usTranscription: 'ðiz',
 							},
-							coords: {
-								start: 0.27,
-								end: 0.57,
-							},
 						},
 						{
 							type: 'punctuation',
@@ -47,10 +43,6 @@ export const sampleText2: StoryConfigT.Story = {
 								enTranscription: 'ˈtælənts',
 								usTranscription: 'ˈtælənts',
 							},
-							coords: {
-								start: 0.57,
-								end: 1.17,
-							},
 						},
 						{
 							type: 'punctuation',
@@ -68,10 +60,6 @@ export const sampleText2: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'ænd',
 								usTranscription: 'ænd',
-							},
-							coords: {
-								start: 1.32,
-								end: 1.5,
 							},
 						},
 						{
@@ -92,10 +80,6 @@ export const sampleText2: StoryConfigT.Story = {
 								enTranscription: 'ə',
 								usTranscription: 'ə',
 							},
-							coords: {
-								start: 1.5,
-								end: 1.56,
-							},
 						},
 						{
 							type: 'punctuation',
@@ -113,10 +97,6 @@ export const sampleText2: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'bɪt',
 								usTranscription: 'bɪt',
-							},
-							coords: {
-								start: 1.56,
-								end: 1.74,
 							},
 						},
 						{
@@ -137,10 +117,6 @@ export const sampleText2: StoryConfigT.Story = {
 								enTranscription: 'əv',
 								usTranscription: 'əv',
 							},
-							coords: {
-								start: 1.74,
-								end: 1.83,
-							},
 						},
 						{
 							type: 'punctuation',
@@ -158,10 +134,6 @@ export const sampleText2: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'lʌk',
 								usTranscription: 'lʌk',
-							},
-							coords: {
-								start: 1.83,
-								end: 2.22,
 							},
 						},
 						{
@@ -181,10 +153,6 @@ export const sampleText2: StoryConfigT.Story = {
 								enTranscription: 'hɛlpt',
 								usTranscription: 'hɛlpt',
 							},
-							coords: {
-								start: 2.61,
-								end: 3,
-							},
 						},
 						{
 							type: 'punctuation',
@@ -202,10 +170,6 @@ export const sampleText2: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'ˈhæri',
 								usTranscription: 'ˈhæri',
-							},
-							coords: {
-								start: 3,
-								end: 3.3,
 							},
 						},
 						{
@@ -226,10 +190,6 @@ export const sampleText2: StoryConfigT.Story = {
 								enTranscription: 'tə',
 								usTranscription: 'tə',
 							},
-							coords: {
-								start: 3.3,
-								end: 3.42,
-							},
 						},
 						{
 							type: 'punctuation',
@@ -247,10 +207,6 @@ export const sampleText2: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'faɪnd',
 								usTranscription: 'faɪnd',
-							},
-							coords: {
-								start: 3.42,
-								end: 3.78,
 							},
 						},
 						{
@@ -271,10 +227,6 @@ export const sampleText2: StoryConfigT.Story = {
 								enTranscription: 'ə',
 								usTranscription: 'ə',
 							},
-							coords: {
-								start: 3.78,
-								end: 3.84,
-							},
 						},
 						{
 							type: 'punctuation',
@@ -292,10 +244,6 @@ export const sampleText2: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'dʒɒb',
 								usTranscription: 'dʒɑb',
-							},
-							coords: {
-								start: 3.84,
-								end: 4.14,
 							},
 						},
 						{
@@ -315,10 +263,6 @@ export const sampleText2: StoryConfigT.Story = {
 								enTranscription: 'wɛn',
 								usTranscription: 'wɛn',
 							},
-							coords: {
-								start: 4.14,
-								end: 4.29,
-							},
 						},
 						{
 							type: 'punctuation',
@@ -336,10 +280,6 @@ export const sampleText2: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'hɪz',
 								usTranscription: 'hɪz',
-							},
-							coords: {
-								start: 4.29,
-								end: 4.53,
 							},
 						},
 						{
@@ -359,10 +299,6 @@ export const sampleText2: StoryConfigT.Story = {
 								enTranscription: 'ˈpɛərənts',
 								usTranscription: 'ˈpɛrənts',
 							},
-							coords: {
-								start: 4.53,
-								end: 5.04,
-							},
 						},
 						{
 							type: 'punctuation',
@@ -380,10 +316,6 @@ export const sampleText2: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'daɪd',
 								usTranscription: 'daɪd',
-							},
-							coords: {
-								start: 5.04,
-								end: 5.43,
 							},
 						},
 						{
@@ -403,10 +335,6 @@ export const sampleText2: StoryConfigT.Story = {
 								enTranscription: 'dʒʌst',
 								usTranscription: 'dʒəst',
 							},
-							coords: {
-								start: 5.46,
-								end: 5.88,
-							},
 						},
 						{
 							type: 'punctuation',
@@ -424,10 +352,6 @@ export const sampleText2: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'tuː',
 								usTranscription: 'tu',
-							},
-							coords: {
-								start: 6,
-								end: 6.3,
 							},
 						},
 						{
@@ -447,10 +371,6 @@ export const sampleText2: StoryConfigT.Story = {
 								enTranscription: 'jɪəz',
 								usTranscription: 'jɪrz',
 							},
-							coords: {
-								start: 6.3,
-								end: 6.69,
-							},
 						},
 						{
 							type: 'punctuation',
@@ -468,10 +388,6 @@ export const sampleText2: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'ˈɑːftə',
 								usTranscription: 'ˈæftər',
-							},
-							coords: {
-								start: 6.69,
-								end: 6.99,
 							},
 						},
 						{
@@ -491,10 +407,6 @@ export const sampleText2: StoryConfigT.Story = {
 								enTranscription: 'hiː',
 								usTranscription: 'hi',
 							},
-							coords: {
-								start: 6.99,
-								end: 7.11,
-							},
 						},
 						{
 							type: 'punctuation',
@@ -512,10 +424,6 @@ export const sampleText2: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'ˈfɪnɪʃt',
 								usTranscription: 'ˈfɪnɪʃt',
-							},
-							coords: {
-								start: 7.11,
-								end: 7.53,
 							},
 						},
 						{
@@ -535,20 +443,399 @@ export const sampleText2: StoryConfigT.Story = {
 								enTranscription: 'skuːl',
 								usTranscription: 'skul',
 							},
-							coords: {
-								start: 7.53,
-								end: 7.98,
-							},
 						},
 						{
 							type: 'punctuation',
-							text: '.',
+							text: '. ',
 						},
 					],
 					phrases: [],
 					sentence: {
 						eng: 'These talents, and a bit of luck, helped Harry to find a job when his parents died just two years after he finished school.',
 						rus: 'Эти таланты и немного удачи помогли Гарри найти работу, когда его родители умерли всего через два года после окончания школы.',
+					},
+				},
+			],
+		},
+		{
+			type: 'paragraph',
+			sentences: [
+				{
+					type: 'sentence',
+					id: 2,
+					sentenceParts: [
+						{
+							id: 1,
+							type: 'word',
+							phraseId: [],
+							word: {
+								partOfSentence: 'Pronoun',
+								partOfSpeech: 'Subject',
+								engWord: 'He',
+								rusWord: 'Он',
+								rusExplanation: '',
+								enTranscription: 'ðiːz',
+								usTranscription: 'ðiz',
+							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
+							id: 2,
+							type: 'word',
+							phraseId: [],
+							word: {
+								partOfSentence: 'Pronoun',
+								partOfSpeech: 'Subject',
+								engWord: 'went',
+								rusWord: 'ушёл',
+								rusExplanation: '',
+								enTranscription: 'ðiːz',
+								usTranscription: 'ðiz',
+							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
+							id: 3,
+							type: 'word',
+							phraseId: [],
+							word: {
+								partOfSentence: 'Pronoun',
+								partOfSpeech: 'Subject',
+								engWord: 'on',
+								rusWord: 'на',
+								rusExplanation: '',
+								enTranscription: 'ðiːz',
+								usTranscription: 'ðiz',
+							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
+							id: 4,
+							type: 'word',
+							phraseId: [],
+							word: {
+								partOfSentence: 'Pronoun',
+								partOfSpeech: 'Subject',
+								engWord: 'to',
+								rusWord: '',
+								rusExplanation:
+									'Частица указывает на неопределённую форму глагола.',
+								enTranscription: 'ðiːz',
+								usTranscription: 'ðiz',
+							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
+							id: 5,
+							type: 'word',
+							phraseId: [],
+							word: {
+								partOfSentence: 'Pronoun',
+								partOfSpeech: 'Subject',
+								engWord: 'win',
+								rusWord: 'выиграть',
+								rusExplanation: '',
+								enTranscription: 'ðiːz',
+								usTranscription: 'ðiz',
+							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
+							id: 6,
+							type: 'word',
+							phraseId: [],
+							word: {
+								partOfSentence: 'Pronoun',
+								partOfSpeech: 'Subject',
+								engWord: 'the',
+								rusWord: '',
+								rusExplanation:
+									'Частица указывает на определённое существительное.',
+								enTranscription: 'ðiːz',
+								usTranscription: 'ðiz',
+							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
+							id: 7,
+							type: 'word',
+							phraseId: [],
+							word: {
+								partOfSentence: 'Pronoun',
+								partOfSpeech: 'Subject',
+								engWord: 'final',
+								rusWord: 'финал',
+								rusExplanation: '',
+								enTranscription: 'ðiːz',
+								usTranscription: 'ðiz',
+							},
+						},
+						{
+							type: 'punctuation',
+							text: '. ',
+						},
+					],
+					phrases: [],
+					sentence: {
+						eng: 'He went on to win the final.',
+						rus: 'Он одержал победу в финале.',
+					},
+				},
+				{
+					type: 'sentence',
+					id: 3,
+					sentenceParts: [
+						{
+							id: 1,
+							type: 'word',
+							phraseId: [],
+							word: {
+								partOfSentence: 'Pronoun',
+								partOfSpeech: 'Subject',
+								engWord: 'I',
+								rusWord: 'Я',
+								rusExplanation: '',
+								enTranscription: 'ðiːz',
+								usTranscription: 'ðiz',
+							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
+							id: 2,
+							type: 'word',
+							phraseId: [],
+							word: {
+								partOfSentence: 'Pronoun',
+								partOfSpeech: 'Subject',
+								engWord: "don't",
+								rusWord: 'не',
+								rusExplanation: '',
+								enTranscription: 'ðiːz',
+								usTranscription: 'ðiz',
+							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
+							id: 3,
+							type: 'word',
+							phraseId: [],
+							word: {
+								partOfSentence: 'Pronoun',
+								partOfSpeech: 'Subject',
+								engWord: 'have',
+								rusWord: 'имею',
+								rusExplanation: '',
+								enTranscription: 'ðiːz',
+								usTranscription: 'ðiz',
+							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
+							id: 4,
+							type: 'word',
+							phraseId: [],
+							word: {
+								partOfSentence: 'Article',
+								partOfSpeech: 'Modifier',
+								engWord: 'a',
+								rusWord: '',
+								rusExplanation:
+									'Артикль, указывающий на неопределённое существительное.',
+								enTranscription: 'ə',
+								usTranscription: 'ə',
+							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
+							id: 5,
+							type: 'word',
+							phraseId: [],
+							word: {
+								partOfSentence: 'Pronoun',
+								partOfSpeech: 'Subject',
+								engWord: 'few',
+								rusWord: 'несколько',
+								rusExplanation: '',
+								enTranscription: 'ðiːz',
+								usTranscription: 'ðiz',
+							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
+							id: 6,
+							type: 'word',
+							phraseId: [],
+							word: {
+								partOfSentence: 'Pronoun',
+								partOfSpeech: 'Subject',
+								engWord: 'years',
+								rusWord: 'лет',
+								rusExplanation: '',
+								enTranscription: 'ðiːz',
+								usTranscription: 'ðiz',
+							},
+						},
+						{
+							type: 'punctuation',
+							text: '. ',
+						},
+					],
+					phrases: [],
+					sentence: {
+						eng: "I don't have a few years.",
+						rus: 'У меня нет несколько лет.',
+					},
+				},
+				{
+					type: 'sentence',
+					id: 4,
+					sentenceParts: [
+						{
+							id: 7,
+							type: 'word',
+							phraseId: [],
+							word: {
+								partOfSentence: 'Pronoun',
+								partOfSpeech: 'Subject',
+								engWord: 'I',
+								rusWord: 'Я',
+								rusExplanation: '',
+								enTranscription: 'ðiːz',
+								usTranscription: 'ðiz',
+							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
+							id: 8,
+							type: 'word',
+							phraseId: [],
+							word: {
+								partOfSentence: 'Pronoun',
+								partOfSpeech: 'Subject',
+								engWord: 'wish',
+								rusWord: 'желаю',
+								rusExplanation: '',
+								enTranscription: 'ðiːz',
+								usTranscription: 'ðiz',
+							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
+							id: 9,
+							type: 'word',
+							phraseId: [],
+							word: {
+								partOfSentence: 'Pronoun',
+								partOfSpeech: 'Subject',
+								engWord: 'to',
+								rusWord: '',
+								rusExplanation: 'Указывает на движение в каком-то направлении',
+								enTranscription: 'ðiːz',
+								usTranscription: 'ðiz',
+							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
+							id: 10,
+							type: 'word',
+							phraseId: [],
+							word: {
+								partOfSentence: 'Article',
+								partOfSpeech: 'Modifier',
+								engWord: 'hell',
+								rusWord: 'ад',
+								rusExplanation: '',
+								enTranscription: 'ə',
+								usTranscription: 'ə',
+							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
+							id: 11,
+							type: 'word',
+							phraseId: [],
+							word: {
+								partOfSentence: 'Pronoun',
+								partOfSpeech: 'Subject',
+								engWord: 'I',
+								rusWord: 'я',
+								rusExplanation: '',
+								enTranscription: 'ðiːz',
+								usTranscription: 'ðiz',
+							},
+						},
+						{
+							type: 'punctuation',
+							text: ' ',
+						},
+						{
+							id: 12,
+							type: 'word',
+							phraseId: [],
+							word: {
+								partOfSentence: 'Pronoun',
+								partOfSpeech: 'Subject',
+								engWord: 'did',
+								rusWord: 'сделал',
+								rusExplanation: '',
+								enTranscription: 'ðiːz',
+								usTranscription: 'ðiz',
+							},
+						},
+						{
+							type: 'punctuation',
+							text: '. ',
+						},
+					],
+					phrases: [],
+					sentence: {
+						eng: 'I wish to hell I did.',
+						rus: 'Я бы очень хотел это сделать.',
 					},
 				},
 			],

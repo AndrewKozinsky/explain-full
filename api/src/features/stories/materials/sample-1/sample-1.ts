@@ -25,10 +25,6 @@ const main: StoryConfigT.Story = {
 								enTranscription: 'ˈhæri',
 								usTranscription: 'ˈhæri',
 							},
-							coords: {
-								start: 0.84,
-								end: 1.23,
-							},
 						},
 						{
 							id: 2,
@@ -42,10 +38,6 @@ const main: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'dɪd',
 								usTranscription: 'dɪd',
-							},
-							coords: {
-								start: 1.23,
-								end: 1.38,
 							},
 						},
 						{
@@ -61,10 +53,6 @@ const main: StoryConfigT.Story = {
 								enTranscription: 'nɒt',
 								usTranscription: 'nɑt',
 							},
-							coords: {
-								start: 1.38,
-								end: 1.59,
-							},
 						},
 						{
 							id: 4,
@@ -78,10 +66,6 @@ const main: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'laɪk',
 								usTranscription: 'laɪk',
-							},
-							coords: {
-								start: 1.59,
-								end: 1.83,
 							},
 						},
 						{
@@ -97,10 +81,6 @@ const main: StoryConfigT.Story = {
 								enTranscription: 'ˈstʌdiɪŋ',
 								usTranscription: 'ˈstʌdiɪŋ',
 							},
-							coords: {
-								start: 1.83,
-								end: 2.31,
-							},
 						},
 						{
 							id: 6,
@@ -115,10 +95,6 @@ const main: StoryConfigT.Story = {
 								enTranscription: 'ˈvɛri',
 								usTranscription: 'ˈvɛri',
 							},
-							coords: {
-								start: 2.31,
-								end: 2.58,
-							},
 						},
 						{
 							id: 7,
@@ -132,10 +108,6 @@ const main: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'mʌtʃ',
 								usTranscription: 'mʌtʃ',
-							},
-							coords: {
-								start: 2.58,
-								end: 2.91,
 							},
 						},
 						{
@@ -155,10 +127,6 @@ const main: StoryConfigT.Story = {
 								enTranscription: 'səʊ',
 								usTranscription: 'soʊ',
 							},
-							coords: {
-								start: 3.27,
-								end: 3.54,
-							},
 						},
 						{
 							id: 9,
@@ -172,10 +140,6 @@ const main: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'hiː',
 								usTranscription: 'hi',
-							},
-							coords: {
-								start: 3.54,
-								end: 3.69,
 							},
 						},
 						{
@@ -191,10 +155,6 @@ const main: StoryConfigT.Story = {
 								enTranscription: 'wɒz',
 								usTranscription: 'wəz',
 							},
-							coords: {
-								start: 3.69,
-								end: 3.84,
-							},
 						},
 						{
 							id: 11,
@@ -208,10 +168,6 @@ const main: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'əˈlaʊd',
 								usTranscription: 'əˈlaʊd',
-							},
-							coords: {
-								start: 3.84,
-								end: 4.26,
 							},
 						},
 						{
@@ -227,10 +183,6 @@ const main: StoryConfigT.Story = {
 								enTranscription: 'tə',
 								usTranscription: 'tə',
 							},
-							coords: {
-								start: 4.26,
-								end: 4.44,
-							},
 						},
 						{
 							id: 13,
@@ -244,10 +196,6 @@ const main: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'ˈfɪnɪʃ',
 								usTranscription: 'ˈfɪnɪʃ',
-							},
-							coords: {
-								start: 4.44,
-								end: 4.86,
 							},
 						},
 						{
@@ -263,10 +211,6 @@ const main: StoryConfigT.Story = {
 								enTranscription: 'hɪz',
 								usTranscription: 'hɪz',
 							},
-							coords: {
-								start: 4.86,
-								end: 5.01,
-							},
 						},
 						{
 							id: 15,
@@ -280,10 +224,6 @@ const main: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'ˌɛdʒʊˈkeɪʃən',
 								usTranscription: 'ˌɛdʒəˈkeɪʃən',
-							},
-							coords: {
-								start: 5.01,
-								end: 5.76,
 							},
 						},
 						{
@@ -299,10 +239,6 @@ const main: StoryConfigT.Story = {
 								enTranscription: 'bɪˈfɔː',
 								usTranscription: 'bɪˈfɔr',
 							},
-							coords: {
-								start: 5.76,
-								end: 6.15,
-							},
 						},
 						{
 							id: 17,
@@ -316,10 +252,6 @@ const main: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'məʊst',
 								usTranscription: 'moʊst',
-							},
-							coords: {
-								start: 6.15,
-								end: 6.6,
 							},
 						},
 						{
@@ -335,10 +267,6 @@ const main: StoryConfigT.Story = {
 								enTranscription: 'jʌŋ',
 								usTranscription: 'jʌŋ',
 							},
-							coords: {
-								start: 6.6,
-								end: 6.9,
-							},
 						},
 						{
 							id: 19,
@@ -352,10 +280,6 @@ const main: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'mɛn',
 								usTranscription: 'mɛn',
-							},
-							coords: {
-								start: 6.9,
-								end: 7.23,
 							},
 						},
 						{
@@ -371,14 +295,10 @@ const main: StoryConfigT.Story = {
 								enTranscription: 'duː',
 								usTranscription: 'du',
 							},
-							coords: {
-								start: 7.23,
-								end: 7.59,
-							},
 						},
 						{
 							type: 'punctuation',
-							text: '.',
+							text: '. ',
 						},
 					],
 					phrases: [],
@@ -404,10 +324,6 @@ const main: StoryConfigT.Story = {
 								enTranscription: 'haʊˈɛvə',
 								usTranscription: 'haʊˈɛvər',
 							},
-							coords: {
-								start: 8.4,
-								end: 8.88,
-							},
 						},
 						{
 							id: 22,
@@ -421,10 +337,6 @@ const main: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'ˈhæri',
 								usTranscription: 'ˈhæri',
-							},
-							coords: {
-								start: 9.21,
-								end: 9.54,
 							},
 						},
 						{
@@ -440,10 +352,6 @@ const main: StoryConfigT.Story = {
 								enTranscription: 'lʌvd',
 								usTranscription: 'lʌvd',
 							},
-							coords: {
-								start: 9.54,
-								end: 9.87,
-							},
 						},
 						{
 							id: 24,
@@ -457,10 +365,6 @@ const main: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'ˈmjuːzɪk',
 								usTranscription: 'ˈmjuzɪk',
-							},
-							coords: {
-								start: 9.9,
-								end: 10.44,
 							},
 						},
 						{
@@ -476,10 +380,6 @@ const main: StoryConfigT.Story = {
 								enTranscription: 'ænd',
 								usTranscription: 'ænd',
 							},
-							coords: {
-								start: 0,
-								end: 0,
-							},
 						},
 						{
 							id: 26,
@@ -493,10 +393,6 @@ const main: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'hiː',
 								usTranscription: 'hi',
-							},
-							coords: {
-								start: 0,
-								end: 0,
 							},
 						},
 						{
@@ -512,10 +408,6 @@ const main: StoryConfigT.Story = {
 								enTranscription: 'kʊd',
 								usTranscription: 'kʊd',
 							},
-							coords: {
-								start: 0,
-								end: 0,
-							},
 						},
 						{
 							id: 28,
@@ -529,10 +421,6 @@ const main: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'sɪŋ',
 								usTranscription: 'sɪŋ',
-							},
-							coords: {
-								start: 0,
-								end: 0,
 							},
 						},
 						{
@@ -548,10 +436,6 @@ const main: StoryConfigT.Story = {
 								enTranscription: 'ænd',
 								usTranscription: 'ænd',
 							},
-							coords: {
-								start: 0,
-								end: 0,
-							},
 						},
 						{
 							id: 30,
@@ -565,10 +449,6 @@ const main: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'pleɪ',
 								usTranscription: 'pleɪ',
-							},
-							coords: {
-								start: 0,
-								end: 0,
 							},
 						},
 						{
@@ -584,10 +464,6 @@ const main: StoryConfigT.Story = {
 								enTranscription: 'ðə (weak form)',
 								usTranscription: 'ðə (weak form)',
 							},
-							coords: {
-								start: 0,
-								end: 0,
-							},
 						},
 						{
 							id: 32,
@@ -602,10 +478,6 @@ const main: StoryConfigT.Story = {
 								enTranscription: 'pɪˈænəʊ',
 								usTranscription: 'piˈænoʊ',
 							},
-							coords: {
-								start: 0,
-								end: 0,
-							},
 						},
 						{
 							id: 33,
@@ -619,10 +491,6 @@ const main: StoryConfigT.Story = {
 								rusExplanation: '',
 								enTranscription: 'wɛl',
 								usTranscription: 'wɛl',
-							},
-							coords: {
-								start: 0,
-								end: 0,
 							},
 						},
 						{

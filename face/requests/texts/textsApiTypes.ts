@@ -63,12 +63,12 @@ export namespace StoryConfigT {
 			usTranscription: string
 		}
 		// Координаты в какое время слово начинается и заканчивается
-		coords: {
+		/*coords: {
 			// На какой секунде начинается
 			start: number
 			// На какой секунде заканчивается
 			end: number
-		}
+		}*/
 	}
 
 	export type Phrase = {
