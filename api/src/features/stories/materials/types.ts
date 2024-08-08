@@ -29,6 +29,7 @@ export namespace StoryConfigT {
 		type: 'sentence'
 		id: number
 		sentenceParts: (Word | Punctuation)[]
+		phrases: Phrase[]
 		sentence: {
 			eng: string
 			rus: string
@@ -39,6 +40,7 @@ export namespace StoryConfigT {
 	export type Word = {
 		id: number
 		type: 'word'
+		phraseId: number[]
 		word: {
 			// Какой части предложения слово
 			partOfSentence: string
@@ -62,6 +64,10 @@ export namespace StoryConfigT {
 			// На какой секунде заканчивается
 			end: number
 		}
+	}
+
+	export type Phrase = {
+		phraseId: number
 	}
 
 	// Знак препинания в предложении

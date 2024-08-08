@@ -8,10 +8,10 @@ import './TopReview.scss'
 function TopReview() {
 	return (
 		<div color="top-review">
-			<PartsOfSpeech />
+			<Translate />
 			<EngWord />
 			<Transcriptions />
-			<Translate />
+			<PartsOfSpeech />
 		</div>
 	)
 }

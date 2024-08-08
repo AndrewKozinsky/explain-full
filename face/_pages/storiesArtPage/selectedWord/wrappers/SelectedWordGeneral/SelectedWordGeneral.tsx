@@ -9,7 +9,7 @@ function SelectedWordGeneral() {
 		<section className="selected-word-general">
 			<TopReview />
 			<div className="selected-word-general__block">
-				<h3 className="selected-word-general__header">Словосочетания</h3>
+				<h3 className="selected-word-general__header">Грамматика слов и фраз</h3>
 				<WordReview />
 			</div>
 			<div className="selected-word-general__block">

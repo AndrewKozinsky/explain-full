@@ -13,15 +13,10 @@ function PartsOfSpeech() {
 	return (
 		<div className="parts-of-speech">
 			<PartOfSpeechItem
-				title="Часть речи"
-				textInBlock={selectedWord.word.partOfSpeech}
-				blockColor="white"
-			/>
-			<PartOfSpeechItem
-				title="Часть предл."
+				title="Часть предл.:"
 				textInBlock={selectedWord.word.partOfSentence}
-				blockColor="black"
 			/>
+			<PartOfSpeechItem title="Часть речи:" textInBlock={selectedWord.word.partOfSpeech} />
 		</div>
 	)
 }
@@ -31,25 +26,15 @@ export default PartsOfSpeech
 type PartOfSpeechItemProps = {
 	title: string
 	textInBlock: string
-	blockColor: 'black' | 'white'
 }
 
 function PartOfSpeechItem(props: PartOfSpeechItemProps) {
-	const { title, textInBlock, blockColor } = props
+	const { title, textInBlock } = props
 
 	return (
 		<div className="part-of-speech">
 			<p className="part-of-speech__title">{title}</p>
-			<p
-				className={cn(
-					'part-of-speech__name',
-					blockColor === 'black'
-						? 'part-of-speech__name--black'
-						: 'part-of-speech__name--white',
-				)}
-			>
-				{textInBlock}
-			</p>
+			<p className={cn('part-of-speech__name')}>{textInBlock}</p>
 		</div>
 	)
 }

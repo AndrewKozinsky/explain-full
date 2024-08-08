@@ -2,8 +2,13 @@
 @import '../../../../../styles/mixins';
 
 .selected-word-general {
+	position: sticky;
+	top: 1.8rem;
+	left: 0;
 	display: grid;
 	gap: 2rem;
+	max-height: calc(100dvh - 4rem);
+	overflow: auto;
 }
 
 .selected-word-general__block {

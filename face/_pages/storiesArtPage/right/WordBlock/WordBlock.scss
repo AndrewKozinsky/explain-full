@@ -2,10 +2,10 @@
 @import 'styles/mixins';
 
 .word-block {
-	display: flex;
-	align-items: flex-start;
-	background-color: $grayColor-2;
-	width: 32rem;
+	background-color: white;
+	width: 22rem;
+	min-width: 22rem;
 	min-height: 20rem;
 	padding: 1.8rem 2rem;
+	border-radius: 0 $radius-2 $radius-2 0;
 }

@@ -11,10 +11,8 @@ function Translate() {
 
 	return (
 		<div className="translate">
-			{selectedWord.word.rusWord ? (
+			{selectedWord.word.rusWord && (
 				<p className="translate__rus">{selectedWord.word.rusWord}</p>
-			) : (
-				<p className="translate__no-translation">Не переводится</p>
 			)}
 			{selectedWord.word.rusExplanation && (
 				<p className="translate__explanation">{selectedWord.word.rusExplanation}</p>

@@ -15,6 +15,7 @@ export const sampleText2: StoryConfigT.Story = {
 						{
 							id: 1,
 							type: 'word',
+							phraseId: [],
 							word: {
 								partOfSentence: 'Pronoun',
 								partOfSpeech: 'Subject',
@@ -36,6 +37,7 @@ export const sampleText2: StoryConfigT.Story = {
 						{
 							id: 2,
 							type: 'word',
+							phraseId: [],
 							word: {
 								partOfSentence: 'Noun',
 								partOfSpeech: 'Subject',
@@ -57,6 +59,7 @@ export const sampleText2: StoryConfigT.Story = {
 						{
 							id: 3,
 							type: 'word',
+							phraseId: [],
 							word: {
 								partOfSentence: 'Conjunction',
 								partOfSpeech: 'Conjunction',
@@ -78,13 +81,14 @@ export const sampleText2: StoryConfigT.Story = {
 						{
 							id: 4,
 							type: 'word',
+							phraseId: [],
 							word: {
 								partOfSentence: 'Article',
 								partOfSpeech: 'Modifier',
 								engWord: 'a',
 								rusWord: '',
 								rusExplanation:
-									'Артикль, указывающий на то, что следом идёт неопределённое существительное.',
+									'Артикль, указывающий на неопределённое существительное.',
 								enTranscription: 'ə',
 								usTranscription: 'ə',
 							},
@@ -100,6 +104,7 @@ export const sampleText2: StoryConfigT.Story = {
 						{
 							id: 5,
 							type: 'word',
+							phraseId: [],
 							word: {
 								partOfSentence: 'Noun',
 								partOfSpeech: 'Object',
@@ -121,6 +126,7 @@ export const sampleText2: StoryConfigT.Story = {
 						{
 							id: 6,
 							type: 'word',
+							phraseId: [],
 							word: {
 								partOfSentence: 'Preposition',
 								partOfSpeech: 'Modifier',
@@ -143,6 +149,7 @@ export const sampleText2: StoryConfigT.Story = {
 						{
 							id: 7,
 							type: 'word',
+							phraseId: [],
 							word: {
 								partOfSentence: 'Noun',
 								partOfSpeech: 'Object',
@@ -164,6 +171,7 @@ export const sampleText2: StoryConfigT.Story = {
 						{
 							id: 8,
 							type: 'word',
+							phraseId: [],
 							word: {
 								partOfSentence: 'Verb',
 								partOfSpeech: 'Predicate',
@@ -185,6 +193,7 @@ export const sampleText2: StoryConfigT.Story = {
 						{
 							id: 9,
 							type: 'word',
+							phraseId: [],
 							word: {
 								partOfSentence: 'Noun',
 								partOfSpeech: 'Subject',
@@ -206,13 +215,14 @@ export const sampleText2: StoryConfigT.Story = {
 						{
 							id: 10,
 							type: 'word',
+							phraseId: [],
 							word: {
 								partOfSentence: 'Preposition',
 								partOfSpeech: 'Modifier',
 								engWord: 'to',
 								rusWord: '',
 								rusExplanation:
-									'Частица to перед глаголом указывает, что он находится в неопределённой форме',
+									'Частица указывает на неопределённую форму глагола.',
 								enTranscription: 'tə',
 								usTranscription: 'tə',
 							},
@@ -228,6 +238,7 @@ export const sampleText2: StoryConfigT.Story = {
 						{
 							id: 11,
 							type: 'word',
+							phraseId: [],
 							word: {
 								partOfSentence: 'Verb',
 								partOfSpeech: 'Predicate',
@@ -249,13 +260,14 @@ export const sampleText2: StoryConfigT.Story = {
 						{
 							id: 12,
 							type: 'word',
+							phraseId: [],
 							word: {
 								partOfSentence: 'Article',
 								partOfSpeech: 'Modifier',
 								engWord: 'a',
 								rusWord: '',
 								rusExplanation:
-									'Артикль, указывающий на то, что следом идёт неопределённое существительное.',
+									'Артикль, указывающий на неопределённое существительное.',
 								enTranscription: 'ə',
 								usTranscription: 'ə',
 							},
@@ -271,6 +283,7 @@ export const sampleText2: StoryConfigT.Story = {
 						{
 							id: 13,
 							type: 'word',
+							phraseId: [],
 							word: {
 								partOfSentence: 'Noun',
 								partOfSpeech: 'Object',
@@ -292,6 +305,7 @@ export const sampleText2: StoryConfigT.Story = {
 						{
 							id: 14,
 							type: 'word',
+							phraseId: [],
 							word: {
 								partOfSentence: 'Conjunction',
 								partOfSpeech: 'Conjunction',
@@ -313,6 +327,7 @@ export const sampleText2: StoryConfigT.Story = {
 						{
 							id: 15,
 							type: 'word',
+							phraseId: [],
 							word: {
 								partOfSentence: 'Pronoun',
 								partOfSpeech: 'Subject',
@@ -334,6 +349,7 @@ export const sampleText2: StoryConfigT.Story = {
 						{
 							id: 16,
 							type: 'word',
+							phraseId: [],
 							word: {
 								partOfSentence: 'Noun',
 								partOfSpeech: 'Subject',
@@ -355,6 +371,7 @@ export const sampleText2: StoryConfigT.Story = {
 						{
 							id: 17,
 							type: 'word',
+							phraseId: [],
 							word: {
 								partOfSentence: 'Verb',
 								partOfSpeech: 'Predicate',
@@ -376,11 +393,12 @@ export const sampleText2: StoryConfigT.Story = {
 						{
 							id: 18,
 							type: 'word',
+							phraseId: [],
 							word: {
 								partOfSentence: 'Adverb',
 								partOfSpeech: 'Modifier',
 								engWord: 'just',
-								rusWord: 'всего',
+								rusWord: 'всего через',
 								rusExplanation: '',
 								enTranscription: 'dʒʌst',
 								usTranscription: 'dʒəst',
@@ -397,6 +415,7 @@ export const sampleText2: StoryConfigT.Story = {
 						{
 							id: 19,
 							type: 'word',
+							phraseId: [],
 							word: {
 								partOfSentence: 'Adjective',
 								partOfSpeech: 'Modifier',
@@ -418,6 +437,7 @@ export const sampleText2: StoryConfigT.Story = {
 						{
 							id: 20,
 							type: 'word',
+							phraseId: [],
 							word: {
 								partOfSentence: 'Noun',
 								partOfSpeech: 'Object',
@@ -439,11 +459,12 @@ export const sampleText2: StoryConfigT.Story = {
 						{
 							id: 21,
 							type: 'word',
+							phraseId: [],
 							word: {
 								partOfSentence: 'Preposition',
 								partOfSpeech: 'Modifier',
 								engWord: 'after',
-								rusWord: 'после',
+								rusWord: 'после (того как)',
 								rusExplanation: '',
 								enTranscription: 'ˈɑːftə',
 								usTranscription: 'ˈæftər',
@@ -460,6 +481,7 @@ export const sampleText2: StoryConfigT.Story = {
 						{
 							id: 22,
 							type: 'word',
+							phraseId: [],
 							word: {
 								partOfSentence: 'Pronoun',
 								partOfSpeech: 'Subject',
@@ -481,6 +503,7 @@ export const sampleText2: StoryConfigT.Story = {
 						{
 							id: 23,
 							type: 'word',
+							phraseId: [],
 							word: {
 								partOfSentence: 'Verb',
 								partOfSpeech: 'Predicate',
@@ -502,6 +525,7 @@ export const sampleText2: StoryConfigT.Story = {
 						{
 							id: 24,
 							type: 'word',
+							phraseId: [],
 							word: {
 								partOfSentence: 'Noun',
 								partOfSpeech: 'Object',
@@ -521,6 +545,7 @@ export const sampleText2: StoryConfigT.Story = {
 							text: '.',
 						},
 					],
+					phrases: [],
 					sentence: {
 						eng: 'These talents, and a bit of luck, helped Harry to find a job when his parents died just two years after he finished school.',
 						rus: 'Эти таланты и немного удачи помогли Гарри найти работу, когда его родители умерли всего через два года после окончания школы.',
