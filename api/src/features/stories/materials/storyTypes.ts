@@ -64,7 +64,7 @@ export namespace StoryConfigT {
 	// Этот объект связывает слова и грамматическое правило
 	export type Phrase = {
 		phraseId: number
-		grammar: GrammarConfigT.Grammar[]
+		grammars: GrammarConfigT.Grammar[]
 	}
 
 	// Знак препинания в предложении

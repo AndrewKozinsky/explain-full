@@ -451,12 +451,15 @@ export const sampleText2: StoryConfigT.Story = {
 						},
 					],
 					phrases: [
-						{ phraseId: 1, grammar: [{ type: GrammarAliases.DemonstrativePronouns }] },
+						{
+							phraseId: 1,
+							grammars: [{ topic: GrammarAliases.DemonstrativePronouns }],
+						},
 						{
 							phraseId: 2,
-							grammar: [
-								{ type: GrammarAliases.Noun },
-								{ type: GrammarAliases.PluralOfNouns },
+							grammars: [
+								{ topic: GrammarAliases.Noun },
+								{ topic: GrammarAliases.PluralOfNouns },
 							],
 						},
 					],
@@ -723,7 +726,12 @@ export const sampleText2: StoryConfigT.Story = {
 							text: '. ',
 						},
 					],
-					phrases: [{ phraseId: 1, grammar: [{ type: GrammarAliases.AbbreviatedForm }] }],
+					phrases: [
+						{
+							phraseId: 1,
+							grammars: [{ topic: GrammarAliases.AbbreviatedForm }],
+						},
+					],
 					sentence: {
 						eng: "I don't have a few years.",
 						rus: 'У меня нет несколько лет.',

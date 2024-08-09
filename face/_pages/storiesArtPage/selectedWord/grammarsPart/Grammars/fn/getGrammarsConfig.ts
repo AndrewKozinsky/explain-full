@@ -83,8 +83,8 @@ function getGrammarNameAndHref(
 	})
 	if (!phrase) return []
 
-	return phrase.grammar.map((gram) => {
-		const grammarTheme = grammarMeta[gram.type]
+	return phrase.grammars.map((grammar) => {
+		const grammarTheme = grammarMeta[grammar.topic]
 
 		return {
 			name: grammarTheme.name + ' ',

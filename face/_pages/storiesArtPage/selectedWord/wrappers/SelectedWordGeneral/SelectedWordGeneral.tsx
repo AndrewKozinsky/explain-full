@@ -4,9 +4,9 @@ import React from 'react'
 import SentenceReview from '../../sentencePart/SentenceReview/SentenceReview'
 import TopReview from '../../topPart/TopReview/TopReview'
 import Widgets from '../../widgetsPart/Widgets/Widgets'
-import Grammars from '../../wordPart/Grammars/Grammars'
-import './SelectedWordGeneral.scss'
+import Grammars from '../../grammarsPart/Grammars/Grammars'
 import { useHaveGrammarForSelectedWord } from './fn/haveGrammarForSelectedWord'
+import './SelectedWordGeneral.scss'
 
 function SelectedWordGeneral() {
 	const haveGrammarForSelectedWord = useHaveGrammarForSelectedWord()
@@ -14,7 +14,7 @@ function SelectedWordGeneral() {
 	return (
 		<section className="selected-word-general">
 			<TopReview />
-			{/*<Widgets />*/}
+			<Widgets />
 			{haveGrammarForSelectedWord && (
 				<div className="selected-word-general__block">
 					<h3 className="selected-word-general__header">Грамматика слов и фраз</h3>

@@ -7,22 +7,28 @@ export namespace GrammarConfigT {
 
 	// Указательные местоимения
 	export type DemonstrativePronouns = {
-		type: GrammarAliases.DemonstrativePronouns
+		topic: GrammarAliases.DemonstrativePronouns
 	}
 
 	// Существительное
 	export type Noun = {
-		type: GrammarAliases.Noun
+		topic: GrammarAliases.Noun
 	}
 
 	// Множественное число существительных
 	export type PluralOfNouns = {
-		type: GrammarAliases.PluralOfNouns
+		topic: GrammarAliases.PluralOfNouns
 	}
 
-	// Сокращённая форма
+	// Сокращённая форма слова или слов.
+	// Например полная форма Mrs будет Mistress,
+	// а D.O.B. будет date of birth (дата рождения);
+	// Или для we're будет we are.
+	// Для неоднозначных случаев типа he's нужно ещё передать тип где будет или 'have' или 'be'
+	// чтобы однозначно сказать he has или he is.
 	export type AbbreviatedForm = {
-		type: GrammarAliases.AbbreviatedForm
+		topic: GrammarAliases.AbbreviatedForm
+		type?: 'have' | 'be'
 	}
 }
 
